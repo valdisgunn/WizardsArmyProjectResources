@@ -18,6 +18,12 @@ console.log("Root URL: " + root_URL);
 console.log("Sprites folder: " + sprites_folder);
 console.log("Visualizer folder: " + visualizer_folder);
 
+let using_deployed_website = window.location.href.includes("valdisgunn.github.io");
+
+if (using_deployed_website) {
+	// Set the sprites folder to the GitHub repository API URL of my "Sprites" folder in my repository
+	sprites_folder = "https://api.github.com/repos/valdisgunn/WizardsArmyProjectResources/contents/Wizards%20Army%20Project/Sprites";
+}
 
 // From closest to furthest (i.e. top to bottom): names indicate the IDs of the sprite elements
 const sprite_layers = [
@@ -331,17 +337,26 @@ function get_list_of_sprites_names() {
 	xhr.open("GET", sprites_folder, false);
 	xhr.send();
 	if (xhr.status == 200) {
-		// Get the list of sprites
-		let fileList = xhr.responseText.split("\n");
-		for (i = 0; i < fileList.length; i++) {
-			var fileinfo = fileList[i].split(' ');
-			if (fileinfo.length > 1 && fileinfo[1].includes("href=")) {
-				// Get the href
-				var href = fileinfo[1].split('"')[1];
-				sprites.push(href);
+		if (!using_deployed_website) {
+			// Get the list of sprites as XML
+			let fileList = xhr.responseText.split("\n");
+			for (i = 0; i < fileList.length; i++) {
+				var fileinfo = fileList[i].split(' ');
+				if (fileinfo.length > 1 && fileinfo[1].includes("href=")) {
+					// Get the href
+					var href = fileinfo[1].split('"')[1];
+					sprites.push(href);
+				}
+			}
+		} else {
+			// We are using the deployed website, so the sprites are already in JSON format
+			let sprites_JSON = JSON.parse(xhr.responseText);
+			for (i = 0; i < sprites_JSON.length; i++) {
+				sprites.push(sprites_JSON[i].download_url);
 			}
 		}
 	}
+	console.log(sprites);
 	return sprites;
 }
 

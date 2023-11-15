@@ -8,14 +8,13 @@ const use_outline = true;
 const hide_book = false;
 
 // Get the root url of the website
-// Equal to "http://localhost:8000" or "https://valdisgunn.github.io"
-let root_URL = window.location.href.split("/").slice(0, 3).join("/") + "/";
-let project_folder = root_URL + "Wizards%20Army%20Project/";
-let sprites_folder = project_folder + "sprites/";
-let visualizer_folder = project_folder + "Visualizer/";
+// Equal to "http://localhost:8000" or "https://valdisgunn.github.io/WizardsArmyProjectResources/
+let root_URL = window.location.href.split("Visualizer")[0];
+// let project_folder = root_URL + "Wizards%20Army%20Project/";
+let sprites_folder = root_URL + "sprites/";
+let visualizer_folder = root_URL + "Visualizer/";
 
 console.log("Root URL: " + root_URL);
-console.log("Project folder: " + project_folder);
 console.log("Sprites folder: " + sprites_folder);
 console.log("Visualizer folder: " + visualizer_folder);
 

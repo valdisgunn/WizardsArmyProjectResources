@@ -26,6 +26,7 @@ if (using_deployed_website) {
 	let github_username = root_URL.split("https://")[1].split(".github.io")[0];
 	let repository_name = root_URL.split("https://" + github_username + ".github.io/")[1].split("/")[0];
 	sprites_folder = "https://api.github.com/repos/" + github_username + "/" + repository_name + "/contents/" + sprites_folder.split(root_URL)[1];
+	console.log("Updated Sprites folder: " + sprites_folder);
 }
 
 // From closest to furthest (i.e. top to bottom): names indicate the IDs of the sprite elements

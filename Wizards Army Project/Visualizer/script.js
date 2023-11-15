@@ -22,7 +22,10 @@ let using_deployed_website = window.location.href.includes("valdisgunn.github.io
 
 if (using_deployed_website) {
 	// Set the sprites folder to the GitHub repository API URL of my "Sprites" folder in my repository
-	sprites_folder = "https://api.github.com/repos/valdisgunn/WizardsArmyProjectResources/contents/Wizards%20Army%20Project/Sprites";
+	// sprites_folder = "https://api.github.com/repos/valdisgunn/WizardsArmyProjectResources/contents/Wizards%20Army%20Project/Sprites";
+	let github_username = root_URL.split("https://")[1].split(".github.io")[0];
+	let repository_name = root_URL.split("https://" + github_username + ".github.io/")[1].split("/")[0];
+	sprites_folder = "https://api.github.com/repos/" + github_username + "/" + repository_name + "/contents/Sprites";
 }
 
 // From closest to furthest (i.e. top to bottom): names indicate the IDs of the sprite elements

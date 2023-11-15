@@ -11,7 +11,7 @@ const hide_book = false;
 // Equal to "http://localhost:8000" or "https://valdisgunn.github.io/WizardsArmyProjectResources/
 let root_URL = window.location.href.split("Visualizer")[0];
 // let project_folder = root_URL + "Wizards%20Army%20Project/";
-let sprites_folder = root_URL + "sprites/";
+let sprites_folder = root_URL + "Sprites/";
 let visualizer_folder = root_URL + "Visualizer/";
 
 console.log("Root URL: " + root_URL);

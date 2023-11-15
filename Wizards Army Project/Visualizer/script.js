@@ -25,7 +25,7 @@ if (using_deployed_website) {
 	// sprites_folder = "https://api.github.com/repos/valdisgunn/WizardsArmyProjectResources/contents/Wizards%20Army%20Project/Sprites";
 	let github_username = root_URL.split("https://")[1].split(".github.io")[0];
 	let repository_name = root_URL.split("https://" + github_username + ".github.io/")[1].split("/")[0];
-	sprites_folder = "https://api.github.com/repos/" + github_username + "/" + repository_name + "/contents/" + sprites_folder.split(root_URL)[1];
+	sprites_folder = "https://api.github.com/repos/" + github_username + "/" + repository_name + "/contents/Wizards%20Army%20Project/Sprites";
 	console.log("Updated Sprites folder: " + sprites_folder);
 }
 

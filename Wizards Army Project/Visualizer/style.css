@@ -1,0 +1,163 @@
+:root {
+	--c1: #ff0000;
+	--c2: #ff6600;
+	--c3: #ffcc00;
+	--c4: #00ff0c;
+	--c5: #00bbf1;
+	--c6: #1400d4;
+	--c7: #a018ff;
+	--c8: #df2cff;
+	--c9: #b65327;
+	--c10: #e5e5e5;
+	--c11: #4d4d4d;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+body {
+	background-color: #505050;
+	/* background-color: #00f200; */
+}
+#wizard-container {
+	margin: 30px auto 0 auto;
+	/* background-color: red; */
+	position: relative;
+}
+#wizard-container > img {
+	width: 100%;
+	height: 100%;
+	/* Remove anti aliasing */
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: -o-crisp-edges;
+	image-rendering: pixelated;
+	/* Set position */
+	position: absolute;
+	/* Make unclickable and unselectable */
+	user-select: none;
+	--webkit-user-select: none;
+	--moz-user-select: none;
+	--ms-user-select: none;
+	--o-user-select: none;
+	pointer-events: none;
+	--webkit-pointer-events: none;
+	--moz-pointer-events: none;
+	--ms-pointer-events: none;
+	--o-pointer-events: none;
+}
+#wizard-name {
+	color: #ffffff80;
+	text-align: center;
+	width: 100%;
+	margin-top: 30px;
+	font-size: 1.5em;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.controls {
+	color: #ffffff50;
+	text-align: center;
+	width: 100%;
+	margin-top: 30px;
+	user-select: none;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+}
+.controls > div {
+	margin-bottom: 10px;
+	background-color: #00000020;
+	padding: 15px 15px;
+	border-radius: 15px;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+}
+.controls .checkbox-container {
+	margin-bottom: 10px;
+	display: inline-flex;
+	flex-direction: row;
+	/* Make checkbox and its layer take up all the space of the div */
+	width: 100%;
+	justify-content: space-between;
+}
+.controls button {
+	background-color: #ffffff50;
+	border: none;
+	color: #ffffff;
+	padding: 10px 25px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1.1em;
+	width: 250px;
+	margin: 5px 0;
+}
+.controls button:hover {
+	background-color: #ffffff80;
+}
+.controls button:active {
+	background-color: #ffffffcc;
+}
+/* --------------------- Checkbox ----------------------------- */
+/* Customize the label (the container) */
+.actual-checkbox-container {
+	display: block;
+	position: relative;
+	padding-left: 28px;
+	cursor: pointer;
+	font-size: 1.1em;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+/* Hide the browser's default checkbox */
+.actual-checkbox-container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+/* Create a custom checkbox */
+.checkbox-checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background-color: #aaa;
+	border-radius: 3px;
+}
+/* On mouse-over, add a grey background color */
+.actual-checkbox-container:hover input ~ .checkbox-checkmark {
+	background-color: #ccc;
+}
+/* When the checkbox is checked, add a blue background */
+.actual-checkbox-container input:checked ~ .checkbox-checkmark {
+	background-color: #2196F3;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox-checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+/* Show the checkmark when checked */
+.actual-checkbox-container input:checked ~ .checkbox-checkmark:after {
+	display: block;
+}
+/* Style the checkmark/indicator */
+.actual-checkbox-container .checkbox-checkmark:after {
+	left: 7px;
+	top: 2px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}

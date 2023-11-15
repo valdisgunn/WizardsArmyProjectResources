@@ -1,0 +1,45 @@
+
+----- NEW METHOD -----------------------------------------------------------
+
+0.1) Assicurati che tutti i livelli da esportare abbiano una maschera di livello attiva (è possibile attivarla cliccando su un livello e premendo Ctrl+' dato che ho
+rimappato tale scorciatoia alla funzione del menu "Livello > Maschera di Livello > Mostra tutto", che attiva la maschera di livello sul livello selezionato, oppure
+è anche possibile attivarla cliccando un livello e poi premendo il terzo tasto dell'ultima riga del pannello "Livelli", cioè io rettangolo bianco con un cerchio
+vuoto dentro): la maschera di livello fa in modo che il livello venga esportato senza essere ritagliato, i.e. venga esportato come sprite 64x64 (dato che la maschera di livello ha questa dimensione).
+
+0.2) Elimina tutti gli sprites esistenti (nella directory degli sprites esportati) che potrebbero avere un conflitto con quelli che si sta cercando di esportare (o elimina direttamente tutti gli sprites in tale directory, e riesportali tutti, dato che il tempo di esportazione è molto breve).
+
+1) Da pannello "Livelli", usa la riga subito dopo la scritta "Livelli" del tab per filtrare i livelli nella lista di livelli sottostante:
+setta il tipo di filtro su "Metodo" dal primo menu dropdown, con l'icona della lente d'ingrandimento (dovrebbe essere settato su "Tipo" o 
+"Nome" di default, o anche "Metodo" se ricorda le opzioni precedenti) e poi dal secondo menu dropdown seleziona "Normale" (questo permette di visualizzare solo i livelli veri e propri, non i gruppi, che invece hanno metodo "Attraversa").
+
+2) Seleziona tutti i livelli da esportare (basta selezionare il primo livello da esportare e fare Shift+Click sull'ultimo da esportare, dato che i livelli
+da esportare, cioè tutti quelli degli sprites del "wizard", sono contigui).
+Nota: NON è necessario rendere visibili i livelli (verranno esportati tutti i livelli selezionati, a prescindere che siano visibili o meno), ma per renderli 
+tutti visibili, seleziona l'icona dell'occhio su uno di essi mentre sono tutti selezionati e premi una o 2 volte l'opzione "Mostra/nascondi questo livello".
+
+3) Dalle opzioni del pannello "Liveli" (tasto con 3 linee in alto a destra del pannello) seleziona "Esporta come" (o premi Alt+Maiusc+Ctrl+' per esportare)
+
+4) Rivedi le impostazioni di esportazione e premi su "Esporta Tutto" (questo tipo di esportazione è molto più rapida del metodo presentato sotto).
+
+----- OLD METHOD -----------------------------------------------------------
+
+1) Hide layers ("livello") which should not be exported (e.g. the palette, the background, ecc...)
+
+2) Check that all body, hats and staffs are numbered correctly (I grouped them into 10-item groups, so it should be succifient to 
+count the layes inside those groups and if they are more than 10 or they do NOT start and end with an item numbered like the
+2 extremes of the interval of the group name, i.e. they do not start with N and end with M in an interval of he form "N-M").
+
+3) Make sure that, when going into "Immagine > Dimensioni Immagine", the size of the image is actually 64x64 
+(if not, that's probably because some pixels were drawn outside of the 64x64 image area of the file, find those pixels and delete them,
+then if needed create another PSD file with a 64x64 size, select ALL layers ("livello") and copy and paste them into the new file, 
+deleting the old one).
+
+4) Go to "File > Esporta > Livelli in file" then:
+> Select appropriate export folder
+> Make the prefix "wizards_"
+> Select "PNG-8" as "Tipo File" (from dropdown menu)
+> Enable "Solo livelli visibili"
+> Enable "trasparenza"
+> Disable "Interlacciato" and "Ritaglia livelli"
+
+NOTE: The export process may take a while (like some minutes...)

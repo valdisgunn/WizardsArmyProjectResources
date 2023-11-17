@@ -14,9 +14,9 @@ let root_URL = window.location.href.split("Visualizer")[0];
 let sprites_folder = root_URL + "Sprites/";
 let visualizer_folder = root_URL + "Visualizer/";
 
-console.log("Root URL: " + root_URL);
-console.log("Sprites folder: " + sprites_folder);
-console.log("Visualizer folder: " + visualizer_folder);
+// console.log("Root URL: " + root_URL);
+// console.log("Sprites folder: " + sprites_folder);
+// console.log("Visualizer folder: " + visualizer_folder);
 
 let using_deployed_website = window.location.href.includes("valdisgunn.github.io");
 
@@ -26,7 +26,7 @@ if (using_deployed_website) {
 	let github_username = root_URL.split("https://")[1].split(".github.io")[0];
 	let repository_name = root_URL.split("https://" + github_username + ".github.io/")[1].split("/")[0];
 	sprites_folder = "https://api.github.com/repos/" + github_username + "/" + repository_name + "/contents/Wizards%20Army%20Project/Sprites";
-	console.log("Updated Sprites folder: " + sprites_folder);
+	// console.log("Updated Sprites folder: " + sprites_folder);
 }
 
 // From closest to furthest (i.e. top to bottom): names indicate the IDs of the sprite elements
@@ -233,7 +233,7 @@ let name_parts_3 = [
 
 function get_wizard_name_based_on_nose_and_beard(nose_number, beard_number) {
 	// NOTE: beard number determines the beginning of the name, nose number determines the middle of the name, while
-	// 		the end of the name is randomly chosen from the name_parts_3 array (in the actual game, I might think of 
+	// 		the end of the name is randomly chosen from the name_parts_3 array (in the actual game, I might think of
 	//		choosing this name at random but also based on what wizards the player already has, so that if duplicate wizards appear,
 	//		they will always have different names)
 	let raondom_number_for_name_part_3 = Math.floor(Math.random() * name_parts_3.length);
@@ -360,12 +360,12 @@ function get_list_of_sprites_names() {
 			}
 		}
 	}
-	console.log(sprites);
+	// console.log(sprites);
 	return sprites;
 }
 
 // Returns a list of ppaths for sprites of thegiven type (sprite_name)
-// NOTE 1: this function might change if I change the name format for sprites that are exported from Photoshop, 
+// NOTE 1: this function might change if I change the name format for sprites that are exported from Photoshop,
 //	but the rest of this script can stay the same
 // NOTE 2: This currently works for sprites with name format similar to "wizards__0001s_0000s_0000_[sprite_name].png"
 function get_sprites(sprite_name) {
@@ -539,7 +539,7 @@ function add_outline() {
 						clone.css("top", original_y_offset + y_offset);
 						clone.css("left", original_x_offset + x_offset);
 						clone.css("z-index", "-1001");
-						// Make image 
+						// Make image
 						clone.css("filter", "invert(100%) brightness(50%)");
 						// clone.css("filter", "invert(100%) sepia(100%) saturate(650%) hue-rotate(50deg)");	// For green background
 						// Set class to "added-outline" so that it can be removed later

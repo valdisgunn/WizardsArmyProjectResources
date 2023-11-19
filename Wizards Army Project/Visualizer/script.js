@@ -279,7 +279,7 @@ $(document).ready(function () {
 	reset_z_ordering();
 
 	// Append the remaining sprites, default sprites for start
-	set_wizard_sprites(true);
+	set_wizard_sprites(false);
 
 	// Assign function to the "#random-nose-beard-checkbox"
 	$("#random-nose-beard-checkbox").change(function () {
@@ -761,6 +761,7 @@ function print_debug_info() {
 	stats_string += "\n";
 	stats_string += "Total number of hats: 				" + get_num_of_sprites_of_type("wizard-hat") + " hats\n";
 	stats_string += "Total number of clothes/bodies: 	" + get_num_of_sprites_of_type("wizard-body") + " clothes/bodies\n";
+	stats_string += "> Unique clothes/hats combinations:	" + (get_num_of_sprites_of_type("wizard-hat") * get_num_of_sprites_of_type("wizard-body")).toString() + " combinations\n";
 	stats_string += "Total number of staffs: 			" + get_num_of_sprites_of_type("wizard-staff") + " staffs\n";
 	stats_string += "\n";
 
@@ -784,6 +785,7 @@ function print_debug_info() {
 		found_images_with_wrong_size.forEach((path, index) => {
 			stats_string += "  - " + path + "\n";
 		});
+		alert("ERROR: Found sprites with a size different than 64px. Check the console for more info.");
 	} else {
 		stats_string += "OK: No sprites with a size different than 64px found.\n";
 	}
@@ -801,6 +803,7 @@ function print_debug_info() {
 			stats_string += "  - " + path + "\n";
 		});
 		stats_string += "  > This might mean that some sprites which should be named 'hat' or 'body' or 'staff' are not named correctly.\n";
+		alert("WARNING: Found some sprites with the word 'Layer' or 'Livello' in the name. Check the console for more info.");
 	} else {
 		stats_string += "OK: No sprites with the word 'Layer' or 'Livello' in the name found.\n";
 	}
@@ -1017,7 +1020,7 @@ function print_hats_and_clothes_sprite_infos() {
 			console.log(palette_rgb);
 
 			// Print the sprites list to the console
-			console.log(sprite_info_objects);
+			// console.log(sprite_info_objects);
 			let sprite_hats_info_string = "";
 			let sprite_clothes_info_string = "";
 			sprite_info_objects.forEach((sprite, index) => {
@@ -1112,31 +1115,58 @@ function print_hats_and_clothes_sprite_infos() {
 		// For the first column, add 10 rows with the 10 names of the colors in the palette for the first column, then 10x9 cells for the color combinations of 2 colors in the first column, then 10x9x8 cells for the color combinations of 3 colors in the first column
 		// In the second and third column, add the number of sprites with that color combination
 		// Each row will have, in the first column, the color combination (of 1, 2 or 3 colors), and in the second and third column the number of sprites with that color combination (i.e. with that colors in the palette, in whatever order obviously)
-		let color_combinations = [];
+		let color_combinations = new Array();
 		Object.keys(palette_rgb).forEach((palette_color, index) => {
 			// Add the color combinations of 1 color (as a list)
-			color_combinations.push(new Array(palette_color));
+			color_combinations.push([palette_color]);
 			// Add the color combinations of 2 colors (as a list)
 			Object.keys(palette_rgb).forEach((palette_color2, index) => {
 				if (palette_color2 != palette_color) {
-					color_combinations.push(new Array(palette_color, palette_color2));
+					let color_combination_1 = [palette_color, palette_color2];
+					// color_combination_1.sort();
+					color_combinations.push(color_combination_1);
 					// Add the color combinations of 3 colors (as a list)
 					if (!avoid_3_color_combinations) {
 						Object.keys(palette_rgb).forEach((palette_color3, index) => {
 							if (palette_color3 != palette_color && palette_color3 != palette_color2) {
-								color_combinations.push(new Array(palette_color, palette_color2, palette_color3));
+								let color_combination_2 = [palette_color, palette_color2, palette_color3];
+								// color_combination_2.sort();
+								color_combinations.push(color_combination_2);
 							}
 						});
 					}
 				}
 			});
 		});
-		// Sort the color combinations by length (ascending)
-		color_combinations.sort((a, b) => {
-			if (a.length > b.length) return 1;
-			if (a.length < b.length) return -1;
-			return 0;
+		// Sort the color combinations by length (ascending) and then by the first element of the array (alphabetically)
+		function sort_color_combinations() {
+			color_combinations.sort((a, b) => {
+				if (a.length > b.length) return 1;
+				if (a.length < b.length) return -1;
+				// Sort by the order they appear in the color palette
+				let a_index = Object.keys(palette_rgb).indexOf(a[0]);
+				let b_index = Object.keys(palette_rgb).indexOf(b[0]);
+				if (a_index > b_index) return 1;
+				if (a_index < b_index) return -1;
+				return 0;
+			});
+		}
+		sort_color_combinations();
+		// console.log(color_combinations);
+		// // Remove duplicates from the color combinations list (i.e. arrays containing the same elements inside the color combination list)
+		let color_combinations_no_duplicates = [];
+		color_combinations.forEach((color_combination, index) => {
+			let color_combination_already_in_list = false;
+			color_combinations_no_duplicates.forEach((color_combination_no_duplicates, index) => {
+				let sorted_color_combination = color_combination.slice().sort();
+				let sorted_color_combination_no_duplicates = color_combination_no_duplicates.slice().sort();
+				if (sorted_color_combination.join(",") == sorted_color_combination_no_duplicates.join(",")) color_combination_already_in_list = true;
+			});
+			if (!color_combination_already_in_list) color_combinations_no_duplicates.push(color_combination);
 		});
+		color_combinations = color_combinations_no_duplicates;
+		sort_color_combinations();
+
 		// Create the table rows
 		color_combinations.forEach((color_combination, index) => {
 			// Create the table row
@@ -1201,8 +1231,11 @@ function print_hats_and_clothes_sprite_infos() {
 		// Iterate over the cells of the table: if the text is "0", set the background color to black
 		$("#sprites-info-table td").each(function () {
 			if ($(this).text() == "0 (0)") {
-				$(this).css("background-color", "#00000030");
-				// $(this).css("color", "white");
+				// $(this).css("background-color", "#00000030");
+				// Replace the content with a checkbox
+				$(this).empty();
+				let checkbox = $("<input type='checkbox'>");
+				checkbox.appendTo($(this));
 			}
 		});
 

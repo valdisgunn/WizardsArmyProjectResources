@@ -1,4 +1,5 @@
 :root {
+	/* Main colors */
 	--c1: #ff0000;
 	--c2: #ff6600;
 	--c3: #ffcc00;
@@ -10,6 +11,37 @@
 	--c9: #b65327;
 	--c10: #e5e5e5;
 	--c11: #4d4d4d;
+	/* Palette colors */
+	--black_1: #1a1a1a;
+	--black_2: #333333;
+	--black_3: #1a1a1a;
+	--gray_1: #999999;
+	--gray_2: #808080;
+	--gray_3: #666666;
+	--white_1: #e5e5e5;
+	--white_2: #cccccc;
+	--white_3: #b3b3b3;
+	--brown_1: #b65327;
+	--brown_2: #964420;
+	--brown_3: #703318;
+	--red_1: #ff4d3a;
+	--red_2: #ff0000;
+	--red_3: #ca0000;
+	--yellow_1: #ffe326;
+	--yellow_2: #ffcc00;
+	--yellow_3: #d2a800;
+	--green_1: #9cff5a;
+	--green_2: #00ff0c;
+	--green_3: #00ca0a;
+	--sky_blue_1: #47d6ff;
+	--sky_blue_2: #00bbf1;
+	--sky_blue_3: #009ecc;
+	--blue_1: #1400d4;
+	--blue_2: #1000aa;
+	--blue_3: #110079;
+	--purple_1: #a018ff;
+	--purple_2: #8200dd;
+	--purple_3: #6200a6;
 }
 html, body {
 	margin: 0;

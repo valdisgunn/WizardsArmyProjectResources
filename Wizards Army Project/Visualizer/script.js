@@ -809,6 +809,281 @@ function print_debug_info() {
 
 }
 
+function print_hats_and_clothes_sprite_infos() {
 
+	// To fill in the pixel palette colors (which contains all the colors of the palette that will determin the "types" or "elements" of the wizard hat or color) we only add the palette color (type/element) if the number of pixels of that color (in the hat/clothes sprite) is x >= pixel_colors_min_count
+	let pixel_colors_min_count_for_hats = 1;
+	let pixel_colors_min_count_for_clothes = 4;
+
+	// For each hat and body (clothes), create an object with the following properties:
+	// - sprite type ("hat" or "clothes")
+	// - sprite number (index of the sprite in the grouped_sprites object)
+	// - sprite path (path to the sprite)
+	// - sprite colors (list of all colors of all pixels in the sprite image, without duplicates, in format rgb(xxx,xxx,xxx))
+	// - sprite palette colors (list of names, taken from the 10 palette colors, of all the colors in the sprite)
+	// - sprite colors count (number of colors in the sprite image)
+
+	// Create an empty list of sprites
+	let sprite_info_objects = [];
+
+	function get_full_sprite_path(sprite_name, sprite_number) {
+		return grouped_sprites[sprite_name][sprite_number];
+		let sprite_path = get_sprite_path(sprite_name, sprite_number);
+		return sprites_folder + sprite_path.substring(sprite_path.lastIndexOf("/") + 1);
+	}
+
+	// For each hat, create a sprite object and append it to the list of sprites
+	for (let i = 0; i < grouped_sprites["wizard-hat"].length; i++) {
+		let sprite = {
+			"type": "hats",
+			"number": i,
+			"path": get_full_sprite_path("wizard-hat", i),
+			"colors": {},
+			"palette_colors": {},
+			"colors_count": 0,
+			"palette_colors_count": 0,
+		}
+		sprite_info_objects.push(sprite);
+	}
+
+	// For each body, create a sprite object and append it to the list of sprites
+	for (let i = 0; i < grouped_sprites["wizard-body"].length; i++) {
+		let sprite = {
+			"type": "clothes",
+			"number": i,
+			"path": get_full_sprite_path("wizard-body", i),
+			"colors": {},
+			"palette_colors": {},
+			"colors_count": 0,
+			"palette_colors_count": 0,
+		}
+		sprite_info_objects.push(sprite);
+	}
+
+	// For each sprite, check the colors in the image (colors of the pixels of the image)
+	// Create a canvas element to draw images on and get the pixels of the image
+	let canvas = document.createElement("canvas");
+	canvas.width = default_sprite_size;
+	canvas.height = default_sprite_size;
+	let ctx = canvas.getContext("2d", { willReadFrequently: true });
+
+	// Draw the face on top of the canvas (to avoid considering colors which are not shown when the face is drawn on top of the hat/clothes, hence colors which should not be considered for the hat/clothes types/elements)
+	let face_sprite = grouped_sprites["wizard-other-sprites"][0];
+	let face_img = new Image();
+	face_img.src = face_sprite;
+
+	sprite_info_objects.forEach((sprite, index) => {
+		// Create a new image element
+		let img = new Image();
+		img.src = sprite.path;
+		// Check if the image exists
+		img.onload = function () {
+			// Image exists
+			// Clear the canvas
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			// Draw the image on the canvas
+			ctx.drawImage(img, 0, 0);
+			// Draw the face on top of the canvas if considering wizard clothes/body
+			//		NOTE: this is done to avoid considering colors which are not shown when the face is drawn on top of the hat/clothes, hence colors which should not be considered for the hat/clothes types/elements
+			if (sprite.type == "clothes") {
+				ctx.drawImage(face_img, 0, 0);
+			}
+			// Get the pixels of the image
+			let pixels = ctx.getImageData(0, 0, img.width, img.height).data;
+			// Create a dictionary of objects with the following:
+			// - color (in format rgb(xxx,xxx,xxx)) (key)
+			// - count (number of pixels with that color in the image) (value)
+			// (list)
+			// For each pixel, check if the color is already in the sprite colors list, and if not, add it to the list
+			for (let i = 0; i < pixels.length; i += 4) {
+				let color = "rgb(" + pixels[i] + "," + pixels[i + 1] + "," + pixels[i + 2] + ")";
+				// Set the rgb key of the sprite colors dictionary to 1 if it doesn't exist, or increment it by 1 if it does exist
+				if (sprite.colors.hasOwnProperty(color)) {
+					sprite.colors[color] += 1;
+				} else {
+					sprite.colors[color] = 1;
+				}
+
+			}
+			// // Convert the set to a list
+			// sprite.colors = [...colors_set];
+			// // Set the number of colors in the sprite
+			sprite.colors_count = Object.keys(sprite.colors).length;
+			// console.log(sprite);
+		}
+	});
+
+	// Function to compare colors
+	function colors_are_equal(color1, color2) {
+		return color1 == color2;
+		// Parse the strings for colors (they are all rgb(xxx,xxx,xxx) format) and check if the r, g and b values are the same or are within a certain difference limit
+		let rgb_difference_limit = 2;	// Considers as equal colors that have either one of the R,G,B values different by at most this value
+		let rgb_difference = 0;
+		let color1_rgb = color1.match(/\d+/g);
+		let color2_rgb = color2.match(/\d+/g);
+		for (let i = 0; i < 3; i++) {
+			rgb_difference = Math.abs(parseInt(color1_rgb[i]) - parseInt(color2_rgb[i]));
+			if (rgb_difference > rgb_difference_limit) return false;
+		}
+		return true;
+	}
+
+	// Function to get the possible colors of the sprite, from the sprite palette
+	function hex_to_rgb(hex_color) {
+		// Convert the hex color string (#RRGGBB) to rgb(xxx,xxx,xxx) format
+		let r = parseInt(hex_color.substring(1, 3), 16);
+		let g = parseInt(hex_color.substring(3, 5), 16);
+		let b = parseInt(hex_color.substring(5, 7), 16);
+		return "rgb(" + r + "," + g + "," + b + ")";
+	}
+
+	let palette_hex = {
+		"black": ["#1a1a1a", "#333333", "#1a1a1a"],
+		"gray": ["#999999", "#808080", "#666666"],
+		"white": ["#e5e5e5", "#cccccc", "#b3b3b3"],
+		"brown": ["#b65327", "#964420", "#703318"],
+		"red": ["#ff4d3a", "#ff0000", "#ca0000"],
+		"yellow": ["#ffe326", "#ffcc00", "#d2a800"],
+		"green": ["#9cff5a", "#00ff0c", "#00ca0a"],
+		"sky_blue": ["#47d6ff", "#00bbf1", "#009ecc"],
+		"blue": ["#1400d4", "#1000aa", "#110079"],
+		"purple": ["#a018ff", "#8200dd", "#6200a6"],
+	}
+	let palette_rgb = {}
+	Object.keys(palette_hex).forEach((key, index) => {
+		palette_rgb[key] = [];
+		palette_hex[key].forEach((hex_color, index) => {
+			let rgb_color = hex_to_rgb(hex_color);
+			palette_rgb[key].push(rgb_color);
+		});
+	});
+
+	// Print the palette_rgb object to the console
+	console.log(palette_rgb);
+
+	// Populate the sprite colors list for the palette colors
+	function populate_sprite_infos() {
+
+		// Cycle through all sprites and populate the sprite palette colors dictionary 
+		sprite_info_objects.forEach((sprite, index) => {
+			// For each color in the sprite, check if it is in the palette, and if it is, add it to the sprite palette colors dictionary
+			Object.keys(sprite.colors).forEach((color, index) => {
+				// Cycle through all colors in the palette and check if the color is in the palette
+				Object.keys(palette_rgb).forEach((palette_color, index) => {
+					if (colors_are_equal(color, palette_rgb[palette_color][0])
+						|| colors_are_equal(color, palette_rgb[palette_color][1])
+						|| colors_are_equal(color, palette_rgb[palette_color][2])) {
+						// The color is in the palette, add it to the sprite palette colors dictionary or increment it if it already exists
+						if (sprite.palette_colors.hasOwnProperty(palette_color)) {
+							sprite.palette_colors[palette_color] += sprite.colors[color];
+						} else {
+							sprite.palette_colors[palette_color] = sprite.colors[color];
+						}
+					}
+				});
+				// Remove any added colors that have a count less than the minimum
+				Object.keys(sprite.palette_colors).forEach((palette_color, index) => {
+					if (sprite.palette_colors[palette_color] < pixel_colors_min_count_for_clothes && sprite.type == "clothes") {
+						delete sprite.palette_colors[palette_color];
+					}
+					if (sprite.palette_colors[palette_color] < pixel_colors_min_count_for_hats && sprite.type == "hats") {
+						delete sprite.palette_colors[palette_color];
+					}
+				});
+				// Sort the sprite palette colors dictionary by value (descending order)
+				sprite.palette_colors = Object.fromEntries(
+					Object.entries(sprite.palette_colors).sort(([, a], [, b]) => b - a)
+				);
+				// Remove the last color if there are more than 3 colors
+				if (Object.keys(sprite.palette_colors).length > 3) {
+					let last_color = Object.keys(sprite.palette_colors)[Object.keys(sprite.palette_colors).length - 1];
+					delete sprite.palette_colors[last_color];
+				}
+			});
+
+			// Set the number of colors in the sprite palette
+			sprite.palette_colors_count = Object.keys(sprite.palette_colors).length;
+		});
+
+		// Sort the sprite infos objects list by sprite type > total palette colors count (descending) > sprite number (ascending)
+		sprite_info_objects.sort((a, b) => {
+			if (a.type > b.type) return 1;
+			if (a.type < b.type) return -1;
+			if (a.palette_colors_count < b.palette_colors_count) return 1;
+			if (a.palette_colors_count > b.palette_colors_count) return -1;
+			if (a.number > b.number) return 1;
+			if (a.number < b.number) return -1;
+			return 0;
+		});
+
+		// Print the sprites list to the console with format "[sprite_type] [sprite_number] [sprite_palette_colors] ([sprite_path])"
+		// console.log(sprite_info_objects);
+		let sprite_info_string = "";
+		sprite_info_objects.forEach((sprite, index) => {
+			sprite_info_string += "> " + sprite.type + " - " + sprite.number + " (" + sprite.path + ")";
+			sprite_info_string += "\n  (" + sprite.palette_colors_count + ") [ ";
+			Object.keys(sprite.palette_colors).forEach((palette_color, index) => {
+				sprite_info_string += palette_color + " (" + sprite.palette_colors[palette_color] + "), ";
+			});
+			sprite_info_string = sprite_info_string.substring(0, sprite_info_string.length - 2) + " ]";
+			// sprite_info_string += "\n  " + sprite.path;
+			sprite_info_string += "\n";
+		});
+		console.log(sprite_info_string);
+
+
+		// Print infos about all the hats and their colors (print, for each hat and for each clothes, the number of sprites with 3, 2 and 1 palette colors)
+		let hats_colors_string = "";
+		let hats_colors = {
+			"3": 0,
+			"2": 0,
+			"1": 0,
+		};
+		sprite_info_objects.forEach((sprite, index) => {
+			if (sprite.type == "hats") {
+				hats_colors[sprite.palette_colors_count.toString()] += 1;
+			}
+		});
+		hats_colors_string += "> Hats with 3 colors: " + hats_colors["3"] + "\n";
+		hats_colors_string += "> Hats with 2 colors: " + hats_colors["2"] + "\n";
+		hats_colors_string += "> Hats with 1 color: " + hats_colors["1"] + "\n";
+		console.log(hats_colors_string);
+
+		// Print infos about all the clothes and their colors (print, for each hat and for each clothes, the number of sprites with 3, 2 and 1 palette colors)
+		let clothes_colors_string = "";
+		let clothes_colors = {
+			"3": 0,
+			"2": 0,
+			"1": 0,
+		};
+		sprite_info_objects.forEach((sprite, index) => {
+			if (sprite.type == "clothes") {
+				clothes_colors[sprite.palette_colors_count.toString()] += 1;
+			}
+		});
+		clothes_colors_string += "> Clothes with 3 colors: " + clothes_colors["3"] + "\n";
+		clothes_colors_string += "> Clothes with 2 colors: " + clothes_colors["2"] + "\n";
+		clothes_colors_string += "> Clothes with 1 color: " + clothes_colors["1"] + "\n";
+		console.log(clothes_colors_string);
+
+
+	}
+
+	// Wait for all sprite info objects to have a colors_count > 0 (check again with time intervals of 250ms)
+	let check_sprite_infos_interval = setInterval(() => {
+		let all_sprite_infos_have_colors = true;
+		sprite_info_objects.forEach((sprite, index) => {
+			if (sprite.colors_count == 0) all_sprite_infos_have_colors = false;
+		});
+		if (all_sprite_infos_have_colors) {
+			// All sprite infos have colors, populate the sprite infos
+			populate_sprite_infos();
+			// Stop the interval
+			clearInterval(check_sprite_infos_interval);
+		}
+	}, 250);
+
+}
+print_hats_and_clothes_sprite_infos();
 
 print_debug_info();

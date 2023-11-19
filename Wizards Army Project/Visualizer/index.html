@@ -5,38 +5,42 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div id="wizard-container">
-	</div>
-	<div id="wizard-name"></div>
-	<div class="controls">
-		<div>
-			<!-- Toggle randomization for nose and beard too when pressing the "randomize wizard" button -->
-			<div class="checkbox-container">
-				<label class="actual-checkbox-container">
-					Random Nose & Beard
-					<input type="checkbox" id="random-nose-beard-checkbox" checked="checked">
-					<span class="checkbox-checkmark"></span>
-				</label>
-			</div>
-			<!-- Randomize all wizards sprites -->
+	<div id="page-wrapper">
+		<div id="wizard-container">
+		</div>
+		<div id="wizard-name"></div>
+		<div class="controls">
 			<div>
-				<button id="random-wizard-button">Random Wizard</button>
+				<!-- Toggle randomization for nose and beard too when pressing the "randomize wizard" button -->
+				<div class="checkbox-container">
+					<label class="actual-checkbox-container">
+						Random Nose & Beard
+						<input type="checkbox" id="random-nose-beard-checkbox" checked="checked">
+						<span class="checkbox-checkmark"></span>
+					</label>
+				</div>
+				<!-- Randomize all wizards sprites -->
+				<div>
+					<button id="random-wizard-button">Random Wizard</button>
+				</div>
+			</div>
+			<!-- Single wizard sprites customization -->
+			<div>
+				<button id="random-wizard-face-button">Random Face</button>
+			
+				<button id="random-wizard-hat-button">Random Hat</button>
+			
+				<button id="random-wizard-body-button">Random Clothes</button>
+
+				<button id="random-wizard-staff-button">Random Staff</button>
+
+				<button id="random-wizard-book-button">Random Book</button>
 			</div>
 		</div>
-		<!-- Single wizard sprites customization -->
-		<div>
-			<button id="random-wizard-face-button">Random Face</button>
-		
-			<button id="random-wizard-hat-button">Random Hat</button>
-		
-			<button id="random-wizard-body-button">Random Clothes</button>
-
-			<button id="random-wizard-staff-button">Random Staff</button>
-
-			<button id="random-wizard-book-button">Random Book</button>
-		</div>
 	</div>
+	
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="script.js"></script>
+	
 </body>
 </html>

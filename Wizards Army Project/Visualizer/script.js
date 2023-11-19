@@ -463,6 +463,7 @@ function get_num_of_sprites_of_type(sprite_name) {
 function add_additional_stroke() {
 	// For each image in the container, clone the image, move it up by one pixel (multiplied by the size multiplier), then reclone it and move it left, then right, then down, and add a black stroke of 1 pixel (times the size multiplier), then move the image in z-layer -1000
 	// Remove any existing additional stroke
+
 	$(".additional-stroke").remove();
 	const stroke_width = 1 * wizard_sprite_size_multiplier;
 	const rounded_stroke = true;
@@ -570,6 +571,74 @@ function get_random_sprite_number(sprite_name, force_number = -1) {
 	return -1;
 }
 
+function add_stroke_and_outline() {
+	// if (use_additional_stroke) add_additional_stroke();
+	// if (use_outline) add_outline();
+
+	// Remove any existing clone wrappers
+	$("#clones-wrapper").remove();
+
+	let image_elements = $("#wizard-container > img");	// Select only direct children of the #wizard-container
+
+	let wrappers_shadow_color = "#757575";
+	let clones_shadow_color = "#000000";
+
+	// Wrapper for the clones
+	let clones_wrapper = $("<div></div>");
+	clones_wrapper.attr("id", "clones-wrapper");
+	clones_wrapper.css("position", "relative");
+	clones_wrapper.css("height", default_sprite_size * wizard_sprite_size_multiplier);
+	clones_wrapper.css("width", default_sprite_size * wizard_sprite_size_multiplier);
+	clones_wrapper.css("z-index", "-1000");
+	// Add a filter for the outline
+	clones_wrapper.css("filter",
+		"drop-shadow(" + (1 * wizard_sprite_size_multiplier) + "px 0px 0px " + wrappers_shadow_color + ")" + " " +
+		"drop-shadow(" + (-1 * wizard_sprite_size_multiplier) + "px 0px 0px " + wrappers_shadow_color + ")" + " " +
+		"drop-shadow(0px " + (1 * wizard_sprite_size_multiplier) + "px 0px " + wrappers_shadow_color + ")" + " " +
+		"drop-shadow(0px " + (-1 * wizard_sprite_size_multiplier) + "px 0px " + wrappers_shadow_color + ")" + " " +
+		""
+	);
+
+	clones_wrapper.appendTo("#wizard-container");
+
+	// Append clones to the clones wrapper
+	image_elements.each(function () {
+
+		// Clone for the horizontal stroke and outline
+		let clone_horizontal = $(this).clone();
+		clone_horizontal.css("top", 0);
+		clone_horizontal.css("left", 0);
+		clone_horizontal.css("z-index", "-1001");
+		clone_horizontal.css("filter",
+			"drop-shadow(" + (1 * wizard_sprite_size_multiplier) + "px 0px 0px " + clones_shadow_color + ")" + " " +
+			"drop-shadow(" + (-1 * wizard_sprite_size_multiplier) + "px 0px 0px " + clones_shadow_color + ")" + " " +
+			// "drop-shadow(0px " + (1 * wizard_sprite_size_multiplier) + "px 0px " + shadow_color + ")" + " " +
+			// "drop-shadow(0px " + (-1 * wizard_sprite_size_multiplier) + "px 0px " + shadow_color + ")" + " " +
+			""
+		);
+		clone_horizontal.appendTo(clones_wrapper);
+
+		// Clone for the vertical stroke and outline
+		let clone_vertical = $(this).clone();
+		clone_vertical.css("top", 0);
+		clone_vertical.css("left", 0);
+		clone_vertical.css("z-index", "-1001");
+		clone_vertical.css("filter",
+			// "drop-shadow(" + (1 * wizard_sprite_size_multiplier) + "px 0px 0px " + shadow_color + ")" + " " +
+			// "drop-shadow(" + (-1 * wizard_sprite_size_multiplier) + "px 0px 0px " + shadow_color + ")" + " " +
+			"drop-shadow(0px " + (1 * wizard_sprite_size_multiplier) + "px 0px " + clones_shadow_color + ")" + " " +
+			"drop-shadow(0px " + (-1 * wizard_sprite_size_multiplier) + "px 0px " + clones_shadow_color + ")" + " " +
+			""
+		);
+		clone_vertical.appendTo(clones_wrapper);
+
+	});
+
+
+	return;
+
+}
+
 function set_wizard_sprites(use_default = false, include_nose_and_beard = true) {
 
 	// Set the sprite for the hat
@@ -591,8 +660,7 @@ function set_wizard_sprites(use_default = false, include_nose_and_beard = true) 
 
 	// Reogranize sprites and add additional stroke and outline
 	reset_z_ordering();
-	if (use_additional_stroke) add_additional_stroke();
-	if (use_outline) add_outline();
+	add_stroke_and_outline();
 
 }
 
@@ -632,8 +700,7 @@ function set_random_beard_and_nose(setting_single_sprite = true) {
 
 	if (setting_single_sprite) {
 		reset_z_ordering();
-		if (use_additional_stroke) add_additional_stroke();
-		if (use_outline) add_outline();
+		add_stroke_and_outline();
 	}
 
 }
@@ -649,8 +716,7 @@ function set_random_hat(use_default = false, setting_single_sprite = true) {
 
 	if (setting_single_sprite) {
 		reset_z_ordering();
-		if (use_additional_stroke) add_additional_stroke();
-		if (use_outline) add_outline();
+		add_stroke_and_outline();
 	}
 
 }
@@ -666,8 +732,7 @@ function set_random_body(use_default = false, setting_single_sprite = true) {
 
 	if (setting_single_sprite) {
 		reset_z_ordering();
-		if (use_additional_stroke) add_additional_stroke();
-		if (use_outline) add_outline();
+		add_stroke_and_outline();
 	}
 
 }
@@ -682,8 +747,7 @@ function set_random_staff(use_default = false, setting_single_sprite = true) {
 
 	if (setting_single_sprite) {
 		reset_z_ordering();
-		if (use_additional_stroke) add_additional_stroke();
-		if (use_outline) add_outline();
+		add_stroke_and_outline();
 	}
 
 }
@@ -724,8 +788,27 @@ function print_debug_info() {
 		stats_string += "OK: No sprites with a size different than 64px found.\n";
 	}
 
+	// Cycle through all files in the sprites folder and check if some sprites contain the word "Layer" or "Livello" in the name (not case sensitive)
+	let found_images_with_wrong_name = [];
+	sprites_paths.forEach((path, index) => {
+		if (path.toLowerCase().includes("layer") || path.toLowerCase().includes("livello")) {
+			found_images_with_wrong_name.push(path);
+		}
+	});
+	if (found_images_with_wrong_name.length > 0) {
+		stats_string += "WARNING: Found some sprites with the word 'Layer' or 'Livello' in the name: \n";
+		found_images_with_wrong_name.forEach((path, index) => {
+			stats_string += "  - " + path + "\n";
+		});
+		stats_string += "  > This might mean that some sprites which should be named 'hat' or 'body' or 'staff' are not named correctly.\n";
+	} else {
+		stats_string += "OK: No sprites with the word 'Layer' or 'Livello' in the name found.\n";
+	}
+
 	console.log(stats_string);
 
 }
+
+
 
 print_debug_info();

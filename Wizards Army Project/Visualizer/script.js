@@ -812,8 +812,8 @@ function print_debug_info() {
 function print_hats_and_clothes_sprite_infos() {
 
 	// To fill in the pixel palette colors (which contains all the colors of the palette that will determin the "types" or "elements" of the wizard hat or color) we only add the palette color (type/element) if the number of pixels of that color (in the hat/clothes sprite) is x >= pixel_colors_min_count
-	let pixel_colors_min_count_for_hats = 1;
-	let pixel_colors_min_count_for_clothes = 4;
+	let pixel_colors_min_count_for_hats = 1;	// Only sprites with a number of pixels GREATER OR EQUAL than this will have the associated color type/element added to the palette
+	let pixel_colors_min_count_for_clothes = 5;	// Only sprites with a number of pixels GREATER OR EQUAL than this will have the associated color type/element added to the palette
 
 	// For each hat and body (clothes), create an object with the following properties:
 	// - sprite type ("hat" or "clothes")
@@ -903,7 +903,6 @@ function print_hats_and_clothes_sprite_infos() {
 				} else {
 					sprite.colors[color] = 1;
 				}
-
 			}
 			// // Convert the set to a list
 			// sprite.colors = [...colors_set];
@@ -915,9 +914,9 @@ function print_hats_and_clothes_sprite_infos() {
 
 	// Function to compare colors
 	function colors_are_equal(color1, color2) {
-		return color1 == color2;
+		// return color1 == color2;
 		// Parse the strings for colors (they are all rgb(xxx,xxx,xxx) format) and check if the r, g and b values are the same or are within a certain difference limit
-		let rgb_difference_limit = 2;	// Considers as equal colors that have either one of the R,G,B values different by at most this value
+		let rgb_difference_limit = 3;	// Considers as equal colors that have either one of the R,G,B values different by at most this value
 		let rgb_difference = 0;
 		let color1_rgb = color1.match(/\d+/g);
 		let color2_rgb = color2.match(/\d+/g);
@@ -958,9 +957,6 @@ function print_hats_and_clothes_sprite_infos() {
 		});
 	});
 
-	// Print the palette_rgb object to the console
-	console.log(palette_rgb);
-
 	// Populate the sprite colors list for the palette colors
 	function populate_sprite_infos() {
 
@@ -981,26 +977,25 @@ function print_hats_and_clothes_sprite_infos() {
 						}
 					}
 				});
-				// Remove any added colors that have a count less than the minimum
-				Object.keys(sprite.palette_colors).forEach((palette_color, index) => {
-					if (sprite.palette_colors[palette_color] < pixel_colors_min_count_for_clothes && sprite.type == "clothes") {
-						delete sprite.palette_colors[palette_color];
-					}
-					if (sprite.palette_colors[palette_color] < pixel_colors_min_count_for_hats && sprite.type == "hats") {
-						delete sprite.palette_colors[palette_color];
-					}
-				});
-				// Sort the sprite palette colors dictionary by value (descending order)
-				sprite.palette_colors = Object.fromEntries(
-					Object.entries(sprite.palette_colors).sort(([, a], [, b]) => b - a)
-				);
-				// Remove the last color if there are more than 3 colors
-				if (Object.keys(sprite.palette_colors).length > 3) {
-					let last_color = Object.keys(sprite.palette_colors)[Object.keys(sprite.palette_colors).length - 1];
-					delete sprite.palette_colors[last_color];
-				}
 			});
-
+			// Remove any added colors that have a count less than the minimum
+			let keys = Object.keys(sprite.palette_colors);
+			for (let i = 0; i < keys.length; i++) {
+				if (sprite.palette_colors[keys[i]] < pixel_colors_min_count_for_hats && sprite.type == "hats") {
+					delete sprite.palette_colors[keys[i]];
+				} else if (sprite.palette_colors[keys[i]] < pixel_colors_min_count_for_clothes && sprite.type == "clothes") {
+					delete sprite.palette_colors[keys[i]];
+				}
+			}
+			// Sort the sprite palette colors dictionary by value (descending order)
+			sprite.palette_colors = Object.fromEntries(
+				Object.entries(sprite.palette_colors).sort(([, a], [, b]) => b - a)
+			);
+			// Remove the last color if there are more than 3 colors
+			if (Object.keys(sprite.palette_colors).length > 3) {
+				let last_color = Object.keys(sprite.palette_colors)[Object.keys(sprite.palette_colors).length - 1];
+				delete sprite.palette_colors[last_color];
+			}
 			// Set the number of colors in the sprite palette
 			sprite.palette_colors_count = Object.keys(sprite.palette_colors).length;
 		});
@@ -1016,55 +1011,200 @@ function print_hats_and_clothes_sprite_infos() {
 			return 0;
 		});
 
-		// Print the sprites list to the console with format "[sprite_type] [sprite_number] [sprite_palette_colors] ([sprite_path])"
-		// console.log(sprite_info_objects);
-		let sprite_info_string = "";
-		sprite_info_objects.forEach((sprite, index) => {
-			sprite_info_string += "> " + sprite.type + " - " + sprite.number + " (" + sprite.path + ")";
-			sprite_info_string += "\n  (" + sprite.palette_colors_count + ") [ ";
-			Object.keys(sprite.palette_colors).forEach((palette_color, index) => {
-				sprite_info_string += palette_color + " (" + sprite.palette_colors[palette_color] + "), ";
+		function print_sprites_info_in_console() {
+
+			// Print the palette_rgb object to the console
+			console.log(palette_rgb);
+
+			// Print the sprites list to the console
+			console.log(sprite_info_objects);
+			let sprite_hats_info_string = "";
+			let sprite_clothes_info_string = "";
+			sprite_info_objects.forEach((sprite, index) => {
+				let string_to_print = "";
+				string_to_print += "> " + sprite.type + " - " + sprite.number + " (" + sprite.path + ")";
+				string_to_print += "\n  (" + sprite.palette_colors_count + ") [ ";
+				Object.keys(sprite.palette_colors).forEach((palette_color, index) => {
+					string_to_print += palette_color + " (" + sprite.palette_colors[palette_color] + "), ";
+				});
+				string_to_print = string_to_print.substring(0, string_to_print.length - 2) + " ]";
+				// sprite_info_string += "\n  " + sprite.path;
+				string_to_print += "\n";
+
+				if (sprite.type == "hats") {
+					sprite_hats_info_string += string_to_print;
+				} else if (sprite.type == "clothes") {
+					sprite_clothes_info_string += string_to_print;
+				}
+
 			});
-			sprite_info_string = sprite_info_string.substring(0, sprite_info_string.length - 2) + " ]";
-			// sprite_info_string += "\n  " + sprite.path;
-			sprite_info_string += "\n";
+
+			// Print the sprite infos to the console
+			console.log(sprite_hats_info_string);
+			console.log(sprite_clothes_info_string);
+
+			// Print infos about all the hats and their colors (print, for each hat and for each clothes, the number of sprites with 3, 2 and 1 palette colors)
+			let hats_colors_string = "";
+			let hats_colors = {
+				"3": 0,
+				"2": 0,
+				"1": 0,
+			};
+			sprite_info_objects.forEach((sprite, index) => {
+				if (sprite.type == "hats") {
+					hats_colors[sprite.palette_colors_count.toString()] += 1;
+				}
+			});
+			hats_colors_string += "> Hats with 3 colors: " + hats_colors["3"] + "\n";
+			hats_colors_string += "> Hats with 2 colors: " + hats_colors["2"] + "\n";
+			hats_colors_string += "> Hats with 1 color: " + hats_colors["1"] + "\n";
+			console.log(hats_colors_string);
+
+			// Print infos about all the clothes and their colors (print, for each hat and for each clothes, the number of sprites with 3, 2 and 1 palette colors)
+			let clothes_colors_string = "";
+			let clothes_colors = {
+				"3": 0,
+				"2": 0,
+				"1": 0,
+			};
+			sprite_info_objects.forEach((sprite, index) => {
+				if (sprite.type == "clothes") {
+					clothes_colors[sprite.palette_colors_count.toString()] += 1;
+				}
+			});
+			clothes_colors_string += "> Clothes with 3 colors: " + clothes_colors["3"] + "\n";
+			clothes_colors_string += "> Clothes with 2 colors: " + clothes_colors["2"] + "\n";
+			clothes_colors_string += "> Clothes with 1 color: " + clothes_colors["1"] + "\n";
+			console.log(clothes_colors_string);
+		}
+		// Print additional sprites info in the console
+		print_sprites_info_in_console();
+
+		// Populate the #sprites-info object, creating a table with:
+		// -in the first clumn, the sprite color combinations, 
+		// - in the second column the number of hat sprites with that color combination, 
+		// - in the third column the number of clothes sprites with that color combination
+		// Treat 3 colors as if they were 2 (to avoid having 10x9x8=720 color combinations for 3 colors and therefore having to create 720 clothes with that color combination...)
+		let avoid_3_color_combinations = true;
+		// Create the table
+		let sprites_info_table = $("<table></table>");
+		sprites_info_table.attr("id", "sprites-info-table");
+		// Create the table body
+		let sprites_info_table_body = $("<tbody></tbody>");
+		// Create the table "header"
+		let sprites_info_table_header = $("<tr></tr>");
+		// Create the table header cells
+		let sprites_info_table_header_cell1 = $("<td></td>");
+		sprites_info_table_header_cell1.text("Colors");
+		let sprites_info_table_header_cell2 = $("<td></td>");
+		sprites_info_table_header_cell2.text("Hats");
+		let sprites_info_table_header_cell3 = $("<td></td>");
+		sprites_info_table_header_cell3.text("Clothes");
+		// Append the cells to the header
+		sprites_info_table_header.append(sprites_info_table_header_cell1);
+		sprites_info_table_header.append(sprites_info_table_header_cell2);
+		sprites_info_table_header.append(sprites_info_table_header_cell3);
+		// Append the header to the table
+		sprites_info_table_body.append(sprites_info_table_header);
+
+		// Create the table body
+		// Populate the table body cells (consider color combinations of 1 color in the palette, 2 colors in the palette, and 3 colors in the palette):
+		// For the first column, add 10 rows with the 10 names of the colors in the palette for the first column, then 10x9 cells for the color combinations of 2 colors in the first column, then 10x9x8 cells for the color combinations of 3 colors in the first column
+		// In the second and third column, add the number of sprites with that color combination
+		// Each row will have, in the first column, the color combination (of 1, 2 or 3 colors), and in the second and third column the number of sprites with that color combination (i.e. with that colors in the palette, in whatever order obviously)
+		let color_combinations = [];
+		Object.keys(palette_rgb).forEach((palette_color, index) => {
+			// Add the color combinations of 1 color (as a list)
+			color_combinations.push(new Array(palette_color));
+			// Add the color combinations of 2 colors (as a list)
+			Object.keys(palette_rgb).forEach((palette_color2, index) => {
+				if (palette_color2 != palette_color) {
+					color_combinations.push(new Array(palette_color, palette_color2));
+					// Add the color combinations of 3 colors (as a list)
+					if (!avoid_3_color_combinations) {
+						Object.keys(palette_rgb).forEach((palette_color3, index) => {
+							if (palette_color3 != palette_color && palette_color3 != palette_color2) {
+								color_combinations.push(new Array(palette_color, palette_color2, palette_color3));
+							}
+						});
+					}
+				}
+			});
 		});
-		console.log(sprite_info_string);
+		// Sort the color combinations by length (ascending)
+		color_combinations.sort((a, b) => {
+			if (a.length > b.length) return 1;
+			if (a.length < b.length) return -1;
+			return 0;
+		});
+		// Create the table rows
+		color_combinations.forEach((color_combination, index) => {
+			// Create the table row
+			let sprites_info_table_row = $("<tr></tr>");
+			// Create the table row cells
+			let sprites_info_table_row_cell1 = $("<td></td>");
+			let sprites_info_table_row_cell2 = $("<td></td>");
+			let sprites_info_table_row_cell3 = $("<td></td>");
+			// Set the text of the first cell to the color combination
+			// sprites_info_table_row_cell1.text(color_combination.join(", "));
+			// Add N divs in the first cell, one for each color in the color combination
+			let colors_wrapper = $("<div></div>");
+			color_combination.forEach((color, index) => {
+				let color_div = $("<div></div>");
+				color_div.css("background-color", palette_hex[color][1]);
+				// color_div.css("width", "20px");
+				// color_div.css("height", "20px");
+				// color_div.css("display", "inline-block");
+				// color_div.css("margin-right", "5px");
+				colors_wrapper.append(color_div);
+			});
+			sprites_info_table_row_cell1.append(colors_wrapper);
+			// Set the text of the second and third cell to the number of sprites with that color combination
+			let hats_count = 0;
+			let hats_count_3_colors = 0;
+			let clothes_count = 0;
+			let clothes_count_3_colors = 0;
+			sprite_info_objects.forEach((sprite, index) => {
+				if (sprite.palette_colors_count == color_combination.length || (avoid_3_color_combinations && sprite.palette_colors_count == 3 && color_combination.length == 2)) {
+					let sprite_palette_colors = Object.keys(sprite.palette_colors);
+					let sprite_palette_colors_match = true;
+					color_combination.forEach((color, index) => {
+						if (!sprite_palette_colors.includes(color)) sprite_palette_colors_match = false;
+					});
+					if (sprite_palette_colors_match) {
+						if (sprite.type == "hats") {
+							hats_count += 1;
+							if (sprite.palette_colors_count == 3) hats_count_3_colors += 1;
+						}
+						if (sprite.type == "clothes") {
+							clothes_count += 1;
+							if (sprite.palette_colors_count == 3) clothes_count_3_colors += 1;
+						}
+					}
+				}
+			});
+			sprites_info_table_row_cell2.text(hats_count + " (" + hats_count_3_colors + ")");
+			sprites_info_table_row_cell3.text(clothes_count + " (" + clothes_count_3_colors + ")");
+			// Append the cells to the row
+			sprites_info_table_row.append(sprites_info_table_row_cell1);
+			sprites_info_table_row.append(sprites_info_table_row_cell2);
+			sprites_info_table_row.append(sprites_info_table_row_cell3);
+			// Append the row to the table body
+			sprites_info_table_body.append(sprites_info_table_row);
+		});
+		// Append the table body to the table
+		sprites_info_table.append(sprites_info_table_body);
 
+		// Append the table to the #sprites-info element
+		$("#sprites-info").append(sprites_info_table);
 
-		// Print infos about all the hats and their colors (print, for each hat and for each clothes, the number of sprites with 3, 2 and 1 palette colors)
-		let hats_colors_string = "";
-		let hats_colors = {
-			"3": 0,
-			"2": 0,
-			"1": 0,
-		};
-		sprite_info_objects.forEach((sprite, index) => {
-			if (sprite.type == "hats") {
-				hats_colors[sprite.palette_colors_count.toString()] += 1;
+		// Iterate over the cells of the table: if the text is "0", set the background color to black
+		$("#sprites-info-table td").each(function () {
+			if ($(this).text() == "0 (0)") {
+				$(this).css("background-color", "#00000030");
+				// $(this).css("color", "white");
 			}
 		});
-		hats_colors_string += "> Hats with 3 colors: " + hats_colors["3"] + "\n";
-		hats_colors_string += "> Hats with 2 colors: " + hats_colors["2"] + "\n";
-		hats_colors_string += "> Hats with 1 color: " + hats_colors["1"] + "\n";
-		console.log(hats_colors_string);
-
-		// Print infos about all the clothes and their colors (print, for each hat and for each clothes, the number of sprites with 3, 2 and 1 palette colors)
-		let clothes_colors_string = "";
-		let clothes_colors = {
-			"3": 0,
-			"2": 0,
-			"1": 0,
-		};
-		sprite_info_objects.forEach((sprite, index) => {
-			if (sprite.type == "clothes") {
-				clothes_colors[sprite.palette_colors_count.toString()] += 1;
-			}
-		});
-		clothes_colors_string += "> Clothes with 3 colors: " + clothes_colors["3"] + "\n";
-		clothes_colors_string += "> Clothes with 2 colors: " + clothes_colors["2"] + "\n";
-		clothes_colors_string += "> Clothes with 1 color: " + clothes_colors["1"] + "\n";
-		console.log(clothes_colors_string);
 
 
 	}
@@ -1081,7 +1221,7 @@ function print_hats_and_clothes_sprite_infos() {
 			// Stop the interval
 			clearInterval(check_sprite_infos_interval);
 		}
-	}, 250);
+	}, 500);
 
 }
 print_hats_and_clothes_sprite_infos();

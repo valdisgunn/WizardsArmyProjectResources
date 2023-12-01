@@ -1,0 +1,190 @@
+:root {
+	/* Main colors */
+	--c1: #ff0000;
+	--c2: #ff6600;
+	--c3: #ffcc00;
+	--c4: #00ff0c;
+	--c5: #00bbf1;
+	--c6: #1400d4;
+	--c7: #a018ff;
+	--c8: #df2cff;
+	--c9: #b65327;
+	--c10: #e5e5e5;
+	--c11: #4d4d4d;
+	/* Palette colors */
+	--black_1: #4d4d4d;
+	--black_2: #333333;
+	--black_3: #1a1a1a;
+	--gray_1: #999999;
+	--gray_2: #808080;
+	--gray_3: #666666;
+	--white_1: #e5e5e5;
+	--white_2: #cccccc;
+	--white_3: #b3b3b3;
+	--brown_1: #b65327;
+	--brown_2: #964420;
+	--brown_3: #703318;
+	--red_1: #ff4d3a;
+	--red_2: #ff0000;
+	--red_3: #ca0000;
+	--yellow_1: #ffe326;
+	--yellow_2: #ffcc00;
+	--yellow_3: #d2a800;
+	--green_1: #9cff5a;
+	--green_2: #00ff0c;
+	--green_3: #00ca0a;
+	--sky_blue_1: #47d6ff;
+	--sky_blue_2: #00bbf1;
+	--sky_blue_3: #009ecc;
+	--blue_1: #1400d4;
+	--blue_2: #1000aa;
+	--blue_3: #110079;
+	--purple_1: #a018ff;
+	--purple_2: #8200dd;
+	--purple_3: #6200a6;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: white;
+	font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+	background-color: #505050;
+}
+#page-content {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+:root {
+	--items-width: 220px;
+	--items-padding: 10px;
+	--items-margin: 8px;
+	--items-border-width: 3px;
+}
+.items-container {
+	width: 100%;
+	max-width: calc(var(--items-width) * 3 + var(--items-padding) *3 * 2 + var(--items-margin) * 3 * 2 + var(--items-border-width) * 3 * 2);
+	height: fit-content;
+	margin: 30px auto 0 auto;
+	position: relative;
+	display: inline-grid;
+	/* Wrap every 3 items */
+	grid-template-columns: repeat(3, 1fr);
+	/* Keep elements close together at center*/
+	justify-items: center;
+	align-items: center;
+}
+.items-container > .item {
+	width: var(--items-width);
+	height: fit-content;
+	margin: var(--items-margin);
+	padding: var(--items-padding);
+	border-radius: 10px;
+	background-color: var(--black_3);
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* Add a border (for rarity color) */
+	border-width: var(--items-border-width);
+	border-style: solid;
+	position: relative;
+	transition: transform 0.1s ease-out, filter 0.1s ease-out;
+}
+.items-container > .item:hover {
+	transform: scale(1.17);
+	z-index: 100;
+	filter: drop-shadow(0px 0px 10px #000000);
+	transition: transform 0.1s ease-in, filter 0.1s ease-in;
+}
+.items-container > .item > div {
+	margin: 2px 0;
+}
+.items-container > .item > .sprite {
+	width: 100%;
+	height: 100%;
+	background-color: 505050;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+.items-container > .item > .sprite > img {
+	width: 100%;
+	height: 100%;
+}
+.items-container > .item > .name {
+	width: calc(100% - 10px * 2);
+	font-size: 1em;
+	font-weight: bold;
+	/* text-align: left; */
+	margin-bottom: 5px;
+}
+.items-container > .item .element-types {
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.items-container > .item .element-types > .element-type {
+	width: 19px;
+	height: 19px;
+	margin-right: 5px;
+	/* padding: 1px 6px; */
+	border-radius: 3px;
+	font-weight: bold;
+	color: var(--black_3);
+	text-align: center;
+	line-height: 19px;
+}
+.items-container > .item .rarity-and-types-container {
+	display: inline-flex;
+	width: calc(100% - 15px * 2);
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	justify-items: space-around;
+}
+.items-container > .item .id-string {
+	font-size: 0.85em;
+	font-weight: bold;
+	color: #ffffff50;
+	position: absolute;
+	top: 15px;
+	/* left: 17px; */
+	font-family: monospace;
+	opacity: 0;
+	/* DELETE */
+	opacity: 1;
+}
+.items-container > .item:hover .id-string {
+	opacity: 1;
+}
+.items-container > .item .rarity {
+	font-size: 1em;
+	/* text-decoration: underline; */
+	/* Show content as uppercase */
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.items-container > .item > .stats-container {
+	width: calc(100% - 5px * 2);
+	display: inline-grid;
+	grid-template-columns: repeat(4, 1fr);
+	margin-top: 5px;
+	font-size: 0.95em;
+}
+.items-container > .item > .stats-container > div {
+	/* Container for stat name and stat value */
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	justify-items: space-between;
+	width: 100%;
+	margin-bottom: 2px;
+}

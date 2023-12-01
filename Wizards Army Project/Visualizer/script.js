@@ -41,9 +41,10 @@ const sprite_layers = [
 	"wizard-beard",
 	"wizard-hat",
 	"wizard-face",
-	"wizard-body",
+	"wizard-robe",
 	"wizard-hand",
 	"wizard-staff",
+
 ]
 const colors = [
 	"#ff0000",
@@ -63,7 +64,7 @@ const sprites_paths = get_list_of_sprites_names();
 const grouped_sprites = {
 
 	"wizard-hat": [],
-	"wizard-body": [],
+	"wizard-robe": [],
 	"wizard-staff": [],
 
 	"wizard-nose": [],
@@ -129,7 +130,7 @@ for (var key in grouped_sprites) {
 class CurrentSpritesNumbers {
 	constructor() {
 		this.hat = 0;
-		this.body = 0;
+		this.robe = 0;
 		this.staff = 0;
 		this.nose = 0;
 		this.beard = 0;
@@ -269,11 +270,11 @@ $(document).ready(function () {
 		$("#wizard-book-gem").css("visibility", "hidden");
 	}
 
-	// Append remaining sprites (hat, nose, beard, body, staff) empty at first
+	// Append remaining sprites (hat, nose, beard, robe, staff) empty at first
 	$("#wizard-container").append("<img id='wizard-hat' src='' />");
 	$("#wizard-container").append("<img id='wizard-nose' src='' />");
 	$("#wizard-container").append("<img id='wizard-beard' src='' />");
-	$("#wizard-container").append("<img id='wizard-body' src='' />");
+	$("#wizard-container").append("<img id='wizard-robe' src='' />");
 	$("#wizard-container").append("<img id='wizard-staff' src='' />");
 
 	reset_z_ordering();
@@ -310,9 +311,9 @@ $(document).ready(function () {
 	$("#random-wizard-hat-button").click(function () {
 		set_random_hat();
 	});
-	// Assign function to the "#random-wizard-body-button"
-	$("#random-wizard-body-button").click(function () {
-		set_random_body();
+	// Assign function to the "#random-wizard-robe-button"
+	$("#random-wizard-robe-button").click(function () {
+		set_random_robe();
 	});
 	// Assign function to the "#random-wizard-staff-button"
 	$("#random-wizard-staff-button").click(function () {
@@ -377,18 +378,21 @@ function get_sprites(sprite_name) {
 		case "wizard-hat":
 			// Get all sprites containing "hat"
 			for (var i = 0; i < sprites_paths.length; i++) {
+				if (sprites_paths[i].includes("default") || sprites_paths[i].includes("placeholder")) continue;
 				if (sprites_paths[i].includes("hat")) sprite_paths.push(sprites_paths[i]);
 			}
 			break;
-		case "wizard-body":
-			// Get all sprites containing "body"
+		case "wizard-robe":
+			// Get all sprites containing "robe"
 			for (var i = 0; i < sprites_paths.length; i++) {
-				if (sprites_paths[i].includes("body")) sprite_paths.push(sprites_paths[i]);
+				if (sprites_paths[i].includes("default") || sprites_paths[i].includes("placeholder")) continue;
+				if (sprites_paths[i].includes("robe")) sprite_paths.push(sprites_paths[i]);
 			}
 			break;
 		case "wizard-staff":
 			// Get all sprites containing "staff"
 			for (var i = 0; i < sprites_paths.length; i++) {
+				if (sprites_paths[i].includes("default") || sprites_paths[i].includes("placeholder")) continue;
 				if (sprites_paths[i].includes("staff")) sprite_paths.push(sprites_paths[i]);
 			}
 			break;
@@ -396,12 +400,14 @@ function get_sprites(sprite_name) {
 		case "wizard-nose":
 			// Get all sprites containing "nose"
 			for (var i = 0; i < sprites_paths.length; i++) {
+				if (sprites_paths[i].includes("default") || sprites_paths[i].includes("placeholder")) continue;
 				if (sprites_paths[i].includes("nose")) sprite_paths.push(sprites_paths[i]);
 			}
 			break;
 		case "wizard-beard":
 			// Get all sprites containing "beard"
 			for (var i = 0; i < sprites_paths.length; i++) {
+				if (sprites_paths[i].includes("default") || sprites_paths[i].includes("placeholder")) continue;
 				if (sprites_paths[i].includes("beard")) sprite_paths.push(sprites_paths[i]);
 			}
 			break;
@@ -558,7 +564,7 @@ function set_random_wizard_name() {
 }
 
 // Pass in the name of a sprite as indicated in the "sprite_layers" array
-// Names can be: "wizard-hat", "wizard-body", "wizard-staff" plus "wizard-nose" and "wizard-beard" if include_nose_and_beard is true
+// Names can be: "wizard-hat", "wizard-robe", "wizard-staff" plus "wizard-nose" and "wizard-beard" if include_nose_and_beard is true
 function get_random_sprite_number(sprite_name, force_number = -1) {
 	if (!sprite_name.includes("wizard-book")) {
 		var num_of_sprites = force_number;
@@ -644,8 +650,8 @@ function set_wizard_sprites(use_default = false, include_nose_and_beard = true) 
 	// Set the sprite for the hat
 	set_random_hat(use_default, false);
 
-	// Set the sprite for the body
-	set_random_body(use_default, false);
+	// Set the sprite for the robe
+	set_random_robe(use_default, false);
 
 	// Set the sprite for the staff
 	set_random_staff(use_default, false);
@@ -721,14 +727,14 @@ function set_random_hat(use_default = false, setting_single_sprite = true) {
 
 }
 
-// Set a ranodm sprite for the wizard body
-function set_random_body(use_default = false, setting_single_sprite = true) {
+// Set a ranodm sprite for the wizard robe
+function set_random_robe(use_default = false, setting_single_sprite = true) {
 
-	// Set the sprite for the body
-	let body_sprite_number = get_random_sprite_number("wizard-body", (use_default ? 0 : -1));
-	let body_sprite = get_sprite_path("wizard-body", body_sprite_number);
-	$("#wizard-body").attr("src", body_sprite);
-	current_sprites_numbers.body = body_sprite_number;
+	// Set the sprite for the robe
+	let robe_sprite_number = get_random_sprite_number("wizard-robe", (use_default ? 0 : -1));
+	let robe_sprite = get_sprite_path("wizard-robe", robe_sprite_number);
+	$("#wizard-robe").attr("src", robe_sprite);
+	current_sprites_numbers.robe = robe_sprite_number;
 
 	if (setting_single_sprite) {
 		reset_z_ordering();
@@ -760,8 +766,8 @@ function print_debug_info() {
 	stats_string += "> Unique wizards combinations:		" + (grouped_sprites["wizard-nose"].length * grouped_sprites["wizard-beard"].length).toString() + " wizards\n";
 	stats_string += "\n";
 	stats_string += "Total number of hats: 				" + get_num_of_sprites_of_type("wizard-hat") + " hats\n";
-	stats_string += "Total number of clothes/bodies: 	" + get_num_of_sprites_of_type("wizard-body") + " clothes/bodies\n";
-	stats_string += "> Unique clothes/hats combinations:	" + (get_num_of_sprites_of_type("wizard-hat") * get_num_of_sprites_of_type("wizard-body")).toString() + " combinations\n";
+	stats_string += "Total number of robes:				" + get_num_of_sprites_of_type("wizard-robe") + " robes\n";
+	stats_string += "> Unique hats/robes combinations:	" + (get_num_of_sprites_of_type("wizard-hat") * get_num_of_sprites_of_type("wizard-robe")).toString() + " combinations\n";
 	stats_string += "Total number of staffs: 			" + get_num_of_sprites_of_type("wizard-staff") + " staffs\n";
 	stats_string += "\n";
 
@@ -802,7 +808,7 @@ function print_debug_info() {
 		found_images_with_wrong_name.forEach((path, index) => {
 			stats_string += "  - " + path + "\n";
 		});
-		stats_string += "  > This might mean that some sprites which should be named 'hat' or 'body' or 'staff' are not named correctly.\n";
+		stats_string += "  > This might mean that some sprites which should be named 'hat' or 'robe' or 'staff' are not named correctly.\n";
 		alert("WARNING: Found some sprites with the word 'Layer' or 'Livello' in the name. Check the console for more info.");
 	} else {
 		stats_string += "OK: No sprites with the word 'Layer' or 'Livello' in the name found.\n";
@@ -812,14 +818,14 @@ function print_debug_info() {
 
 }
 
-function print_hats_and_clothes_sprite_infos() {
+function print_hats_and_robes_sprite_infos() {
 
-	// To fill in the pixel palette colors (which contains all the colors of the palette that will determin the "types" or "elements" of the wizard hat or color) we only add the palette color (type/element) if the number of pixels of that color (in the hat/clothes sprite) is x >= pixel_colors_min_count
-	let pixel_colors_min_count_for_hats = 1;	// Only sprites with a number of pixels GREATER OR EQUAL than this will have the associated color type/element added to the palette
-	let pixel_colors_min_count_for_clothes = 5;	// Only sprites with a number of pixels GREATER OR EQUAL than this will have the associated color type/element added to the palette
+	// To fill in the pixel palette colors (which contains all the colors of the palette that will determin the "types" or "elements" of the wizard hat or color) we only add the palette color (type/element) if the number of pixels of that color (in the hat/robes sprite) is x >= pixel_colors_min_count
+	let pixel_colors_min_count_for_hats = 2;	// Only sprites with a number of pixels GREATER OR EQUAL than this will have the associated color type/element added to the palette
+	let pixel_colors_min_count_for_robes = 5;	// Only sprites with a number of pixels GREATER OR EQUAL than this will have the associated color type/element added to the palette
 
-	// For each hat and body (clothes), create an object with the following properties:
-	// - sprite type ("hat" or "clothes")
+	// For each hat and robe (clothes), create an object with the following properties:
+	// - sprite type ("hat" or "robe")
 	// - sprite number (index of the sprite in the grouped_sprites object)
 	// - sprite path (path to the sprite)
 	// - sprite colors (list of all colors of all pixels in the sprite image, without duplicates, in format rgb(xxx,xxx,xxx))
@@ -849,12 +855,12 @@ function print_hats_and_clothes_sprite_infos() {
 		sprite_info_objects.push(sprite);
 	}
 
-	// For each body, create a sprite object and append it to the list of sprites
-	for (let i = 0; i < grouped_sprites["wizard-body"].length; i++) {
+	// For each robe, create a sprite object and append it to the list of sprites
+	for (let i = 0; i < grouped_sprites["wizard-robe"].length; i++) {
 		let sprite = {
-			"type": "clothes",
+			"type": "robes",
 			"number": i,
-			"path": get_full_sprite_path("wizard-body", i),
+			"path": get_full_sprite_path("wizard-robe", i),
 			"colors": {},
 			"palette_colors": {},
 			"colors_count": 0,
@@ -870,7 +876,7 @@ function print_hats_and_clothes_sprite_infos() {
 	canvas.height = default_sprite_size;
 	let ctx = canvas.getContext("2d", { willReadFrequently: true });
 
-	// Draw the face on top of the canvas (to avoid considering colors which are not shown when the face is drawn on top of the hat/clothes, hence colors which should not be considered for the hat/clothes types/elements)
+	// Draw the face on top of the canvas (to avoid considering colors which are not shown when the face is drawn on top of the hat/robes, hence colors which should not be considered for the hat/robe types/elements)
 	let face_sprite = grouped_sprites["wizard-other-sprites"][0];
 	let face_img = new Image();
 	face_img.src = face_sprite;
@@ -886,9 +892,9 @@ function print_hats_and_clothes_sprite_infos() {
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 			// Draw the image on the canvas
 			ctx.drawImage(img, 0, 0);
-			// Draw the face on top of the canvas if considering wizard clothes/body
-			//		NOTE: this is done to avoid considering colors which are not shown when the face is drawn on top of the hat/clothes, hence colors which should not be considered for the hat/clothes types/elements
-			if (sprite.type == "clothes") {
+			// Draw the face on top of the canvas if considering wizard robe
+			//		NOTE: this is done to avoid considering colors which are not shown when the face is drawn on top of the hat/robe, hence colors which should not be considered for the hat/robe types/elements
+			if (sprite.type == "robes") {
 				ctx.drawImage(face_img, 0, 0);
 			}
 			// Get the pixels of the image
@@ -940,7 +946,7 @@ function print_hats_and_clothes_sprite_infos() {
 	}
 
 	let palette_hex = {
-		"black": ["#1a1a1a", "#333333", "#1a1a1a"],
+		"black": ["#4d4d4d", "#333333", "#1a1a1a"],
 		"gray": ["#999999", "#808080", "#666666"],
 		"white": ["#e5e5e5", "#cccccc", "#b3b3b3"],
 		"brown": ["#b65327", "#964420", "#703318"],
@@ -986,7 +992,7 @@ function print_hats_and_clothes_sprite_infos() {
 			for (let i = 0; i < keys.length; i++) {
 				if (sprite.palette_colors[keys[i]] < pixel_colors_min_count_for_hats && sprite.type == "hats") {
 					delete sprite.palette_colors[keys[i]];
-				} else if (sprite.palette_colors[keys[i]] < pixel_colors_min_count_for_clothes && sprite.type == "clothes") {
+				} else if (sprite.palette_colors[keys[i]] < pixel_colors_min_count_for_robes && sprite.type == "robes") {
 					delete sprite.palette_colors[keys[i]];
 				}
 			}
@@ -1022,7 +1028,7 @@ function print_hats_and_clothes_sprite_infos() {
 			// Print the sprites list to the console
 			// console.log(sprite_info_objects);
 			let sprite_hats_info_string = "";
-			let sprite_clothes_info_string = "";
+			let sprite_robes_info_string = "";
 			sprite_info_objects.forEach((sprite, index) => {
 				let string_to_print = "";
 				string_to_print += "> " + sprite.type + " - " + sprite.number + " (" + sprite.path + ")";
@@ -1036,17 +1042,17 @@ function print_hats_and_clothes_sprite_infos() {
 
 				if (sprite.type == "hats") {
 					sprite_hats_info_string += string_to_print;
-				} else if (sprite.type == "clothes") {
-					sprite_clothes_info_string += string_to_print;
+				} else if (sprite.type == "robes") {
+					sprite_robes_info_string += string_to_print;
 				}
 
 			});
 
 			// Print the sprite infos to the console
 			console.log(sprite_hats_info_string);
-			console.log(sprite_clothes_info_string);
+			console.log(sprite_robes_info_string);
 
-			// Print infos about all the hats and their colors (print, for each hat and for each clothes, the number of sprites with 3, 2 and 1 palette colors)
+			// Print infos about all the hats and their colors (print, for each hat and for each robes, the number of sprites with 3, 2 and 1 palette colors)
 			let hats_colors_string = "";
 			let hats_colors = {
 				"3": 0,
@@ -1063,22 +1069,22 @@ function print_hats_and_clothes_sprite_infos() {
 			hats_colors_string += "> Hats with 1 color: " + hats_colors["1"] + "\n";
 			console.log(hats_colors_string);
 
-			// Print infos about all the clothes and their colors (print, for each hat and for each clothes, the number of sprites with 3, 2 and 1 palette colors)
-			let clothes_colors_string = "";
-			let clothes_colors = {
+			// Print infos about all the robes and their colors (print, for each hat and for each robes, the number of sprites with 3, 2 and 1 palette colors)
+			let robes_colors_string = "";
+			let robes_colors = {
 				"3": 0,
 				"2": 0,
 				"1": 0,
 			};
 			sprite_info_objects.forEach((sprite, index) => {
-				if (sprite.type == "clothes") {
-					clothes_colors[sprite.palette_colors_count.toString()] += 1;
+				if (sprite.type == "robes") {
+					robes_colors[sprite.palette_colors_count.toString()] += 1;
 				}
 			});
-			clothes_colors_string += "> Clothes with 3 colors: " + clothes_colors["3"] + "\n";
-			clothes_colors_string += "> Clothes with 2 colors: " + clothes_colors["2"] + "\n";
-			clothes_colors_string += "> Clothes with 1 color: " + clothes_colors["1"] + "\n";
-			console.log(clothes_colors_string);
+			robes_colors_string += "> Robes with 3 colors: " + robes_colors["3"] + "\n";
+			robes_colors_string += "> Robes with 2 colors: " + robes_colors["2"] + "\n";
+			robes_colors_string += "> Robes with 1 color: " + robes_colors["1"] + "\n";
+			console.log(robes_colors_string);
 		}
 		// Print additional sprites info in the console
 		print_sprites_info_in_console();
@@ -1086,7 +1092,7 @@ function print_hats_and_clothes_sprite_infos() {
 		// Populate the #sprites-info object, creating a table with:
 		// -in the first clumn, the sprite color combinations, 
 		// - in the second column the number of hat sprites with that color combination, 
-		// - in the third column the number of clothes sprites with that color combination
+		// - in the third column the number of robes sprites with that color combination
 		// Treat 3 colors as if they were 2 (to avoid having 10x9x8=720 color combinations for 3 colors and therefore having to create 720 clothes with that color combination...)
 		let avoid_3_color_combinations = true;
 		// Create the table
@@ -1102,7 +1108,7 @@ function print_hats_and_clothes_sprite_infos() {
 		let sprites_info_table_header_cell2 = $("<td></td>");
 		sprites_info_table_header_cell2.text("Hats");
 		let sprites_info_table_header_cell3 = $("<td></td>");
-		sprites_info_table_header_cell3.text("Clothes");
+		sprites_info_table_header_cell3.text("Robes");
 		// Append the cells to the header
 		sprites_info_table_header.append(sprites_info_table_header_cell1);
 		sprites_info_table_header.append(sprites_info_table_header_cell2);
@@ -1192,8 +1198,8 @@ function print_hats_and_clothes_sprite_infos() {
 			// Set the text of the second and third cell to the number of sprites with that color combination
 			let hats_count = 0;
 			let hats_count_3_colors = 0;
-			let clothes_count = 0;
-			let clothes_count_3_colors = 0;
+			let robes_count = 0;
+			let robes_count_3_colors = 0;
 			sprite_info_objects.forEach((sprite, index) => {
 				if (sprite.palette_colors_count == color_combination.length || (avoid_3_color_combinations && sprite.palette_colors_count == 3 && color_combination.length == 2)) {
 					let sprite_palette_colors = Object.keys(sprite.palette_colors);
@@ -1206,15 +1212,15 @@ function print_hats_and_clothes_sprite_infos() {
 							hats_count += 1;
 							if (sprite.palette_colors_count == 3) hats_count_3_colors += 1;
 						}
-						if (sprite.type == "clothes") {
-							clothes_count += 1;
-							if (sprite.palette_colors_count == 3) clothes_count_3_colors += 1;
+						if (sprite.type == "robes") {
+							robes_count += 1;
+							if (sprite.palette_colors_count == 3) robes_count_3_colors += 1;
 						}
 					}
 				}
 			});
 			sprites_info_table_row_cell2.text(hats_count + " (" + hats_count_3_colors + ")");
-			sprites_info_table_row_cell3.text(clothes_count + " (" + clothes_count_3_colors + ")");
+			sprites_info_table_row_cell3.text(robes_count + " (" + robes_count_3_colors + ")");
 			// Append the cells to the row
 			sprites_info_table_row.append(sprites_info_table_row_cell1);
 			sprites_info_table_row.append(sprites_info_table_row_cell2);
@@ -1257,6 +1263,6 @@ function print_hats_and_clothes_sprite_infos() {
 	}, 500);
 
 }
-print_hats_and_clothes_sprite_infos();
+print_hats_and_robes_sprite_infos();
 
 print_debug_info();

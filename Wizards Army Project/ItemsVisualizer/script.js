@@ -143,7 +143,7 @@ function populate_clothing_items() {
 		"weightIncrement": "WGT",
 	};
 
-	// Create a div contianing general information about the items
+	// Create a div containing general information about the items
 	var generalInfoDiv = document.createElement("div");
 	generalInfoDiv.id = "general-info";
 

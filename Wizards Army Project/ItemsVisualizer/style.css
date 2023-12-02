@@ -212,10 +212,11 @@ body {
 	max-width: calc(var(--items-width) * 3 + var(--items-padding) *3 * 2 + var(--items-margin) * 3 * 2 + var(--items-border-width) * 3 * 2);
 	color: var(--black_3);
 	font-size: 1.1em;
-	font-weight: bold;
+	/* font-weight: bold; */
 	margin-top: 30px;
 	display: inline-flex;
 	flex-direction: row;
 	justify-content: space-around;
 	text-align: left;
+	line-height: 1.05em;
 }

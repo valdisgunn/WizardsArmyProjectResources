@@ -155,14 +155,14 @@ function populate_clothing_items() {
 
 	// Create a div for the number of items
 	let numOfHatsDiv = document.createElement("div");
-	numOfHatsDiv.className = "hats";
+	numOfHatsDiv.style.lineHeight = "1.3em";
 	let totalNumOfHats = CLOTHING_ITEMS.filter(item => item.clothing_type == "hat").length;
-	numOfHatsDiv.innerHTML = "Number of <u>HATS</u>: " + totalNumOfHats;
+	numOfHatsDiv.innerHTML = "<b>Number of <u>HATS</u></b>:<br/>> <b>" + totalNumOfHats + "</b> (" + (totalNumOfHats / 3) + " groups)";
 	hatsDiv.appendChild(numOfHatsDiv);
 	let numOfRobesDiv = document.createElement("div");
-	numOfRobesDiv.className = "robes";
+	numOfRobesDiv.style.lineHeight = "1.3em";
 	let totalNumOfRobes = CLOTHING_ITEMS.filter(item => item.clothing_type == "robe").length;
-	numOfRobesDiv.innerHTML = "Number of <u>ROBES</u>: " + totalNumOfRobes;
+	numOfRobesDiv.innerHTML = "<b>Number of <u>ROBES</u></b>:<br/>> <b>" + totalNumOfRobes + "</b> (" + (totalNumOfRobes / 3) + " groups)";
 	robesDiv.appendChild(numOfRobesDiv);
 
 	// Calculate number of hats and clohes with certain rarities

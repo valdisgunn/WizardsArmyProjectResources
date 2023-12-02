@@ -1,8 +1,8 @@
 [
     {
         "clothing_type": "hat",
-        "name": "Granite Hat of Mystery",
-        "sprite": "hat-93.png",
+        "name": "Granite Hat of Sensitivity",
+        "sprite": "hat-99.png",
         "id_string": "HAT-T1-G001-N01",
         "element_type": [
             "Rock"
@@ -17,16 +17,16 @@
         ],
         "healthPointsIncrement": 90,
         "powerBoost": -75,
-        "skillBoost": 60,
+        "skillBoost": 0,
         "reachBoost": -45,
-        "energyBoost": 0,
+        "energyBoost": 60,
         "luckBoost": 95,
         "weightIncrement": 70
     },
     {
         "clothing_type": "hat",
-        "name": "Luminous Hat of Mystery",
-        "sprite": "hat-92.png",
+        "name": "Luminous Hat of Sensitivity",
+        "sprite": "hat-98.png",
         "id_string": "HAT-T1-G001-N02",
         "element_type": [
             "Light"
@@ -41,16 +41,16 @@
         ],
         "healthPointsIncrement": 85,
         "powerBoost": 25,
-        "skillBoost": 15,
+        "skillBoost": -35,
         "reachBoost": -60,
-        "energyBoost": -35,
+        "energyBoost": 15,
         "luckBoost": 60,
         "weightIncrement": 40
     },
     {
         "clothing_type": "hat",
-        "name": "Shadowed Hat of Mystery",
-        "sprite": "hat-91.png",
+        "name": "Shadowed Hat of Sensitivity",
+        "sprite": "hat-97.png",
         "id_string": "HAT-T1-G001-N03",
         "element_type": [
             "Darkness"
@@ -64,17 +64,17 @@
             3
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": 65,
-        "skillBoost": 35,
+        "powerBoost": 35,
+        "skillBoost": 0,
         "reachBoost": 20,
-        "energyBoost": 0,
+        "energyBoost": 65,
         "luckBoost": 15,
         "weightIncrement": 60
     },
     {
         "clothing_type": "hat",
-        "name": "Oceanic Hat of the Arcane",
-        "sprite": "hat-90.png",
+        "name": "Oceanic Hat of Sincerity",
+        "sprite": "hat-96.png",
         "id_string": "HAT-T1-G002-N01",
         "element_type": [
             "Water"
@@ -88,17 +88,17 @@
             2
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": 15,
-        "skillBoost": -45,
-        "reachBoost": 45,
-        "energyBoost": 20,
-        "luckBoost": -75,
+        "powerBoost": -45,
+        "skillBoost": -75,
+        "reachBoost": 20,
+        "energyBoost": 15,
+        "luckBoost": 45,
         "weightIncrement": 55
     },
     {
         "clothing_type": "hat",
-        "name": "Grimshade Hat of the Arcane",
-        "sprite": "hat-89.png",
+        "name": "Grimshade Hat of Sincerity",
+        "sprite": "hat-95.png",
         "id_string": "HAT-T1-G002-N02",
         "element_type": [
             "Poison"
@@ -112,17 +112,17 @@
             2
         ],
         "healthPointsIncrement": 70,
-        "powerBoost": 25,
-        "skillBoost": -35,
+        "powerBoost": -35,
+        "skillBoost": -60,
         "reachBoost": 15,
         "energyBoost": 60,
-        "luckBoost": -60,
+        "luckBoost": 25,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
-        "name": "Scarlet Hat of the Arcane",
-        "sprite": "hat-88.png",
+        "name": "Scarlet Hat of Sincerity",
+        "sprite": "hat-94.png",
         "id_string": "HAT-T1-G002-N03",
         "element_type": [
             "Fire"
@@ -145,8 +145,8 @@
     },
     {
         "clothing_type": "hat",
-        "name": "Fernwhisper Hat of the Mind",
-        "sprite": "hat-87.png",
+        "name": "Fernwhisper Hat of Diplomacy",
+        "sprite": "hat-93.png",
         "id_string": "HAT-T1-G003-N01",
         "element_type": [
             "Nature"
@@ -160,17 +160,17 @@
             2
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": -75,
+        "powerBoost": 0,
         "skillBoost": 0,
-        "reachBoost": 0,
-        "energyBoost": -45,
-        "luckBoost": 75,
+        "reachBoost": -75,
+        "energyBoost": 75,
+        "luckBoost": -45,
         "weightIncrement": 50
     },
     {
         "clothing_type": "hat",
-        "name": "Jolt Hat of the Mind",
-        "sprite": "hat-86.png",
+        "name": "Jolt Hat of Diplomacy",
+        "sprite": "hat-92.png",
         "id_string": "HAT-T1-G003-N02",
         "element_type": [
             "Thunder"
@@ -184,17 +184,17 @@
             2
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": -60,
+        "powerBoost": 75,
         "skillBoost": 0,
         "reachBoost": -35,
-        "energyBoost": 75,
-        "luckBoost": 125,
+        "energyBoost": 125,
+        "luckBoost": -60,
         "weightIncrement": 75
     },
     {
         "clothing_type": "hat",
-        "name": "Cobblestone Hat of the Mind",
-        "sprite": "hat-85.png",
+        "name": "Cobblestone Hat of Diplomacy",
+        "sprite": "hat-91.png",
         "id_string": "HAT-T1-G003-N03",
         "element_type": [
             "Rock"
@@ -208,17 +208,17 @@
             2
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": -75,
+        "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": 0,
-        "luckBoost": 0,
+        "luckBoost": -75,
         "weightIncrement": 75
     },
     {
         "clothing_type": "hat",
-        "name": "Terra Sun-Hat of Elegance",
-        "sprite": "hat-84.png",
+        "name": "Terra Sun-Hat of Creativity",
+        "sprite": "hat-90.png",
         "id_string": "HAT-T1-G004-N01",
         "element_type": [
             "Earth"
@@ -232,17 +232,17 @@
             -1
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": 95,
-        "skillBoost": 0,
-        "reachBoost": 60,
-        "energyBoost": -45,
-        "luckBoost": -75,
+        "powerBoost": 60,
+        "skillBoost": -45,
+        "reachBoost": -75,
+        "energyBoost": 95,
+        "luckBoost": 0,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
-        "name": "Nature's Sun-Hat of Elegance",
-        "sprite": "hat-83.png",
+        "name": "Nature's Sun-Hat of Creativity",
+        "sprite": "hat-89.png",
         "id_string": "HAT-T1-G004-N02",
         "element_type": [
             "Nature"
@@ -256,8 +256,8 @@
             -1
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": -25,
-        "skillBoost": 35,
+        "powerBoost": 35,
+        "skillBoost": -25,
         "reachBoost": 75,
         "energyBoost": 20,
         "luckBoost": -40,
@@ -265,8 +265,8 @@
     },
     {
         "clothing_type": "hat",
-        "name": "Airborne Sun-Hat of Elegance",
-        "sprite": "hat-82.png",
+        "name": "Airborne Sun-Hat of Creativity",
+        "sprite": "hat-88.png",
         "id_string": "HAT-T1-G004-N03",
         "element_type": [
             "Air"
@@ -289,8 +289,8 @@
     },
     {
         "clothing_type": "hat",
-        "name": "Voltweaver's Hat of Wisdom",
-        "sprite": "hat-81.png",
+        "name": "Voltweaver's Hat of Silence",
+        "sprite": "hat-87.png",
         "id_string": "HAT-T1-G005-N01",
         "element_type": [
             "Thunder"
@@ -304,17 +304,17 @@
             2
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": 45,
+        "powerBoost": -75,
         "skillBoost": -45,
-        "reachBoost": 20,
-        "energyBoost": -75,
+        "reachBoost": 45,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 80
     },
     {
         "clothing_type": "hat",
-        "name": "Alabaster Hat of Wisdom",
-        "sprite": "hat-80.png",
+        "name": "Alabaster Hat of Silence",
+        "sprite": "hat-86.png",
         "id_string": "HAT-T1-G005-N02",
         "element_type": [
             "Light"
@@ -328,17 +328,17 @@
             2
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": 35,
+        "powerBoost": -25,
         "skillBoost": -40,
-        "reachBoost": 20,
-        "energyBoost": -25,
+        "reachBoost": 35,
+        "energyBoost": 20,
         "luckBoost": 75,
         "weightIncrement": 50
     },
     {
         "clothing_type": "hat",
-        "name": "Mariner's Hat of Wisdom",
-        "sprite": "hat-79.png",
+        "name": "Mariner's Hat of Silence",
+        "sprite": "hat-85.png",
         "id_string": "HAT-T1-G005-N03",
         "element_type": [
             "Water"
@@ -352,17 +352,17 @@
             2
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": 0,
+        "powerBoost": -75,
         "skillBoost": 0,
-        "reachBoost": 65,
-        "energyBoost": -75,
+        "reachBoost": 0,
+        "energyBoost": 65,
         "luckBoost": 40,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
-        "name": "Virulent Hat of Prowess",
-        "sprite": "hat-78.png",
+        "name": "Virulent Hat of Sorcery",
+        "sprite": "hat-84.png",
         "id_string": "HAT-T1-G006-N01",
         "element_type": [
             "Poison"
@@ -376,17 +376,17 @@
             -4
         ],
         "healthPointsIncrement": 110,
-        "powerBoost": -45,
+        "powerBoost": 75,
         "skillBoost": 0,
-        "reachBoost": 125,
-        "energyBoost": 0,
-        "luckBoost": 75,
+        "reachBoost": 0,
+        "energyBoost": -45,
+        "luckBoost": 125,
         "weightIncrement": 80
     },
     {
         "clothing_type": "hat",
-        "name": "Emberheart Hat of Prowess",
-        "sprite": "hat-77.png",
+        "name": "Emberheart Hat of Sorcery",
+        "sprite": "hat-83.png",
         "id_string": "HAT-T1-G006-N02",
         "element_type": [
             "Fire"
@@ -400,17 +400,17 @@
             -4
         ],
         "healthPointsIncrement": 130,
-        "powerBoost": -40,
-        "skillBoost": 75,
+        "powerBoost": 75,
+        "skillBoost": -40,
         "reachBoost": 35,
-        "energyBoost": -25,
-        "luckBoost": 20,
+        "energyBoost": 20,
+        "luckBoost": -25,
         "weightIncrement": 60
     },
     {
         "clothing_type": "hat",
-        "name": "Umberstone Hat of Prowess",
-        "sprite": "hat-76.png",
+        "name": "Umberstone Hat of Sorcery",
+        "sprite": "hat-82.png",
         "id_string": "HAT-T1-G006-N03",
         "element_type": [
             "Earth"
@@ -424,17 +424,17 @@
             -4
         ],
         "healthPointsIncrement": 155,
-        "powerBoost": 75,
+        "powerBoost": 40,
         "skillBoost": 15,
-        "reachBoost": 0,
-        "energyBoost": 40,
-        "luckBoost": 25,
+        "reachBoost": 75,
+        "energyBoost": 25,
+        "luckBoost": 0,
         "weightIncrement": 70
     },
     {
         "clothing_type": "hat",
-        "name": "Ruby Pointy-Hat of Knowledge",
-        "sprite": "hat-75.png",
+        "name": "Ruby Pointy-Hat of Elegance",
+        "sprite": "hat-81.png",
         "id_string": "HAT-T1-G007-N01",
         "element_type": [
             "Fire"
@@ -448,17 +448,17 @@
             6
         ],
         "healthPointsIncrement": 120,
-        "powerBoost": 60,
-        "skillBoost": 95,
+        "powerBoost": -75,
+        "skillBoost": 60,
         "reachBoost": 0,
-        "energyBoost": -75,
+        "energyBoost": 95,
         "luckBoost": -45,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
-        "name": "Electric Pointy-Hat of Knowledge",
-        "sprite": "hat-74.png",
+        "name": "Electric Pointy-Hat of Elegance",
+        "sprite": "hat-80.png",
         "id_string": "HAT-T1-G007-N02",
         "element_type": [
             "Thunder"
@@ -472,17 +472,17 @@
             6
         ],
         "healthPointsIncrement": 155,
-        "powerBoost": -15,
+        "powerBoost": 75,
         "skillBoost": 15,
-        "reachBoost": 75,
+        "reachBoost": -15,
         "energyBoost": 40,
         "luckBoost": 25,
         "weightIncrement": 85
     },
     {
         "clothing_type": "hat",
-        "name": "Aerial Pointy-Hat of Knowledge",
-        "sprite": "hat-73.png",
+        "name": "Aerial Pointy-Hat of Elegance",
+        "sprite": "hat-79.png",
         "id_string": "HAT-T1-G007-N03",
         "element_type": [
             "Air"
@@ -496,17 +496,17 @@
             6
         ],
         "healthPointsIncrement": 120,
-        "powerBoost": 50,
-        "skillBoost": 0,
+        "powerBoost": -75,
+        "skillBoost": 50,
         "reachBoost": 0,
-        "energyBoost": -75,
+        "energyBoost": 0,
         "luckBoost": 0,
         "weightIncrement": 55
     },
     {
         "clothing_type": "hat",
-        "name": "Arboreal Hood of Whispers",
-        "sprite": "hat-72.png",
+        "name": "Arboreal Hood of Sincerity",
+        "sprite": "hat-78.png",
         "id_string": "HAT-T1-G008-N01",
         "element_type": [
             "Earth"
@@ -521,16 +521,16 @@
         ],
         "healthPointsIncrement": 155,
         "powerBoost": 25,
-        "skillBoost": -45,
+        "skillBoost": 10,
         "reachBoost": 50,
         "energyBoost": 15,
-        "luckBoost": 10,
+        "luckBoost": -45,
         "weightIncrement": 75
     },
     {
         "clothing_type": "hat",
-        "name": "Sylvan Hood of Whispers",
-        "sprite": "hat-71.png",
+        "name": "Sylvan Hood of Sincerity",
+        "sprite": "hat-77.png",
         "id_string": "HAT-T1-G008-N02",
         "element_type": [
             "Nature"
@@ -545,16 +545,16 @@
         ],
         "healthPointsIncrement": 175,
         "powerBoost": 75,
-        "skillBoost": -25,
+        "skillBoost": 35,
         "reachBoost": -40,
         "energyBoost": 20,
-        "luckBoost": 35,
+        "luckBoost": -25,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
-        "name": "Enigmatic Hood of Whispers",
-        "sprite": "hat-70.png",
+        "name": "Enigmatic Hood of Sincerity",
+        "sprite": "hat-76.png",
         "id_string": "HAT-T1-G008-N03",
         "element_type": [
             "Darkness"
@@ -568,17 +568,17 @@
             2
         ],
         "healthPointsIncrement": 130,
-        "powerBoost": 40,
-        "skillBoost": 0,
-        "reachBoost": -75,
-        "energyBoost": 0,
+        "powerBoost": 0,
+        "skillBoost": 40,
+        "reachBoost": 0,
+        "energyBoost": -75,
         "luckBoost": 65,
         "weightIncrement": 80
     },
     {
         "clothing_type": "hat",
-        "name": "Obsidian Hat of Echoes",
-        "sprite": "hat-69.png",
+        "name": "Obsidian Hat of Imagination",
+        "sprite": "hat-75.png",
         "id_string": "HAT-T1-G009-N01",
         "element_type": [
             "Darkness"
@@ -592,17 +592,17 @@
             0
         ],
         "healthPointsIncrement": 160,
-        "powerBoost": 0,
-        "skillBoost": 75,
-        "reachBoost": 125,
-        "energyBoost": 0,
+        "powerBoost": 125,
+        "skillBoost": 0,
+        "reachBoost": 0,
+        "energyBoost": 75,
         "luckBoost": -45,
         "weightIncrement": 85
     },
     {
         "clothing_type": "hat",
-        "name": "Gneiss Hat of Echoes",
-        "sprite": "hat-68.png",
+        "name": "Gneiss Hat of Imagination",
+        "sprite": "hat-74.png",
         "id_string": "HAT-T1-G009-N02",
         "element_type": [
             "Rock"
@@ -616,8 +616,8 @@
             0
         ],
         "healthPointsIncrement": 200,
-        "powerBoost": -15,
-        "skillBoost": 75,
+        "powerBoost": 75,
+        "skillBoost": -15,
         "reachBoost": 15,
         "energyBoost": 40,
         "luckBoost": 25,
@@ -625,8 +625,8 @@
     },
     {
         "clothing_type": "hat",
-        "name": "Crystal Hat of Echoes",
-        "sprite": "hat-67.png",
+        "name": "Crystal Hat of Imagination",
+        "sprite": "hat-73.png",
         "id_string": "HAT-T1-G009-N03",
         "element_type": [
             "Light"
@@ -641,16 +641,16 @@
         ],
         "healthPointsIncrement": 145,
         "powerBoost": 0,
-        "skillBoost": 0,
+        "skillBoost": -75,
         "reachBoost": 0,
         "energyBoost": 0,
-        "luckBoost": -75,
+        "luckBoost": 0,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
-        "name": "Purple Beanie of Beyond",
-        "sprite": "hat-66.png",
+        "name": "Purple Beanie of Discernment",
+        "sprite": "hat-72.png",
         "id_string": "HAT-T1-G010-N01",
         "element_type": [
             "Poison"
@@ -665,16 +665,16 @@
         ],
         "healthPointsIncrement": 140,
         "powerBoost": 0,
-        "skillBoost": -45,
-        "reachBoost": 95,
+        "skillBoost": -75,
+        "reachBoost": -45,
         "energyBoost": 60,
-        "luckBoost": -75,
+        "luckBoost": 95,
         "weightIncrement": 90
     },
     {
         "clothing_type": "hat",
-        "name": "Torrential Beanie of Beyond",
-        "sprite": "hat-65.png",
+        "name": "Torrential Beanie of Discernment",
+        "sprite": "hat-71.png",
         "id_string": "HAT-T1-G010-N02",
         "element_type": [
             "Water"
@@ -689,16 +689,16 @@
         ],
         "healthPointsIncrement": 170,
         "powerBoost": -35,
-        "skillBoost": 60,
+        "skillBoost": -60,
         "reachBoost": 25,
         "energyBoost": 15,
-        "luckBoost": -60,
+        "luckBoost": 60,
         "weightIncrement": 80
     },
     {
         "clothing_type": "hat",
-        "name": "Gustborne Beanie of Beyond",
-        "sprite": "hat-64.png",
+        "name": "Gustborne Beanie of Discernment",
+        "sprite": "hat-70.png",
         "id_string": "HAT-T1-G010-N03",
         "element_type": [
             "Air"
@@ -721,8 +721,8 @@
     },
     {
         "clothing_type": "hat",
-        "name": "Infernal Coif of Secrets",
-        "sprite": "hat-63.png",
+        "name": "Infernal Coif of Punctuality",
+        "sprite": "hat-69.png",
         "id_string": "HAT-T1-G011-N01",
         "element_type": [
             "Fire"
@@ -736,17 +736,17 @@
             1
         ],
         "healthPointsIncrement": 55,
-        "powerBoost": -75,
-        "skillBoost": 45,
-        "reachBoost": -45,
+        "powerBoost": 45,
+        "skillBoost": -45,
+        "reachBoost": -75,
         "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 45
     },
     {
         "clothing_type": "hat",
-        "name": "Verdant Coif of Secrets",
-        "sprite": "hat-62.png",
+        "name": "Verdant Coif of Punctuality",
+        "sprite": "hat-68.png",
         "id_string": "HAT-T1-G011-N02",
         "element_type": [
             "Nature"
@@ -760,8 +760,8 @@
             1
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": -35,
-        "skillBoost": 60,
+        "powerBoost": 60,
+        "skillBoost": -35,
         "reachBoost": -60,
         "energyBoost": 15,
         "luckBoost": 25,
@@ -769,8 +769,8 @@
     },
     {
         "clothing_type": "hat",
-        "name": "Electric Coif of Secrets",
-        "sprite": "hat-61.png",
+        "name": "Electric Coif of Punctuality",
+        "sprite": "hat-67.png",
         "id_string": "HAT-T1-G011-N03",
         "element_type": [
             "Thunder"
@@ -793,8 +793,8 @@
     },
     {
         "clothing_type": "hat",
-        "name": "Enigmatic Top-Hat of the Enigma",
-        "sprite": "hat-60.png",
+        "name": "Enigmatic Top-Hat of Cooperation",
+        "sprite": "hat-66.png",
         "id_string": "HAT-T2-G001-N01",
         "element_type": [
             "Darkness",
@@ -810,17 +810,17 @@
             5
         ],
         "healthPointsIncrement": 60,
-        "powerBoost": -45,
-        "skillBoost": 60,
+        "powerBoost": -75,
+        "skillBoost": -45,
         "reachBoost": 0,
-        "energyBoost": -75,
+        "energyBoost": 60,
         "luckBoost": 95,
         "weightIncrement": 60
     },
     {
         "clothing_type": "hat",
-        "name": "Sylvan Top-Hat of the Enigma",
-        "sprite": "hat-59.png",
+        "name": "Sylvan Top-Hat of Cooperation",
+        "sprite": "hat-65.png",
         "id_string": "HAT-T2-G001-N02",
         "element_type": [
             "Nature",
@@ -836,17 +836,17 @@
             5
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": -35,
-        "skillBoost": -60,
-        "reachBoost": 60,
+        "powerBoost": 60,
+        "skillBoost": -35,
+        "reachBoost": -60,
         "energyBoost": 25,
         "luckBoost": 15,
         "weightIncrement": 45
     },
     {
         "clothing_type": "hat",
-        "name": "Ethereal Top-Hat of the Enigma",
-        "sprite": "hat-58.png",
+        "name": "Ethereal Top-Hat of Cooperation",
+        "sprite": "hat-64.png",
         "id_string": "HAT-T2-G001-N03",
         "element_type": [
             "Light",
@@ -871,8 +871,8 @@
     },
     {
         "clothing_type": "hat",
-        "name": "Sienna Sheriff-Hat of the Unknown",
-        "sprite": "hat-57.png",
+        "name": "Sienna Cowboy-Hat of Efficiency",
+        "sprite": "hat-63.png",
         "id_string": "HAT-T2-G002-N01",
         "element_type": [
             "Earth",
@@ -888,17 +888,17 @@
             4
         ],
         "healthPointsIncrement": 85,
-        "powerBoost": 45,
-        "skillBoost": -45,
-        "reachBoost": 20,
-        "energyBoost": 15,
-        "luckBoost": -75,
+        "powerBoost": -45,
+        "skillBoost": 15,
+        "reachBoost": -75,
+        "energyBoost": 45,
+        "luckBoost": 20,
         "weightIncrement": 60
     },
     {
         "clothing_type": "hat",
-        "name": "Shockwave Sheriff-Hat of the Unknown",
-        "sprite": "hat-56.png",
+        "name": "Shockwave Cowboy-Hat of Efficiency",
+        "sprite": "hat-62.png",
         "id_string": "HAT-T2-G002-N02",
         "element_type": [
             "Thunder",
@@ -914,17 +914,17 @@
             4
         ],
         "healthPointsIncrement": 85,
-        "powerBoost": 60,
-        "skillBoost": -35,
-        "reachBoost": 15,
-        "energyBoost": 25,
-        "luckBoost": -60,
+        "powerBoost": -60,
+        "skillBoost": 25,
+        "reachBoost": -35,
+        "energyBoost": 60,
+        "luckBoost": 15,
         "weightIncrement": 70
     },
     {
         "clothing_type": "hat",
-        "name": "Obsidian Sheriff-Hat of the Unknown",
-        "sprite": "hat-55.png",
+        "name": "Obsidian Cowboy-Hat of Efficiency",
+        "sprite": "hat-61.png",
         "id_string": "HAT-T2-G002-N03",
         "element_type": [
             "Darkness",
@@ -949,8 +949,8 @@
     },
     {
         "clothing_type": "hat",
-        "name": "Clayborne Homburg-Hat of Silence",
-        "sprite": "hat-54.png",
+        "name": "Clayborne Homburg-Hat of Rationality",
+        "sprite": "hat-60.png",
         "id_string": "HAT-T2-G003-N01",
         "element_type": [
             "Earth",
@@ -966,17 +966,17 @@
             5
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": 0,
-        "skillBoost": 75,
-        "reachBoost": 0,
-        "energyBoost": -45,
-        "luckBoost": -75,
+        "powerBoost": -45,
+        "skillBoost": 0,
+        "reachBoost": -75,
+        "energyBoost": 75,
+        "luckBoost": 0,
         "weightIncrement": 60
     },
     {
         "clothing_type": "hat",
-        "name": "Pristine Homburg-Hat of Silence",
-        "sprite": "hat-53.png",
+        "name": "Pristine Homburg-Hat of Rationality",
+        "sprite": "hat-59.png",
         "id_string": "HAT-T2-G003-N02",
         "element_type": [
             "Light",
@@ -992,17 +992,17 @@
             5
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": -60,
+        "powerBoost": 75,
         "skillBoost": -35,
         "reachBoost": 0,
         "energyBoost": 125,
-        "luckBoost": 75,
+        "luckBoost": -60,
         "weightIncrement": 45
     },
     {
         "clothing_type": "hat",
-        "name": "Stonebound Homburg-Hat of Silence",
-        "sprite": "hat-52.png",
+        "name": "Stonebound Homburg-Hat of Rationality",
+        "sprite": "hat-58.png",
         "id_string": "HAT-T2-G003-N03",
         "element_type": [
             "Rock",
@@ -1018,17 +1018,17 @@
             5
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": 0,
+        "powerBoost": -75,
         "skillBoost": 0,
         "reachBoost": 0,
-        "energyBoost": -75,
+        "energyBoost": 0,
         "luckBoost": 0,
         "weightIncrement": 75
     },
     {
         "clothing_type": "hat",
-        "name": "Venomous Night-Cap of Harmony",
-        "sprite": "hat-51.png",
+        "name": "Venomous Night-Cap of Diligence",
+        "sprite": "hat-57.png",
         "id_string": "HAT-T2-G004-N01",
         "element_type": [
             "Poison",
@@ -1044,8 +1044,8 @@
             -2
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": -45,
-        "skillBoost": 95,
+        "powerBoost": 95,
+        "skillBoost": -45,
         "reachBoost": 0,
         "energyBoost": 60,
         "luckBoost": -75,
@@ -1053,8 +1053,8 @@
     },
     {
         "clothing_type": "hat",
-        "name": "Aquaborn Night-Cap of Harmony",
-        "sprite": "hat-50.png",
+        "name": "Aquaborn Night-Cap of Diligence",
+        "sprite": "hat-56.png",
         "id_string": "HAT-T2-G004-N02",
         "element_type": [
             "Water",
@@ -1070,17 +1070,17 @@
             -2
         ],
         "healthPointsIncrement": 120,
-        "powerBoost": -25,
-        "skillBoost": 35,
-        "reachBoost": 20,
-        "energyBoost": -40,
-        "luckBoost": 75,
+        "powerBoost": 35,
+        "skillBoost": 75,
+        "reachBoost": -25,
+        "energyBoost": 20,
+        "luckBoost": -40,
         "weightIncrement": 60
     },
     {
         "clothing_type": "hat",
-        "name": "Shadowed Night-Cap of Harmony",
-        "sprite": "hat-49.png",
+        "name": "Shadowed Night-Cap of Diligence",
+        "sprite": "hat-55.png",
         "id_string": "HAT-T2-G004-N03",
         "element_type": [
             "Darkness",
@@ -1105,8 +1105,8 @@
     },
     {
         "clothing_type": "hat",
-        "name": "Scarlet Night-Cap of Enigma",
-        "sprite": "hat-48.png",
+        "name": "Scarlet Night-Cap of Unbound",
+        "sprite": "hat-54.png",
         "id_string": "HAT-T2-G005-N01",
         "element_type": [
             "Fire",
@@ -1122,17 +1122,17 @@
             2
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": 45,
-        "skillBoost": 20,
-        "reachBoost": -75,
-        "energyBoost": -45,
-        "luckBoost": 15,
+        "powerBoost": -75,
+        "skillBoost": -45,
+        "reachBoost": 45,
+        "energyBoost": 15,
+        "luckBoost": 20,
         "weightIncrement": 60
     },
     {
         "clothing_type": "hat",
-        "name": "Grimshade Night-Cap of Enigma",
-        "sprite": "hat-47.png",
+        "name": "Grimshade Night-Cap of Unbound",
+        "sprite": "hat-53.png",
         "id_string": "HAT-T2-G005-N02",
         "element_type": [
             "Poison",
@@ -1148,17 +1148,17 @@
             2
         ],
         "healthPointsIncrement": 110,
-        "powerBoost": 35,
-        "skillBoost": 20,
-        "reachBoost": -25,
-        "energyBoost": -40,
+        "powerBoost": -25,
+        "skillBoost": -40,
+        "reachBoost": 20,
+        "energyBoost": 35,
         "luckBoost": 75,
         "weightIncrement": 75
     },
     {
         "clothing_type": "hat",
-        "name": "Oceanic Night-Cap of Enigma",
-        "sprite": "hat-46.png",
+        "name": "Oceanic Night-Cap of Unbound",
+        "sprite": "hat-52.png",
         "id_string": "HAT-T2-G005-N03",
         "element_type": [
             "Water",
@@ -1175,16 +1175,16 @@
         ],
         "healthPointsIncrement": 90,
         "powerBoost": 0,
-        "skillBoost": 40,
-        "reachBoost": 65,
-        "energyBoost": -75,
-        "luckBoost": 0,
+        "skillBoost": 0,
+        "reachBoost": -75,
+        "energyBoost": 65,
+        "luckBoost": 40,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
-        "name": "Celestial Night-Cap of Reflection",
-        "sprite": "hat-45.png",
+        "name": "Celestial Night-Cap of Sagacity",
+        "sprite": "hat-51.png",
         "id_string": "HAT-T2-G006-N01",
         "element_type": [
             "Air",
@@ -1201,16 +1201,16 @@
         ],
         "healthPointsIncrement": 125,
         "powerBoost": 75,
-        "skillBoost": 125,
+        "skillBoost": 0,
         "reachBoost": -45,
         "energyBoost": 0,
-        "luckBoost": 0,
+        "luckBoost": 125,
         "weightIncrement": 50
     },
     {
         "clothing_type": "hat",
-        "name": "Fernwhisper Night-Cap of Reflection",
-        "sprite": "hat-44.png",
+        "name": "Fernwhisper Night-Cap of Sagacity",
+        "sprite": "hat-50.png",
         "id_string": "HAT-T2-G006-N02",
         "element_type": [
             "Nature",
@@ -1226,8 +1226,8 @@
             1
         ],
         "healthPointsIncrement": 155,
-        "powerBoost": 35,
-        "skillBoost": -25,
+        "powerBoost": -25,
+        "skillBoost": 35,
         "reachBoost": 75,
         "energyBoost": 20,
         "luckBoost": -40,
@@ -1235,8 +1235,8 @@
     },
     {
         "clothing_type": "hat",
-        "name": "Stygian Night-Cap of Reflection",
-        "sprite": "hat-43.png",
+        "name": "Stygian Night-Cap of Sagacity",
+        "sprite": "hat-49.png",
         "id_string": "HAT-T2-G006-N03",
         "element_type": [
             "Darkness",
@@ -1252,17 +1252,17 @@
             1
         ],
         "healthPointsIncrement": 150,
-        "powerBoost": 75,
-        "skillBoost": 40,
-        "reachBoost": 25,
-        "energyBoost": 0,
+        "powerBoost": 0,
+        "skillBoost": 75,
+        "reachBoost": 40,
+        "energyBoost": 25,
         "luckBoost": 15,
         "weightIncrement": 75
     },
     {
         "clothing_type": "hat",
-        "name": "Crystal Hat of Veil",
-        "sprite": "hat-42.png",
+        "name": "Crystal Hat of Stoicism",
+        "sprite": "hat-48.png",
         "id_string": "HAT-T2-G007-N01",
         "element_type": [
             "Water",
@@ -1278,17 +1278,17 @@
             3
         ],
         "healthPointsIncrement": 125,
-        "powerBoost": -45,
+        "powerBoost": 0,
         "skillBoost": 95,
-        "reachBoost": 60,
-        "energyBoost": -75,
-        "luckBoost": 0,
+        "reachBoost": -45,
+        "energyBoost": 60,
+        "luckBoost": -75,
         "weightIncrement": 70
     },
     {
         "clothing_type": "hat",
-        "name": "Incendiary Hat of Veil",
-        "sprite": "hat-41.png",
+        "name": "Incendiary Hat of Stoicism",
+        "sprite": "hat-47.png",
         "id_string": "HAT-T2-G007-N02",
         "element_type": [
             "Fire",
@@ -1304,17 +1304,17 @@
             3
         ],
         "healthPointsIncrement": 145,
-        "powerBoost": 75,
+        "powerBoost": -15,
         "skillBoost": 15,
-        "reachBoost": 40,
-        "energyBoost": 25,
-        "luckBoost": -15,
+        "reachBoost": 75,
+        "energyBoost": 40,
+        "luckBoost": 25,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
-        "name": "Terra Hat of Veil",
-        "sprite": "hat-40.png",
+        "name": "Terra Hat of Stoicism",
+        "sprite": "hat-46.png",
         "id_string": "HAT-T2-G007-N03",
         "element_type": [
             "Earth",
@@ -1331,16 +1331,16 @@
         ],
         "healthPointsIncrement": 130,
         "powerBoost": 0,
-        "skillBoost": 0,
-        "reachBoost": 50,
-        "energyBoost": -75,
+        "skillBoost": 50,
+        "reachBoost": -75,
+        "energyBoost": 0,
         "luckBoost": 0,
         "weightIncrement": 75
     },
     {
         "clothing_type": "hat",
-        "name": "Slate Pointy-Hat of Presence",
-        "sprite": "hat-39.png",
+        "name": "Slate Pointy-Hat of Gratitude",
+        "sprite": "hat-45.png",
         "id_string": "HAT-T2-G008-N01",
         "element_type": [
             "Rock",
@@ -1356,17 +1356,17 @@
             4
         ],
         "healthPointsIncrement": 175,
-        "powerBoost": 15,
+        "powerBoost": -45,
         "skillBoost": 50,
         "reachBoost": 25,
-        "energyBoost": -45,
+        "energyBoost": 15,
         "luckBoost": 10,
         "weightIncrement": 90
     },
     {
         "clothing_type": "hat",
-        "name": "Sylph's Pointy-Hat of Presence",
-        "sprite": "hat-38.png",
+        "name": "Sylph's Pointy-Hat of Gratitude",
+        "sprite": "hat-44.png",
         "id_string": "HAT-T2-G008-N02",
         "element_type": [
             "Air",
@@ -1382,17 +1382,17 @@
             4
         ],
         "healthPointsIncrement": 165,
-        "powerBoost": 20,
-        "skillBoost": -25,
+        "powerBoost": -25,
+        "skillBoost": 35,
         "reachBoost": 75,
-        "energyBoost": -40,
-        "luckBoost": 35,
+        "energyBoost": 20,
+        "luckBoost": -40,
         "weightIncrement": 55
     },
     {
         "clothing_type": "hat",
-        "name": "Voltweaver's Pointy-Hat of Presence",
-        "sprite": "hat-37.png",
+        "name": "Voltweaver's Pointy-Hat of Gratitude",
+        "sprite": "hat-43.png",
         "id_string": "HAT-T2-G008-N03",
         "element_type": [
             "Thunder",
@@ -1408,17 +1408,17 @@
             4
         ],
         "healthPointsIncrement": 140,
-        "powerBoost": 40,
-        "skillBoost": 0,
-        "reachBoost": -75,
-        "energyBoost": 65,
-        "luckBoost": 0,
+        "powerBoost": -75,
+        "skillBoost": 40,
+        "reachBoost": 0,
+        "energyBoost": 0,
+        "luckBoost": 65,
         "weightIncrement": 90
     },
     {
         "clothing_type": "hat",
-        "name": "Virulent Night-Cap of Grace",
-        "sprite": "hat-36.png",
+        "name": "Virulent Night-Cap of Liberality",
+        "sprite": "hat-42.png",
         "id_string": "HAT-T2-G009-N01",
         "element_type": [
             "Poison",
@@ -1435,16 +1435,16 @@
         ],
         "healthPointsIncrement": 135,
         "powerBoost": 75,
-        "skillBoost": 125,
-        "reachBoost": 0,
-        "energyBoost": 0,
-        "luckBoost": -45,
+        "skillBoost": 0,
+        "reachBoost": -45,
+        "energyBoost": 125,
+        "luckBoost": 0,
         "weightIncrement": 85
     },
     {
         "clothing_type": "hat",
-        "name": "Pearly Night-Cap of Grace",
-        "sprite": "hat-35.png",
+        "name": "Pearly Night-Cap of Liberality",
+        "sprite": "hat-41.png",
         "id_string": "HAT-T2-G009-N02",
         "element_type": [
             "Light",
@@ -1462,15 +1462,15 @@
         "healthPointsIncrement": 175,
         "powerBoost": 75,
         "skillBoost": 40,
-        "reachBoost": 25,
+        "reachBoost": -15,
         "energyBoost": 15,
-        "luckBoost": -15,
+        "luckBoost": 25,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
-        "name": "Golden Night-Cap of Grace",
-        "sprite": "hat-34.png",
+        "name": "Golden Night-Cap of Liberality",
+        "sprite": "hat-40.png",
         "id_string": "HAT-T2-G009-N03",
         "element_type": [
             "Thunder",
@@ -1488,15 +1488,15 @@
         "healthPointsIncrement": 135,
         "powerBoost": 0,
         "skillBoost": 0,
-        "reachBoost": -75,
-        "energyBoost": 0,
+        "reachBoost": 0,
+        "energyBoost": -75,
         "luckBoost": 0,
         "weightIncrement": 90
     },
     {
         "clothing_type": "hat",
-        "name": "Pebble Hat of the Edges",
-        "sprite": "hat-33.png",
+        "name": "Pebble Hat of Optimism",
+        "sprite": "hat-39.png",
         "id_string": "HAT-T2-G010-N01",
         "element_type": [
             "Rock",
@@ -1512,17 +1512,17 @@
             2
         ],
         "healthPointsIncrement": 190,
-        "powerBoost": 0,
-        "skillBoost": 60,
-        "reachBoost": -75,
-        "energyBoost": -45,
-        "luckBoost": 95,
+        "powerBoost": -45,
+        "skillBoost": -75,
+        "reachBoost": 0,
+        "energyBoost": 95,
+        "luckBoost": 60,
         "weightIncrement": 100
     },
     {
         "clothing_type": "hat",
-        "name": "Ebon Hat of the Edges",
-        "sprite": "hat-32.png",
+        "name": "Ebon Hat of Optimism",
+        "sprite": "hat-38.png",
         "id_string": "HAT-T2-G010-N02",
         "element_type": [
             "Darkness",
@@ -1538,17 +1538,17 @@
             2
         ],
         "healthPointsIncrement": 165,
-        "powerBoost": 60,
+        "powerBoost": -60,
         "skillBoost": 25,
         "reachBoost": -35,
-        "energyBoost": -60,
+        "energyBoost": 60,
         "luckBoost": 15,
         "weightIncrement": 85
     },
     {
         "clothing_type": "hat",
-        "name": "Deep Blue Hat of the Edges",
-        "sprite": "hat-31.png",
+        "name": "Deep Blue Hat of Optimism",
+        "sprite": "hat-37.png",
         "id_string": "HAT-T2-G010-N03",
         "element_type": [
             "Water",
@@ -1564,17 +1564,17 @@
             2
         ],
         "healthPointsIncrement": 190,
-        "powerBoost": 0,
-        "skillBoost": 20,
-        "reachBoost": 35,
-        "energyBoost": 15,
+        "powerBoost": 15,
+        "skillBoost": 35,
+        "reachBoost": 0,
+        "energyBoost": 20,
         "luckBoost": 65,
         "weightIncrement": 80
     },
     {
         "clothing_type": "hat",
-        "name": "Ethereal Beanie of Unfolding",
-        "sprite": "hat-30.png",
+        "name": "Ethereal Beanie of Honesty",
+        "sprite": "hat-36.png",
         "id_string": "HAT-T2-G011-N01",
         "element_type": [
             "Light",
@@ -1590,17 +1590,17 @@
             3
         ],
         "healthPointsIncrement": 65,
-        "powerBoost": -75,
-        "skillBoost": 45,
-        "reachBoost": 20,
-        "energyBoost": -45,
-        "luckBoost": 15,
+        "powerBoost": 45,
+        "skillBoost": -45,
+        "reachBoost": -75,
+        "energyBoost": 15,
+        "luckBoost": 20,
         "weightIncrement": 35
     },
     {
         "clothing_type": "hat",
-        "name": "Enigmatic Beanie of Unfolding",
-        "sprite": "hat-29.png",
+        "name": "Enigmatic Beanie of Honesty",
+        "sprite": "hat-35.png",
         "id_string": "HAT-T2-G011-N02",
         "element_type": [
             "Darkness",
@@ -1616,17 +1616,17 @@
             3
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": -35,
-        "skillBoost": 60,
-        "reachBoost": 25,
-        "energyBoost": -60,
+        "powerBoost": 25,
+        "skillBoost": -60,
+        "reachBoost": -35,
+        "energyBoost": 60,
         "luckBoost": 15,
         "weightIncrement": 55
     },
     {
         "clothing_type": "hat",
-        "name": "Crimson Beanie of Unfolding",
-        "sprite": "hat-28.png",
+        "name": "Crimson Beanie of Honesty",
+        "sprite": "hat-34.png",
         "id_string": "HAT-T2-G011-N03",
         "element_type": [
             "Fire",
@@ -1651,8 +1651,8 @@
     },
     {
         "clothing_type": "hat",
-        "name": "Sienna Beanie of the Untold",
-        "sprite": "hat-27.png",
+        "name": "Sienna Beanie of Resilience",
+        "sprite": "hat-33.png",
         "id_string": "HAT-T2-G012-N01",
         "element_type": [
             "Earth",
@@ -1668,17 +1668,17 @@
             3
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": 0,
+        "powerBoost": 75,
         "skillBoost": -45,
-        "reachBoost": 75,
-        "energyBoost": -75,
-        "luckBoost": 0,
+        "reachBoost": 0,
+        "energyBoost": 0,
+        "luckBoost": -75,
         "weightIncrement": 55
     },
     {
         "clothing_type": "hat",
-        "name": "Iceflow Beanie of the Untold",
-        "sprite": "hat-26.png",
+        "name": "Iceflow Beanie of Resilience",
+        "sprite": "hat-32.png",
         "id_string": "HAT-T2-G012-N02",
         "element_type": [
             "Water",
@@ -1696,15 +1696,15 @@
         "healthPointsIncrement": 105,
         "powerBoost": 125,
         "skillBoost": -60,
-        "reachBoost": 75,
+        "reachBoost": 0,
         "energyBoost": -35,
-        "luckBoost": 0,
+        "luckBoost": 75,
         "weightIncrement": 50
     },
     {
         "clothing_type": "hat",
-        "name": "Orchid Beanie of the Untold",
-        "sprite": "hat-25.png",
+        "name": "Orchid Beanie of Resilience",
+        "sprite": "hat-31.png",
         "id_string": "HAT-T2-G012-N03",
         "element_type": [
             "Poison",
@@ -1721,16 +1721,16 @@
         ],
         "healthPointsIncrement": 40,
         "powerBoost": 0,
-        "skillBoost": 0,
+        "skillBoost": -75,
         "reachBoost": 0,
         "energyBoost": 0,
-        "luckBoost": -75,
+        "luckBoost": 0,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
-        "name": "Emerald Night-Cap of the Unrevealed",
-        "sprite": "hat-24.png",
+        "name": "Emerald Night-Cap of Sagacity",
+        "sprite": "hat-30.png",
         "id_string": "HAT-T2-G013-N01",
         "element_type": [
             "Nature",
@@ -1746,17 +1746,17 @@
             -2
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": -75,
-        "skillBoost": 95,
+        "powerBoost": 0,
+        "skillBoost": -45,
         "reachBoost": 60,
-        "energyBoost": 0,
-        "luckBoost": -45,
+        "energyBoost": -75,
+        "luckBoost": 95,
         "weightIncrement": 45
     },
     {
         "clothing_type": "hat",
-        "name": "Abyssal Night-Cap of the Unrevealed",
-        "sprite": "hat-23.png",
+        "name": "Abyssal Night-Cap of Sagacity",
+        "sprite": "hat-29.png",
         "id_string": "HAT-T2-G013-N02",
         "element_type": [
             "Darkness",
@@ -1772,17 +1772,17 @@
             -2
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 75,
-        "skillBoost": -25,
+        "powerBoost": -25,
+        "skillBoost": -40,
         "reachBoost": 35,
-        "energyBoost": -40,
+        "energyBoost": 75,
         "luckBoost": 20,
         "weightIncrement": 60
     },
     {
         "clothing_type": "hat",
-        "name": "Gustborne Night-Cap of the Unrevealed",
-        "sprite": "hat-22.png",
+        "name": "Gustborne Night-Cap of Sagacity",
+        "sprite": "hat-28.png",
         "id_string": "HAT-T2-G013-N03",
         "element_type": [
             "Air",
@@ -1807,8 +1807,8 @@
     },
     {
         "clothing_type": "hat",
-        "name": "Aquaborn Helmet of Thalos",
-        "sprite": "hat-21.png",
+        "name": "Aquaborn Helmet of Fairness",
+        "sprite": "hat-27.png",
         "id_string": "HAT-T2-G014-N01",
         "element_type": [
             "Water",
@@ -1824,17 +1824,17 @@
             3
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 20,
-        "skillBoost": -45,
-        "reachBoost": -75,
-        "energyBoost": 15,
+        "powerBoost": -45,
+        "skillBoost": 15,
+        "reachBoost": 20,
+        "energyBoost": -75,
         "luckBoost": 45,
         "weightIncrement": 55
     },
     {
         "clothing_type": "hat",
-        "name": "Granite Helmet of Thalos",
-        "sprite": "hat-20.png",
+        "name": "Granite Helmet of Fairness",
+        "sprite": "hat-26.png",
         "id_string": "HAT-T2-G014-N02",
         "element_type": [
             "Rock",
@@ -1850,17 +1850,17 @@
             3
         ],
         "healthPointsIncrement": 130,
-        "powerBoost": 75,
-        "skillBoost": -40,
-        "reachBoost": -25,
-        "energyBoost": 35,
+        "powerBoost": -40,
+        "skillBoost": 75,
+        "reachBoost": 35,
+        "energyBoost": -25,
         "luckBoost": 20,
         "weightIncrement": 75
     },
     {
         "clothing_type": "hat",
-        "name": "Earthen Helmet of Thalos",
-        "sprite": "hat-19.png",
+        "name": "Earthen Helmet of Fairness",
+        "sprite": "hat-25.png",
         "id_string": "HAT-T2-G014-N03",
         "element_type": [
             "Earth",
@@ -1876,17 +1876,17 @@
             3
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": 40,
+        "powerBoost": -75,
         "skillBoost": 0,
-        "reachBoost": -75,
+        "reachBoost": 40,
         "energyBoost": 0,
         "luckBoost": 65,
         "weightIncrement": 60
     },
     {
         "clothing_type": "hat",
-        "name": "Oceanic Bonnet-Cap of Resilience",
-        "sprite": "hat-18.png",
+        "name": "Oceanic Bonnet-Cap of Prudence",
+        "sprite": "hat-24.png",
         "id_string": "HAT-T2-G015-N01",
         "element_type": [
             "Water",
@@ -1904,15 +1904,15 @@
         "healthPointsIncrement": 120,
         "powerBoost": 125,
         "skillBoost": 0,
-        "reachBoost": -45,
-        "energyBoost": 75,
-        "luckBoost": 0,
+        "reachBoost": 75,
+        "energyBoost": 0,
+        "luckBoost": -45,
         "weightIncrement": 60
     },
     {
         "clothing_type": "hat",
-        "name": "Rocky Bonnet-Cap of Resilience",
-        "sprite": "hat-17.png",
+        "name": "Rocky Bonnet-Cap of Prudence",
+        "sprite": "hat-23.png",
         "id_string": "HAT-T2-G015-N02",
         "element_type": [
             "Rock",
@@ -1928,17 +1928,17 @@
             2
         ],
         "healthPointsIncrement": 150,
-        "powerBoost": -25,
+        "powerBoost": -40,
         "skillBoost": 75,
-        "reachBoost": 35,
+        "reachBoost": -25,
         "energyBoost": 20,
-        "luckBoost": -40,
+        "luckBoost": 35,
         "weightIncrement": 80
     },
     {
         "clothing_type": "hat",
-        "name": "Ivory Bonnet-Cap of Resilience",
-        "sprite": "hat-16.png",
+        "name": "Ivory Bonnet-Cap of Prudence",
+        "sprite": "hat-22.png",
         "id_string": "HAT-T2-G015-N03",
         "element_type": [
             "Light",
@@ -1954,17 +1954,17 @@
             2
         ],
         "healthPointsIncrement": 145,
-        "powerBoost": 15,
+        "powerBoost": 0,
         "skillBoost": 75,
         "reachBoost": 25,
-        "energyBoost": 0,
+        "energyBoost": 15,
         "luckBoost": 40,
         "weightIncrement": 50
     },
     {
         "clothing_type": "hat",
-        "name": "Cobalt Hat of Compassion",
-        "sprite": "hat-15.png",
+        "name": "Cobalt Hat of Credibility",
+        "sprite": "hat-21.png",
         "id_string": "HAT-T2-G016-N01",
         "element_type": [
             "Water",
@@ -1980,17 +1980,17 @@
             4
         ],
         "healthPointsIncrement": 125,
-        "powerBoost": -45,
-        "skillBoost": -75,
-        "reachBoost": 60,
-        "energyBoost": 0,
-        "luckBoost": 95,
+        "powerBoost": 0,
+        "skillBoost": 95,
+        "reachBoost": -75,
+        "energyBoost": -45,
+        "luckBoost": 60,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
-        "name": "Stygian Hat of Compassion",
-        "sprite": "hat-14.png",
+        "name": "Stygian Hat of Credibility",
+        "sprite": "hat-20.png",
         "id_string": "HAT-T2-G016-N02",
         "element_type": [
             "Darkness",
@@ -2006,17 +2006,17 @@
             4
         ],
         "healthPointsIncrement": 150,
-        "powerBoost": 40,
+        "powerBoost": -15,
         "skillBoost": 25,
         "reachBoost": 75,
-        "energyBoost": -15,
+        "energyBoost": 40,
         "luckBoost": 15,
         "weightIncrement": 70
     },
     {
         "clothing_type": "hat",
-        "name": "Cobblestone Hat of Compassion",
-        "sprite": "hat-13.png",
+        "name": "Cobblestone Hat of Credibility",
+        "sprite": "hat-19.png",
         "id_string": "HAT-T2-G016-N03",
         "element_type": [
             "Rock",
@@ -2033,15 +2033,171 @@
         ],
         "healthPointsIncrement": 130,
         "powerBoost": 0,
-        "skillBoost": 50,
-        "reachBoost": 0,
+        "skillBoost": 0,
+        "reachBoost": -75,
         "energyBoost": 0,
-        "luckBoost": -75,
+        "luckBoost": 50,
         "weightIncrement": 85
     },
     {
         "clothing_type": "hat",
-        "name": "Mariner's Hat of the Mystic",
+        "name": "Viper's Boater-Hat of Punctuality",
+        "sprite": "hat-18.png",
+        "id_string": "HAT-T2-G017-N01",
+        "element_type": [
+            "Poison",
+            "Air"
+        ],
+        "item_colors": {
+            "purple": 26,
+            "sky_blue": 12
+        },
+        "rarity": "Rare",
+        "pixels_offset": [
+            1,
+            2
+        ],
+        "healthPointsIncrement": 120,
+        "powerBoost": 10,
+        "skillBoost": 25,
+        "reachBoost": -45,
+        "energyBoost": 50,
+        "luckBoost": 15,
+        "weightIncrement": 80
+    },
+    {
+        "clothing_type": "hat",
+        "name": "Nature's Boater-Hat of Punctuality",
+        "sprite": "hat-17.png",
+        "id_string": "HAT-T2-G017-N02",
+        "element_type": [
+            "Nature",
+            "Fire"
+        ],
+        "item_colors": {
+            "green": 26,
+            "red": 12
+        },
+        "rarity": "Epic",
+        "pixels_offset": [
+            1,
+            2
+        ],
+        "healthPointsIncrement": 155,
+        "powerBoost": 75,
+        "skillBoost": -25,
+        "reachBoost": -40,
+        "energyBoost": 35,
+        "luckBoost": 20,
+        "weightIncrement": 60
+    },
+    {
+        "clothing_type": "hat",
+        "name": "Crystal Boater-Hat of Punctuality",
+        "sprite": "hat-16.png",
+        "id_string": "HAT-T2-G017-N03",
+        "element_type": [
+            "Water",
+            "Poison"
+        ],
+        "item_colors": {
+            "blue": 26,
+            "purple": 12
+        },
+        "rarity": "Useless",
+        "pixels_offset": [
+            1,
+            2
+        ],
+        "healthPointsIncrement": 105,
+        "powerBoost": -75,
+        "skillBoost": 65,
+        "reachBoost": 0,
+        "energyBoost": 40,
+        "luckBoost": 0,
+        "weightIncrement": 65
+    },
+    {
+        "clothing_type": "hat",
+        "name": "Slate Hat of Wisdom",
+        "sprite": "hat-15.png",
+        "id_string": "HAT-T2-G018-N01",
+        "element_type": [
+            "Rock",
+            "Poison"
+        ],
+        "item_colors": {
+            "gray": 90,
+            "purple": 4
+        },
+        "rarity": "Common",
+        "pixels_offset": [
+            1,
+            4
+        ],
+        "healthPointsIncrement": 145,
+        "powerBoost": -45,
+        "skillBoost": 75,
+        "reachBoost": 0,
+        "energyBoost": 0,
+        "luckBoost": -75,
+        "weightIncrement": 90
+    },
+    {
+        "clothing_type": "hat",
+        "name": "Canyon Hat of Wisdom",
+        "sprite": "hat-14.png",
+        "id_string": "HAT-T2-G018-N02",
+        "element_type": [
+            "Earth",
+            "Nature"
+        ],
+        "item_colors": {
+            "brown": 90,
+            "green": 4
+        },
+        "rarity": "Rare",
+        "pixels_offset": [
+            1,
+            4
+        ],
+        "healthPointsIncrement": 165,
+        "powerBoost": 75,
+        "skillBoost": -35,
+        "reachBoost": 0,
+        "energyBoost": 125,
+        "luckBoost": -60,
+        "weightIncrement": 75
+    },
+    {
+        "clothing_type": "hat",
+        "name": "Fiery Hat of Wisdom",
+        "sprite": "hat-13.png",
+        "id_string": "HAT-T2-G018-N03",
+        "element_type": [
+            "Fire",
+            "Air"
+        ],
+        "item_colors": {
+            "red": 90,
+            "sky_blue": 4
+        },
+        "rarity": "Epic",
+        "pixels_offset": [
+            1,
+            4
+        ],
+        "healthPointsIncrement": 150,
+        "powerBoost": 35,
+        "skillBoost": 75,
+        "reachBoost": 0,
+        "energyBoost": 0,
+        "luckBoost": 20,
+        "weightIncrement": 65
+    },
+    {
+        "clothing_type": "hat",
+        "name": "Mariner's Hat of Tolerance",
         "sprite": "hat-12.png",
         "id_string": "HAT-T3-G001-N01",
         "element_type": [
@@ -2060,16 +2216,16 @@
             2
         ],
         "healthPointsIncrement": 70,
-        "powerBoost": 95,
-        "skillBoost": -45,
-        "reachBoost": 60,
-        "energyBoost": -75,
-        "luckBoost": 0,
+        "powerBoost": -45,
+        "skillBoost": 0,
+        "reachBoost": -75,
+        "energyBoost": 95,
+        "luckBoost": 60,
         "weightIncrement": 50
     },
     {
         "clothing_type": "hat",
-        "name": "Noxious Hat of the Mystic",
+        "name": "Noxious Hat of Tolerance",
         "sprite": "hat-11.png",
         "id_string": "HAT-T3-G001-N02",
         "element_type": [
@@ -2088,16 +2244,16 @@
             2
         ],
         "healthPointsIncrement": 70,
-        "powerBoost": 25,
+        "powerBoost": -60,
         "skillBoost": -35,
-        "reachBoost": -60,
-        "energyBoost": 60,
+        "reachBoost": 60,
+        "energyBoost": 25,
         "luckBoost": 15,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
-        "name": "Mysterious Hat of the Mystic",
+        "name": "Mysterious Hat of Tolerance",
         "sprite": "hat-10.png",
         "id_string": "HAT-T3-G001-N03",
         "element_type": [
@@ -2116,16 +2272,16 @@
             2
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 20,
-        "skillBoost": 65,
-        "reachBoost": 15,
-        "energyBoost": 35,
-        "luckBoost": 0,
+        "powerBoost": 35,
+        "skillBoost": 0,
+        "reachBoost": 20,
+        "energyBoost": 65,
+        "luckBoost": 15,
         "weightIncrement": 60
     },
     {
         "clothing_type": "hat",
-        "name": "Umbral Hat of the Unseen",
+        "name": "Umbral Hat of Tactfulness",
         "sprite": "hat-9.png",
         "id_string": "HAT-T3-G002-N01",
         "element_type": [
@@ -2144,16 +2300,16 @@
             0
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": -75,
-        "skillBoost": -45,
-        "reachBoost": 45,
-        "energyBoost": 20,
+        "powerBoost": -45,
+        "skillBoost": 20,
+        "reachBoost": -75,
+        "energyBoost": 45,
         "luckBoost": 15,
         "weightIncrement": 60
     },
     {
         "clothing_type": "hat",
-        "name": "Emberheart Hat of the Unseen",
+        "name": "Emberheart Hat of Tactfulness",
         "sprite": "hat-8.png",
         "id_string": "HAT-T3-G002-N02",
         "element_type": [
@@ -2172,16 +2328,16 @@
             0
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": -35,
-        "skillBoost": -60,
-        "reachBoost": 60,
+        "powerBoost": -60,
+        "skillBoost": 60,
+        "reachBoost": -35,
         "energyBoost": 25,
         "luckBoost": 15,
         "weightIncrement": 50
     },
     {
         "clothing_type": "hat",
-        "name": "Virulent Hat of the Unseen",
+        "name": "Virulent Hat of Tactfulness",
         "sprite": "hat-7.png",
         "id_string": "HAT-T3-G002-N03",
         "element_type": [
@@ -2209,7 +2365,7 @@
     },
     {
         "clothing_type": "hat",
-        "name": "Deep Blue Pointy-Hat of Serenity",
+        "name": "Deep Blue Pointy-Hat of Thoroughness",
         "sprite": "hat-6.png",
         "id_string": "HAT-T3-G003-N01",
         "element_type": [
@@ -2228,16 +2384,16 @@
             5
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": -45,
-        "skillBoost": 75,
-        "reachBoost": 0,
-        "energyBoost": -75,
+        "powerBoost": 0,
+        "skillBoost": -45,
+        "reachBoost": -75,
+        "energyBoost": 75,
         "luckBoost": 0,
         "weightIncrement": 55
     },
     {
         "clothing_type": "hat",
-        "name": "Blightbound Pointy-Hat of Serenity",
+        "name": "Blightbound Pointy-Hat of Thoroughness",
         "sprite": "hat-5.png",
         "id_string": "HAT-T3-G003-N02",
         "element_type": [
@@ -2256,16 +2412,16 @@
             5
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": -35,
-        "skillBoost": 75,
-        "reachBoost": 125,
-        "energyBoost": -60,
-        "luckBoost": 0,
+        "powerBoost": 125,
+        "skillBoost": 0,
+        "reachBoost": -35,
+        "energyBoost": 75,
+        "luckBoost": -60,
         "weightIncrement": 70
     },
     {
         "clothing_type": "hat",
-        "name": "Silvery Pointy-Hat of Serenity",
+        "name": "Silvery Pointy-Hat of Thoroughness",
         "sprite": "hat-4.png",
         "id_string": "HAT-T3-G003-N03",
         "element_type": [
@@ -2285,15 +2441,15 @@
         ],
         "healthPointsIncrement": 75,
         "powerBoost": 0,
-        "skillBoost": -75,
-        "reachBoost": 0,
+        "skillBoost": 0,
+        "reachBoost": -75,
         "energyBoost": 0,
         "luckBoost": 0,
         "weightIncrement": 45
     },
     {
         "clothing_type": "hat",
-        "name": "Crimson Helmet of Tranquility",
+        "name": "Crimson Helmet of Knowledge",
         "sprite": "hat-3.png",
         "id_string": "HAT-T3-G004-N01",
         "element_type": [
@@ -2312,16 +2468,16 @@
             4
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": -75,
-        "skillBoost": 0,
-        "reachBoost": -45,
+        "powerBoost": 60,
+        "skillBoost": -45,
+        "reachBoost": -75,
         "energyBoost": 95,
-        "luckBoost": 60,
+        "luckBoost": 0,
         "weightIncrement": 55
     },
     {
         "clothing_type": "hat",
-        "name": "Ethereal Helmet of Tranquility",
+        "name": "Ethereal Helmet of Knowledge",
         "sprite": "hat-2.png",
         "id_string": "HAT-T3-G004-N02",
         "element_type": [
@@ -2340,16 +2496,16 @@
             4
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": -25,
-        "skillBoost": -40,
-        "reachBoost": 35,
+        "powerBoost": 35,
+        "skillBoost": 75,
+        "reachBoost": -25,
         "energyBoost": 20,
-        "luckBoost": 75,
+        "luckBoost": -40,
         "weightIncrement": 50
     },
     {
         "clothing_type": "hat",
-        "name": "Enigmatic Helmet of Tranquility",
+        "name": "Enigmatic Helmet of Knowledge",
         "sprite": "hat.png",
         "id_string": "HAT-T3-G004-N03",
         "element_type": [
@@ -2377,8 +2533,8 @@
     },
     {
         "clothing_type": "robe",
-        "name": "Granite Cloak of Mystery",
-        "sprite": "robe-84.png",
+        "name": "Granite Cloak of Sensitivity",
+        "sprite": "robe-93.png",
         "id_string": "ROBE-T1-G001-N01",
         "element_type": [
             "Rock"
@@ -2393,16 +2549,16 @@
         ],
         "healthPointsIncrement": 90,
         "powerBoost": -75,
-        "skillBoost": 60,
+        "skillBoost": 0,
         "reachBoost": -45,
-        "energyBoost": 0,
+        "energyBoost": 60,
         "luckBoost": 95,
         "weightIncrement": 70
     },
     {
         "clothing_type": "robe",
-        "name": "Shadowed Cloak of Mystery",
-        "sprite": "robe-83.png",
+        "name": "Shadowed Cloak of Sensitivity",
+        "sprite": "robe-92.png",
         "id_string": "ROBE-T1-G001-N02",
         "element_type": [
             "Darkness"
@@ -2416,17 +2572,17 @@
             -17
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": 60,
-        "skillBoost": 25,
-        "reachBoost": -35,
-        "energyBoost": -60,
+        "powerBoost": 25,
+        "skillBoost": -35,
+        "reachBoost": -60,
+        "energyBoost": 60,
         "luckBoost": 15,
         "weightIncrement": 60
     },
     {
         "clothing_type": "robe",
-        "name": "Luminous Cloak of Mystery",
-        "sprite": "robe-82.png",
+        "name": "Luminous Cloak of Sensitivity",
+        "sprite": "robe-91.png",
         "id_string": "ROBE-T1-G001-N03",
         "element_type": [
             "Light"
@@ -2441,16 +2597,16 @@
         ],
         "healthPointsIncrement": 95,
         "powerBoost": 35,
-        "skillBoost": 20,
-        "reachBoost": 15,
-        "energyBoost": 0,
+        "skillBoost": 0,
+        "reachBoost": 20,
+        "energyBoost": 15,
         "luckBoost": 65,
         "weightIncrement": 40
     },
     {
         "clothing_type": "robe",
-        "name": "Rustic Cape of the Arcane",
-        "sprite": "robe-81.png",
+        "name": "Rustic Cape of Sincerity",
+        "sprite": "robe-90.png",
         "id_string": "ROBE-T1-G002-N01",
         "element_type": [
             "Earth"
@@ -2464,17 +2620,17 @@
             -18
         ],
         "healthPointsIncrement": 85,
-        "powerBoost": 20,
+        "powerBoost": -75,
         "skillBoost": -45,
         "reachBoost": 45,
-        "energyBoost": 15,
-        "luckBoost": -75,
+        "energyBoost": 20,
+        "luckBoost": 15,
         "weightIncrement": 60
     },
     {
         "clothing_type": "robe",
-        "name": "Zephyr Cape of the Arcane",
-        "sprite": "robe-80.png",
+        "name": "Zephyr Cape of Sincerity",
+        "sprite": "robe-89.png",
         "id_string": "ROBE-T1-G002-N02",
         "element_type": [
             "Thunder"
@@ -2488,17 +2644,17 @@
             -18
         ],
         "healthPointsIncrement": 85,
-        "powerBoost": 60,
+        "powerBoost": -60,
         "skillBoost": -35,
-        "reachBoost": 25,
-        "energyBoost": 15,
-        "luckBoost": -60,
+        "reachBoost": 60,
+        "energyBoost": 25,
+        "luckBoost": 15,
         "weightIncrement": 70
     },
     {
         "clothing_type": "robe",
-        "name": "Azure Cape of the Arcane",
-        "sprite": "robe-79.png",
+        "name": "Azure Cape of Sincerity",
+        "sprite": "robe-88.png",
         "id_string": "ROBE-T1-G002-N03",
         "element_type": [
             "Air"
@@ -2521,8 +2677,8 @@
     },
     {
         "clothing_type": "robe",
-        "name": "Flametongue Drip of the Mind",
-        "sprite": "robe-78.png",
+        "name": "Flametongue Drip of Diplomacy",
+        "sprite": "robe-87.png",
         "id_string": "ROBE-T1-G003-N01",
         "element_type": [
             "Fire"
@@ -2536,17 +2692,17 @@
             -19
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": -75,
+        "powerBoost": 0,
         "skillBoost": 0,
-        "reachBoost": 0,
-        "energyBoost": -45,
-        "luckBoost": 75,
+        "reachBoost": -75,
+        "energyBoost": 75,
+        "luckBoost": -45,
         "weightIncrement": 55
     },
     {
         "clothing_type": "robe",
-        "name": "Fernwhisper Drip of the Mind",
-        "sprite": "robe-77.png",
+        "name": "Fernwhisper Drip of Diplomacy",
+        "sprite": "robe-86.png",
         "id_string": "ROBE-T1-G003-N02",
         "element_type": [
             "Nature"
@@ -2560,17 +2716,17 @@
             -19
         ],
         "healthPointsIncrement": 115,
-        "powerBoost": -35,
+        "powerBoost": 75,
         "skillBoost": 0,
         "reachBoost": -60,
         "energyBoost": 125,
-        "luckBoost": 75,
+        "luckBoost": -35,
         "weightIncrement": 50
     },
     {
         "clothing_type": "robe",
-        "name": "Stygian Drip of the Mind",
-        "sprite": "robe-76.png",
+        "name": "Stygian Drip of Diplomacy",
+        "sprite": "robe-85.png",
         "id_string": "ROBE-T1-G003-N03",
         "element_type": [
             "Darkness"
@@ -2584,17 +2740,17 @@
             -19
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": -75,
+        "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": 0,
-        "luckBoost": 0,
+        "luckBoost": -75,
         "weightIncrement": 65
     },
     {
         "clothing_type": "robe",
-        "name": "Crystal Cloak of Elegance",
-        "sprite": "robe-75.png",
+        "name": "Crystal Cloak of Creativity",
+        "sprite": "robe-84.png",
         "id_string": "ROBE-T1-G004-N01",
         "element_type": [
             "Water"
@@ -2609,16 +2765,16 @@
         ],
         "healthPointsIncrement": 100,
         "powerBoost": 95,
-        "skillBoost": 0,
-        "reachBoost": 60,
-        "energyBoost": -45,
-        "luckBoost": -75,
+        "skillBoost": -45,
+        "reachBoost": -75,
+        "energyBoost": 60,
+        "luckBoost": 0,
         "weightIncrement": 60
     },
     {
         "clothing_type": "robe",
-        "name": "Viper's Cloak of Elegance",
-        "sprite": "robe-74.png",
+        "name": "Viper's Cloak of Creativity",
+        "sprite": "robe-83.png",
         "id_string": "ROBE-T1-G004-N02",
         "element_type": [
             "Poison"
@@ -2632,8 +2788,8 @@
             -18
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": -25,
-        "skillBoost": 35,
+        "powerBoost": 35,
+        "skillBoost": -25,
         "reachBoost": 20,
         "energyBoost": 75,
         "luckBoost": -40,
@@ -2641,8 +2797,8 @@
     },
     {
         "clothing_type": "robe",
-        "name": "Gleaming Cloak of Elegance",
-        "sprite": "robe-73.png",
+        "name": "Gleaming Cloak of Creativity",
+        "sprite": "robe-82.png",
         "id_string": "ROBE-T1-G004-N03",
         "element_type": [
             "Light"
@@ -2665,8 +2821,80 @@
     },
     {
         "clothing_type": "robe",
-        "name": "Ashen Robe of the Enigma",
-        "sprite": "robe-72.png",
+        "name": "Mariner's Robe of Silence",
+        "sprite": "robe-81.png",
+        "id_string": "ROBE-T1-G005-N01",
+        "element_type": [
+            "Water"
+        ],
+        "item_colors": {
+            "blue": 168
+        },
+        "rarity": "Common",
+        "pixels_offset": [
+            3,
+            -17
+        ],
+        "healthPointsIncrement": 110,
+        "powerBoost": -45,
+        "skillBoost": -75,
+        "reachBoost": 20,
+        "energyBoost": 15,
+        "luckBoost": 45,
+        "weightIncrement": 65
+    },
+    {
+        "clothing_type": "robe",
+        "name": "Fiery Robe of Silence",
+        "sprite": "robe-80.png",
+        "id_string": "ROBE-T1-G005-N02",
+        "element_type": [
+            "Fire"
+        ],
+        "item_colors": {
+            "red": 168
+        },
+        "rarity": "Epic",
+        "pixels_offset": [
+            3,
+            -17
+        ],
+        "healthPointsIncrement": 120,
+        "powerBoost": -40,
+        "skillBoost": -25,
+        "reachBoost": 75,
+        "energyBoost": 35,
+        "luckBoost": 20,
+        "weightIncrement": 60
+    },
+    {
+        "clothing_type": "robe",
+        "name": "Voltweaver's Robe of Silence",
+        "sprite": "robe-79.png",
+        "id_string": "ROBE-T1-G005-N03",
+        "element_type": [
+            "Thunder"
+        ],
+        "item_colors": {
+            "yellow": 168
+        },
+        "rarity": "Useless",
+        "pixels_offset": [
+            3,
+            -17
+        ],
+        "healthPointsIncrement": 95,
+        "powerBoost": -75,
+        "skillBoost": 0,
+        "reachBoost": 0,
+        "energyBoost": 40,
+        "luckBoost": 65,
+        "weightIncrement": 80
+    },
+    {
+        "clothing_type": "robe",
+        "name": "Ashen Robe of Cooperation",
+        "sprite": "robe-78.png",
         "id_string": "ROBE-T2-G001-N01",
         "element_type": [
             "Rock",
@@ -2683,16 +2911,16 @@
         ],
         "healthPointsIncrement": 95,
         "powerBoost": -45,
-        "skillBoost": 60,
+        "skillBoost": -75,
         "reachBoost": 0,
-        "energyBoost": -75,
+        "energyBoost": 60,
         "luckBoost": 95,
         "weightIncrement": 70
     },
     {
         "clothing_type": "robe",
-        "name": "Ethereal Robe of the Enigma",
-        "sprite": "robe-71.png",
+        "name": "Ethereal Robe of Cooperation",
+        "sprite": "robe-77.png",
         "id_string": "ROBE-T2-G001-N02",
         "element_type": [
             "Light",
@@ -2708,17 +2936,17 @@
             -17
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": -35,
-        "skillBoost": -60,
-        "reachBoost": 60,
+        "powerBoost": 60,
+        "skillBoost": -35,
+        "reachBoost": -60,
         "energyBoost": 25,
         "luckBoost": 15,
         "weightIncrement": 40
     },
     {
         "clothing_type": "robe",
-        "name": "Enigmatic Robe of the Enigma",
-        "sprite": "robe-70.png",
+        "name": "Enigmatic Robe of Cooperation",
+        "sprite": "robe-76.png",
         "id_string": "ROBE-T2-G001-N03",
         "element_type": [
             "Darkness",
@@ -2743,8 +2971,8 @@
     },
     {
         "clothing_type": "robe",
-        "name": "Iceflow Cloak of the Unknown",
-        "sprite": "robe-69.png",
+        "name": "Iceflow Cloak of Efficiency",
+        "sprite": "robe-75.png",
         "id_string": "ROBE-T2-G002-N01",
         "element_type": [
             "Water",
@@ -2760,17 +2988,17 @@
             -17
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 15,
-        "skillBoost": -45,
-        "reachBoost": 20,
-        "energyBoost": 45,
-        "luckBoost": -75,
+        "powerBoost": -45,
+        "skillBoost": 45,
+        "reachBoost": -75,
+        "energyBoost": 15,
+        "luckBoost": 20,
         "weightIncrement": 55
     },
     {
         "clothing_type": "robe",
-        "name": "Lavaforge Cloak of the Unknown",
-        "sprite": "robe-68.png",
+        "name": "Lavaforge Cloak of Efficiency",
+        "sprite": "robe-74.png",
         "id_string": "ROBE-T2-G002-N02",
         "element_type": [
             "Fire",
@@ -2786,17 +3014,17 @@
             -17
         ],
         "healthPointsIncrement": 75,
-        "powerBoost": 60,
-        "skillBoost": -35,
-        "reachBoost": 25,
-        "energyBoost": 15,
-        "luckBoost": -60,
+        "powerBoost": -60,
+        "skillBoost": 15,
+        "reachBoost": -35,
+        "energyBoost": 60,
+        "luckBoost": 25,
         "weightIncrement": 50
     },
     {
         "clothing_type": "robe",
-        "name": "Shockwave Cloak of the Unknown",
-        "sprite": "robe-67.png",
+        "name": "Shockwave Cloak of Efficiency",
+        "sprite": "robe-73.png",
         "id_string": "ROBE-T2-G002-N03",
         "element_type": [
             "Thunder",
@@ -2821,8 +3049,8 @@
     },
     {
         "clothing_type": "robe",
-        "name": "Blazebringer Dress of Silence",
-        "sprite": "robe-66.png",
+        "name": "Blazebringer Dress of Rationality",
+        "sprite": "robe-72.png",
         "id_string": "ROBE-T2-G003-N01",
         "element_type": [
             "Fire",
@@ -2838,17 +3066,17 @@
             -18
         ],
         "healthPointsIncrement": 75,
-        "powerBoost": 0,
-        "skillBoost": 75,
-        "reachBoost": 0,
-        "energyBoost": -75,
-        "luckBoost": -45,
+        "powerBoost": -75,
+        "skillBoost": 0,
+        "reachBoost": -45,
+        "energyBoost": 75,
+        "luckBoost": 0,
         "weightIncrement": 55
     },
     {
         "clothing_type": "robe",
-        "name": "Abyssal Dress of Silence",
-        "sprite": "robe-65.png",
+        "name": "Abyssal Dress of Rationality",
+        "sprite": "robe-71.png",
         "id_string": "ROBE-T2-G003-N02",
         "element_type": [
             "Darkness",
@@ -2864,17 +3092,17 @@
             -18
         ],
         "healthPointsIncrement": 85,
-        "powerBoost": -35,
+        "powerBoost": 125,
         "skillBoost": -60,
         "reachBoost": 0,
         "energyBoost": 75,
-        "luckBoost": 125,
+        "luckBoost": -35,
         "weightIncrement": 65
     },
     {
         "clothing_type": "robe",
-        "name": "Purple Dress of Silence",
-        "sprite": "robe-64.png",
+        "name": "Purple Dress of Rationality",
+        "sprite": "robe-70.png",
         "id_string": "ROBE-T2-G003-N03",
         "element_type": [
             "Poison",
@@ -2890,17 +3118,17 @@
             -18
         ],
         "healthPointsIncrement": 55,
-        "powerBoost": 0,
+        "powerBoost": -75,
         "skillBoost": 0,
         "reachBoost": 0,
-        "energyBoost": -75,
+        "energyBoost": 0,
         "luckBoost": 0,
         "weightIncrement": 70
     },
     {
         "clothing_type": "robe",
-        "name": "Infernal Cape of Harmony",
-        "sprite": "robe-63.png",
+        "name": "Infernal Cape of Diligence",
+        "sprite": "robe-69.png",
         "id_string": "ROBE-T2-G004-N01",
         "element_type": [
             "Fire",
@@ -2916,8 +3144,8 @@
             -18
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": -75,
-        "skillBoost": 60,
+        "powerBoost": 60,
+        "skillBoost": -75,
         "reachBoost": 0,
         "energyBoost": 95,
         "luckBoost": -45,
@@ -2925,8 +3153,8 @@
     },
     {
         "clothing_type": "robe",
-        "name": "Verdant Cape of Harmony",
-        "sprite": "robe-62.png",
+        "name": "Verdant Cape of Diligence",
+        "sprite": "robe-68.png",
         "id_string": "ROBE-T2-G004-N02",
         "element_type": [
             "Nature",
@@ -2942,17 +3170,17 @@
             -18
         ],
         "healthPointsIncrement": 140,
-        "powerBoost": -40,
-        "skillBoost": 20,
-        "reachBoost": 75,
-        "energyBoost": -25,
-        "luckBoost": 35,
+        "powerBoost": 75,
+        "skillBoost": 35,
+        "reachBoost": -40,
+        "energyBoost": 20,
+        "luckBoost": -25,
         "weightIncrement": 50
     },
     {
         "clothing_type": "robe",
-        "name": "Shadowed Cape of Harmony",
-        "sprite": "robe-61.png",
+        "name": "Shadowed Cape of Diligence",
+        "sprite": "robe-67.png",
         "id_string": "ROBE-T2-G004-N03",
         "element_type": [
             "Darkness",
@@ -2977,8 +3205,8 @@
     },
     {
         "clothing_type": "robe",
-        "name": "Azure Cape of Enigma",
-        "sprite": "robe-60.png",
+        "name": "Azure Cape of Unbound",
+        "sprite": "robe-66.png",
         "id_string": "ROBE-T2-G005-N01",
         "element_type": [
             "Air",
@@ -2994,17 +3222,17 @@
             -18
         ],
         "healthPointsIncrement": 115,
-        "powerBoost": 15,
-        "skillBoost": 45,
-        "reachBoost": -75,
-        "energyBoost": -45,
-        "luckBoost": 20,
+        "powerBoost": -45,
+        "skillBoost": -75,
+        "reachBoost": 45,
+        "energyBoost": 20,
+        "luckBoost": 15,
         "weightIncrement": 45
     },
     {
         "clothing_type": "robe",
-        "name": "Rustic Cape of Enigma",
-        "sprite": "robe-59.png",
+        "name": "Rustic Cape of Unbound",
+        "sprite": "robe-65.png",
         "id_string": "ROBE-T2-G005-N02",
         "element_type": [
             "Earth",
@@ -3020,17 +3248,17 @@
             -19
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": 75,
-        "skillBoost": 35,
-        "reachBoost": -40,
-        "energyBoost": -25,
+        "powerBoost": -40,
+        "skillBoost": -25,
+        "reachBoost": 75,
+        "energyBoost": 35,
         "luckBoost": 20,
         "weightIncrement": 65
     },
     {
         "clothing_type": "robe",
-        "name": "Zephyr Cape of Enigma",
-        "sprite": "robe-58.png",
+        "name": "Zephyr Cape of Unbound",
+        "sprite": "robe-64.png",
         "id_string": "ROBE-T2-G005-N03",
         "element_type": [
             "Thunder",
@@ -3047,16 +3275,16 @@
         ],
         "healthPointsIncrement": 100,
         "powerBoost": 0,
-        "skillBoost": 65,
-        "reachBoost": 40,
-        "energyBoost": -75,
-        "luckBoost": 0,
+        "skillBoost": 0,
+        "reachBoost": -75,
+        "energyBoost": 40,
+        "luckBoost": 65,
         "weightIncrement": 80
     },
     {
         "clothing_type": "robe",
-        "name": "Muddy Robe of Reflection",
-        "sprite": "robe-57.png",
+        "name": "Muddy Robe of Sagacity",
+        "sprite": "robe-63.png",
         "id_string": "ROBE-T2-G006-N01",
         "element_type": [
             "Earth",
@@ -3072,17 +3300,17 @@
             -18
         ],
         "healthPointsIncrement": 140,
-        "powerBoost": 75,
-        "skillBoost": 125,
+        "powerBoost": 125,
+        "skillBoost": 0,
         "reachBoost": -45,
         "energyBoost": 0,
-        "luckBoost": 0,
+        "luckBoost": 75,
         "weightIncrement": 70
     },
     {
         "clothing_type": "robe",
-        "name": "Stygian Robe of Reflection",
-        "sprite": "robe-56.png",
+        "name": "Stygian Robe of Sagacity",
+        "sprite": "robe-62.png",
         "id_string": "ROBE-T2-G006-N02",
         "element_type": [
             "Darkness",
@@ -3098,17 +3326,17 @@
             -18
         ],
         "healthPointsIncrement": 130,
-        "powerBoost": 75,
-        "skillBoost": -40,
+        "powerBoost": -40,
+        "skillBoost": 35,
         "reachBoost": 20,
-        "energyBoost": 35,
+        "energyBoost": 75,
         "luckBoost": -25,
         "weightIncrement": 75
     },
     {
         "clothing_type": "robe",
-        "name": "Jolt Robe of Reflection",
-        "sprite": "robe-55.png",
+        "name": "Jolt Robe of Sagacity",
+        "sprite": "robe-61.png",
         "id_string": "ROBE-T2-G006-N03",
         "element_type": [
             "Thunder",
@@ -3124,17 +3352,17 @@
             -18
         ],
         "healthPointsIncrement": 150,
-        "powerBoost": 75,
+        "powerBoost": 0,
         "skillBoost": 15,
-        "reachBoost": 40,
-        "energyBoost": 0,
+        "reachBoost": 75,
+        "energyBoost": 40,
         "luckBoost": 25,
         "weightIncrement": 80
     },
     {
         "clothing_type": "robe",
-        "name": "Airborne Cloak of Veil",
-        "sprite": "robe-54.png",
+        "name": "Airborne Cloak of Stoicism",
+        "sprite": "robe-60.png",
         "id_string": "ROBE-T2-G007-N01",
         "element_type": [
             "Air",
@@ -3150,17 +3378,17 @@
             -17
         ],
         "healthPointsIncrement": 125,
-        "powerBoost": -75,
+        "powerBoost": 0,
         "skillBoost": 95,
-        "reachBoost": 60,
-        "energyBoost": -45,
-        "luckBoost": 0,
+        "reachBoost": -45,
+        "energyBoost": 60,
+        "luckBoost": -75,
         "weightIncrement": 55
     },
     {
         "clothing_type": "robe",
-        "name": "Gravel Cloak of Veil",
-        "sprite": "robe-53.png",
+        "name": "Gravel Cloak of Stoicism",
+        "sprite": "robe-59.png",
         "id_string": "ROBE-T2-G007-N02",
         "element_type": [
             "Rock",
@@ -3176,17 +3404,17 @@
             -17
         ],
         "healthPointsIncrement": 185,
-        "powerBoost": 40,
+        "powerBoost": -15,
         "skillBoost": 75,
         "reachBoost": 25,
         "energyBoost": 15,
-        "luckBoost": -15,
+        "luckBoost": 40,
         "weightIncrement": 90
     },
     {
         "clothing_type": "robe",
-        "name": "Viper's Cloak of Veil",
-        "sprite": "robe-52.png",
+        "name": "Viper's Cloak of Stoicism",
+        "sprite": "robe-58.png",
         "id_string": "ROBE-T2-G007-N03",
         "element_type": [
             "Poison",
@@ -3203,16 +3431,16 @@
         ],
         "healthPointsIncrement": 100,
         "powerBoost": 0,
-        "skillBoost": 0,
-        "reachBoost": 50,
-        "energyBoost": -75,
+        "skillBoost": 50,
+        "reachBoost": -75,
+        "energyBoost": 0,
         "luckBoost": 0,
         "weightIncrement": 80
     },
     {
         "clothing_type": "robe",
-        "name": "Noxious Robe of Presence",
-        "sprite": "robe-51.png",
+        "name": "Noxious Robe of Gratitude",
+        "sprite": "robe-57.png",
         "id_string": "ROBE-T2-G008-N01",
         "element_type": [
             "Poison",
@@ -3228,17 +3456,17 @@
             -19
         ],
         "healthPointsIncrement": 125,
-        "powerBoost": 50,
+        "powerBoost": -45,
         "skillBoost": 15,
         "reachBoost": 10,
-        "energyBoost": -45,
+        "energyBoost": 50,
         "luckBoost": 25,
         "weightIncrement": 85
     },
     {
         "clothing_type": "robe",
-        "name": "Slate Robe of Presence",
-        "sprite": "robe-50.png",
+        "name": "Slate Robe of Gratitude",
+        "sprite": "robe-56.png",
         "id_string": "ROBE-T2-G008-N02",
         "element_type": [
             "Rock",
@@ -3254,17 +3482,17 @@
             -19
         ],
         "healthPointsIncrement": 180,
-        "powerBoost": 75,
-        "skillBoost": -40,
-        "reachBoost": 35,
-        "energyBoost": -25,
-        "luckBoost": 20,
+        "powerBoost": -40,
+        "skillBoost": 75,
+        "reachBoost": 20,
+        "energyBoost": 35,
+        "luckBoost": -25,
         "weightIncrement": 90
     },
     {
         "clothing_type": "robe",
-        "name": "Mariner's Robe of Presence",
-        "sprite": "robe-49.png",
+        "name": "Mariner's Robe of Gratitude",
+        "sprite": "robe-55.png",
         "id_string": "ROBE-T2-G008-N03",
         "element_type": [
             "Water",
@@ -3280,17 +3508,17 @@
             -19
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": 65,
-        "skillBoost": 0,
-        "reachBoost": -75,
-        "energyBoost": 40,
-        "luckBoost": 0,
+        "powerBoost": -75,
+        "skillBoost": 65,
+        "reachBoost": 0,
+        "energyBoost": 0,
+        "luckBoost": 40,
         "weightIncrement": 70
     },
     {
         "clothing_type": "robe",
-        "name": "Viridian Cape of Grace",
-        "sprite": "robe-48.png",
+        "name": "Viridian Cape of Liberality",
+        "sprite": "robe-54.png",
         "id_string": "ROBE-T2-G009-N01",
         "element_type": [
             "Nature",
@@ -3307,16 +3535,16 @@
         ],
         "healthPointsIncrement": 170,
         "powerBoost": 75,
-        "skillBoost": 125,
-        "reachBoost": 0,
-        "energyBoost": 0,
-        "luckBoost": -45,
+        "skillBoost": 0,
+        "reachBoost": -45,
+        "energyBoost": 125,
+        "luckBoost": 0,
         "weightIncrement": 65
     },
     {
         "clothing_type": "robe",
-        "name": "Umberstone Cape of Grace",
-        "sprite": "robe-47.png",
+        "name": "Umberstone Cape of Liberality",
+        "sprite": "robe-53.png",
         "id_string": "ROBE-T2-G009-N02",
         "element_type": [
             "Earth",
@@ -3332,17 +3560,17 @@
             -18
         ],
         "healthPointsIncrement": 185,
-        "powerBoost": 25,
-        "skillBoost": 15,
-        "reachBoost": 75,
-        "energyBoost": 40,
-        "luckBoost": -15,
+        "powerBoost": 40,
+        "skillBoost": 25,
+        "reachBoost": -15,
+        "energyBoost": 75,
+        "luckBoost": 15,
         "weightIncrement": 80
     },
     {
         "clothing_type": "robe",
-        "name": "Virulent Cape of Grace",
-        "sprite": "robe-46.png",
+        "name": "Virulent Cape of Liberality",
+        "sprite": "robe-52.png",
         "id_string": "ROBE-T2-G009-N03",
         "element_type": [
             "Poison",
@@ -3360,15 +3588,15 @@
         "healthPointsIncrement": 115,
         "powerBoost": 0,
         "skillBoost": 0,
-        "reachBoost": -75,
-        "energyBoost": 0,
+        "reachBoost": 0,
+        "energyBoost": -75,
         "luckBoost": 0,
         "weightIncrement": 85
     },
     {
         "clothing_type": "robe",
-        "name": "Deep Blue Robe of the Edges",
-        "sprite": "robe-45.png",
+        "name": "Deep Blue Robe of Optimism",
+        "sprite": "robe-51.png",
         "id_string": "ROBE-T2-G010-N01",
         "element_type": [
             "Water",
@@ -3384,17 +3612,17 @@
             -18
         ],
         "healthPointsIncrement": 160,
-        "powerBoost": 0,
-        "skillBoost": 95,
-        "reachBoost": -75,
-        "energyBoost": -45,
+        "powerBoost": -45,
+        "skillBoost": -75,
+        "reachBoost": 0,
+        "energyBoost": 95,
         "luckBoost": 60,
         "weightIncrement": 80
     },
     {
         "clothing_type": "robe",
-        "name": "Ruby Robe of the Edges",
-        "sprite": "robe-44.png",
+        "name": "Ruby Robe of Optimism",
+        "sprite": "robe-50.png",
         "id_string": "ROBE-T2-G010-N02",
         "element_type": [
             "Fire",
@@ -3410,17 +3638,17 @@
             -18
         ],
         "healthPointsIncrement": 160,
-        "powerBoost": 25,
+        "powerBoost": -35,
         "skillBoost": 60,
-        "reachBoost": -35,
-        "energyBoost": -60,
+        "reachBoost": -60,
+        "energyBoost": 25,
         "luckBoost": 15,
         "weightIncrement": 75
     },
     {
         "clothing_type": "robe",
-        "name": "Aerial Robe of the Edges",
-        "sprite": "robe-43.png",
+        "name": "Aerial Robe of Optimism",
+        "sprite": "robe-49.png",
         "id_string": "ROBE-T2-G010-N03",
         "element_type": [
             "Air",
@@ -3436,17 +3664,17 @@
             -18
         ],
         "healthPointsIncrement": 185,
-        "powerBoost": 0,
-        "skillBoost": 35,
-        "reachBoost": 65,
-        "energyBoost": 20,
-        "luckBoost": 15,
+        "powerBoost": 15,
+        "skillBoost": 65,
+        "reachBoost": 0,
+        "energyBoost": 35,
+        "luckBoost": 20,
         "weightIncrement": 60
     },
     {
         "clothing_type": "robe",
-        "name": "Toxic Poncho of Unfolding",
-        "sprite": "robe-42.png",
+        "name": "Toxic Poncho of Honesty",
+        "sprite": "robe-48.png",
         "id_string": "ROBE-T2-G011-N01",
         "element_type": [
             "Poison",
@@ -3462,17 +3690,17 @@
             -17
         ],
         "healthPointsIncrement": 60,
-        "powerBoost": -45,
-        "skillBoost": 45,
-        "reachBoost": 15,
-        "energyBoost": -75,
-        "luckBoost": 20,
+        "powerBoost": 20,
+        "skillBoost": -75,
+        "reachBoost": -45,
+        "energyBoost": 45,
+        "luckBoost": 15,
         "weightIncrement": 60
     },
     {
         "clothing_type": "robe",
-        "name": "Ethereal Poncho of Unfolding",
-        "sprite": "robe-41.png",
+        "name": "Ethereal Poncho of Honesty",
+        "sprite": "robe-47.png",
         "id_string": "ROBE-T2-G011-N02",
         "element_type": [
             "Light",
@@ -3488,17 +3716,17 @@
             -17
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": -60,
-        "skillBoost": 60,
-        "reachBoost": 25,
-        "energyBoost": -35,
+        "powerBoost": 60,
+        "skillBoost": -35,
+        "reachBoost": -60,
+        "energyBoost": 25,
         "luckBoost": 15,
         "weightIncrement": 35
     },
     {
         "clothing_type": "robe",
-        "name": "Sapphire Poncho of Unfolding",
-        "sprite": "robe-40.png",
+        "name": "Sapphire Poncho of Honesty",
+        "sprite": "robe-46.png",
         "id_string": "ROBE-T2-G011-N03",
         "element_type": [
             "Water",
@@ -3523,8 +3751,8 @@
     },
     {
         "clothing_type": "robe",
-        "name": "Lavaforge Robe of the Untold",
-        "sprite": "robe-39.png",
+        "name": "Lavaforge Robe of Resilience",
+        "sprite": "robe-45.png",
         "id_string": "ROBE-T2-G012-N01",
         "element_type": [
             "Fire",
@@ -3540,17 +3768,17 @@
             -17
         ],
         "healthPointsIncrement": 70,
-        "powerBoost": 0,
-        "skillBoost": -75,
-        "reachBoost": 75,
-        "energyBoost": -45,
-        "luckBoost": 0,
+        "powerBoost": 75,
+        "skillBoost": -45,
+        "reachBoost": 0,
+        "energyBoost": 0,
+        "luckBoost": -75,
         "weightIncrement": 45
     },
     {
         "clothing_type": "robe",
-        "name": "Gneiss Robe of the Untold",
-        "sprite": "robe-38.png",
+        "name": "Gneiss Robe of Resilience",
+        "sprite": "robe-44.png",
         "id_string": "ROBE-T2-G012-N02",
         "element_type": [
             "Rock",
@@ -3568,15 +3796,15 @@
         "healthPointsIncrement": 95,
         "powerBoost": 75,
         "skillBoost": -35,
-        "reachBoost": 125,
+        "reachBoost": 0,
         "energyBoost": -60,
-        "luckBoost": 0,
+        "luckBoost": 125,
         "weightIncrement": 70
     },
     {
         "clothing_type": "robe",
-        "name": "Obsidian Robe of the Untold",
-        "sprite": "robe-37.png",
+        "name": "Obsidian Robe of Resilience",
+        "sprite": "robe-43.png",
         "id_string": "ROBE-T2-G012-N03",
         "element_type": [
             "Darkness",
@@ -3593,16 +3821,16 @@
         ],
         "healthPointsIncrement": 70,
         "powerBoost": 0,
-        "skillBoost": 0,
+        "skillBoost": -75,
         "reachBoost": 0,
         "energyBoost": 0,
-        "luckBoost": -75,
+        "luckBoost": 0,
         "weightIncrement": 60
     },
     {
         "clothing_type": "robe",
-        "name": "Emerald Drip of the Unrevealed",
-        "sprite": "robe-36.png",
+        "name": "Emerald Drip of Sagacity",
+        "sprite": "robe-42.png",
         "id_string": "ROBE-T2-G013-N01",
         "element_type": [
             "Nature",
@@ -3618,17 +3846,17 @@
             -19
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": -75,
-        "skillBoost": 95,
+        "powerBoost": 0,
+        "skillBoost": -75,
         "reachBoost": 60,
-        "energyBoost": 0,
-        "luckBoost": -45,
+        "energyBoost": -45,
+        "luckBoost": 95,
         "weightIncrement": 45
     },
     {
         "clothing_type": "robe",
-        "name": "Pristine Drip of the Unrevealed",
-        "sprite": "robe-35.png",
+        "name": "Pristine Drip of Sagacity",
+        "sprite": "robe-41.png",
         "id_string": "ROBE-T2-G013-N02",
         "element_type": [
             "Light",
@@ -3644,17 +3872,17 @@
             -19
         ],
         "healthPointsIncrement": 110,
-        "powerBoost": 20,
+        "powerBoost": -25,
         "skillBoost": -40,
         "reachBoost": 35,
-        "energyBoost": -25,
+        "energyBoost": 20,
         "luckBoost": 75,
         "weightIncrement": 40
     },
     {
         "clothing_type": "robe",
-        "name": "Gustborne Drip of the Unrevealed",
-        "sprite": "robe-34.png",
+        "name": "Gustborne Drip of Sagacity",
+        "sprite": "robe-40.png",
         "id_string": "ROBE-T2-G013-N03",
         "element_type": [
             "Air",
@@ -3679,8 +3907,8 @@
     },
     {
         "clothing_type": "robe",
-        "name": "Venomous Cloak of Thalos",
-        "sprite": "robe-33.png",
+        "name": "Venomous Cloak of Fairness",
+        "sprite": "robe-39.png",
         "id_string": "ROBE-T2-G014-N01",
         "element_type": [
             "Poison",
@@ -3696,17 +3924,17 @@
             -17
         ],
         "healthPointsIncrement": 70,
-        "powerBoost": 20,
-        "skillBoost": -75,
-        "reachBoost": -45,
-        "energyBoost": 45,
-        "luckBoost": 15,
+        "powerBoost": -45,
+        "skillBoost": 45,
+        "reachBoost": 15,
+        "energyBoost": -75,
+        "luckBoost": 20,
         "weightIncrement": 70
     },
     {
         "clothing_type": "robe",
-        "name": "Verdant Cloak of Thalos",
-        "sprite": "robe-32.png",
+        "name": "Verdant Cloak of Fairness",
+        "sprite": "robe-38.png",
         "id_string": "ROBE-T2-G014-N02",
         "element_type": [
             "Nature",
@@ -3722,17 +3950,17 @@
             -17
         ],
         "healthPointsIncrement": 130,
-        "powerBoost": 75,
-        "skillBoost": -25,
-        "reachBoost": -40,
-        "energyBoost": 20,
+        "powerBoost": -40,
+        "skillBoost": 20,
+        "reachBoost": 75,
+        "energyBoost": -25,
         "luckBoost": 35,
         "weightIncrement": 50
     },
     {
         "clothing_type": "robe",
-        "name": "Aquaborn Cloak of Thalos",
-        "sprite": "robe-31.png",
+        "name": "Aquaborn Cloak of Fairness",
+        "sprite": "robe-37.png",
         "id_string": "ROBE-T2-G014-N03",
         "element_type": [
             "Water",
@@ -3748,17 +3976,17 @@
             -17
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": 65,
+        "powerBoost": -75,
         "skillBoost": 0,
-        "reachBoost": -75,
+        "reachBoost": 40,
         "energyBoost": 0,
-        "luckBoost": 40,
+        "luckBoost": 65,
         "weightIncrement": 55
     },
     {
         "clothing_type": "robe",
-        "name": "Scarlet Cloak of Resilience",
-        "sprite": "robe-30.png",
+        "name": "Scarlet Cloak of Prudence",
+        "sprite": "robe-36.png",
         "id_string": "ROBE-T2-G015-N01",
         "element_type": [
             "Fire",
@@ -3776,15 +4004,15 @@
         "healthPointsIncrement": 105,
         "powerBoost": 75,
         "skillBoost": 0,
-        "reachBoost": -45,
-        "energyBoost": 125,
-        "luckBoost": 0,
+        "reachBoost": 125,
+        "energyBoost": 0,
+        "luckBoost": -45,
         "weightIncrement": 55
     },
     {
         "clothing_type": "robe",
-        "name": "Zephyr Cloak of Resilience",
-        "sprite": "robe-29.png",
+        "name": "Zephyr Cloak of Prudence",
+        "sprite": "robe-35.png",
         "id_string": "ROBE-T2-G015-N02",
         "element_type": [
             "Thunder",
@@ -3801,16 +4029,16 @@
         ],
         "healthPointsIncrement": 120,
         "powerBoost": -40,
-        "skillBoost": 20,
-        "reachBoost": 35,
+        "skillBoost": 35,
+        "reachBoost": -25,
         "energyBoost": 75,
-        "luckBoost": -25,
+        "luckBoost": 20,
         "weightIncrement": 75
     },
     {
         "clothing_type": "robe",
-        "name": "Rocky Cloak of Resilience",
-        "sprite": "robe-28.png",
+        "name": "Rocky Cloak of Prudence",
+        "sprite": "robe-34.png",
         "id_string": "ROBE-T2-G015-N03",
         "element_type": [
             "Rock",
@@ -3826,17 +4054,17 @@
             -16
         ],
         "healthPointsIncrement": 160,
-        "powerBoost": 40,
+        "powerBoost": 0,
         "skillBoost": 75,
         "reachBoost": 25,
-        "energyBoost": 0,
+        "energyBoost": 40,
         "luckBoost": 15,
         "weightIncrement": 80
     },
     {
         "clothing_type": "robe",
-        "name": "Cobalt Jacket of Compassion",
-        "sprite": "robe-27.png",
+        "name": "Cobalt Jacket of Credibility",
+        "sprite": "robe-33.png",
         "id_string": "ROBE-T2-G016-N01",
         "element_type": [
             "Water",
@@ -3852,17 +4080,17 @@
             -17
         ],
         "healthPointsIncrement": 110,
-        "powerBoost": -45,
-        "skillBoost": -75,
-        "reachBoost": 95,
-        "energyBoost": 0,
+        "powerBoost": 0,
+        "skillBoost": 95,
+        "reachBoost": -45,
+        "energyBoost": -75,
         "luckBoost": 60,
         "weightIncrement": 65
     },
     {
         "clothing_type": "robe",
-        "name": "Malevolent Jacket of Compassion",
-        "sprite": "robe-26.png",
+        "name": "Malevolent Jacket of Credibility",
+        "sprite": "robe-32.png",
         "id_string": "ROBE-T2-G016-N02",
         "element_type": [
             "Poison",
@@ -3878,17 +4106,17 @@
             -17
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": 75,
+        "powerBoost": -15,
         "skillBoost": 15,
         "reachBoost": 40,
-        "energyBoost": -15,
+        "energyBoost": 75,
         "luckBoost": 25,
         "weightIncrement": 75
     },
     {
         "clothing_type": "robe",
-        "name": "Fernwhisper Jacket of Compassion",
-        "sprite": "robe-25.png",
+        "name": "Fernwhisper Jacket of Credibility",
+        "sprite": "robe-31.png",
         "id_string": "ROBE-T2-G016-N03",
         "element_type": [
             "Nature",
@@ -3905,16 +4133,94 @@
         ],
         "healthPointsIncrement": 125,
         "powerBoost": 0,
-        "skillBoost": 50,
-        "reachBoost": 0,
+        "skillBoost": 0,
+        "reachBoost": -75,
         "energyBoost": 0,
-        "luckBoost": -75,
+        "luckBoost": 50,
         "weightIncrement": 55
     },
     {
         "clothing_type": "robe",
-        "name": "Mysterious Cape of the Mystic",
-        "sprite": "robe-24.png",
+        "name": "Airborne Robe of Punctuality",
+        "sprite": "robe-30.png",
+        "id_string": "ROBE-T2-G017-N01",
+        "element_type": [
+            "Air",
+            "Water"
+        ],
+        "item_colors": {
+            "sky_blue": 137,
+            "blue": 116
+        },
+        "rarity": "Rare",
+        "pixels_offset": [
+            3,
+            -16
+        ],
+        "healthPointsIncrement": 140,
+        "powerBoost": 10,
+        "skillBoost": 25,
+        "reachBoost": -45,
+        "energyBoost": 15,
+        "luckBoost": 50,
+        "weightIncrement": 50
+    },
+    {
+        "clothing_type": "robe",
+        "name": "Incendiary Robe of Punctuality",
+        "sprite": "robe-29.png",
+        "id_string": "ROBE-T2-G017-N02",
+        "element_type": [
+            "Fire",
+            "Earth"
+        ],
+        "item_colors": {
+            "red": 137,
+            "brown": 116
+        },
+        "rarity": "Epic",
+        "pixels_offset": [
+            3,
+            -16
+        ],
+        "healthPointsIncrement": 140,
+        "powerBoost": 75,
+        "skillBoost": -25,
+        "reachBoost": -40,
+        "energyBoost": 35,
+        "luckBoost": 20,
+        "weightIncrement": 60
+    },
+    {
+        "clothing_type": "robe",
+        "name": "Gravel Robe of Punctuality",
+        "sprite": "robe-28.png",
+        "id_string": "ROBE-T2-G017-N03",
+        "element_type": [
+            "Rock",
+            "Air"
+        ],
+        "item_colors": {
+            "gray": 137,
+            "sky_blue": 116
+        },
+        "rarity": "Useless",
+        "pixels_offset": [
+            3,
+            -16
+        ],
+        "healthPointsIncrement": 140,
+        "powerBoost": -75,
+        "skillBoost": 40,
+        "reachBoost": 0,
+        "energyBoost": 65,
+        "luckBoost": 0,
+        "weightIncrement": 85
+    },
+    {
+        "clothing_type": "robe",
+        "name": "Mysterious Cape of Tolerance",
+        "sprite": "robe-27.png",
         "id_string": "ROBE-T3-G001-N01",
         "element_type": [
             "Darkness",
@@ -3932,17 +4238,17 @@
             -18
         ],
         "healthPointsIncrement": 75,
-        "powerBoost": 95,
-        "skillBoost": -45,
-        "reachBoost": 60,
-        "energyBoost": -75,
-        "luckBoost": 0,
+        "powerBoost": -45,
+        "skillBoost": 0,
+        "reachBoost": -75,
+        "energyBoost": 60,
+        "luckBoost": 95,
         "weightIncrement": 60
     },
     {
         "clothing_type": "robe",
-        "name": "Slate Cape of the Mystic",
-        "sprite": "robe-23.png",
+        "name": "Slate Cape of Tolerance",
+        "sprite": "robe-26.png",
         "id_string": "ROBE-T3-G001-N02",
         "element_type": [
             "Rock",
@@ -3960,17 +4266,17 @@
             -19
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": 25,
-        "skillBoost": -35,
-        "reachBoost": -60,
-        "energyBoost": 60,
+        "powerBoost": -35,
+        "skillBoost": -60,
+        "reachBoost": 60,
+        "energyBoost": 25,
         "luckBoost": 15,
         "weightIncrement": 70
     },
     {
         "clothing_type": "robe",
-        "name": "Ivyshade Cape of the Mystic",
-        "sprite": "robe-22.png",
+        "name": "Ivyshade Cape of Tolerance",
+        "sprite": "robe-25.png",
         "id_string": "ROBE-T3-G001-N03",
         "element_type": [
             "Nature",
@@ -3989,16 +4295,16 @@
         ],
         "healthPointsIncrement": 105,
         "powerBoost": 35,
-        "skillBoost": 15,
+        "skillBoost": 0,
         "reachBoost": 65,
         "energyBoost": 20,
-        "luckBoost": 0,
+        "luckBoost": 15,
         "weightIncrement": 45
     },
     {
         "clothing_type": "robe",
-        "name": "Virulent Cape of the Unseen",
-        "sprite": "robe-21.png",
+        "name": "Virulent Cape of Tactfulness",
+        "sprite": "robe-24.png",
         "id_string": "ROBE-T3-G002-N01",
         "element_type": [
             "Poison",
@@ -4016,17 +4322,17 @@
             -18
         ],
         "healthPointsIncrement": 70,
-        "powerBoost": -75,
-        "skillBoost": -45,
-        "reachBoost": 45,
-        "energyBoost": 20,
-        "luckBoost": 15,
+        "powerBoost": -45,
+        "skillBoost": 15,
+        "reachBoost": -75,
+        "energyBoost": 45,
+        "luckBoost": 20,
         "weightIncrement": 65
     },
     {
         "clothing_type": "robe",
-        "name": "Umbral Cape of the Unseen",
-        "sprite": "robe-20.png",
+        "name": "Umbral Cape of Tactfulness",
+        "sprite": "robe-23.png",
         "id_string": "ROBE-T3-G002-N02",
         "element_type": [
             "Darkness",
@@ -4044,17 +4350,17 @@
             -18
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": -60,
-        "skillBoost": -35,
-        "reachBoost": 60,
-        "energyBoost": 25,
-        "luckBoost": 15,
+        "powerBoost": -35,
+        "skillBoost": 15,
+        "reachBoost": -60,
+        "energyBoost": 60,
+        "luckBoost": 25,
         "weightIncrement": 60
     },
     {
         "clothing_type": "robe",
-        "name": "Nautical Cape of the Unseen",
-        "sprite": "robe-19.png",
+        "name": "Nautical Cape of Tactfulness",
+        "sprite": "robe-22.png",
         "id_string": "ROBE-T3-G002-N03",
         "element_type": [
             "Water",
@@ -4081,8 +4387,8 @@
     },
     {
         "clothing_type": "robe",
-        "name": "Pebble Robe of Serenity",
-        "sprite": "robe-18.png",
+        "name": "Pebble Robe of Thoroughness",
+        "sprite": "robe-21.png",
         "id_string": "ROBE-T3-G003-N01",
         "element_type": [
             "Rock",
@@ -4100,17 +4406,17 @@
             -19
         ],
         "healthPointsIncrement": 125,
-        "powerBoost": -75,
-        "skillBoost": 75,
-        "reachBoost": 0,
-        "energyBoost": -45,
+        "powerBoost": 0,
+        "skillBoost": -45,
+        "reachBoost": -75,
+        "energyBoost": 75,
         "luckBoost": 0,
         "weightIncrement": 75
     },
     {
         "clothing_type": "robe",
-        "name": "Deep Blue Robe of Serenity",
-        "sprite": "robe-17.png",
+        "name": "Deep Blue Robe of Thoroughness",
+        "sprite": "robe-20.png",
         "id_string": "ROBE-T3-G003-N02",
         "element_type": [
             "Water",
@@ -4128,17 +4434,17 @@
             -19
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": -35,
-        "skillBoost": 125,
-        "reachBoost": 75,
-        "energyBoost": -60,
-        "luckBoost": 0,
+        "powerBoost": 75,
+        "skillBoost": 0,
+        "reachBoost": -35,
+        "energyBoost": 125,
+        "luckBoost": -60,
         "weightIncrement": 55
     },
     {
         "clothing_type": "robe",
-        "name": "Ebon Robe of Serenity",
-        "sprite": "robe-16.png",
+        "name": "Ebon Robe of Thoroughness",
+        "sprite": "robe-19.png",
         "id_string": "ROBE-T3-G003-N03",
         "element_type": [
             "Darkness",
@@ -4157,16 +4463,16 @@
         ],
         "healthPointsIncrement": 85,
         "powerBoost": 0,
-        "skillBoost": -75,
-        "reachBoost": 0,
+        "skillBoost": 0,
+        "reachBoost": -75,
         "energyBoost": 0,
         "luckBoost": 0,
         "weightIncrement": 65
     },
     {
         "clothing_type": "robe",
-        "name": "Toxic Robe of Tranquility",
-        "sprite": "robe-15.png",
+        "name": "Toxic Robe of Knowledge",
+        "sprite": "robe-18.png",
         "id_string": "ROBE-T3-G004-N01",
         "element_type": [
             "Poison",
@@ -4184,17 +4490,17 @@
             -16
         ],
         "healthPointsIncrement": 85,
-        "powerBoost": -45,
-        "skillBoost": 0,
+        "powerBoost": 60,
+        "skillBoost": -45,
         "reachBoost": -75,
         "energyBoost": 95,
-        "luckBoost": 60,
+        "luckBoost": 0,
         "weightIncrement": 70
     },
     {
         "clothing_type": "robe",
-        "name": "Ethereal Robe of Tranquility",
-        "sprite": "robe-14.png",
+        "name": "Ethereal Robe of Knowledge",
+        "sprite": "robe-17.png",
         "id_string": "ROBE-T3-G004-N02",
         "element_type": [
             "Light",
@@ -4212,17 +4518,17 @@
             -16
         ],
         "healthPointsIncrement": 115,
-        "powerBoost": -40,
-        "skillBoost": -25,
-        "reachBoost": 75,
+        "powerBoost": 75,
+        "skillBoost": 35,
+        "reachBoost": -25,
         "energyBoost": 20,
-        "luckBoost": 35,
+        "luckBoost": -40,
         "weightIncrement": 50
     },
     {
         "clothing_type": "robe",
-        "name": "Ashen Robe of Tranquility",
-        "sprite": "robe-13.png",
+        "name": "Ashen Robe of Knowledge",
+        "sprite": "robe-16.png",
         "id_string": "ROBE-T3-G004-N03",
         "element_type": [
             "Rock",
@@ -4249,8 +4555,8 @@
     },
     {
         "clothing_type": "robe",
-        "name": "Mossy Cape of Essence",
-        "sprite": "robe-12.png",
+        "name": "Mossy Cape of Decorum",
+        "sprite": "robe-15.png",
         "id_string": "ROBE-T3-G005-N01",
         "element_type": [
             "Nature",
@@ -4268,17 +4574,17 @@
             -17
         ],
         "healthPointsIncrement": 125,
-        "powerBoost": 45,
-        "skillBoost": 20,
-        "reachBoost": -75,
-        "energyBoost": -45,
-        "luckBoost": 15,
+        "powerBoost": 20,
+        "skillBoost": -75,
+        "reachBoost": 45,
+        "energyBoost": 15,
+        "luckBoost": -45,
         "weightIncrement": 55
     },
     {
         "clothing_type": "robe",
-        "name": "Zephyrwind Cape of Essence",
-        "sprite": "robe-11.png",
+        "name": "Zephyrwind Cape of Decorum",
+        "sprite": "robe-14.png",
         "id_string": "ROBE-T3-G005-N02",
         "element_type": [
             "Air",
@@ -4297,16 +4603,16 @@
         ],
         "healthPointsIncrement": 150,
         "powerBoost": 20,
-        "skillBoost": 75,
-        "reachBoost": -40,
-        "energyBoost": -25,
-        "luckBoost": 35,
+        "skillBoost": -40,
+        "reachBoost": 75,
+        "energyBoost": 35,
+        "luckBoost": -25,
         "weightIncrement": 45
     },
     {
         "clothing_type": "robe",
-        "name": "Obsidian Cape of Essence",
-        "sprite": "robe-10.png",
+        "name": "Obsidian Cape of Decorum",
+        "sprite": "robe-13.png",
         "id_string": "ROBE-T3-G005-N03",
         "element_type": [
             "Darkness",
@@ -4326,15 +4632,15 @@
         "healthPointsIncrement": 85,
         "powerBoost": 0,
         "skillBoost": -75,
-        "reachBoost": 65,
+        "reachBoost": 0,
         "energyBoost": 40,
-        "luckBoost": 0,
+        "luckBoost": 65,
         "weightIncrement": 70
     },
     {
         "clothing_type": "robe",
-        "name": "Pristine Robe of Insight",
-        "sprite": "robe-9.png",
+        "name": "Pristine Robe of Harmony",
+        "sprite": "robe-12.png",
         "id_string": "ROBE-T3-G006-N01",
         "element_type": [
             "Light",
@@ -4352,17 +4658,17 @@
             -18
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": -45,
-        "skillBoost": 125,
+        "powerBoost": 75,
+        "skillBoost": -45,
         "reachBoost": 0,
         "energyBoost": 0,
-        "luckBoost": 75,
+        "luckBoost": 125,
         "weightIncrement": 55
     },
     {
         "clothing_type": "robe",
-        "name": "Torrential Robe of Insight",
-        "sprite": "robe-8.png",
+        "name": "Torrential Robe of Harmony",
+        "sprite": "robe-11.png",
         "id_string": "ROBE-T3-G006-N02",
         "element_type": [
             "Water",
@@ -4380,17 +4686,17 @@
             -18
         ],
         "healthPointsIncrement": 145,
-        "powerBoost": 20,
+        "powerBoost": -25,
         "skillBoost": 35,
-        "reachBoost": -40,
-        "energyBoost": -25,
-        "luckBoost": 75,
+        "reachBoost": 75,
+        "energyBoost": 20,
+        "luckBoost": -40,
         "weightIncrement": 65
     },
     {
         "clothing_type": "robe",
-        "name": "Blazebringer Robe of Insight",
-        "sprite": "robe-7.png",
+        "name": "Blazebringer Robe of Harmony",
+        "sprite": "robe-10.png",
         "id_string": "ROBE-T3-G006-N03",
         "element_type": [
             "Fire",
@@ -4417,8 +4723,8 @@
     },
     {
         "clothing_type": "robe",
-        "name": "Nimbus Drip of Infinity",
-        "sprite": "robe-6.png",
+        "name": "Nimbus Drip of Pliability",
+        "sprite": "robe-9.png",
         "id_string": "ROBE-T3-G007-N01",
         "element_type": [
             "Air",
@@ -4436,17 +4742,17 @@
             -19
         ],
         "healthPointsIncrement": 125,
-        "powerBoost": 60,
-        "skillBoost": -75,
-        "reachBoost": -45,
+        "powerBoost": -45,
+        "skillBoost": 60,
+        "reachBoost": 0,
         "energyBoost": 95,
-        "luckBoost": 0,
+        "luckBoost": -75,
         "weightIncrement": 55
     },
     {
         "clothing_type": "robe",
-        "name": "Shadowed Drip of Infinity",
-        "sprite": "robe-5.png",
+        "name": "Shadowed Drip of Pliability",
+        "sprite": "robe-8.png",
         "id_string": "ROBE-T3-G007-N02",
         "element_type": [
             "Darkness",
@@ -4464,17 +4770,17 @@
             -19
         ],
         "healthPointsIncrement": 165,
-        "powerBoost": 40,
-        "skillBoost": -15,
-        "reachBoost": 75,
+        "powerBoost": 75,
+        "skillBoost": 40,
+        "reachBoost": -15,
         "energyBoost": 25,
         "luckBoost": 15,
         "weightIncrement": 75
     },
     {
         "clothing_type": "robe",
-        "name": "Verdant Drip of Infinity",
-        "sprite": "robe-4.png",
+        "name": "Verdant Drip of Pliability",
+        "sprite": "robe-7.png",
         "id_string": "ROBE-T3-G007-N03",
         "element_type": [
             "Nature",
@@ -4494,15 +4800,15 @@
         "healthPointsIncrement": 130,
         "powerBoost": 0,
         "skillBoost": 0,
-        "reachBoost": -75,
-        "energyBoost": 0,
-        "luckBoost": 50,
+        "reachBoost": 0,
+        "energyBoost": 50,
+        "luckBoost": -75,
         "weightIncrement": 60
     },
     {
         "clothing_type": "robe",
-        "name": "Oceanic Cape of the Runes",
-        "sprite": "robe-3.png",
+        "name": "Oceanic Cape of Tactfulness",
+        "sprite": "robe-6.png",
         "id_string": "ROBE-T3-G008-N01",
         "element_type": [
             "Water",
@@ -4529,8 +4835,8 @@
     },
     {
         "clothing_type": "robe",
-        "name": "Herbalist's Cape of the Runes",
-        "sprite": "robe-2.png",
+        "name": "Herbalist's Cape of Tactfulness",
+        "sprite": "robe-5.png",
         "id_string": "ROBE-T3-G008-N02",
         "element_type": [
             "Nature",
@@ -4548,17 +4854,17 @@
             -18
         ],
         "healthPointsIncrement": 185,
-        "powerBoost": 35,
+        "powerBoost": -40,
         "skillBoost": 75,
-        "reachBoost": 20,
-        "energyBoost": -25,
-        "luckBoost": -40,
+        "reachBoost": 35,
+        "energyBoost": 20,
+        "luckBoost": -25,
         "weightIncrement": 65
     },
     {
         "clothing_type": "robe",
-        "name": "Azure Cape of the Runes",
-        "sprite": "robe.png",
+        "name": "Azure Cape of Tactfulness",
+        "sprite": "robe-4.png",
         "id_string": "ROBE-T3-G008-N03",
         "element_type": [
             "Air",
@@ -4579,8 +4885,92 @@
         "powerBoost": 0,
         "skillBoost": 40,
         "reachBoost": -75,
-        "energyBoost": 65,
-        "luckBoost": 0,
+        "energyBoost": 0,
+        "luckBoost": 65,
         "weightIncrement": 55
+    },
+    {
+        "clothing_type": "robe",
+        "name": "Flametongue Robe of Amiability",
+        "sprite": "robe-3.png",
+        "id_string": "ROBE-T3-G009-N01",
+        "element_type": [
+            "Fire",
+            "Rock",
+            "Earth"
+        ],
+        "item_colors": {
+            "red": 102,
+            "gray": 78,
+            "brown": 64
+        },
+        "rarity": "Rare",
+        "pixels_offset": [
+            4,
+            -17
+        ],
+        "healthPointsIncrement": 165,
+        "powerBoost": 75,
+        "skillBoost": -45,
+        "reachBoost": 0,
+        "energyBoost": 125,
+        "luckBoost": 0,
+        "weightIncrement": 70
+    },
+    {
+        "clothing_type": "robe",
+        "name": "Cobalt Robe of Amiability",
+        "sprite": "robe-2.png",
+        "id_string": "ROBE-T3-G009-N02",
+        "element_type": [
+            "Water",
+            "Darkness",
+            "Poison"
+        ],
+        "item_colors": {
+            "blue": 102,
+            "black": 78,
+            "purple": 64
+        },
+        "rarity": "Legendary",
+        "pixels_offset": [
+            4,
+            -17
+        ],
+        "healthPointsIncrement": 170,
+        "powerBoost": 25,
+        "skillBoost": -15,
+        "reachBoost": 15,
+        "energyBoost": 75,
+        "luckBoost": 40,
+        "weightIncrement": 75
+    },
+    {
+        "clothing_type": "robe",
+        "name": "Jolt Robe of Amiability",
+        "sprite": "robe.png",
+        "id_string": "ROBE-T3-G009-N03",
+        "element_type": [
+            "Thunder",
+            "Earth",
+            "Darkness"
+        ],
+        "item_colors": {
+            "yellow": 102,
+            "black": 46,
+            "brown": 96
+        },
+        "rarity": "Useless",
+        "pixels_offset": [
+            4,
+            -17
+        ],
+        "healthPointsIncrement": 140,
+        "powerBoost": 0,
+        "skillBoost": 0,
+        "reachBoost": 0,
+        "energyBoost": 0,
+        "luckBoost": -75,
+        "weightIncrement": 90
     }
 ]

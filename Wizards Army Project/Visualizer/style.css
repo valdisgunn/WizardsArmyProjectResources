@@ -123,8 +123,15 @@ body {
 	border-radius: 5px;
 	cursor: pointer;
 	font-size: 1.1em;
-	width: 250px;
+	width: 275px;
 	margin: 5px 0;
+}
+#controls button.small-button {
+	width: 30px;
+	padding: 10px 5px;
+}
+#controls button.medium-button {
+	width: calc(275px - 30px - 20px * 2);
 }
 #controls button:hover {
 	background-color: #ffffff80;

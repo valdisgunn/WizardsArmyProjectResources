@@ -143,6 +143,57 @@ function populate_clothing_items() {
 		"weightIncrement": "WGT",
 	};
 
+	// Create a div contianing general information about the items
+	var generalInfoDiv = document.createElement("div");
+	generalInfoDiv.id = "general-info";
+	// Create a div for the number of items
+	var numberOfItemsDiv = document.createElement("div");
+	numberOfItemsDiv.className = "number-of-items";
+	let numOfHatsDiv = document.createElement("div");
+	numOfHatsDiv.className = "hats";
+	numOfHatsDiv.innerHTML = "Number of hats: " + CLOTHING_ITEMS.filter(item => item.clothing_type == "hat").length;
+	numberOfItemsDiv.appendChild(numOfHatsDiv);
+	let numOfRobesDiv = document.createElement("div");
+	numOfRobesDiv.className = "robes";
+	numOfRobesDiv.innerHTML = "Number of robes: " + CLOTHING_ITEMS.filter(item => item.clothing_type == "robe").length;
+	numberOfItemsDiv.appendChild(numOfRobesDiv);
+	generalInfoDiv.appendChild(numberOfItemsDiv);
+
+	// Calculate number of hats and clohes with certain rarities
+	let hatsProbabilities = {
+		"Useless": 0,
+		"Common": 0,
+		"Rare": 0,
+		"Epic": 0,
+		"Legendary": 0
+	};
+	let robesProbabilities = {
+		"Useless": 0,
+		"Common": 0,
+		"Rare": 0,
+		"Epic": 0,
+		"Legendary": 0
+	};
+	for (var i = 0; i < CLOTHING_ITEMS.length; i++) {
+		if (CLOTHING_ITEMS[i].clothing_type == "hat") {
+			hatsProbabilities[CLOTHING_ITEMS[i].rarity] += 1;
+		} else if (CLOTHING_ITEMS[i].clothing_type == "robe") {
+			robesProbabilities[CLOTHING_ITEMS[i].rarity] += 1;
+		}
+	}
+	let hatsProbabilitiesDiv = document.createElement("div");
+	hatsProbabilitiesDiv.className = "hats-probabilities";
+	hatsProbabilitiesDiv.innerHTML = "Hats probabilities: " + JSON.stringify(hatsProbabilities);
+	generalInfoDiv.appendChild(hatsProbabilitiesDiv);
+	let robesProbabilitiesDiv = document.createElement("div");
+	robesProbabilitiesDiv.className = "robes-probabilities";
+	robesProbabilitiesDiv.innerHTML = "Robes probabilities: " + JSON.stringify(robesProbabilities);
+	generalInfoDiv.appendChild(robesProbabilitiesDiv);
+
+	// Append the general info div to the items container
+	document.getElementById("page-content").prepend(generalInfoDiv);
+
+
 	// We create a div for each clothing item, with nested divs for each of its properties
 	for (var i = 0; i < CLOTHING_ITEMS.length; i++) {
 
@@ -150,6 +201,12 @@ function populate_clothing_items() {
 		var itemDiv = document.createElement("div");
 		itemDiv.className = "item";
 		itemDiv.id = CLOTHING_ITEMS[i].id_string;
+
+		// Create a new div for the item's name
+		var nameDiv = document.createElement("div");
+		nameDiv.className = "name";
+		nameDiv.innerHTML = CLOTHING_ITEMS[i].name;
+		itemDiv.appendChild(nameDiv);
 
 		// Create a new div for the item's sprite
 		var spriteDiv = document.createElement("div");
@@ -168,16 +225,17 @@ function populate_clothing_items() {
 		spriteDiv.appendChild(imgElement);
 		itemDiv.appendChild(spriteDiv);
 
-		// Create a new div for the item's name
-		var nameDiv = document.createElement("div");
-		nameDiv.className = "name";
-		nameDiv.innerHTML = CLOTHING_ITEMS[i].name;
-		itemDiv.appendChild(nameDiv);
-
 		// Create a container for the rarity and element id
 		var rarityAndElementTypesContainerDiv = document.createElement("div");
 		rarityAndElementTypesContainerDiv.className = "rarity-and-types-container";
 		itemDiv.appendChild(rarityAndElementTypesContainerDiv);
+
+		// Create a new div for the item's rarity
+		var rarityDiv = document.createElement("div");
+		rarityDiv.className = "rarity";
+		rarityDiv.style.color = rarity_colors[CLOTHING_ITEMS[i].rarity];
+		rarityDiv.innerHTML = CLOTHING_ITEMS[i].rarity + " " + CLOTHING_ITEMS[i].clothing_type
+		rarityAndElementTypesContainerDiv.appendChild(rarityDiv);
 
 		// Create a new div for the item's element types
 		var elementTypesDiv = document.createElement("div");
@@ -194,13 +252,6 @@ function populate_clothing_items() {
 			elementTypesDiv.appendChild(elementTypeDiv);
 		}
 		rarityAndElementTypesContainerDiv.appendChild(elementTypesDiv);
-
-		// Create a new div for the item's rarity
-		var rarityDiv = document.createElement("div");
-		rarityDiv.className = "rarity";
-		rarityDiv.style.color = rarity_colors[CLOTHING_ITEMS[i].rarity];
-		rarityDiv.innerHTML = CLOTHING_ITEMS[i].rarity + " " + CLOTHING_ITEMS[i].clothing_type
-		rarityAndElementTypesContainerDiv.appendChild(rarityDiv);
 
 		// Create a new div for the item's id string
 		var idStringDiv = document.createElement("div");

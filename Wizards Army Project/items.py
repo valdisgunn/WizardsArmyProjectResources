@@ -8,6 +8,10 @@ import PIL.Image
 import itertools
 import math
 import json
+import argparse
+import random	# used to shuffle things with a seed
+random.seed(14)	# set the seed to "14" to get the same scrambled lists and things every time
+				# NOTE: DON'T CHANGE THIS SEED (otherwise, all new items will be generated with different names than previous items which are supposed to remain the same, and possibly also different stats, types, rarities, ecc...)
 
 # MAIN CONSTANTS ======================================================================================================
 
@@ -31,7 +35,7 @@ TYPES_GROUPS_CLOTHING_PIECE_NAME_MAPPINGS = {
 		# DONE until "T1-G011"
 
 		"T2-G001": "Top-Hat",
-		"T2-G002": "Sheriff-Hat",
+		"T2-G002": "Cowboy-Hat",
 		"T2-G003": "Homburg-Hat",
 		"T2-G004": "Night-Cap",
 		"T2-G005": "Night-Cap",
@@ -43,7 +47,8 @@ TYPES_GROUPS_CLOTHING_PIECE_NAME_MAPPINGS = {
 		"T2-G013": "Night-Cap",
 		"T2-G014": "Helmet",
 		"T2-G015": "Bonnet-Cap",
-		# DONE until "T2-G016"
+		"T2-G017": "Boater-Hat",
+		# DONE until "T2-G017"
 
 		# "T3-G001": "Hat",
 		"T3-G003": "Pointy-Hat",
@@ -546,81 +551,89 @@ def get_actual_general_epithets_list():
 	'''
 	# NOTE: this list may contain duplicates or too long epithets, use the "get_actual_general_epithets_list()" function to get the actual list of epithets that can be used
 	general_epithets_not_adjusted = [
-		" of Mystery",
-		" of the Enigma",
-		" of the Mystic",
-		" of the Arcane",
-		" of the Unknown",
-		" of Arcane Secrets",
-		" of Ethereal Whispers",
-		" of the Unseen",
-		" of Celestial Harmony",
-		" of Astral Essence",
-		" of Shrouded Wisdom",
-		" of Cosmic Insight",
-		" of the Mind",
-		" of Tranquil Essence",
-		" of Timeless Arcana",
-		" of Endless Sorcery",
-		" of Eternal Enigma",
-		" of Astral Attunement",
-		" of Enchanted Realms",
-		" of Mystical Prowess",
-		" of Infinite Wisdom",
-		" of Timeless Enchantment",
-		" of Everlasting Arcana",
+		# " of Arcane Secrets",
+		# " of Ethereal Whispers",
+		# " of Celestial Harmony",
+		# " of Astral Essence",
+		# " of Shrouded Wisdom",
+		# " of Cosmic Insight",
+		# " of Tranquil Essence",
+		# " of Timeless Arcana",
+		# " of Endless Sorcery",
+		# " of Eternal Enigma",
+		# " of Astral Attunement",
+		# " of Enchanted Realms",
+		# " of Mystical Prowess",
+		# " of Infinite Wisdom",
+		# " of Timeless Enchantment",
+		# " of Everlasting Arcana",
+		# " of Eternal Echoes",
+		# " of Infinite Realms",
+		# " of Enigmatic Forces",
+		# " of Harmonious Whispers",
+		# " of Tranquil Reflection",
+		# " of Veiled Secrets",
+		# " of Astral Resonance",
+		# " of Mystical Harmony",
+		# " of Ethereal Insight",
+		# " of Unseen Forces",
+		# " of Celestial Radiance",
+		# " of Timeless Wisdom",
+		# " of Enchanted Echoes",
+		# " of Arcane Elegance",
+		# " of Harmonic Whispers",
+		# " of Transcendent Knowledge",
+		# " of Eternal Silence",
+		# " of Enigmatic Presence",
+		# " of Serene Reflection",
+		# " of Astral Realms",
+		# " of Mystic Serenity",
+		# " of Celestial Echoes",
+		# " of Harmonious Insight",
+		# " of Ethereal Presence",
+		# " of Tranquil Knowledge",
+		# " of Celestial Essence",
+		# " of Astral Knowledge",
+		# " of Enchanted Knowledge",
+		# " of Ancient Arcana",
+		# " of Ancient Wisdom",
+		# " of Ancient Knowledge",
+		# " of Ancient Insight",
+		# " of Ancient Presence",
+		# " of Ancient Essence",
+		# " of Ancient Enchantment",
+		# " of Ancient Sorcery",
+		# " of Ancient Whispers",
+		# " of Ancient Radiance",
+		# " of Ancient Echoes",
+		# " of Ancient Serenity",
+		# " of Ancient Reflection",
+		# " of Stylish Elegance",
+
+		# " of the Enigma",
+		# " of the Mystic",
+		# " of the Arcane",
+		# " of the Unknown",
+		# " of the Unseen",
+		# " of the Mind",
+		# " of the Runes",
+		# " of the Unknown",
+		# " of the Edges",
+		# " of the Untold",
+		# " of the Unspoken",
+		# " of the Unheard",
+		# " of the Unseen",
+		# " of the Unrevealed",
+		# " of the Elements",
+
+		# Names and misc
 		" of Silence",
 		" of Serenity",
-		" of Eternal Echoes",
-		" of Infinite Realms",
-		" of Enigmatic Forces",
-		" of Harmonious Whispers",
-		" of Tranquil Reflection",
-		" of Veiled Secrets",
-		" of Astral Resonance",
-		" of Mystical Harmony",
-		" of Ethereal Insight",
-		" of Unseen Forces",
-		" of Celestial Radiance",
-		" of Timeless Wisdom",
-		" of Enchanted Echoes",
-		" of Arcane Elegance",
-		" of Harmonic Whispers",
-		" of Transcendent Knowledge",
-		" of Eternal Silence",
-		" of Enigmatic Presence",
-		" of Serene Reflection",
-		" of Astral Realms",
-		" of Mystic Serenity",
-		" of Celestial Echoes",
-		" of Harmonious Insight",
-		" of Ethereal Presence",
-		" of Tranquil Knowledge",
-		" of Celestial Essence",
-		" of Astral Knowledge",
-		" of Enchanted Knowledge",
-		" of Ancient Arcana",
-		" of Ancient Wisdom",
-		" of Ancient Knowledge",
-		" of Ancient Insight",
-		" of Ancient Presence",
-		" of Ancient Essence",
-		" of Ancient Enchantment",
-		" of Ancient Sorcery",
-		" of Ancient Whispers",
-		" of Ancient Radiance",
-		" of Ancient Echoes",
-		" of Ancient Serenity",
-		" of Ancient Reflection",
-		" of Stylish Elegance",
 		" of Elegance",
 		" of Mystery",
 		" of Harmony",
 		" of Tranquility",
 		" of Wisdom",
-		" of Enigma",
-		" of Essence",
-		" of Serenity",
 		" of Prowess",
 		" of Reflection",
 		" of Insight",
@@ -630,30 +643,23 @@ def get_actual_general_epithets_list():
 		" of Infinity",
 		" of Whispers",
 		" of Presence",
-		" of the Runes",
-		" of the Unknown",
 		" of Echoes",
 		" of Grace",
 		" of Resonance",
-		" of Beyond",
-		" of the Edges",
-		" of Reflection",
 		" of Enchantment",
 		" of Secrets",
 		" of Unfolding",
 		" of Unbound",
 		" of Unveiling",
-		" of the Untold",
-		" of the Unspoken",
-		" of the Unheard",
-		" of the Unseen",
-		" of the Unrevealed",
 		" of Wizardry",
 		" of Sorcery",
+		" of Respect",
+		
+		# Fun easter egg
 		" of Valdis Gunn",
-		" of Thalos",
+
+		# Human qualities
 		" of Resistance",
-		" of the Elements",
 		" of Resilience",
 		" of Courage",
 		" of Empathy",
@@ -665,15 +671,12 @@ def get_actual_general_epithets_list():
 		" of Generosity",
 		" of Kindness",
 		" of Patience",
-		" of Open-mindedness",
 		" of Curiosity",
 		" of Creativity",
 		" of Optimism",
 		" of Adaptability",
 		" of Perseverance",
-		" of Responsibility",
 		" of Gratitude",
-		" of Self-discipline",
 		" of Caring",
 		" of Empowerment",
 		" of Tolerance",
@@ -684,7 +687,6 @@ def get_actual_general_epithets_list():
 		" of Wisdom",
 		" of Loyalty",
 		" of Diligence",
-		" of Resourcefulness",
 		" of Sensitivity",
 		" of Humor",
 		" of Reliability",
@@ -699,7 +701,6 @@ def get_actual_general_epithets_list():
 		" of Vivacity",
 		" of Discernment",
 		" of Maturity",
-		" of Innovativeness",
 		" of Harmony",
 		" of Candor",
 		" of Thoroughness",
@@ -715,9 +716,7 @@ def get_actual_general_epithets_list():
 		" of Decisiveness",
 		" of Vitality",
 		" of Credibility",
-		" of Judiciousness",
 		" of Sociability",
-		" of Steadfastness",
 		" of Prudence",
 		" of Grit",
 		" of Imagination",
@@ -725,21 +724,15 @@ def get_actual_general_epithets_list():
 		" of Harboring",
 		" of Zeal",
 		" of Tranquility",
-		" of Unselfishness",
 		" of Cooperation",
 		" of Modesty",
-		" of Resourcefulness",
 		" of Sincerity",
 		" of Prowess",
-		" of Perceptiveness",
 		" of Dexterity",
 		" of Pliability",
 		" of Stoicism",
 		" of Endurance",
 		" of Enthusiasm",
-		" of Gracefulness",
-		" of Persuasiveness",
-		" of Inquisitiveness",
 		" of Tenacity",
 		" of Serenity",
 		" of Rationality",
@@ -747,21 +740,15 @@ def get_actual_general_epithets_list():
 		" of Cordiality",
 		" of Intuition",
 		" of Sensitivity",
-		" of Thoughtfulness",
-		" of Insightfulness",
 		" of Punctuality",
 		" of Sociability",
 		" of Dynamism",
 		" of Reticence",
-		" of Unpretentiousness",
 		" of Consistency",
 		" of Efficiency",
-		" of Cautious Optimism",
-		" of Resourcefulness",
 		" of Harmony",
 		" of Decorum",
 		" of Modesty",
-		" of Reflectiveness",
 		" of Mellowness",
 		" of Cleverness",
 		" of Munificence",
@@ -769,7 +756,6 @@ def get_actual_general_epithets_list():
 		" of Sanguinity",
 		" of Tactfulness",
 		" of Fidelity",
-		" of Respectfulness",
 		" of Discernment",
 		" of Sagacity",
 		" of Amiability",
@@ -785,7 +771,156 @@ def get_actual_general_epithets_list():
 			or (len(epithet_words) == 3 and epithet_words[0] in ["of", "the"] and epithet_words[1] in ["of", "the"]):
 			epithets.append(epithet)
 	return epithets
-GENERAL_EPITHETS = get_actual_general_epithets_list()
+
+# GENERAL_EPITHETS = get_actual_general_epithets_list()
+GENERAL_EPITHETS = [
+	# Names and misc
+	" of Silence",
+	" of Serenity",
+	" of Elegance",
+	" of Mystery",
+	" of Harmony",
+	" of Tranquility",
+	" of Wisdom",
+	" of Prowess",
+	" of Reflection",
+	" of Insight",
+	" of Silence",
+	" of Knowledge",
+	" of Veil",
+	" of Infinity",
+	" of Whispers",
+	" of Presence",
+	" of Echoes",
+	" of Grace",
+	" of Resonance",
+	" of Enchantment",
+	" of Secrets",
+	" of Unfolding",
+	" of Unbound",
+	" of Unveiling",
+	" of Wizardry",
+	" of Sorcery",
+	" of Respect",
+	
+	# Fun easter egg
+	" of Valdis Gunn",
+
+	# Human qualities
+	" of Resistance",
+	" of Resilience",
+	" of Courage",
+	" of Empathy",
+	" of Compassion",
+	" of Resilience",
+	" of Courage",
+	" of Integrity",
+	" of Honesty",
+	" of Generosity",
+	" of Kindness",
+	" of Patience",
+	" of Curiosity",
+	" of Creativity",
+	" of Optimism",
+	" of Perseverance",
+	" of Gratitude",
+	" of Caring",
+	" of Empowerment",
+	" of Tolerance",
+	" of Humility",
+	" of Tactfulness",
+	" of Flexibility",
+	" of Forgiveness",
+	" of Wisdom",
+	" of Loyalty",
+	" of Diligence",
+	" of Sensitivity",
+	" of Humor",
+	" of Reliability",
+	" of Fairness",
+	" of Altruism",
+	" of Punctuality",
+	" of Sincerity",
+	" of Vivacity",
+	" of Discernment",
+	" of Maturity",
+	" of Harmony",
+	" of Candor",
+	" of Empowerment",
+	" of Thoroughness",
+	" of Sagacity",
+	" of Equanimity",
+	" of Versatility",
+	" of Diplomacy",
+	" of Graciousness",
+	" of Magnanimity",
+	" of Decisiveness",
+	" of Vitality",
+	" of Credibility",
+	" of Sociability",
+	" of Prudence",
+	" of Grit",
+	" of Imagination",
+	" of Liberality",
+	" of Harboring",
+	" of Zeal",
+	" of Tranquility",
+	" of Cooperation",
+	" of Modesty",
+	" of Sincerity",
+	" of Prowess",
+	" of Dexterity",
+	" of Pliability",
+	" of Stoicism",
+	" of Endurance",
+	" of Enthusiasm",
+	" of Tenacity",
+	" of Serenity",
+	" of Rationality",
+	" of Exuberance",
+	" of Cordiality",
+	" of Intuition",
+	" of Sensitivity",
+	" of Punctuality",
+	" of Sociability",
+	" of Dynamism",
+	" of Reticence",
+	" of Consistency",
+	" of Efficiency",
+	" of Harmony",
+	" of Decorum",
+	" of Modesty",
+	" of Mellowness",
+	" of Cleverness",
+	" of Munificence",
+	" of Empathy",
+	" of Sanguinity",
+	" of Tactfulness",
+	" of Fidelity",
+	" of Discernment",
+	" of Sagacity",
+	" of Amiability",
+	" of Liveliness"
+]
+
+# Scramble the epithets list deterministically
+random.shuffle(GENERAL_EPITHETS)
+
+# Get command line arguments ("--ignore-old-items-differences", ...)
+parser = argparse.ArgumentParser()
+parser.add_argument("--ignore-old-items-differences", action="store_true")
+args = parser.parse_args()
+
+# Used to sort items by their sprite name
+def get_fixed_item_sprite_name(sprite_name):
+	name = sprite_name.split(".")[0]
+	# check if the sprite contains "-"
+	if "-" in name:
+		# get the number after the "-"
+		return name.split("-")[1].zfill(3)
+	else:
+		# get the number after the "_"
+		return "1".zfill(3)
 
 def main():
 
@@ -875,6 +1010,22 @@ def main():
 	for item in clothing_items:
 		print(get_item_string(item, False, False))
 
+	def get_compact_item_string(item):
+		items_string = ""
+		# Append id_string
+		items_string += item["id_string"] + "/"
+		# Append sprite
+		items_string += item["sprite"][0:-4] + " | "
+		# Append name
+		items_string += item["name"] + " | "
+		# Append rarity
+		items_string += str(item["rarity"])[0:3] + ". | "
+		# Append element types (only as initials)
+		items_string += "+".join([element_type[0] for element_type in item["element_type"]]) + " | "
+		# Append stat values as a list (of only values)
+		items_string += str([item["healthPointsIncrement"], item["powerBoost"], item["skillBoost"], item["reachBoost"], item["energyBoost"], item["luckBoost"], item["weightIncrement"]])
+		return items_string
+
 	# ==================================================================================================================
 	# TESTS ===========================================================================================================
 
@@ -886,9 +1037,9 @@ def main():
 		for item2 in clothing_items:
 			if item1 != item2 and item1["name"] == item2["name"]:
 				found_duplicate_names = True
-				print("\tERROR: Found 2 clothing items with the same name: ", item1["name"])
-				print("\t\t", item1["id_string"], " - ", item1["sprite"])
-				print("\t\t", item2["id_string"], " - ", item2["sprite"])
+				print("\t> ERROR: Found 2 clothing items with the same name: ", item1["name"])
+				print("\t\t", item1["id_string"], " (",item1["element_type"],")", "  -  ", item1["sprite"],sep="")
+				print("\t\t", item2["id_string"], " (",item2["element_type"],")", "  -  ", item2["sprite"],sep="")
 	if not found_duplicate_names:
 		print("\tOK: No duplicate names found (for hats and clothes).")
 
@@ -903,21 +1054,115 @@ def main():
 			if item1 != item2 and group_string_1 == group_string_2 and item_type_1 == item_type_2:
 				if set(item1["element_type"]) == set(item2["element_type"]):
 					found_duplicate_types = True
-					print("\tERROR: Found 2 clothing items with the same types in the same group: ", item1["element_type"])
-					print("\t\t", item1["id_string"], " - ", item1["sprite"])
-					print("\t\t", item2["id_string"], " - ", item2["sprite"])
+					print("\t> ERROR: Found 2 clothing items with the same types in the same group: ", item1["element_type"])
+					print("\t\t", item1["id_string"], " (",item1["element_type"],")", "  -  ", item1["sprite"],sep="")
+					print("\t\t", item2["id_string"], " (",item2["element_type"],")", "  -  ", item2["sprite"],sep="")
 	if not found_duplicate_types:
 		print("\tOK: No duplicate types on the same group found (for hats and clothes).")
+
+	# Get the content of the the currently existing JSON file (if it exists), and compare its content with the new items to write
+	found_old_items_differences_with_new_items = False
+	json_file_path = JSON_ITEMS_DIRECTORY + JSON_CLOTHING_ITEMS_FILE_NAME
+	if os.path.exists(json_file_path):
+		with open(json_file_path, "r") as json_file:
+			json_file_content = json.load(json_file)
+			# Compare the items in the JSON file with the new items
+			# Group all the items into 3 groups for each glothing type:
+			# 	The 3 groups correspond to a number of element types of the item (either "T1", "T2" or "T3")
+			# Compare items, one by one, of the previous list with the new list (compare their element types lists, in order, their rarity, their name and their stats), until the old items are over (and only new items remain, but they are all after the old items' last element of the group)
+			# 	If the items are the same, then do nothing, otherwise, print the old item and the new item as an "> ERROR"
+
+			# Group the items in the JSON file by their number of element types
+			grouped_old_items = {
+				"hat": {
+					"T1": [],
+					"T2": [],
+					"T3": [],
+				},
+				"robe": {
+					"T1": [],
+					"T2": [],
+					"T3": [],
+				},
+			}
+			grouped_new_items = {
+				"hat": {
+					"T1": [],
+					"T2": [],
+					"T3": [],
+				},
+				"robe": {
+					"T1": [],
+					"T2": [],
+					"T3": [],
+				},
+			}
+			for item in json_file_content:
+				grouped_old_items[item["clothing_type"]][item["id_string"].split("-")[1]].append(item)
+			for item in clothing_items:
+				grouped_new_items[item["clothing_type"]][item["id_string"].split("-")[1]].append(item)
+			# Sort all items in the groups by their fixed sprite name
+			for clothing_type in grouped_old_items:
+				for item_type in grouped_old_items[clothing_type]:
+					grouped_old_items[clothing_type][item_type].sort(key=lambda item: get_fixed_item_sprite_name(item["sprite"]), reverse=True)
+			for clothing_type in grouped_new_items:
+				for item_type in grouped_new_items[clothing_type]:
+					grouped_new_items[clothing_type][item_type].sort(key=lambda item: get_fixed_item_sprite_name(item["sprite"]), reverse=True)
+			# Compare the items in the JSON file with the new items
+			for clothing_type in grouped_old_items:
+				for item_type in grouped_old_items[clothing_type]:
+					for i in range(len(grouped_old_items[clothing_type][item_type])):
+						# Get the old item and the new item
+						old_item = grouped_old_items[clothing_type][item_type][i]
+						new_item = grouped_new_items[clothing_type][item_type][i]
+						# Compare their element types lists, in order, their rarity, their name and their stats
+						if old_item["element_type"] != new_item["element_type"] \
+							or old_item["rarity"] != new_item["rarity"] \
+							or old_item["name"] != new_item["name"] \
+							or old_item["healthPointsIncrement"] != new_item["healthPointsIncrement"] \
+							or old_item["powerBoost"] != new_item["powerBoost"] \
+							or old_item["skillBoost"] != new_item["skillBoost"] \
+							or old_item["reachBoost"] != new_item["reachBoost"] \
+							or old_item["energyBoost"] != new_item["energyBoost"] \
+							or old_item["luckBoost"] != new_item["luckBoost"] \
+							or old_item["weightIncrement"] != new_item["weightIncrement"]:
+							found_old_items_differences_with_new_items = True
+							print("\t> ERROR: The new items introduced changes to the old items, found 2 different items here: ")
+							print("\t  ", "OLD: ", get_compact_item_string(old_item), sep="")
+							print("\t  ", "NEW: ", get_compact_item_string(new_item), sep="")
+			if not found_old_items_differences_with_new_items:
+				print("\tOK: No differences in ordering found between the old items and the new items.")
+			else:
+				print("\n\t", "  NOTE: errors might be due to the fact that new items in the Photoshop file were created right next to old items, \n", 
+		  					"\t\tinstead of at the top of the list of layers for a specific hat's/robe's group of sprites \n",
+							"\t\t(grouped by number of elements).\n", 
+							"\t\tCheck the layers of the photoshop file before continuing, and if you find there are no errors there \n",
+							"\t\t(but this error is originated by something else), then re-run this script with parameter \n",
+							"\t\t\"--ignore-old-items-differences\" to overwrite the items list with the new one.\n",
+							"\t\tAlso, it might be good to create an additiona backup file of the current items somewhere...", sep="")
 
 	# ==================================================================================================================
 	# JSON ============================================================================================================
 
+	# Check if command line arguments contain "--ignore-old-items-differences", if it doesnt, terminate the script
+	if found_old_items_differences_with_new_items and not args.ignore_old_items_differences:
+		print("\n\n>>>>> NOTE: To overwrite the JSON file with the new items, run this script with parameter \"--ignore-old-items-differences\".\n")
+		return
+		
 	# Print items in JSON file (create file if it doesn't exist)
 	json_file_path = JSON_ITEMS_DIRECTORY + JSON_CLOTHING_ITEMS_FILE_NAME
 	input_val = input("\n>>>>> Do you want to overwrite the file \"" + json_file_path + "\"? (Y/n): ")
 	if input_val == "Y":
 		if not os.path.exists(JSON_ITEMS_DIRECTORY):
 			os.makedirs(JSON_ITEMS_DIRECTORY)
+		# Create a backup of the previous file (if it exists)
+		if os.path.exists(json_file_path):
+			backup_file_path = json_file_path + ".backup"
+			if os.path.exists(backup_file_path):
+				os.remove(backup_file_path)
+			os.rename(json_file_path, backup_file_path)
+			print("\t[OK] Current file \"" + json_file_path + "\" backed up as \"" + backup_file_path + "\".")
+		# Write the JSON file
 		with open(json_file_path, "w") as json_file:
 			# json_file.write("[\n")
 			# for item in clothing_items:
@@ -1280,15 +1525,6 @@ def generate_clothing_items_attributes(items):
 	'''
 	# Add the "id_string" to clothing items and also set their "rarity"
 	temp_dict = {}
-	# sort items by type and sprite name
-	def sort_criteria(sprite_name):
-		name = sprite_name.split(".")[0]
-		# check if the sprite contains "-"
-		if "-" in name:
-			# get the number after the "-"
-			return name.split("-")[1].zfill(3)
-		else:
-			return "1".zfill(3)
 	def get_item_group_and_item_number(item):
 		'''
 		Get item and group number from id_string
@@ -1371,12 +1607,16 @@ def generate_clothing_items_attributes(items):
 			percentage_stats = ["powerBoost", "skillBoost", "reachBoost", "energyBoost", "luckBoost"]
 			# Get all permutations of all of the 5 stats
 			permutations = list(itertools.permutations(percentage_stats, len(percentage_stats)))
+			# Sort the permutations alphabetically based on their elements
+			permutations.sort(key=lambda permutation: "".join(permutation))
 			# Get all permutations of the first num_positive + num_negative stats
 			permutations = [permutation[:num_positive+num_negative] for permutation in permutations]
 			# Remove duplicates
 			permutations = list(set([tuple(permutation) for permutation in permutations]))
 			# Convert back to list
 			permutations = [list(permutation) for permutation in permutations]
+			# Sort the permutations alphabetically based on their elements
+			permutations.sort(key=lambda permutation: "".join(permutation))
 			return permutations
 	def set_item_stats(item):
 		# Set the stats positive and negative values of each item based on the rarity of the item, the id_string, ecc...
@@ -1564,7 +1804,7 @@ def generate_clothing_items_attributes(items):
 
 		return item
 
-	items.sort(key=lambda item: sort_criteria(item["sprite"]), reverse=True)
+	items.sort(key=lambda item: get_fixed_item_sprite_name(item["sprite"]), reverse=True)
 	for item, index in zip(items, range(len(items))):
 		# Get the type of the item
 		item_type = item["clothing_type"].upper()

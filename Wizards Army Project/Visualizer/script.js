@@ -61,6 +61,21 @@ const colors = [
 ];
 const sprites_paths = get_list_of_sprites_names();
 
+function get_sprite_name_for_ordering() {
+	// Get the name of the sprite before the ".png" which could be "[name]-N" where N is a number or "[name]"
+	let sprite_name = this.src.split("/")[this.src.split("/").length - 1].split(".png")[0];
+	if (sprite_name.includes("-")) {
+		sprite_name = sprite_name.split("-")[1];
+	} else {
+		sprite_name = "1";
+	}
+	// Now pad the sprite name with zeros so that it is always 4 characters long
+	while (sprite_name.length < 4) {
+		sprite_name = "0" + sprite_name;
+	}
+	return sprite_name;
+}
+
 const grouped_sprites = {
 
 	"wizard-hat": [],
@@ -124,6 +139,14 @@ for (var key in grouped_sprites) {
 		if (grouped_sprites.hasOwnProperty(key)) {
 			grouped_sprites[key] = get_sprites(key);
 		}
+	}
+}
+// Sort the grouped sprites by their name for ordering
+for (var key in grouped_sprites) {
+	if (grouped_sprites.hasOwnProperty(key)) {
+		grouped_sprites[key].sort(function (a, b) {
+			return get_sprite_name_for_ordering.call({ src: b }) - get_sprite_name_for_ordering.call({ src: a });
+		});
 	}
 }
 
@@ -280,7 +303,7 @@ $(document).ready(function () {
 	reset_z_ordering();
 
 	// Append the remaining sprites, default sprites for start
-	set_wizard_sprites(false);
+	set_wizard_sprites(-1);
 
 	// Assign function to the "#random-nose-beard-checkbox"
 	$("#random-nose-beard-checkbox").change(function () {
@@ -294,7 +317,7 @@ $(document).ready(function () {
 	$("#random-nose-beard-checkbox").prop("checked", generate_random_nose_and_beard);
 	// Assign function to the "#randomize-wizard-button"
 	$("#random-wizard-button").click(function () {
-		set_wizard_sprites(false, generate_random_nose_and_beard);
+		set_wizard_sprites(-1, generate_random_nose_and_beard);
 	});
 	// When user presses "Space", prevent default action and click the button
 	$(document).keypress(function (e) {
@@ -303,27 +326,77 @@ $(document).ready(function () {
 			$("#random-wizard-button").click();
 		}
 	});
+
 	// Assign function to the "#random-wizard-face-button" (choose random nose and beard)
 	$("#random-wizard-face-button").click(function () {
 		set_random_beard_and_nose();
 	});
+	// Assign function to previous and next face buttons
+	// TO DO...
+
 	// Assign function to the "#random-wizard-hat-button"
 	$("#random-wizard-hat-button").click(function () {
 		set_random_hat();
 	});
+	// Assign function to previous and next hat buttons
+	function get_previous_next_hat(to_add) {
+		let hat_sprite_number = current_sprites_numbers.hat + to_add;
+		if (hat_sprite_number < 0) hat_sprite_number = get_num_of_sprites_of_type("wizard-hat") - 1;
+		if (hat_sprite_number >= get_num_of_sprites_of_type("wizard-hat")) hat_sprite_number = 0;
+		set_random_hat(hat_sprite_number);
+		current_sprites_numbers.hat = hat_sprite_number;
+	}
+	$("#previous-wizard-hat-button").click(function () {
+		get_previous_next_hat(-1);
+	});
+	$("#next-wizard-hat-button").click(function () {
+		get_previous_next_hat(1);
+	});
+
 	// Assign function to the "#random-wizard-robe-button"
 	$("#random-wizard-robe-button").click(function () {
 		set_random_robe();
 	});
+	// Assign function to previous and next robe buttons
+	function get_previous_next_robe(to_add) {
+		let robe_sprite_number = current_sprites_numbers.robe + to_add;
+		if (robe_sprite_number < 0) robe_sprite_number = get_num_of_sprites_of_type("wizard-robe") - 1;
+		if (robe_sprite_number >= get_num_of_sprites_of_type("wizard-robe")) robe_sprite_number = 0;
+		set_random_robe(robe_sprite_number);
+		current_sprites_numbers.robe = robe_sprite_number;
+	}
+	$("#previous-wizard-robe-button").click(function () {
+		get_previous_next_robe(-1);
+	});
+	$("#next-wizard-robe-button").click(function () {
+		get_previous_next_robe(1);
+	});
+
 	// Assign function to the "#random-wizard-staff-button"
 	$("#random-wizard-staff-button").click(function () {
 		set_random_staff();
 	});
+	// Assign function to previous and next staff buttons
+	function get_previous_next_staff(to_add) {
+		let staff_sprite_number = current_sprites_numbers.staff + to_add;
+		if (staff_sprite_number < 0) staff_sprite_number = get_num_of_sprites_of_type("wizard-staff") - 1;
+		if (staff_sprite_number >= get_num_of_sprites_of_type("wizard-staff")) staff_sprite_number = 0;
+		set_random_staff(staff_sprite_number);
+		current_sprites_numbers.staff = staff_sprite_number;
+	}
+	$("#previous-wizard-staff-button").click(function () {
+		get_previous_next_staff(-1);
+	});
+	$("#next-wizard-staff-button").click(function () {
+		get_previous_next_staff(1);
+	});
+
 	// Assign function to the "#random-wizard-book-button"
 	$("#random-wizard-book-button").click(function () {
 		set_random_book();
 	});
-
+	// Assign function to previous and next book buttons
+	// TO DO...
 
 });
 
@@ -567,9 +640,9 @@ function set_random_wizard_name() {
 // Names can be: "wizard-hat", "wizard-robe", "wizard-staff" plus "wizard-nose" and "wizard-beard" if include_nose_and_beard is true
 function get_random_sprite_number(sprite_name, force_number = -1) {
 	if (!sprite_name.includes("wizard-book")) {
-		var num_of_sprites = force_number;
-		if (num_of_sprites == -1) num_of_sprites = get_num_of_sprites_of_type(sprite_name);
-		var sprite_number = Math.floor(Math.random() * num_of_sprites);
+		var num_of_sprites = get_num_of_sprites_of_type(sprite_name);
+		var sprite_number = force_number;
+		if (force_number == -1) sprite_number = Math.floor(Math.random() * num_of_sprites);
 		// var sprite_path = get_sprite_path(sprite_name, sprite_number);
 		// return sprite_path;
 		return sprite_number;
@@ -645,16 +718,16 @@ function add_stroke_and_outline() {
 
 }
 
-function set_wizard_sprites(use_default = false, include_nose_and_beard = true) {
+function set_wizard_sprites(force_number = -1, include_nose_and_beard = true) {
 
 	// Set the sprite for the hat
-	set_random_hat(use_default, false);
+	set_random_hat(force_number, false);
 
 	// Set the sprite for the robe
-	set_random_robe(use_default, false);
+	set_random_robe(force_number, false);
 
 	// Set the sprite for the staff
-	set_random_staff(use_default, false);
+	set_random_staff(force_number, false);
 
 	// Set the sprite for the book
 	set_random_book();
@@ -712,10 +785,10 @@ function set_random_beard_and_nose(setting_single_sprite = true) {
 }
 
 // Set a random sprite for the wizard hat
-function set_random_hat(use_default = false, setting_single_sprite = true) {
+function set_random_hat(force_number = -1, setting_single_sprite = true) {
 
 	// Set the sprite for the hat
-	let hat_sprite_number = get_random_sprite_number("wizard-hat", (use_default ? 0 : -1));
+	let hat_sprite_number = get_random_sprite_number("wizard-hat", force_number);
 	let hat_sprite = get_sprite_path("wizard-hat", hat_sprite_number);
 	$("#wizard-hat").attr("src", hat_sprite);
 	current_sprites_numbers.hat = hat_sprite_number;
@@ -728,10 +801,10 @@ function set_random_hat(use_default = false, setting_single_sprite = true) {
 }
 
 // Set a ranodm sprite for the wizard robe
-function set_random_robe(use_default = false, setting_single_sprite = true) {
+function set_random_robe(force_number = -1, setting_single_sprite = true) {
 
 	// Set the sprite for the robe
-	let robe_sprite_number = get_random_sprite_number("wizard-robe", (use_default ? 0 : -1));
+	let robe_sprite_number = get_random_sprite_number("wizard-robe", force_number);
 	let robe_sprite = get_sprite_path("wizard-robe", robe_sprite_number);
 	$("#wizard-robe").attr("src", robe_sprite);
 	current_sprites_numbers.robe = robe_sprite_number;
@@ -743,10 +816,10 @@ function set_random_robe(use_default = false, setting_single_sprite = true) {
 
 }
 
-function set_random_staff(use_default = false, setting_single_sprite = true) {
+function set_random_staff(force_number = -1, setting_single_sprite = true) {
 
 	// Set the sprite for the staff
-	let staff_sprite_number = get_random_sprite_number("wizard-staff", (use_default ? 0 : -1));
+	let staff_sprite_number = get_random_sprite_number("wizard-staff", force_number);
 	let staff_sprite = get_sprite_path("wizard-staff", staff_sprite_number);
 	$("#wizard-staff").attr("src", staff_sprite);
 	current_sprites_numbers.staff = staff_sprite_number;
@@ -1219,8 +1292,14 @@ function print_hats_and_robes_sprite_infos() {
 					}
 				}
 			});
-			sprites_info_table_row_cell2.text(hats_count + " (" + hats_count_3_colors + ")");
-			sprites_info_table_row_cell3.text(robes_count + " (" + robes_count_3_colors + ")");
+			let append_String_cell2 = "";
+			let append_String_cell3 = "";
+			if (index >= 10) {
+				append_String_cell2 = " (" + hats_count_3_colors + ")";
+				append_String_cell3 = " (" + robes_count_3_colors + ")";
+			}
+			sprites_info_table_row_cell2.text(hats_count + append_String_cell2);
+			sprites_info_table_row_cell3.text(robes_count + append_String_cell3);
 			// Append the cells to the row
 			sprites_info_table_row.append(sprites_info_table_row_cell1);
 			sprites_info_table_row.append(sprites_info_table_row_cell2);
@@ -1232,19 +1311,45 @@ function print_hats_and_robes_sprite_infos() {
 		sprites_info_table.append(sprites_info_table_body);
 
 		// Append the table to the #sprites-info element
+		let title_div = $("<div></div>");
+		$(title_div).html("<b>COLOR COMBINATIONS COUNT</b>");
+		title_div.css("font-size", "1.2em");
+		title_div.css("font-weight", "bold");
+		title_div.css("text-align", "center");
+		title_div.css("margin-bottom", "5px");
+		title_div.css("color", "#777777");
+		let description_div = $("<div></div>");
+		$(description_div).html("<b>NOTE</b>: Numbers in parentheses indicate the number of sprites with that color combination that have <b>3 element types</b> (3 colors).");
+		description_div.css("font-size", "0.85em");
+		description_div.css("font-style", "italic");
+		description_div.css("text-align", "center");
+		description_div.width("35%");
+		description_div.css("margin-bottom", "8px");
+		description_div.css("color", "#777777");
+		$("#sprites-info").append(title_div);
+		$("#sprites-info").append(description_div);
 		$("#sprites-info").append(sprites_info_table);
 
-		// Iterate over the cells of the table: if the text is "0", set the background color to black
+		// Iterate over the cells of the table: if the text is "0" add a checkbox in the cell
 		$("#sprites-info-table td").each(function () {
 			if ($(this).text() == "0 (0)") {
-				// $(this).css("background-color", "#00000030");
 				// Replace the content with a checkbox
 				$(this).empty();
 				let checkbox = $("<input type='checkbox'>");
 				checkbox.appendTo($(this));
+			} else if ($(this).text() == "1" || $(this).text() == "1 (0)") {
+				// Highlight background (there is only one sprite with that color combination)
+				$(this).css("background-color", "#00000020");
+			} else {
+				// Highlight background (there are no sprites with 2 colors having that color combination)
+				let text = $(this).text();
+				let text_num_1 = text.substring(0, text.indexOf(" ")).toString();
+				let text_num_2 = text.substring(text.indexOf(" ") + 1, text.length).replace("(", "").replace(")", "").toString();
+				if (text_num_1 == text_num_2) {
+					$(this).css("background-color", "#00000060");
+				}
 			}
 		});
-
 
 	}
 

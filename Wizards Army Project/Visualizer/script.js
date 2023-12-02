@@ -1096,7 +1096,7 @@ function print_hats_and_robes_sprite_infos() {
 		function print_sprites_info_in_console() {
 
 			// Print the palette_rgb object to the console
-			console.log(palette_rgb);
+			// console.log(palette_rgb);
 
 			// Print the sprites list to the console
 			// console.log(sprite_info_objects);
@@ -1122,8 +1122,8 @@ function print_hats_and_robes_sprite_infos() {
 			});
 
 			// Print the sprite infos to the console
-			console.log(sprite_hats_info_string);
-			console.log(sprite_robes_info_string);
+			// console.log(sprite_hats_info_string);
+			// console.log(sprite_robes_info_string);
 
 			// Print infos about all the hats and their colors (print, for each hat and for each robes, the number of sprites with 3, 2 and 1 palette colors)
 			let hats_colors_string = "";
@@ -1140,7 +1140,7 @@ function print_hats_and_robes_sprite_infos() {
 			hats_colors_string += "> Hats with 3 colors: " + hats_colors["3"] + "\n";
 			hats_colors_string += "> Hats with 2 colors: " + hats_colors["2"] + "\n";
 			hats_colors_string += "> Hats with 1 color: " + hats_colors["1"] + "\n";
-			console.log(hats_colors_string);
+			// console.log(hats_colors_string);
 
 			// Print infos about all the robes and their colors (print, for each hat and for each robes, the number of sprites with 3, 2 and 1 palette colors)
 			let robes_colors_string = "";
@@ -1157,7 +1157,7 @@ function print_hats_and_robes_sprite_infos() {
 			robes_colors_string += "> Robes with 3 colors: " + robes_colors["3"] + "\n";
 			robes_colors_string += "> Robes with 2 colors: " + robes_colors["2"] + "\n";
 			robes_colors_string += "> Robes with 1 color: " + robes_colors["1"] + "\n";
-			console.log(robes_colors_string);
+			// console.log(robes_colors_string);
 		}
 		// Print additional sprites info in the console
 		print_sprites_info_in_console();

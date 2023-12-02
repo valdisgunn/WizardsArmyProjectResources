@@ -146,28 +146,34 @@ function populate_clothing_items() {
 	// Create a div contianing general information about the items
 	var generalInfoDiv = document.createElement("div");
 	generalInfoDiv.id = "general-info";
+
+	// Create 2 divs, one to store infos about hats, the other about robes
+	var hatsDiv = document.createElement("div");
+	hatsDiv.className = "hats";
+	var robesDiv = document.createElement("div");
+	robesDiv.className = "robes";
+
 	// Create a div for the number of items
-	var numberOfItemsDiv = document.createElement("div");
-	numberOfItemsDiv.className = "number-of-items";
 	let numOfHatsDiv = document.createElement("div");
 	numOfHatsDiv.className = "hats";
-	numOfHatsDiv.innerHTML = "Number of hats: " + CLOTHING_ITEMS.filter(item => item.clothing_type == "hat").length;
-	numberOfItemsDiv.appendChild(numOfHatsDiv);
+	let totalNumOfHats = CLOTHING_ITEMS.filter(item => item.clothing_type == "hat").length;
+	numOfHatsDiv.innerHTML = "Number of <u>HATS</u>: " + totalNumOfHats;
+	hatsDiv.appendChild(numOfHatsDiv);
 	let numOfRobesDiv = document.createElement("div");
 	numOfRobesDiv.className = "robes";
-	numOfRobesDiv.innerHTML = "Number of robes: " + CLOTHING_ITEMS.filter(item => item.clothing_type == "robe").length;
-	numberOfItemsDiv.appendChild(numOfRobesDiv);
-	generalInfoDiv.appendChild(numberOfItemsDiv);
+	let totalNumOfRobes = CLOTHING_ITEMS.filter(item => item.clothing_type == "robe").length;
+	numOfRobesDiv.innerHTML = "Number of <u>ROBES</u>: " + totalNumOfRobes;
+	robesDiv.appendChild(numOfRobesDiv);
 
 	// Calculate number of hats and clohes with certain rarities
-	let hatsProbabilities = {
+	let hatsPerRarity = {
 		"Useless": 0,
 		"Common": 0,
 		"Rare": 0,
 		"Epic": 0,
 		"Legendary": 0
 	};
-	let robesProbabilities = {
+	let robesPerRarity = {
 		"Useless": 0,
 		"Common": 0,
 		"Rare": 0,
@@ -176,19 +182,34 @@ function populate_clothing_items() {
 	};
 	for (var i = 0; i < CLOTHING_ITEMS.length; i++) {
 		if (CLOTHING_ITEMS[i].clothing_type == "hat") {
-			hatsProbabilities[CLOTHING_ITEMS[i].rarity] += 1;
+			hatsPerRarity[CLOTHING_ITEMS[i].rarity] += 1;
 		} else if (CLOTHING_ITEMS[i].clothing_type == "robe") {
-			robesProbabilities[CLOTHING_ITEMS[i].rarity] += 1;
+			robesPerRarity[CLOTHING_ITEMS[i].rarity] += 1;
 		}
 	}
-	let hatsProbabilitiesDiv = document.createElement("div");
-	hatsProbabilitiesDiv.className = "hats-probabilities";
-	hatsProbabilitiesDiv.innerHTML = "Hats probabilities: " + JSON.stringify(hatsProbabilities);
-	generalInfoDiv.appendChild(hatsProbabilitiesDiv);
-	let robesProbabilitiesDiv = document.createElement("div");
-	robesProbabilitiesDiv.className = "robes-probabilities";
-	robesProbabilitiesDiv.innerHTML = "Robes probabilities: " + JSON.stringify(robesProbabilities);
-	generalInfoDiv.appendChild(robesProbabilitiesDiv);
+	let hatsPerRaritiesDiv = document.createElement("div");
+	hatsPerRaritiesDiv.className = "hats-probabilities";
+	hatsPerRaritiesDiv.style.marginTop = "10px";
+	hatsPerRaritiesDiv.style.fontWeight = "normal";
+	hatsPerRaritiesDiv.style.fontSize = "0.85em";
+	hatsPerRaritiesDiv.innerHTML = "<b>Total hats per rarities</b>:<br>";
+	for (var rarity in hatsPerRarity) {
+		hatsPerRaritiesDiv.innerHTML += " - " + rarity + ": <b>" + hatsPerRarity[rarity] + " / " + totalNumOfHats + "</b><br>";
+	}
+	hatsDiv.appendChild(hatsPerRaritiesDiv);
+	let robesPerRaritiesDiv = document.createElement("div");
+	robesPerRaritiesDiv.className = "robes-probabilities";
+	robesPerRaritiesDiv.style.marginTop = "10px";
+	robesPerRaritiesDiv.style.fontWeight = "normal";
+	robesPerRaritiesDiv.style.fontSize = "0.85em";
+	robesPerRaritiesDiv.innerHTML = "<b>Total robes per rarities</b>:<br>";
+	for (var rarity in robesPerRarity) {
+		robesPerRaritiesDiv.innerHTML += " - " + rarity + ": <b>" + robesPerRarity[rarity] + " / " + totalNumOfRobes + "</b><br>";
+	}
+	robesDiv.appendChild(robesPerRaritiesDiv);
+
+	generalInfoDiv.appendChild(hatsDiv);
+	generalInfoDiv.appendChild(robesDiv);
 
 	// Append the general info div to the items container
 	document.getElementById("page-content").prepend(generalInfoDiv);

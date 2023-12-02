@@ -13,13 +13,13 @@ let using_deployed_website = window.location.href.includes("valdisgunn.github.io
 // Sprites path
 // sprites_folder = "../Sprites/";
 
-if (using_deployed_website) {
-	// Set the sprites folder to the GitHub repository API URL of my "Sprites" folder in my repository
-	// sprites_folder = "https://api.github.com/repos/valdisgunn/WizardsArmyProjectResources/contents/Wizards%20Army%20Project/Sprites";
-	let github_username = root_URL.split("https://")[1].split(".github.io")[0];
-	let repository_name = root_URL.split("https://" + github_username + ".github.io/")[1].split("/")[0];
-	sprites_folder = "https://api.github.com/repos/" + github_username + "/" + repository_name + "/contents/Wizards%20Army%20Project/Sprites/";
-}
+// if (using_deployed_website) {
+// 	// Set the sprites folder to the GitHub repository API URL of my "Sprites" folder in my repository
+// 	// sprites_folder = "https://api.github.com/repos/valdisgunn/WizardsArmyProjectResources/contents/Wizards%20Army%20Project/Sprites";
+// 	let github_username = root_URL.split("https://")[1].split(".github.io")[0];
+// 	let repository_name = root_URL.split("https://" + github_username + ".github.io/")[1].split("/")[0];
+// 	sprites_folder = "https://api.github.com/repos/" + github_username + "/" + repository_name + "/contents/Wizards%20Army%20Project/Sprites/";
+// }
 
 // Get the JSON content of file "../item_json_iles/clothing_items.json"
 const CLOTHING_ITEMS = getJSONContent("../item_json_files/clothing_items.json");

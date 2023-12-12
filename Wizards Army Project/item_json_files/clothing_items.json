@@ -16,11 +16,11 @@
             3
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": -75,
+        "powerBoost": -35,
         "skillBoost": 0,
-        "reachBoost": -45,
-        "energyBoost": 60,
-        "luckBoost": 95,
+        "reachBoost": -20,
+        "energyBoost": 40,
+        "luckBoost": 65,
         "weightIncrement": 70
     },
     {
@@ -40,11 +40,11 @@
             3
         ],
         "healthPointsIncrement": 85,
-        "powerBoost": 25,
-        "skillBoost": -35,
-        "reachBoost": -60,
+        "powerBoost": 20,
+        "skillBoost": -15,
+        "reachBoost": -25,
         "energyBoost": 15,
-        "luckBoost": 60,
+        "luckBoost": 45,
         "weightIncrement": 40
     },
     {
@@ -64,11 +64,11 @@
             3
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": 35,
+        "powerBoost": 25,
         "skillBoost": 0,
-        "reachBoost": 20,
-        "energyBoost": 65,
-        "luckBoost": 15,
+        "reachBoost": 15,
+        "energyBoost": 45,
+        "luckBoost": 10,
         "weightIncrement": 60
     },
     {
@@ -88,11 +88,11 @@
             2
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": -45,
-        "skillBoost": -75,
-        "reachBoost": 20,
-        "energyBoost": 15,
-        "luckBoost": 45,
+        "powerBoost": -20,
+        "skillBoost": -35,
+        "reachBoost": 15,
+        "energyBoost": 10,
+        "luckBoost": 30,
         "weightIncrement": 55
     },
     {
@@ -112,11 +112,11 @@
             2
         ],
         "healthPointsIncrement": 70,
-        "powerBoost": -35,
-        "skillBoost": -60,
+        "powerBoost": -15,
+        "skillBoost": -25,
         "reachBoost": 15,
-        "energyBoost": 60,
-        "luckBoost": 25,
+        "energyBoost": 45,
+        "luckBoost": 20,
         "weightIncrement": 65
     },
     {
@@ -136,9 +136,9 @@
             2
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": 60,
-        "skillBoost": 40,
-        "reachBoost": 25,
+        "powerBoost": 45,
+        "skillBoost": 30,
+        "reachBoost": 20,
         "energyBoost": 15,
         "luckBoost": 15,
         "weightIncrement": 50
@@ -162,9 +162,9 @@
         "healthPointsIncrement": 105,
         "powerBoost": 0,
         "skillBoost": 0,
-        "reachBoost": -75,
-        "energyBoost": 75,
-        "luckBoost": -45,
+        "reachBoost": -35,
+        "energyBoost": 50,
+        "luckBoost": -20,
         "weightIncrement": 50
     },
     {
@@ -184,11 +184,11 @@
             2
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 75,
+        "powerBoost": 55,
         "skillBoost": 0,
-        "reachBoost": -35,
-        "energyBoost": 125,
-        "luckBoost": -60,
+        "reachBoost": -15,
+        "energyBoost": 90,
+        "luckBoost": -25,
         "weightIncrement": 75
     },
     {
@@ -212,7 +212,7 @@
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": 0,
-        "luckBoost": -75,
+        "luckBoost": -30,
         "weightIncrement": 75
     },
     {
@@ -232,10 +232,10 @@
             -1
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": 60,
-        "skillBoost": -45,
-        "reachBoost": -75,
-        "energyBoost": 95,
+        "powerBoost": 40,
+        "skillBoost": -20,
+        "reachBoost": -35,
+        "energyBoost": 65,
         "luckBoost": 0,
         "weightIncrement": 65
     },
@@ -256,11 +256,11 @@
             -1
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": 35,
-        "skillBoost": -25,
-        "reachBoost": 75,
-        "energyBoost": 20,
-        "luckBoost": -40,
+        "powerBoost": 25,
+        "skillBoost": -15,
+        "reachBoost": 55,
+        "energyBoost": 15,
+        "luckBoost": -20,
         "weightIncrement": 50
     },
     {
@@ -281,9 +281,9 @@
         ],
         "healthPointsIncrement": 130,
         "powerBoost": 15,
-        "skillBoost": 60,
-        "reachBoost": 40,
-        "energyBoost": 25,
+        "skillBoost": 45,
+        "reachBoost": 30,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 45
     },
@@ -304,11 +304,11 @@
             2
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": -75,
-        "skillBoost": -45,
-        "reachBoost": 45,
-        "energyBoost": 20,
-        "luckBoost": 15,
+        "powerBoost": -35,
+        "skillBoost": -20,
+        "reachBoost": 30,
+        "energyBoost": 15,
+        "luckBoost": 10,
         "weightIncrement": 80
     },
     {
@@ -328,11 +328,11 @@
             2
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": -25,
-        "skillBoost": -40,
-        "reachBoost": 35,
-        "energyBoost": 20,
-        "luckBoost": 75,
+        "powerBoost": -15,
+        "skillBoost": -20,
+        "reachBoost": 25,
+        "energyBoost": 15,
+        "luckBoost": 55,
         "weightIncrement": 50
     },
     {
@@ -352,11 +352,11 @@
             2
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": -75,
+        "powerBoost": -30,
         "skillBoost": 0,
         "reachBoost": 0,
-        "energyBoost": 65,
-        "luckBoost": 40,
+        "energyBoost": 40,
+        "luckBoost": 25,
         "weightIncrement": 65
     },
     {
@@ -376,11 +376,11 @@
             -4
         ],
         "healthPointsIncrement": 110,
-        "powerBoost": 75,
+        "powerBoost": 55,
         "skillBoost": 0,
         "reachBoost": 0,
-        "energyBoost": -45,
-        "luckBoost": 125,
+        "energyBoost": -20,
+        "luckBoost": 90,
         "weightIncrement": 80
     },
     {
@@ -400,11 +400,11 @@
             -4
         ],
         "healthPointsIncrement": 130,
-        "powerBoost": 75,
-        "skillBoost": -40,
-        "reachBoost": 35,
-        "energyBoost": 20,
-        "luckBoost": -25,
+        "powerBoost": 55,
+        "skillBoost": -20,
+        "reachBoost": 25,
+        "energyBoost": 15,
+        "luckBoost": -15,
         "weightIncrement": 60
     },
     {
@@ -424,10 +424,10 @@
             -4
         ],
         "healthPointsIncrement": 155,
-        "powerBoost": 40,
+        "powerBoost": 30,
         "skillBoost": 15,
-        "reachBoost": 75,
-        "energyBoost": 25,
+        "reachBoost": 55,
+        "energyBoost": 20,
         "luckBoost": 0,
         "weightIncrement": 70
     },
@@ -448,11 +448,11 @@
             6
         ],
         "healthPointsIncrement": 120,
-        "powerBoost": -75,
-        "skillBoost": 60,
+        "powerBoost": -35,
+        "skillBoost": 40,
         "reachBoost": 0,
-        "energyBoost": 95,
-        "luckBoost": -45,
+        "energyBoost": 65,
+        "luckBoost": -20,
         "weightIncrement": 65
     },
     {
@@ -472,11 +472,11 @@
             6
         ],
         "healthPointsIncrement": 155,
-        "powerBoost": 75,
+        "powerBoost": 55,
         "skillBoost": 15,
-        "reachBoost": -15,
-        "energyBoost": 40,
-        "luckBoost": 25,
+        "reachBoost": -10,
+        "energyBoost": 30,
+        "luckBoost": 20,
         "weightIncrement": 85
     },
     {
@@ -496,8 +496,8 @@
             6
         ],
         "healthPointsIncrement": 120,
-        "powerBoost": -75,
-        "skillBoost": 50,
+        "powerBoost": -30,
+        "skillBoost": 30,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": 0,
@@ -520,11 +520,11 @@
             2
         ],
         "healthPointsIncrement": 155,
-        "powerBoost": 25,
+        "powerBoost": 20,
         "skillBoost": 10,
-        "reachBoost": 50,
+        "reachBoost": 35,
         "energyBoost": 15,
-        "luckBoost": -45,
+        "luckBoost": -20,
         "weightIncrement": 75
     },
     {
@@ -544,11 +544,11 @@
             2
         ],
         "healthPointsIncrement": 175,
-        "powerBoost": 75,
-        "skillBoost": 35,
-        "reachBoost": -40,
-        "energyBoost": 20,
-        "luckBoost": -25,
+        "powerBoost": 55,
+        "skillBoost": 25,
+        "reachBoost": -20,
+        "energyBoost": 15,
+        "luckBoost": -15,
         "weightIncrement": 65
     },
     {
@@ -569,10 +569,10 @@
         ],
         "healthPointsIncrement": 130,
         "powerBoost": 0,
-        "skillBoost": 40,
+        "skillBoost": 25,
         "reachBoost": 0,
-        "energyBoost": -75,
-        "luckBoost": 65,
+        "energyBoost": -30,
+        "luckBoost": 40,
         "weightIncrement": 80
     },
     {
@@ -592,11 +592,11 @@
             0
         ],
         "healthPointsIncrement": 160,
-        "powerBoost": 125,
+        "powerBoost": 90,
         "skillBoost": 0,
         "reachBoost": 0,
-        "energyBoost": 75,
-        "luckBoost": -45,
+        "energyBoost": 55,
+        "luckBoost": -20,
         "weightIncrement": 85
     },
     {
@@ -616,11 +616,11 @@
             0
         ],
         "healthPointsIncrement": 200,
-        "powerBoost": 75,
-        "skillBoost": -15,
+        "powerBoost": 55,
+        "skillBoost": -10,
         "reachBoost": 15,
-        "energyBoost": 40,
-        "luckBoost": 25,
+        "energyBoost": 30,
+        "luckBoost": 20,
         "weightIncrement": 95
     },
     {
@@ -641,7 +641,7 @@
         ],
         "healthPointsIncrement": 145,
         "powerBoost": 0,
-        "skillBoost": -75,
+        "skillBoost": -30,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": 0,
@@ -665,10 +665,10 @@
         ],
         "healthPointsIncrement": 140,
         "powerBoost": 0,
-        "skillBoost": -75,
-        "reachBoost": -45,
-        "energyBoost": 60,
-        "luckBoost": 95,
+        "skillBoost": -35,
+        "reachBoost": -20,
+        "energyBoost": 40,
+        "luckBoost": 65,
         "weightIncrement": 90
     },
     {
@@ -688,11 +688,11 @@
             2
         ],
         "healthPointsIncrement": 170,
-        "powerBoost": -35,
-        "skillBoost": -60,
-        "reachBoost": 25,
+        "powerBoost": -15,
+        "skillBoost": -25,
+        "reachBoost": 20,
         "energyBoost": 15,
-        "luckBoost": 60,
+        "luckBoost": 45,
         "weightIncrement": 80
     },
     {
@@ -713,10 +713,10 @@
         ],
         "healthPointsIncrement": 180,
         "powerBoost": 0,
-        "skillBoost": 65,
-        "reachBoost": 35,
-        "energyBoost": 20,
-        "luckBoost": 15,
+        "skillBoost": 45,
+        "reachBoost": 25,
+        "energyBoost": 15,
+        "luckBoost": 10,
         "weightIncrement": 60
     },
     {
@@ -736,11 +736,11 @@
             1
         ],
         "healthPointsIncrement": 55,
-        "powerBoost": 45,
-        "skillBoost": -45,
-        "reachBoost": -75,
-        "energyBoost": 20,
-        "luckBoost": 15,
+        "powerBoost": 30,
+        "skillBoost": -20,
+        "reachBoost": -35,
+        "energyBoost": 15,
+        "luckBoost": 10,
         "weightIncrement": 45
     },
     {
@@ -760,11 +760,11 @@
             1
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": 60,
-        "skillBoost": -35,
-        "reachBoost": -60,
+        "powerBoost": 45,
+        "skillBoost": -15,
+        "reachBoost": -25,
         "energyBoost": 15,
-        "luckBoost": 25,
+        "luckBoost": 20,
         "weightIncrement": 40
     },
     {
@@ -784,10 +784,10 @@
             1
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 60,
+        "powerBoost": 45,
         "skillBoost": 15,
-        "reachBoost": 40,
-        "energyBoost": 25,
+        "reachBoost": 30,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 65
     },
@@ -810,11 +810,11 @@
             5
         ],
         "healthPointsIncrement": 60,
-        "powerBoost": -75,
-        "skillBoost": -45,
+        "powerBoost": -35,
+        "skillBoost": -20,
         "reachBoost": 0,
-        "energyBoost": 60,
-        "luckBoost": 95,
+        "energyBoost": 40,
+        "luckBoost": 65,
         "weightIncrement": 60
     },
     {
@@ -836,10 +836,10 @@
             5
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": 60,
-        "skillBoost": -35,
-        "reachBoost": -60,
-        "energyBoost": 25,
+        "powerBoost": 45,
+        "skillBoost": -15,
+        "reachBoost": -25,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 45
     },
@@ -862,11 +862,11 @@
             5
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": 65,
-        "skillBoost": 35,
+        "powerBoost": 45,
+        "skillBoost": 25,
         "reachBoost": 0,
-        "energyBoost": 20,
-        "luckBoost": 15,
+        "energyBoost": 15,
+        "luckBoost": 10,
         "weightIncrement": 40
     },
     {
@@ -888,11 +888,11 @@
             4
         ],
         "healthPointsIncrement": 85,
-        "powerBoost": -45,
-        "skillBoost": 15,
-        "reachBoost": -75,
-        "energyBoost": 45,
-        "luckBoost": 20,
+        "powerBoost": -20,
+        "skillBoost": 10,
+        "reachBoost": -35,
+        "energyBoost": 30,
+        "luckBoost": 15,
         "weightIncrement": 60
     },
     {
@@ -914,10 +914,10 @@
             4
         ],
         "healthPointsIncrement": 85,
-        "powerBoost": -60,
-        "skillBoost": 25,
-        "reachBoost": -35,
-        "energyBoost": 60,
+        "powerBoost": -25,
+        "skillBoost": 20,
+        "reachBoost": -15,
+        "energyBoost": 45,
         "luckBoost": 15,
         "weightIncrement": 70
     },
@@ -940,10 +940,10 @@
             4
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": 60,
-        "skillBoost": 25,
+        "powerBoost": 45,
+        "skillBoost": 20,
         "reachBoost": 15,
-        "energyBoost": 40,
+        "energyBoost": 30,
         "luckBoost": 15,
         "weightIncrement": 60
     },
@@ -966,10 +966,10 @@
             5
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": -45,
+        "powerBoost": -20,
         "skillBoost": 0,
-        "reachBoost": -75,
-        "energyBoost": 75,
+        "reachBoost": -35,
+        "energyBoost": 50,
         "luckBoost": 0,
         "weightIncrement": 60
     },
@@ -992,11 +992,11 @@
             5
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 75,
-        "skillBoost": -35,
+        "powerBoost": 55,
+        "skillBoost": -15,
         "reachBoost": 0,
-        "energyBoost": 125,
-        "luckBoost": -60,
+        "energyBoost": 90,
+        "luckBoost": -25,
         "weightIncrement": 45
     },
     {
@@ -1018,7 +1018,7 @@
             5
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": -75,
+        "powerBoost": -30,
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": 0,
@@ -1044,11 +1044,11 @@
             -2
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": 95,
-        "skillBoost": -45,
+        "powerBoost": 65,
+        "skillBoost": -20,
         "reachBoost": 0,
-        "energyBoost": 60,
-        "luckBoost": -75,
+        "energyBoost": 40,
+        "luckBoost": -35,
         "weightIncrement": 70
     },
     {
@@ -1070,11 +1070,11 @@
             -2
         ],
         "healthPointsIncrement": 120,
-        "powerBoost": 35,
-        "skillBoost": 75,
-        "reachBoost": -25,
-        "energyBoost": 20,
-        "luckBoost": -40,
+        "powerBoost": 25,
+        "skillBoost": 55,
+        "reachBoost": -15,
+        "energyBoost": 15,
+        "luckBoost": -20,
         "weightIncrement": 60
     },
     {
@@ -1096,9 +1096,9 @@
             -2
         ],
         "healthPointsIncrement": 130,
-        "powerBoost": 60,
-        "skillBoost": 40,
-        "reachBoost": 25,
+        "powerBoost": 45,
+        "skillBoost": 30,
+        "reachBoost": 20,
         "energyBoost": 15,
         "luckBoost": 15,
         "weightIncrement": 70
@@ -1122,11 +1122,11 @@
             2
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": -75,
-        "skillBoost": -45,
-        "reachBoost": 45,
-        "energyBoost": 15,
-        "luckBoost": 20,
+        "powerBoost": -35,
+        "skillBoost": -20,
+        "reachBoost": 30,
+        "energyBoost": 10,
+        "luckBoost": 15,
         "weightIncrement": 60
     },
     {
@@ -1148,11 +1148,11 @@
             2
         ],
         "healthPointsIncrement": 110,
-        "powerBoost": -25,
-        "skillBoost": -40,
-        "reachBoost": 20,
-        "energyBoost": 35,
-        "luckBoost": 75,
+        "powerBoost": -15,
+        "skillBoost": -20,
+        "reachBoost": 15,
+        "energyBoost": 25,
+        "luckBoost": 55,
         "weightIncrement": 75
     },
     {
@@ -1176,9 +1176,9 @@
         "healthPointsIncrement": 90,
         "powerBoost": 0,
         "skillBoost": 0,
-        "reachBoost": -75,
-        "energyBoost": 65,
-        "luckBoost": 40,
+        "reachBoost": -30,
+        "energyBoost": 40,
+        "luckBoost": 25,
         "weightIncrement": 65
     },
     {
@@ -1200,11 +1200,11 @@
             1
         ],
         "healthPointsIncrement": 125,
-        "powerBoost": 75,
+        "powerBoost": 55,
         "skillBoost": 0,
-        "reachBoost": -45,
+        "reachBoost": -20,
         "energyBoost": 0,
-        "luckBoost": 125,
+        "luckBoost": 90,
         "weightIncrement": 50
     },
     {
@@ -1226,11 +1226,11 @@
             1
         ],
         "healthPointsIncrement": 155,
-        "powerBoost": -25,
-        "skillBoost": 35,
-        "reachBoost": 75,
-        "energyBoost": 20,
-        "luckBoost": -40,
+        "powerBoost": -15,
+        "skillBoost": 25,
+        "reachBoost": 55,
+        "energyBoost": 15,
+        "luckBoost": -20,
         "weightIncrement": 60
     },
     {
@@ -1253,9 +1253,9 @@
         ],
         "healthPointsIncrement": 150,
         "powerBoost": 0,
-        "skillBoost": 75,
-        "reachBoost": 40,
-        "energyBoost": 25,
+        "skillBoost": 55,
+        "reachBoost": 30,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 75
     },
@@ -1279,10 +1279,10 @@
         ],
         "healthPointsIncrement": 125,
         "powerBoost": 0,
-        "skillBoost": 95,
-        "reachBoost": -45,
-        "energyBoost": 60,
-        "luckBoost": -75,
+        "skillBoost": 65,
+        "reachBoost": -20,
+        "energyBoost": 40,
+        "luckBoost": -35,
         "weightIncrement": 70
     },
     {
@@ -1304,11 +1304,11 @@
             3
         ],
         "healthPointsIncrement": 145,
-        "powerBoost": -15,
+        "powerBoost": -10,
         "skillBoost": 15,
-        "reachBoost": 75,
-        "energyBoost": 40,
-        "luckBoost": 25,
+        "reachBoost": 55,
+        "energyBoost": 30,
+        "luckBoost": 20,
         "weightIncrement": 65
     },
     {
@@ -1331,8 +1331,8 @@
         ],
         "healthPointsIncrement": 130,
         "powerBoost": 0,
-        "skillBoost": 50,
-        "reachBoost": -75,
+        "skillBoost": 30,
+        "reachBoost": -30,
         "energyBoost": 0,
         "luckBoost": 0,
         "weightIncrement": 75
@@ -1356,9 +1356,9 @@
             4
         ],
         "healthPointsIncrement": 175,
-        "powerBoost": -45,
-        "skillBoost": 50,
-        "reachBoost": 25,
+        "powerBoost": -20,
+        "skillBoost": 35,
+        "reachBoost": 20,
         "energyBoost": 15,
         "luckBoost": 10,
         "weightIncrement": 90
@@ -1382,11 +1382,11 @@
             4
         ],
         "healthPointsIncrement": 165,
-        "powerBoost": -25,
-        "skillBoost": 35,
-        "reachBoost": 75,
-        "energyBoost": 20,
-        "luckBoost": -40,
+        "powerBoost": -15,
+        "skillBoost": 25,
+        "reachBoost": 55,
+        "energyBoost": 15,
+        "luckBoost": -20,
         "weightIncrement": 55
     },
     {
@@ -1408,11 +1408,11 @@
             4
         ],
         "healthPointsIncrement": 140,
-        "powerBoost": -75,
-        "skillBoost": 40,
+        "powerBoost": -30,
+        "skillBoost": 25,
         "reachBoost": 0,
         "energyBoost": 0,
-        "luckBoost": 65,
+        "luckBoost": 40,
         "weightIncrement": 90
     },
     {
@@ -1434,10 +1434,10 @@
             -2
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": 75,
+        "powerBoost": 55,
         "skillBoost": 0,
-        "reachBoost": -45,
-        "energyBoost": 125,
+        "reachBoost": -20,
+        "energyBoost": 90,
         "luckBoost": 0,
         "weightIncrement": 85
     },
@@ -1460,11 +1460,11 @@
             -2
         ],
         "healthPointsIncrement": 175,
-        "powerBoost": 75,
-        "skillBoost": 40,
-        "reachBoost": -15,
+        "powerBoost": 55,
+        "skillBoost": 30,
+        "reachBoost": -10,
         "energyBoost": 15,
-        "luckBoost": 25,
+        "luckBoost": 20,
         "weightIncrement": 65
     },
     {
@@ -1489,7 +1489,7 @@
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": 0,
-        "energyBoost": -75,
+        "energyBoost": -30,
         "luckBoost": 0,
         "weightIncrement": 90
     },
@@ -1512,11 +1512,11 @@
             2
         ],
         "healthPointsIncrement": 190,
-        "powerBoost": -45,
-        "skillBoost": -75,
+        "powerBoost": -20,
+        "skillBoost": -35,
         "reachBoost": 0,
-        "energyBoost": 95,
-        "luckBoost": 60,
+        "energyBoost": 65,
+        "luckBoost": 40,
         "weightIncrement": 100
     },
     {
@@ -1538,10 +1538,10 @@
             2
         ],
         "healthPointsIncrement": 165,
-        "powerBoost": -60,
-        "skillBoost": 25,
-        "reachBoost": -35,
-        "energyBoost": 60,
+        "powerBoost": -25,
+        "skillBoost": 20,
+        "reachBoost": -15,
+        "energyBoost": 45,
         "luckBoost": 15,
         "weightIncrement": 85
     },
@@ -1564,11 +1564,11 @@
             2
         ],
         "healthPointsIncrement": 190,
-        "powerBoost": 15,
-        "skillBoost": 35,
+        "powerBoost": 10,
+        "skillBoost": 25,
         "reachBoost": 0,
-        "energyBoost": 20,
-        "luckBoost": 65,
+        "energyBoost": 15,
+        "luckBoost": 45,
         "weightIncrement": 80
     },
     {
@@ -1590,11 +1590,11 @@
             3
         ],
         "healthPointsIncrement": 65,
-        "powerBoost": 45,
-        "skillBoost": -45,
-        "reachBoost": -75,
-        "energyBoost": 15,
-        "luckBoost": 20,
+        "powerBoost": 30,
+        "skillBoost": -20,
+        "reachBoost": -35,
+        "energyBoost": 10,
+        "luckBoost": 15,
         "weightIncrement": 35
     },
     {
@@ -1616,10 +1616,10 @@
             3
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": 25,
-        "skillBoost": -60,
-        "reachBoost": -35,
-        "energyBoost": 60,
+        "powerBoost": 20,
+        "skillBoost": -25,
+        "reachBoost": -15,
+        "energyBoost": 45,
         "luckBoost": 15,
         "weightIncrement": 55
     },
@@ -1642,10 +1642,10 @@
             3
         ],
         "healthPointsIncrement": 85,
-        "powerBoost": 60,
+        "powerBoost": 45,
         "skillBoost": 15,
-        "reachBoost": 40,
-        "energyBoost": 25,
+        "reachBoost": 30,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 45
     },
@@ -1668,11 +1668,11 @@
             3
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": 75,
-        "skillBoost": -45,
+        "powerBoost": 50,
+        "skillBoost": -20,
         "reachBoost": 0,
         "energyBoost": 0,
-        "luckBoost": -75,
+        "luckBoost": -35,
         "weightIncrement": 55
     },
     {
@@ -1694,11 +1694,11 @@
             3
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": 125,
-        "skillBoost": -60,
+        "powerBoost": 90,
+        "skillBoost": -25,
         "reachBoost": 0,
-        "energyBoost": -35,
-        "luckBoost": 75,
+        "energyBoost": -15,
+        "luckBoost": 55,
         "weightIncrement": 50
     },
     {
@@ -1721,7 +1721,7 @@
         ],
         "healthPointsIncrement": 40,
         "powerBoost": 0,
-        "skillBoost": -75,
+        "skillBoost": -30,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": 0,
@@ -1747,10 +1747,10 @@
         ],
         "healthPointsIncrement": 100,
         "powerBoost": 0,
-        "skillBoost": -45,
-        "reachBoost": 60,
-        "energyBoost": -75,
-        "luckBoost": 95,
+        "skillBoost": -20,
+        "reachBoost": 40,
+        "energyBoost": -35,
+        "luckBoost": 65,
         "weightIncrement": 45
     },
     {
@@ -1772,11 +1772,11 @@
             -2
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": -25,
-        "skillBoost": -40,
-        "reachBoost": 35,
-        "energyBoost": 75,
-        "luckBoost": 20,
+        "powerBoost": -15,
+        "skillBoost": -20,
+        "reachBoost": 25,
+        "energyBoost": 55,
+        "luckBoost": 15,
         "weightIncrement": 60
     },
     {
@@ -1799,10 +1799,10 @@
         ],
         "healthPointsIncrement": 130,
         "powerBoost": 15,
-        "skillBoost": 60,
-        "reachBoost": 40,
+        "skillBoost": 45,
+        "reachBoost": 30,
         "energyBoost": 15,
-        "luckBoost": 25,
+        "luckBoost": 20,
         "weightIncrement": 40
     },
     {
@@ -1824,11 +1824,11 @@
             3
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": -45,
-        "skillBoost": 15,
-        "reachBoost": 20,
-        "energyBoost": -75,
-        "luckBoost": 45,
+        "powerBoost": -20,
+        "skillBoost": 10,
+        "reachBoost": 15,
+        "energyBoost": -35,
+        "luckBoost": 30,
         "weightIncrement": 55
     },
     {
@@ -1850,11 +1850,11 @@
             3
         ],
         "healthPointsIncrement": 130,
-        "powerBoost": -40,
-        "skillBoost": 75,
-        "reachBoost": 35,
-        "energyBoost": -25,
-        "luckBoost": 20,
+        "powerBoost": -20,
+        "skillBoost": 55,
+        "reachBoost": 25,
+        "energyBoost": -15,
+        "luckBoost": 15,
         "weightIncrement": 75
     },
     {
@@ -1876,11 +1876,11 @@
             3
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": -75,
+        "powerBoost": -30,
         "skillBoost": 0,
-        "reachBoost": 40,
+        "reachBoost": 25,
         "energyBoost": 0,
-        "luckBoost": 65,
+        "luckBoost": 40,
         "weightIncrement": 60
     },
     {
@@ -1902,11 +1902,11 @@
             2
         ],
         "healthPointsIncrement": 120,
-        "powerBoost": 125,
+        "powerBoost": 90,
         "skillBoost": 0,
-        "reachBoost": 75,
+        "reachBoost": 55,
         "energyBoost": 0,
-        "luckBoost": -45,
+        "luckBoost": -20,
         "weightIncrement": 60
     },
     {
@@ -1928,11 +1928,11 @@
             2
         ],
         "healthPointsIncrement": 150,
-        "powerBoost": -40,
-        "skillBoost": 75,
-        "reachBoost": -25,
-        "energyBoost": 20,
-        "luckBoost": 35,
+        "powerBoost": -20,
+        "skillBoost": 55,
+        "reachBoost": -15,
+        "energyBoost": 15,
+        "luckBoost": 25,
         "weightIncrement": 80
     },
     {
@@ -1955,10 +1955,10 @@
         ],
         "healthPointsIncrement": 145,
         "powerBoost": 0,
-        "skillBoost": 75,
-        "reachBoost": 25,
+        "skillBoost": 55,
+        "reachBoost": 20,
         "energyBoost": 15,
-        "luckBoost": 40,
+        "luckBoost": 30,
         "weightIncrement": 50
     },
     {
@@ -1981,10 +1981,10 @@
         ],
         "healthPointsIncrement": 125,
         "powerBoost": 0,
-        "skillBoost": 95,
-        "reachBoost": -75,
-        "energyBoost": -45,
-        "luckBoost": 60,
+        "skillBoost": 65,
+        "reachBoost": -35,
+        "energyBoost": -20,
+        "luckBoost": 40,
         "weightIncrement": 65
     },
     {
@@ -2006,10 +2006,10 @@
             4
         ],
         "healthPointsIncrement": 150,
-        "powerBoost": -15,
-        "skillBoost": 25,
-        "reachBoost": 75,
-        "energyBoost": 40,
+        "powerBoost": -10,
+        "skillBoost": 20,
+        "reachBoost": 55,
+        "energyBoost": 30,
         "luckBoost": 15,
         "weightIncrement": 70
     },
@@ -2034,9 +2034,9 @@
         "healthPointsIncrement": 130,
         "powerBoost": 0,
         "skillBoost": 0,
-        "reachBoost": -75,
+        "reachBoost": -30,
         "energyBoost": 0,
-        "luckBoost": 50,
+        "luckBoost": 30,
         "weightIncrement": 85
     },
     {
@@ -2059,9 +2059,9 @@
         ],
         "healthPointsIncrement": 120,
         "powerBoost": 10,
-        "skillBoost": 25,
-        "reachBoost": -45,
-        "energyBoost": 50,
+        "skillBoost": 20,
+        "reachBoost": -20,
+        "energyBoost": 35,
         "luckBoost": 15,
         "weightIncrement": 80
     },
@@ -2084,11 +2084,11 @@
             2
         ],
         "healthPointsIncrement": 155,
-        "powerBoost": 75,
-        "skillBoost": -25,
-        "reachBoost": -40,
-        "energyBoost": 35,
-        "luckBoost": 20,
+        "powerBoost": 55,
+        "skillBoost": -15,
+        "reachBoost": -20,
+        "energyBoost": 25,
+        "luckBoost": 15,
         "weightIncrement": 60
     },
     {
@@ -2110,10 +2110,10 @@
             2
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": -75,
-        "skillBoost": 65,
+        "powerBoost": -30,
+        "skillBoost": 40,
         "reachBoost": 0,
-        "energyBoost": 40,
+        "energyBoost": 25,
         "luckBoost": 0,
         "weightIncrement": 65
     },
@@ -2136,11 +2136,11 @@
             4
         ],
         "healthPointsIncrement": 145,
-        "powerBoost": -45,
-        "skillBoost": 75,
+        "powerBoost": -20,
+        "skillBoost": 50,
         "reachBoost": 0,
         "energyBoost": 0,
-        "luckBoost": -75,
+        "luckBoost": -35,
         "weightIncrement": 90
     },
     {
@@ -2162,11 +2162,11 @@
             4
         ],
         "healthPointsIncrement": 165,
-        "powerBoost": 75,
-        "skillBoost": -35,
+        "powerBoost": 55,
+        "skillBoost": -15,
         "reachBoost": 0,
-        "energyBoost": 125,
-        "luckBoost": -60,
+        "energyBoost": 90,
+        "luckBoost": -25,
         "weightIncrement": 75
     },
     {
@@ -2188,11 +2188,11 @@
             4
         ],
         "healthPointsIncrement": 150,
-        "powerBoost": 35,
-        "skillBoost": 75,
+        "powerBoost": 25,
+        "skillBoost": 55,
         "reachBoost": 0,
         "energyBoost": 0,
-        "luckBoost": 20,
+        "luckBoost": 15,
         "weightIncrement": 65
     },
     {
@@ -2216,11 +2216,11 @@
             2
         ],
         "healthPointsIncrement": 70,
-        "powerBoost": -45,
+        "powerBoost": -20,
         "skillBoost": 0,
-        "reachBoost": -75,
-        "energyBoost": 95,
-        "luckBoost": 60,
+        "reachBoost": -35,
+        "energyBoost": 65,
+        "luckBoost": 40,
         "weightIncrement": 50
     },
     {
@@ -2244,10 +2244,10 @@
             2
         ],
         "healthPointsIncrement": 70,
-        "powerBoost": -60,
-        "skillBoost": -35,
-        "reachBoost": 60,
-        "energyBoost": 25,
+        "powerBoost": -25,
+        "skillBoost": -15,
+        "reachBoost": 45,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 65
     },
@@ -2272,11 +2272,11 @@
             2
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 35,
+        "powerBoost": 25,
         "skillBoost": 0,
-        "reachBoost": 20,
-        "energyBoost": 65,
-        "luckBoost": 15,
+        "reachBoost": 15,
+        "energyBoost": 45,
+        "luckBoost": 10,
         "weightIncrement": 60
     },
     {
@@ -2300,11 +2300,11 @@
             0
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": -45,
-        "skillBoost": 20,
-        "reachBoost": -75,
-        "energyBoost": 45,
-        "luckBoost": 15,
+        "powerBoost": -20,
+        "skillBoost": 15,
+        "reachBoost": -35,
+        "energyBoost": 30,
+        "luckBoost": 10,
         "weightIncrement": 60
     },
     {
@@ -2328,10 +2328,10 @@
             0
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": -60,
-        "skillBoost": 60,
-        "reachBoost": -35,
-        "energyBoost": 25,
+        "powerBoost": -25,
+        "skillBoost": 45,
+        "reachBoost": -15,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 50
     },
@@ -2357,10 +2357,10 @@
         ],
         "healthPointsIncrement": 105,
         "powerBoost": 15,
-        "skillBoost": 60,
+        "skillBoost": 45,
         "reachBoost": 15,
-        "energyBoost": 40,
-        "luckBoost": 25,
+        "energyBoost": 30,
+        "luckBoost": 20,
         "weightIncrement": 65
     },
     {
@@ -2385,9 +2385,9 @@
         ],
         "healthPointsIncrement": 95,
         "powerBoost": 0,
-        "skillBoost": -45,
-        "reachBoost": -75,
-        "energyBoost": 75,
+        "skillBoost": -20,
+        "reachBoost": -35,
+        "energyBoost": 50,
         "luckBoost": 0,
         "weightIncrement": 55
     },
@@ -2412,11 +2412,11 @@
             5
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 125,
+        "powerBoost": 90,
         "skillBoost": 0,
-        "reachBoost": -35,
-        "energyBoost": 75,
-        "luckBoost": -60,
+        "reachBoost": -15,
+        "energyBoost": 55,
+        "luckBoost": -25,
         "weightIncrement": 70
     },
     {
@@ -2442,7 +2442,7 @@
         "healthPointsIncrement": 75,
         "powerBoost": 0,
         "skillBoost": 0,
-        "reachBoost": -75,
+        "reachBoost": -30,
         "energyBoost": 0,
         "luckBoost": 0,
         "weightIncrement": 45
@@ -2468,10 +2468,10 @@
             4
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": 60,
-        "skillBoost": -45,
-        "reachBoost": -75,
-        "energyBoost": 95,
+        "powerBoost": 40,
+        "skillBoost": -20,
+        "reachBoost": -35,
+        "energyBoost": 65,
         "luckBoost": 0,
         "weightIncrement": 55
     },
@@ -2496,11 +2496,11 @@
             4
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": 35,
-        "skillBoost": 75,
-        "reachBoost": -25,
-        "energyBoost": 20,
-        "luckBoost": -40,
+        "powerBoost": 25,
+        "skillBoost": 55,
+        "reachBoost": -15,
+        "energyBoost": 15,
+        "luckBoost": -20,
         "weightIncrement": 50
     },
     {
@@ -2524,10 +2524,10 @@
             4
         ],
         "healthPointsIncrement": 125,
-        "powerBoost": 40,
+        "powerBoost": 30,
         "skillBoost": 15,
-        "reachBoost": 25,
-        "energyBoost": 60,
+        "reachBoost": 20,
+        "energyBoost": 45,
         "luckBoost": 15,
         "weightIncrement": 70
     },
@@ -2548,11 +2548,11 @@
             -17
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": -75,
+        "powerBoost": -35,
         "skillBoost": 0,
-        "reachBoost": -45,
-        "energyBoost": 60,
-        "luckBoost": 95,
+        "reachBoost": -20,
+        "energyBoost": 40,
+        "luckBoost": 65,
         "weightIncrement": 70
     },
     {
@@ -2572,10 +2572,10 @@
             -17
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": 25,
-        "skillBoost": -35,
-        "reachBoost": -60,
-        "energyBoost": 60,
+        "powerBoost": 20,
+        "skillBoost": -15,
+        "reachBoost": -25,
+        "energyBoost": 45,
         "luckBoost": 15,
         "weightIncrement": 60
     },
@@ -2596,11 +2596,11 @@
             -17
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 35,
+        "powerBoost": 25,
         "skillBoost": 0,
-        "reachBoost": 20,
-        "energyBoost": 15,
-        "luckBoost": 65,
+        "reachBoost": 15,
+        "energyBoost": 10,
+        "luckBoost": 45,
         "weightIncrement": 40
     },
     {
@@ -2620,11 +2620,11 @@
             -18
         ],
         "healthPointsIncrement": 85,
-        "powerBoost": -75,
-        "skillBoost": -45,
-        "reachBoost": 45,
-        "energyBoost": 20,
-        "luckBoost": 15,
+        "powerBoost": -35,
+        "skillBoost": -20,
+        "reachBoost": 30,
+        "energyBoost": 15,
+        "luckBoost": 10,
         "weightIncrement": 60
     },
     {
@@ -2644,10 +2644,10 @@
             -18
         ],
         "healthPointsIncrement": 85,
-        "powerBoost": -60,
-        "skillBoost": -35,
-        "reachBoost": 60,
-        "energyBoost": 25,
+        "powerBoost": -25,
+        "skillBoost": -15,
+        "reachBoost": 45,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 70
     },
@@ -2669,9 +2669,9 @@
         ],
         "healthPointsIncrement": 110,
         "powerBoost": 15,
-        "skillBoost": 60,
-        "reachBoost": 40,
-        "energyBoost": 25,
+        "skillBoost": 45,
+        "reachBoost": 30,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 40
     },
@@ -2694,9 +2694,9 @@
         "healthPointsIncrement": 80,
         "powerBoost": 0,
         "skillBoost": 0,
-        "reachBoost": -75,
-        "energyBoost": 75,
-        "luckBoost": -45,
+        "reachBoost": -35,
+        "energyBoost": 50,
+        "luckBoost": -20,
         "weightIncrement": 55
     },
     {
@@ -2716,11 +2716,11 @@
             -19
         ],
         "healthPointsIncrement": 115,
-        "powerBoost": 75,
+        "powerBoost": 55,
         "skillBoost": 0,
-        "reachBoost": -60,
-        "energyBoost": 125,
-        "luckBoost": -35,
+        "reachBoost": -25,
+        "energyBoost": 90,
+        "luckBoost": -15,
         "weightIncrement": 50
     },
     {
@@ -2744,7 +2744,7 @@
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": 0,
-        "luckBoost": -75,
+        "luckBoost": -30,
         "weightIncrement": 65
     },
     {
@@ -2764,10 +2764,10 @@
             -18
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": 95,
-        "skillBoost": -45,
-        "reachBoost": -75,
-        "energyBoost": 60,
+        "powerBoost": 65,
+        "skillBoost": -20,
+        "reachBoost": -35,
+        "energyBoost": 40,
         "luckBoost": 0,
         "weightIncrement": 60
     },
@@ -2788,11 +2788,11 @@
             -18
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": 35,
-        "skillBoost": -25,
-        "reachBoost": 20,
-        "energyBoost": 75,
-        "luckBoost": -40,
+        "powerBoost": 25,
+        "skillBoost": -15,
+        "reachBoost": 15,
+        "energyBoost": 55,
+        "luckBoost": -20,
         "weightIncrement": 70
     },
     {
@@ -2812,11 +2812,11 @@
             -18
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": 40,
-        "skillBoost": 25,
+        "powerBoost": 30,
+        "skillBoost": 20,
         "reachBoost": 15,
         "energyBoost": 15,
-        "luckBoost": 60,
+        "luckBoost": 45,
         "weightIncrement": 50
     },
     {
@@ -2836,11 +2836,11 @@
             -17
         ],
         "healthPointsIncrement": 110,
-        "powerBoost": -45,
-        "skillBoost": -75,
-        "reachBoost": 20,
-        "energyBoost": 15,
-        "luckBoost": 45,
+        "powerBoost": -20,
+        "skillBoost": -35,
+        "reachBoost": 15,
+        "energyBoost": 10,
+        "luckBoost": 30,
         "weightIncrement": 65
     },
     {
@@ -2860,11 +2860,11 @@
             -17
         ],
         "healthPointsIncrement": 120,
-        "powerBoost": -40,
-        "skillBoost": -25,
-        "reachBoost": 75,
-        "energyBoost": 35,
-        "luckBoost": 20,
+        "powerBoost": -20,
+        "skillBoost": -15,
+        "reachBoost": 55,
+        "energyBoost": 25,
+        "luckBoost": 15,
         "weightIncrement": 60
     },
     {
@@ -2884,11 +2884,11 @@
             -17
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": -75,
+        "powerBoost": -30,
         "skillBoost": 0,
         "reachBoost": 0,
-        "energyBoost": 40,
-        "luckBoost": 65,
+        "energyBoost": 25,
+        "luckBoost": 40,
         "weightIncrement": 80
     },
     {
@@ -2910,11 +2910,11 @@
             -17
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": -45,
-        "skillBoost": -75,
+        "powerBoost": -20,
+        "skillBoost": -35,
         "reachBoost": 0,
-        "energyBoost": 60,
-        "luckBoost": 95,
+        "energyBoost": 40,
+        "luckBoost": 65,
         "weightIncrement": 70
     },
     {
@@ -2936,10 +2936,10 @@
             -17
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": 60,
-        "skillBoost": -35,
-        "reachBoost": -60,
-        "energyBoost": 25,
+        "powerBoost": 45,
+        "skillBoost": -15,
+        "reachBoost": -25,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 40
     },
@@ -2962,11 +2962,11 @@
             -17
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 35,
-        "skillBoost": 20,
+        "powerBoost": 25,
+        "skillBoost": 15,
         "reachBoost": 0,
-        "energyBoost": 65,
-        "luckBoost": 15,
+        "energyBoost": 45,
+        "luckBoost": 10,
         "weightIncrement": 60
     },
     {
@@ -2988,11 +2988,11 @@
             -17
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": -45,
-        "skillBoost": 45,
-        "reachBoost": -75,
-        "energyBoost": 15,
-        "luckBoost": 20,
+        "powerBoost": -20,
+        "skillBoost": 30,
+        "reachBoost": -35,
+        "energyBoost": 10,
+        "luckBoost": 15,
         "weightIncrement": 55
     },
     {
@@ -3014,11 +3014,11 @@
             -17
         ],
         "healthPointsIncrement": 75,
-        "powerBoost": -60,
+        "powerBoost": -25,
         "skillBoost": 15,
-        "reachBoost": -35,
-        "energyBoost": 60,
-        "luckBoost": 25,
+        "reachBoost": -15,
+        "energyBoost": 45,
+        "luckBoost": 20,
         "weightIncrement": 50
     },
     {
@@ -3040,10 +3040,10 @@
             -17
         ],
         "healthPointsIncrement": 120,
-        "powerBoost": 60,
-        "skillBoost": 40,
+        "powerBoost": 45,
+        "skillBoost": 30,
         "reachBoost": 15,
-        "energyBoost": 25,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 70
     },
@@ -3066,10 +3066,10 @@
             -18
         ],
         "healthPointsIncrement": 75,
-        "powerBoost": -75,
+        "powerBoost": -35,
         "skillBoost": 0,
-        "reachBoost": -45,
-        "energyBoost": 75,
+        "reachBoost": -20,
+        "energyBoost": 50,
         "luckBoost": 0,
         "weightIncrement": 55
     },
@@ -3092,11 +3092,11 @@
             -18
         ],
         "healthPointsIncrement": 85,
-        "powerBoost": 125,
-        "skillBoost": -60,
+        "powerBoost": 90,
+        "skillBoost": -25,
         "reachBoost": 0,
-        "energyBoost": 75,
-        "luckBoost": -35,
+        "energyBoost": 55,
+        "luckBoost": -15,
         "weightIncrement": 65
     },
     {
@@ -3118,7 +3118,7 @@
             -18
         ],
         "healthPointsIncrement": 55,
-        "powerBoost": -75,
+        "powerBoost": -30,
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": 0,
@@ -3144,11 +3144,11 @@
             -18
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": 60,
-        "skillBoost": -75,
+        "powerBoost": 40,
+        "skillBoost": -35,
         "reachBoost": 0,
-        "energyBoost": 95,
-        "luckBoost": -45,
+        "energyBoost": 65,
+        "luckBoost": -20,
         "weightIncrement": 55
     },
     {
@@ -3170,11 +3170,11 @@
             -18
         ],
         "healthPointsIncrement": 140,
-        "powerBoost": 75,
-        "skillBoost": 35,
-        "reachBoost": -40,
-        "energyBoost": 20,
-        "luckBoost": -25,
+        "powerBoost": 55,
+        "skillBoost": 25,
+        "reachBoost": -20,
+        "energyBoost": 15,
+        "luckBoost": -15,
         "weightIncrement": 50
     },
     {
@@ -3196,10 +3196,10 @@
             -18
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": 25,
+        "powerBoost": 20,
         "skillBoost": 15,
-        "reachBoost": 60,
-        "energyBoost": 40,
+        "reachBoost": 45,
+        "energyBoost": 30,
         "luckBoost": 15,
         "weightIncrement": 70
     },
@@ -3222,11 +3222,11 @@
             -18
         ],
         "healthPointsIncrement": 115,
-        "powerBoost": -45,
-        "skillBoost": -75,
-        "reachBoost": 45,
-        "energyBoost": 20,
-        "luckBoost": 15,
+        "powerBoost": -20,
+        "skillBoost": -35,
+        "reachBoost": 30,
+        "energyBoost": 15,
+        "luckBoost": 10,
         "weightIncrement": 45
     },
     {
@@ -3248,11 +3248,11 @@
             -19
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": -40,
-        "skillBoost": -25,
-        "reachBoost": 75,
-        "energyBoost": 35,
-        "luckBoost": 20,
+        "powerBoost": -20,
+        "skillBoost": -15,
+        "reachBoost": 55,
+        "energyBoost": 25,
+        "luckBoost": 15,
         "weightIncrement": 65
     },
     {
@@ -3276,9 +3276,9 @@
         "healthPointsIncrement": 100,
         "powerBoost": 0,
         "skillBoost": 0,
-        "reachBoost": -75,
-        "energyBoost": 40,
-        "luckBoost": 65,
+        "reachBoost": -30,
+        "energyBoost": 25,
+        "luckBoost": 40,
         "weightIncrement": 80
     },
     {
@@ -3300,11 +3300,11 @@
             -18
         ],
         "healthPointsIncrement": 140,
-        "powerBoost": 125,
+        "powerBoost": 90,
         "skillBoost": 0,
-        "reachBoost": -45,
+        "reachBoost": -20,
         "energyBoost": 0,
-        "luckBoost": 75,
+        "luckBoost": 55,
         "weightIncrement": 70
     },
     {
@@ -3326,11 +3326,11 @@
             -18
         ],
         "healthPointsIncrement": 130,
-        "powerBoost": -40,
-        "skillBoost": 35,
-        "reachBoost": 20,
-        "energyBoost": 75,
-        "luckBoost": -25,
+        "powerBoost": -20,
+        "skillBoost": 25,
+        "reachBoost": 15,
+        "energyBoost": 55,
+        "luckBoost": -15,
         "weightIncrement": 75
     },
     {
@@ -3354,9 +3354,9 @@
         "healthPointsIncrement": 150,
         "powerBoost": 0,
         "skillBoost": 15,
-        "reachBoost": 75,
-        "energyBoost": 40,
-        "luckBoost": 25,
+        "reachBoost": 55,
+        "energyBoost": 30,
+        "luckBoost": 20,
         "weightIncrement": 80
     },
     {
@@ -3379,10 +3379,10 @@
         ],
         "healthPointsIncrement": 125,
         "powerBoost": 0,
-        "skillBoost": 95,
-        "reachBoost": -45,
-        "energyBoost": 60,
-        "luckBoost": -75,
+        "skillBoost": 65,
+        "reachBoost": -20,
+        "energyBoost": 40,
+        "luckBoost": -35,
         "weightIncrement": 55
     },
     {
@@ -3404,11 +3404,11 @@
             -17
         ],
         "healthPointsIncrement": 185,
-        "powerBoost": -15,
-        "skillBoost": 75,
-        "reachBoost": 25,
+        "powerBoost": -10,
+        "skillBoost": 55,
+        "reachBoost": 20,
         "energyBoost": 15,
-        "luckBoost": 40,
+        "luckBoost": 30,
         "weightIncrement": 90
     },
     {
@@ -3431,8 +3431,8 @@
         ],
         "healthPointsIncrement": 100,
         "powerBoost": 0,
-        "skillBoost": 50,
-        "reachBoost": -75,
+        "skillBoost": 30,
+        "reachBoost": -30,
         "energyBoost": 0,
         "luckBoost": 0,
         "weightIncrement": 80
@@ -3456,11 +3456,11 @@
             -19
         ],
         "healthPointsIncrement": 125,
-        "powerBoost": -45,
+        "powerBoost": -20,
         "skillBoost": 15,
         "reachBoost": 10,
-        "energyBoost": 50,
-        "luckBoost": 25,
+        "energyBoost": 35,
+        "luckBoost": 20,
         "weightIncrement": 85
     },
     {
@@ -3482,11 +3482,11 @@
             -19
         ],
         "healthPointsIncrement": 180,
-        "powerBoost": -40,
-        "skillBoost": 75,
-        "reachBoost": 20,
-        "energyBoost": 35,
-        "luckBoost": -25,
+        "powerBoost": -20,
+        "skillBoost": 55,
+        "reachBoost": 15,
+        "energyBoost": 25,
+        "luckBoost": -15,
         "weightIncrement": 90
     },
     {
@@ -3508,11 +3508,11 @@
             -19
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": -75,
-        "skillBoost": 65,
+        "powerBoost": -30,
+        "skillBoost": 40,
         "reachBoost": 0,
         "energyBoost": 0,
-        "luckBoost": 40,
+        "luckBoost": 25,
         "weightIncrement": 70
     },
     {
@@ -3534,10 +3534,10 @@
             -18
         ],
         "healthPointsIncrement": 170,
-        "powerBoost": 75,
+        "powerBoost": 55,
         "skillBoost": 0,
-        "reachBoost": -45,
-        "energyBoost": 125,
+        "reachBoost": -20,
+        "energyBoost": 90,
         "luckBoost": 0,
         "weightIncrement": 65
     },
@@ -3560,10 +3560,10 @@
             -18
         ],
         "healthPointsIncrement": 185,
-        "powerBoost": 40,
-        "skillBoost": 25,
-        "reachBoost": -15,
-        "energyBoost": 75,
+        "powerBoost": 30,
+        "skillBoost": 20,
+        "reachBoost": -10,
+        "energyBoost": 55,
         "luckBoost": 15,
         "weightIncrement": 80
     },
@@ -3589,7 +3589,7 @@
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": 0,
-        "energyBoost": -75,
+        "energyBoost": -30,
         "luckBoost": 0,
         "weightIncrement": 85
     },
@@ -3612,11 +3612,11 @@
             -18
         ],
         "healthPointsIncrement": 160,
-        "powerBoost": -45,
-        "skillBoost": -75,
+        "powerBoost": -20,
+        "skillBoost": -35,
         "reachBoost": 0,
-        "energyBoost": 95,
-        "luckBoost": 60,
+        "energyBoost": 65,
+        "luckBoost": 40,
         "weightIncrement": 80
     },
     {
@@ -3638,10 +3638,10 @@
             -18
         ],
         "healthPointsIncrement": 160,
-        "powerBoost": -35,
-        "skillBoost": 60,
-        "reachBoost": -60,
-        "energyBoost": 25,
+        "powerBoost": -15,
+        "skillBoost": 45,
+        "reachBoost": -25,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 75
     },
@@ -3664,11 +3664,11 @@
             -18
         ],
         "healthPointsIncrement": 185,
-        "powerBoost": 15,
-        "skillBoost": 65,
+        "powerBoost": 10,
+        "skillBoost": 45,
         "reachBoost": 0,
-        "energyBoost": 35,
-        "luckBoost": 20,
+        "energyBoost": 25,
+        "luckBoost": 15,
         "weightIncrement": 60
     },
     {
@@ -3690,11 +3690,11 @@
             -17
         ],
         "healthPointsIncrement": 60,
-        "powerBoost": 20,
-        "skillBoost": -75,
-        "reachBoost": -45,
-        "energyBoost": 45,
-        "luckBoost": 15,
+        "powerBoost": 15,
+        "skillBoost": -35,
+        "reachBoost": -20,
+        "energyBoost": 30,
+        "luckBoost": 10,
         "weightIncrement": 60
     },
     {
@@ -3716,10 +3716,10 @@
             -17
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": 60,
-        "skillBoost": -35,
-        "reachBoost": -60,
-        "energyBoost": 25,
+        "powerBoost": 45,
+        "skillBoost": -15,
+        "reachBoost": -25,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 35
     },
@@ -3744,9 +3744,9 @@
         "healthPointsIncrement": 105,
         "powerBoost": 15,
         "skillBoost": 15,
-        "reachBoost": 60,
-        "energyBoost": 25,
-        "luckBoost": 40,
+        "reachBoost": 45,
+        "energyBoost": 20,
+        "luckBoost": 30,
         "weightIncrement": 50
     },
     {
@@ -3768,11 +3768,11 @@
             -17
         ],
         "healthPointsIncrement": 70,
-        "powerBoost": 75,
-        "skillBoost": -45,
+        "powerBoost": 50,
+        "skillBoost": -20,
         "reachBoost": 0,
         "energyBoost": 0,
-        "luckBoost": -75,
+        "luckBoost": -35,
         "weightIncrement": 45
     },
     {
@@ -3794,11 +3794,11 @@
             -17
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 75,
-        "skillBoost": -35,
+        "powerBoost": 55,
+        "skillBoost": -15,
         "reachBoost": 0,
-        "energyBoost": -60,
-        "luckBoost": 125,
+        "energyBoost": -25,
+        "luckBoost": 90,
         "weightIncrement": 70
     },
     {
@@ -3821,7 +3821,7 @@
         ],
         "healthPointsIncrement": 70,
         "powerBoost": 0,
-        "skillBoost": -75,
+        "skillBoost": -30,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": 0,
@@ -3847,10 +3847,10 @@
         ],
         "healthPointsIncrement": 95,
         "powerBoost": 0,
-        "skillBoost": -75,
-        "reachBoost": 60,
-        "energyBoost": -45,
-        "luckBoost": 95,
+        "skillBoost": -35,
+        "reachBoost": 40,
+        "energyBoost": -20,
+        "luckBoost": 65,
         "weightIncrement": 45
     },
     {
@@ -3872,11 +3872,11 @@
             -19
         ],
         "healthPointsIncrement": 110,
-        "powerBoost": -25,
-        "skillBoost": -40,
-        "reachBoost": 35,
-        "energyBoost": 20,
-        "luckBoost": 75,
+        "powerBoost": -15,
+        "skillBoost": -20,
+        "reachBoost": 25,
+        "energyBoost": 15,
+        "luckBoost": 55,
         "weightIncrement": 40
     },
     {
@@ -3898,10 +3898,10 @@
             -19
         ],
         "healthPointsIncrement": 115,
-        "powerBoost": 60,
+        "powerBoost": 45,
         "skillBoost": 15,
-        "reachBoost": 40,
-        "energyBoost": 25,
+        "reachBoost": 30,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 40
     },
@@ -3924,11 +3924,11 @@
             -17
         ],
         "healthPointsIncrement": 70,
-        "powerBoost": -45,
-        "skillBoost": 45,
-        "reachBoost": 15,
-        "energyBoost": -75,
-        "luckBoost": 20,
+        "powerBoost": -20,
+        "skillBoost": 30,
+        "reachBoost": 10,
+        "energyBoost": -35,
+        "luckBoost": 15,
         "weightIncrement": 70
     },
     {
@@ -3950,11 +3950,11 @@
             -17
         ],
         "healthPointsIncrement": 130,
-        "powerBoost": -40,
-        "skillBoost": 20,
-        "reachBoost": 75,
-        "energyBoost": -25,
-        "luckBoost": 35,
+        "powerBoost": -20,
+        "skillBoost": 15,
+        "reachBoost": 55,
+        "energyBoost": -15,
+        "luckBoost": 25,
         "weightIncrement": 50
     },
     {
@@ -3976,11 +3976,11 @@
             -17
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": -75,
+        "powerBoost": -30,
         "skillBoost": 0,
-        "reachBoost": 40,
+        "reachBoost": 25,
         "energyBoost": 0,
-        "luckBoost": 65,
+        "luckBoost": 40,
         "weightIncrement": 55
     },
     {
@@ -4002,11 +4002,11 @@
             -16
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": 75,
+        "powerBoost": 55,
         "skillBoost": 0,
-        "reachBoost": 125,
+        "reachBoost": 90,
         "energyBoost": 0,
-        "luckBoost": -45,
+        "luckBoost": -20,
         "weightIncrement": 55
     },
     {
@@ -4028,11 +4028,11 @@
             -16
         ],
         "healthPointsIncrement": 120,
-        "powerBoost": -40,
-        "skillBoost": 35,
-        "reachBoost": -25,
-        "energyBoost": 75,
-        "luckBoost": 20,
+        "powerBoost": -20,
+        "skillBoost": 25,
+        "reachBoost": -15,
+        "energyBoost": 55,
+        "luckBoost": 15,
         "weightIncrement": 75
     },
     {
@@ -4055,9 +4055,9 @@
         ],
         "healthPointsIncrement": 160,
         "powerBoost": 0,
-        "skillBoost": 75,
-        "reachBoost": 25,
-        "energyBoost": 40,
+        "skillBoost": 55,
+        "reachBoost": 20,
+        "energyBoost": 30,
         "luckBoost": 15,
         "weightIncrement": 80
     },
@@ -4081,10 +4081,10 @@
         ],
         "healthPointsIncrement": 110,
         "powerBoost": 0,
-        "skillBoost": 95,
-        "reachBoost": -45,
-        "energyBoost": -75,
-        "luckBoost": 60,
+        "skillBoost": 65,
+        "reachBoost": -20,
+        "energyBoost": -35,
+        "luckBoost": 40,
         "weightIncrement": 65
     },
     {
@@ -4106,11 +4106,11 @@
             -17
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": -15,
+        "powerBoost": -10,
         "skillBoost": 15,
-        "reachBoost": 40,
-        "energyBoost": 75,
-        "luckBoost": 25,
+        "reachBoost": 30,
+        "energyBoost": 55,
+        "luckBoost": 20,
         "weightIncrement": 75
     },
     {
@@ -4134,9 +4134,9 @@
         "healthPointsIncrement": 125,
         "powerBoost": 0,
         "skillBoost": 0,
-        "reachBoost": -75,
+        "reachBoost": -30,
         "energyBoost": 0,
-        "luckBoost": 50,
+        "luckBoost": 30,
         "weightIncrement": 55
     },
     {
@@ -4159,10 +4159,10 @@
         ],
         "healthPointsIncrement": 140,
         "powerBoost": 10,
-        "skillBoost": 25,
-        "reachBoost": -45,
+        "skillBoost": 20,
+        "reachBoost": -20,
         "energyBoost": 15,
-        "luckBoost": 50,
+        "luckBoost": 35,
         "weightIncrement": 50
     },
     {
@@ -4184,11 +4184,11 @@
             -16
         ],
         "healthPointsIncrement": 140,
-        "powerBoost": 75,
-        "skillBoost": -25,
-        "reachBoost": -40,
-        "energyBoost": 35,
-        "luckBoost": 20,
+        "powerBoost": 55,
+        "skillBoost": -15,
+        "reachBoost": -20,
+        "energyBoost": 25,
+        "luckBoost": 15,
         "weightIncrement": 60
     },
     {
@@ -4210,10 +4210,10 @@
             -16
         ],
         "healthPointsIncrement": 140,
-        "powerBoost": -75,
-        "skillBoost": 40,
+        "powerBoost": -30,
+        "skillBoost": 25,
         "reachBoost": 0,
-        "energyBoost": 65,
+        "energyBoost": 40,
         "luckBoost": 0,
         "weightIncrement": 85
     },
@@ -4238,11 +4238,11 @@
             -18
         ],
         "healthPointsIncrement": 75,
-        "powerBoost": -45,
+        "powerBoost": -20,
         "skillBoost": 0,
-        "reachBoost": -75,
-        "energyBoost": 60,
-        "luckBoost": 95,
+        "reachBoost": -35,
+        "energyBoost": 40,
+        "luckBoost": 65,
         "weightIncrement": 60
     },
     {
@@ -4266,10 +4266,10 @@
             -19
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": -35,
-        "skillBoost": -60,
-        "reachBoost": 60,
-        "energyBoost": 25,
+        "powerBoost": -15,
+        "skillBoost": -25,
+        "reachBoost": 45,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 70
     },
@@ -4294,11 +4294,11 @@
             -19
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": 35,
+        "powerBoost": 25,
         "skillBoost": 0,
-        "reachBoost": 65,
-        "energyBoost": 20,
-        "luckBoost": 15,
+        "reachBoost": 45,
+        "energyBoost": 15,
+        "luckBoost": 10,
         "weightIncrement": 45
     },
     {
@@ -4322,11 +4322,11 @@
             -18
         ],
         "healthPointsIncrement": 70,
-        "powerBoost": -45,
-        "skillBoost": 15,
-        "reachBoost": -75,
-        "energyBoost": 45,
-        "luckBoost": 20,
+        "powerBoost": -20,
+        "skillBoost": 10,
+        "reachBoost": -35,
+        "energyBoost": 30,
+        "luckBoost": 15,
         "weightIncrement": 65
     },
     {
@@ -4350,11 +4350,11 @@
             -18
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": -35,
+        "powerBoost": -15,
         "skillBoost": 15,
-        "reachBoost": -60,
-        "energyBoost": 60,
-        "luckBoost": 25,
+        "reachBoost": -25,
+        "energyBoost": 45,
+        "luckBoost": 20,
         "weightIncrement": 60
     },
     {
@@ -4378,11 +4378,11 @@
             -18
         ],
         "healthPointsIncrement": 110,
-        "powerBoost": 25,
+        "powerBoost": 20,
         "skillBoost": 15,
-        "reachBoost": 60,
+        "reachBoost": 45,
         "energyBoost": 15,
-        "luckBoost": 40,
+        "luckBoost": 30,
         "weightIncrement": 55
     },
     {
@@ -4407,9 +4407,9 @@
         ],
         "healthPointsIncrement": 125,
         "powerBoost": 0,
-        "skillBoost": -45,
-        "reachBoost": -75,
-        "energyBoost": 75,
+        "skillBoost": -20,
+        "reachBoost": -35,
+        "energyBoost": 50,
         "luckBoost": 0,
         "weightIncrement": 75
     },
@@ -4434,11 +4434,11 @@
             -19
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": 75,
+        "powerBoost": 55,
         "skillBoost": 0,
-        "reachBoost": -35,
-        "energyBoost": 125,
-        "luckBoost": -60,
+        "reachBoost": -15,
+        "energyBoost": 90,
+        "luckBoost": -25,
         "weightIncrement": 55
     },
     {
@@ -4464,7 +4464,7 @@
         "healthPointsIncrement": 85,
         "powerBoost": 0,
         "skillBoost": 0,
-        "reachBoost": -75,
+        "reachBoost": -30,
         "energyBoost": 0,
         "luckBoost": 0,
         "weightIncrement": 65
@@ -4490,10 +4490,10 @@
             -16
         ],
         "healthPointsIncrement": 85,
-        "powerBoost": 60,
-        "skillBoost": -45,
-        "reachBoost": -75,
-        "energyBoost": 95,
+        "powerBoost": 40,
+        "skillBoost": -20,
+        "reachBoost": -35,
+        "energyBoost": 65,
         "luckBoost": 0,
         "weightIncrement": 70
     },
@@ -4518,11 +4518,11 @@
             -16
         ],
         "healthPointsIncrement": 115,
-        "powerBoost": 75,
-        "skillBoost": 35,
-        "reachBoost": -25,
-        "energyBoost": 20,
-        "luckBoost": -40,
+        "powerBoost": 55,
+        "skillBoost": 25,
+        "reachBoost": -15,
+        "energyBoost": 15,
+        "luckBoost": -20,
         "weightIncrement": 50
     },
     {
@@ -4547,10 +4547,10 @@
         ],
         "healthPointsIncrement": 155,
         "powerBoost": 15,
-        "skillBoost": 60,
-        "reachBoost": 40,
+        "skillBoost": 45,
+        "reachBoost": 30,
         "energyBoost": 15,
-        "luckBoost": 25,
+        "luckBoost": 20,
         "weightIncrement": 80
     },
     {
@@ -4574,11 +4574,11 @@
             -17
         ],
         "healthPointsIncrement": 125,
-        "powerBoost": 20,
-        "skillBoost": -75,
-        "reachBoost": 45,
-        "energyBoost": 15,
-        "luckBoost": -45,
+        "powerBoost": 15,
+        "skillBoost": -35,
+        "reachBoost": 30,
+        "energyBoost": 10,
+        "luckBoost": -20,
         "weightIncrement": 55
     },
     {
@@ -4602,11 +4602,11 @@
             -17
         ],
         "healthPointsIncrement": 150,
-        "powerBoost": 20,
-        "skillBoost": -40,
-        "reachBoost": 75,
-        "energyBoost": 35,
-        "luckBoost": -25,
+        "powerBoost": 15,
+        "skillBoost": -20,
+        "reachBoost": 55,
+        "energyBoost": 25,
+        "luckBoost": -15,
         "weightIncrement": 45
     },
     {
@@ -4631,10 +4631,10 @@
         ],
         "healthPointsIncrement": 85,
         "powerBoost": 0,
-        "skillBoost": -75,
+        "skillBoost": -30,
         "reachBoost": 0,
-        "energyBoost": 40,
-        "luckBoost": 65,
+        "energyBoost": 25,
+        "luckBoost": 40,
         "weightIncrement": 70
     },
     {
@@ -4658,11 +4658,11 @@
             -18
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": 75,
-        "skillBoost": -45,
+        "powerBoost": 55,
+        "skillBoost": -20,
         "reachBoost": 0,
         "energyBoost": 0,
-        "luckBoost": 125,
+        "luckBoost": 90,
         "weightIncrement": 55
     },
     {
@@ -4686,11 +4686,11 @@
             -18
         ],
         "healthPointsIncrement": 145,
-        "powerBoost": -25,
-        "skillBoost": 35,
-        "reachBoost": 75,
-        "energyBoost": 20,
-        "luckBoost": -40,
+        "powerBoost": -15,
+        "skillBoost": 25,
+        "reachBoost": 55,
+        "energyBoost": 15,
+        "luckBoost": -20,
         "weightIncrement": 65
     },
     {
@@ -4714,9 +4714,9 @@
             -18
         ],
         "healthPointsIncrement": 140,
-        "powerBoost": 75,
-        "skillBoost": 40,
-        "reachBoost": 25,
+        "powerBoost": 55,
+        "skillBoost": 30,
+        "reachBoost": 20,
         "energyBoost": 15,
         "luckBoost": 0,
         "weightIncrement": 60
@@ -4742,11 +4742,11 @@
             -19
         ],
         "healthPointsIncrement": 125,
-        "powerBoost": -45,
-        "skillBoost": 60,
+        "powerBoost": -20,
+        "skillBoost": 40,
         "reachBoost": 0,
-        "energyBoost": 95,
-        "luckBoost": -75,
+        "energyBoost": 65,
+        "luckBoost": -35,
         "weightIncrement": 55
     },
     {
@@ -4770,10 +4770,10 @@
             -19
         ],
         "healthPointsIncrement": 165,
-        "powerBoost": 75,
-        "skillBoost": 40,
-        "reachBoost": -15,
-        "energyBoost": 25,
+        "powerBoost": 55,
+        "skillBoost": 30,
+        "reachBoost": -10,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 75
     },
@@ -4801,8 +4801,8 @@
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": 0,
-        "energyBoost": 50,
-        "luckBoost": -75,
+        "energyBoost": 30,
+        "luckBoost": -30,
         "weightIncrement": 60
     },
     {
@@ -4826,11 +4826,11 @@
             -18
         ],
         "healthPointsIncrement": 150,
-        "powerBoost": 25,
+        "powerBoost": 20,
         "skillBoost": 10,
-        "reachBoost": 50,
+        "reachBoost": 35,
         "energyBoost": 15,
-        "luckBoost": -45,
+        "luckBoost": -20,
         "weightIncrement": 70
     },
     {
@@ -4854,11 +4854,11 @@
             -18
         ],
         "healthPointsIncrement": 185,
-        "powerBoost": -40,
-        "skillBoost": 75,
-        "reachBoost": 35,
-        "energyBoost": 20,
-        "luckBoost": -25,
+        "powerBoost": -20,
+        "skillBoost": 55,
+        "reachBoost": 25,
+        "energyBoost": 15,
+        "luckBoost": -15,
         "weightIncrement": 65
     },
     {
@@ -4883,10 +4883,10 @@
         ],
         "healthPointsIncrement": 130,
         "powerBoost": 0,
-        "skillBoost": 40,
-        "reachBoost": -75,
+        "skillBoost": 25,
+        "reachBoost": -30,
         "energyBoost": 0,
-        "luckBoost": 65,
+        "luckBoost": 40,
         "weightIncrement": 55
     },
     {
@@ -4910,10 +4910,10 @@
             -17
         ],
         "healthPointsIncrement": 165,
-        "powerBoost": 75,
-        "skillBoost": -45,
+        "powerBoost": 55,
+        "skillBoost": -20,
         "reachBoost": 0,
-        "energyBoost": 125,
+        "energyBoost": 90,
         "luckBoost": 0,
         "weightIncrement": 70
     },
@@ -4938,11 +4938,11 @@
             -17
         ],
         "healthPointsIncrement": 170,
-        "powerBoost": 25,
-        "skillBoost": -15,
+        "powerBoost": 20,
+        "skillBoost": -10,
         "reachBoost": 15,
-        "energyBoost": 75,
-        "luckBoost": 40,
+        "energyBoost": 55,
+        "luckBoost": 30,
         "weightIncrement": 75
     },
     {
@@ -4970,7 +4970,7 @@
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": 0,
-        "luckBoost": -75,
+        "luckBoost": -30,
         "weightIncrement": 90
     }
 ]

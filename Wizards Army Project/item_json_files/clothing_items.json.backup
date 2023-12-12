@@ -2,7 +2,7 @@
     {
         "clothing_type": "hat",
         "name": "Granite Hat of Sensitivity",
-        "sprite": "hat-96.png",
+        "sprite": "hat-99.png",
         "id_string": "HAT-T1-G001-N01",
         "element_type": [
             "Rock"
@@ -19,14 +19,14 @@
         "powerBoost": -75,
         "skillBoost": 0,
         "reachBoost": -45,
-        "energyBoost": 60,
-        "luckBoost": 95,
+        "energyBoost": 55,
+        "luckBoost": 90,
         "weightIncrement": 70
     },
     {
         "clothing_type": "hat",
         "name": "Luminous Hat of Sensitivity",
-        "sprite": "hat-95.png",
+        "sprite": "hat-98.png",
         "id_string": "HAT-T1-G001-N02",
         "element_type": [
             "Light"
@@ -44,13 +44,13 @@
         "skillBoost": -35,
         "reachBoost": -60,
         "energyBoost": 15,
-        "luckBoost": 60,
+        "luckBoost": 55,
         "weightIncrement": 40
     },
     {
         "clothing_type": "hat",
         "name": "Shadowed Hat of Sensitivity",
-        "sprite": "hat-94.png",
+        "sprite": "hat-97.png",
         "id_string": "HAT-T1-G001-N03",
         "element_type": [
             "Darkness"
@@ -64,17 +64,17 @@
             3
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": 35,
+        "powerBoost": 30,
         "skillBoost": 0,
         "reachBoost": 20,
-        "energyBoost": 65,
+        "energyBoost": 55,
         "luckBoost": 15,
         "weightIncrement": 60
     },
     {
         "clothing_type": "hat",
         "name": "Oceanic Hat of Sincerity",
-        "sprite": "hat-93.png",
+        "sprite": "hat-96.png",
         "id_string": "HAT-T1-G002-N01",
         "element_type": [
             "Water"
@@ -98,7 +98,7 @@
     {
         "clothing_type": "hat",
         "name": "Grimshade Hat of Sincerity",
-        "sprite": "hat-92.png",
+        "sprite": "hat-95.png",
         "id_string": "HAT-T1-G002-N02",
         "element_type": [
             "Poison"
@@ -115,14 +115,14 @@
         "powerBoost": -35,
         "skillBoost": -60,
         "reachBoost": 15,
-        "energyBoost": 60,
+        "energyBoost": 55,
         "luckBoost": 25,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
         "name": "Scarlet Hat of Sincerity",
-        "sprite": "hat-91.png",
+        "sprite": "hat-94.png",
         "id_string": "HAT-T1-G002-N03",
         "element_type": [
             "Fire"
@@ -136,9 +136,9 @@
             2
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": 60,
-        "skillBoost": 40,
-        "reachBoost": 25,
+        "powerBoost": 55,
+        "skillBoost": 35,
+        "reachBoost": 20,
         "energyBoost": 15,
         "luckBoost": 15,
         "weightIncrement": 50
@@ -146,7 +146,7 @@
     {
         "clothing_type": "hat",
         "name": "Fernwhisper Hat of Diplomacy",
-        "sprite": "hat-90.png",
+        "sprite": "hat-93.png",
         "id_string": "HAT-T1-G003-N01",
         "element_type": [
             "Nature"
@@ -163,14 +163,14 @@
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": -75,
-        "energyBoost": 75,
+        "energyBoost": 70,
         "luckBoost": -45,
         "weightIncrement": 50
     },
     {
         "clothing_type": "hat",
         "name": "Jolt Hat of Diplomacy",
-        "sprite": "hat-89.png",
+        "sprite": "hat-92.png",
         "id_string": "HAT-T1-G003-N02",
         "element_type": [
             "Thunder"
@@ -184,17 +184,17 @@
             2
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 75,
+        "powerBoost": 70,
         "skillBoost": 0,
         "reachBoost": -35,
-        "energyBoost": 125,
+        "energyBoost": 115,
         "luckBoost": -60,
         "weightIncrement": 75
     },
     {
         "clothing_type": "hat",
         "name": "Cobblestone Hat of Diplomacy",
-        "sprite": "hat-88.png",
+        "sprite": "hat-91.png",
         "id_string": "HAT-T1-G003-N03",
         "element_type": [
             "Rock"
@@ -218,7 +218,7 @@
     {
         "clothing_type": "hat",
         "name": "Terra Sun-Hat of Creativity",
-        "sprite": "hat-87.png",
+        "sprite": "hat-90.png",
         "id_string": "HAT-T1-G004-N01",
         "element_type": [
             "Earth"
@@ -232,17 +232,17 @@
             -1
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": 60,
+        "powerBoost": 55,
         "skillBoost": -45,
         "reachBoost": -75,
-        "energyBoost": 95,
+        "energyBoost": 90,
         "luckBoost": 0,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
         "name": "Nature's Sun-Hat of Creativity",
-        "sprite": "hat-86.png",
+        "sprite": "hat-89.png",
         "id_string": "HAT-T1-G004-N02",
         "element_type": [
             "Nature"
@@ -256,9 +256,9 @@
             -1
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": 35,
+        "powerBoost": 30,
         "skillBoost": -25,
-        "reachBoost": 75,
+        "reachBoost": 70,
         "energyBoost": 20,
         "luckBoost": -40,
         "weightIncrement": 50
@@ -266,7 +266,7 @@
     {
         "clothing_type": "hat",
         "name": "Airborne Sun-Hat of Creativity",
-        "sprite": "hat-85.png",
+        "sprite": "hat-88.png",
         "id_string": "HAT-T1-G004-N03",
         "element_type": [
             "Air"
@@ -281,16 +281,16 @@
         ],
         "healthPointsIncrement": 130,
         "powerBoost": 15,
-        "skillBoost": 60,
-        "reachBoost": 40,
-        "energyBoost": 25,
+        "skillBoost": 55,
+        "reachBoost": 35,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 45
     },
     {
         "clothing_type": "hat",
         "name": "Voltweaver's Hat of Silence",
-        "sprite": "hat-84.png",
+        "sprite": "hat-87.png",
         "id_string": "HAT-T1-G005-N01",
         "element_type": [
             "Thunder"
@@ -314,7 +314,7 @@
     {
         "clothing_type": "hat",
         "name": "Alabaster Hat of Silence",
-        "sprite": "hat-83.png",
+        "sprite": "hat-86.png",
         "id_string": "HAT-T1-G005-N02",
         "element_type": [
             "Light"
@@ -330,15 +330,15 @@
         "healthPointsIncrement": 135,
         "powerBoost": -25,
         "skillBoost": -40,
-        "reachBoost": 35,
+        "reachBoost": 30,
         "energyBoost": 20,
-        "luckBoost": 75,
+        "luckBoost": 70,
         "weightIncrement": 50
     },
     {
         "clothing_type": "hat",
         "name": "Mariner's Hat of Silence",
-        "sprite": "hat-82.png",
+        "sprite": "hat-85.png",
         "id_string": "HAT-T1-G005-N03",
         "element_type": [
             "Water"
@@ -362,7 +362,7 @@
     {
         "clothing_type": "hat",
         "name": "Virulent Hat of Sorcery",
-        "sprite": "hat-81.png",
+        "sprite": "hat-84.png",
         "id_string": "HAT-T1-G006-N01",
         "element_type": [
             "Poison"
@@ -376,17 +376,17 @@
             -4
         ],
         "healthPointsIncrement": 110,
-        "powerBoost": 75,
+        "powerBoost": 70,
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": -45,
-        "luckBoost": 125,
+        "luckBoost": 115,
         "weightIncrement": 80
     },
     {
         "clothing_type": "hat",
         "name": "Emberheart Hat of Sorcery",
-        "sprite": "hat-80.png",
+        "sprite": "hat-83.png",
         "id_string": "HAT-T1-G006-N02",
         "element_type": [
             "Fire"
@@ -400,9 +400,9 @@
             -4
         ],
         "healthPointsIncrement": 130,
-        "powerBoost": 75,
+        "powerBoost": 70,
         "skillBoost": -40,
-        "reachBoost": 35,
+        "reachBoost": 30,
         "energyBoost": 20,
         "luckBoost": -25,
         "weightIncrement": 60
@@ -410,7 +410,7 @@
     {
         "clothing_type": "hat",
         "name": "Umberstone Hat of Sorcery",
-        "sprite": "hat-79.png",
+        "sprite": "hat-82.png",
         "id_string": "HAT-T1-G006-N03",
         "element_type": [
             "Earth"
@@ -424,17 +424,17 @@
             -4
         ],
         "healthPointsIncrement": 155,
-        "powerBoost": 40,
+        "powerBoost": 35,
         "skillBoost": 15,
-        "reachBoost": 75,
-        "energyBoost": 25,
+        "reachBoost": 65,
+        "energyBoost": 20,
         "luckBoost": 0,
         "weightIncrement": 70
     },
     {
         "clothing_type": "hat",
         "name": "Ruby Pointy-Hat of Elegance",
-        "sprite": "hat-78.png",
+        "sprite": "hat-81.png",
         "id_string": "HAT-T1-G007-N01",
         "element_type": [
             "Fire"
@@ -449,16 +449,16 @@
         ],
         "healthPointsIncrement": 120,
         "powerBoost": -75,
-        "skillBoost": 60,
+        "skillBoost": 55,
         "reachBoost": 0,
-        "energyBoost": 95,
+        "energyBoost": 90,
         "luckBoost": -45,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
         "name": "Electric Pointy-Hat of Elegance",
-        "sprite": "hat-77.png",
+        "sprite": "hat-80.png",
         "id_string": "HAT-T1-G007-N02",
         "element_type": [
             "Thunder"
@@ -472,17 +472,17 @@
             6
         ],
         "healthPointsIncrement": 155,
-        "powerBoost": 75,
+        "powerBoost": 65,
         "skillBoost": 15,
         "reachBoost": -15,
-        "energyBoost": 40,
-        "luckBoost": 25,
+        "energyBoost": 35,
+        "luckBoost": 20,
         "weightIncrement": 85
     },
     {
         "clothing_type": "hat",
         "name": "Aerial Pointy-Hat of Elegance",
-        "sprite": "hat-76.png",
+        "sprite": "hat-79.png",
         "id_string": "HAT-T1-G007-N03",
         "element_type": [
             "Air"
@@ -506,7 +506,7 @@
     {
         "clothing_type": "hat",
         "name": "Arboreal Hood of Sincerity",
-        "sprite": "hat-75.png",
+        "sprite": "hat-78.png",
         "id_string": "HAT-T1-G008-N01",
         "element_type": [
             "Earth"
@@ -522,7 +522,7 @@
         "healthPointsIncrement": 155,
         "powerBoost": 25,
         "skillBoost": 10,
-        "reachBoost": 50,
+        "reachBoost": 45,
         "energyBoost": 15,
         "luckBoost": -45,
         "weightIncrement": 75
@@ -530,7 +530,7 @@
     {
         "clothing_type": "hat",
         "name": "Sylvan Hood of Sincerity",
-        "sprite": "hat-74.png",
+        "sprite": "hat-77.png",
         "id_string": "HAT-T1-G008-N02",
         "element_type": [
             "Nature"
@@ -544,8 +544,8 @@
             2
         ],
         "healthPointsIncrement": 175,
-        "powerBoost": 75,
-        "skillBoost": 35,
+        "powerBoost": 70,
+        "skillBoost": 30,
         "reachBoost": -40,
         "energyBoost": 20,
         "luckBoost": -25,
@@ -554,7 +554,7 @@
     {
         "clothing_type": "hat",
         "name": "Enigmatic Hood of Sincerity",
-        "sprite": "hat-73.png",
+        "sprite": "hat-76.png",
         "id_string": "HAT-T1-G008-N03",
         "element_type": [
             "Darkness"
@@ -578,7 +578,7 @@
     {
         "clothing_type": "hat",
         "name": "Obsidian Hat of Imagination",
-        "sprite": "hat-72.png",
+        "sprite": "hat-75.png",
         "id_string": "HAT-T1-G009-N01",
         "element_type": [
             "Darkness"
@@ -592,17 +592,17 @@
             0
         ],
         "healthPointsIncrement": 160,
-        "powerBoost": 125,
+        "powerBoost": 115,
         "skillBoost": 0,
         "reachBoost": 0,
-        "energyBoost": 75,
+        "energyBoost": 70,
         "luckBoost": -45,
         "weightIncrement": 85
     },
     {
         "clothing_type": "hat",
         "name": "Gneiss Hat of Imagination",
-        "sprite": "hat-71.png",
+        "sprite": "hat-74.png",
         "id_string": "HAT-T1-G009-N02",
         "element_type": [
             "Rock"
@@ -616,17 +616,17 @@
             0
         ],
         "healthPointsIncrement": 200,
-        "powerBoost": 75,
+        "powerBoost": 65,
         "skillBoost": -15,
         "reachBoost": 15,
-        "energyBoost": 40,
-        "luckBoost": 25,
+        "energyBoost": 35,
+        "luckBoost": 20,
         "weightIncrement": 95
     },
     {
         "clothing_type": "hat",
         "name": "Crystal Hat of Imagination",
-        "sprite": "hat-70.png",
+        "sprite": "hat-73.png",
         "id_string": "HAT-T1-G009-N03",
         "element_type": [
             "Light"
@@ -650,7 +650,7 @@
     {
         "clothing_type": "hat",
         "name": "Purple Beanie of Discernment",
-        "sprite": "hat-69.png",
+        "sprite": "hat-72.png",
         "id_string": "HAT-T1-G010-N01",
         "element_type": [
             "Poison"
@@ -667,14 +667,14 @@
         "powerBoost": 0,
         "skillBoost": -75,
         "reachBoost": -45,
-        "energyBoost": 60,
-        "luckBoost": 95,
+        "energyBoost": 55,
+        "luckBoost": 90,
         "weightIncrement": 90
     },
     {
         "clothing_type": "hat",
         "name": "Torrential Beanie of Discernment",
-        "sprite": "hat-68.png",
+        "sprite": "hat-71.png",
         "id_string": "HAT-T1-G010-N02",
         "element_type": [
             "Water"
@@ -692,13 +692,13 @@
         "skillBoost": -60,
         "reachBoost": 25,
         "energyBoost": 15,
-        "luckBoost": 60,
+        "luckBoost": 55,
         "weightIncrement": 80
     },
     {
         "clothing_type": "hat",
         "name": "Gustborne Beanie of Discernment",
-        "sprite": "hat-67.png",
+        "sprite": "hat-70.png",
         "id_string": "HAT-T1-G010-N03",
         "element_type": [
             "Air"
@@ -713,8 +713,8 @@
         ],
         "healthPointsIncrement": 180,
         "powerBoost": 0,
-        "skillBoost": 65,
-        "reachBoost": 35,
+        "skillBoost": 55,
+        "reachBoost": 30,
         "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 60
@@ -722,7 +722,7 @@
     {
         "clothing_type": "hat",
         "name": "Infernal Coif of Punctuality",
-        "sprite": "hat-66.png",
+        "sprite": "hat-69.png",
         "id_string": "HAT-T1-G011-N01",
         "element_type": [
             "Fire"
@@ -746,7 +746,7 @@
     {
         "clothing_type": "hat",
         "name": "Verdant Coif of Punctuality",
-        "sprite": "hat-65.png",
+        "sprite": "hat-68.png",
         "id_string": "HAT-T1-G011-N02",
         "element_type": [
             "Nature"
@@ -760,7 +760,7 @@
             1
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": 60,
+        "powerBoost": 55,
         "skillBoost": -35,
         "reachBoost": -60,
         "energyBoost": 15,
@@ -770,7 +770,7 @@
     {
         "clothing_type": "hat",
         "name": "Electric Coif of Punctuality",
-        "sprite": "hat-64.png",
+        "sprite": "hat-67.png",
         "id_string": "HAT-T1-G011-N03",
         "element_type": [
             "Thunder"
@@ -784,17 +784,17 @@
             1
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 60,
+        "powerBoost": 55,
         "skillBoost": 15,
-        "reachBoost": 40,
-        "energyBoost": 25,
+        "reachBoost": 35,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
         "name": "Enigmatic Top-Hat of Cooperation",
-        "sprite": "hat-63.png",
+        "sprite": "hat-66.png",
         "id_string": "HAT-T2-G001-N01",
         "element_type": [
             "Darkness",
@@ -813,14 +813,14 @@
         "powerBoost": -75,
         "skillBoost": -45,
         "reachBoost": 0,
-        "energyBoost": 60,
-        "luckBoost": 95,
+        "energyBoost": 55,
+        "luckBoost": 90,
         "weightIncrement": 60
     },
     {
         "clothing_type": "hat",
         "name": "Sylvan Top-Hat of Cooperation",
-        "sprite": "hat-62.png",
+        "sprite": "hat-65.png",
         "id_string": "HAT-T2-G001-N02",
         "element_type": [
             "Nature",
@@ -836,7 +836,7 @@
             5
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": 60,
+        "powerBoost": 55,
         "skillBoost": -35,
         "reachBoost": -60,
         "energyBoost": 25,
@@ -846,7 +846,7 @@
     {
         "clothing_type": "hat",
         "name": "Ethereal Top-Hat of Cooperation",
-        "sprite": "hat-61.png",
+        "sprite": "hat-64.png",
         "id_string": "HAT-T2-G001-N03",
         "element_type": [
             "Light",
@@ -862,8 +862,8 @@
             5
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": 65,
-        "skillBoost": 35,
+        "powerBoost": 55,
+        "skillBoost": 30,
         "reachBoost": 0,
         "energyBoost": 20,
         "luckBoost": 15,
@@ -872,7 +872,7 @@
     {
         "clothing_type": "hat",
         "name": "Sienna Cowboy-Hat of Efficiency",
-        "sprite": "hat-60.png",
+        "sprite": "hat-63.png",
         "id_string": "HAT-T2-G002-N01",
         "element_type": [
             "Earth",
@@ -898,7 +898,7 @@
     {
         "clothing_type": "hat",
         "name": "Shockwave Cowboy-Hat of Efficiency",
-        "sprite": "hat-59.png",
+        "sprite": "hat-62.png",
         "id_string": "HAT-T2-G002-N02",
         "element_type": [
             "Thunder",
@@ -917,14 +917,14 @@
         "powerBoost": -60,
         "skillBoost": 25,
         "reachBoost": -35,
-        "energyBoost": 60,
+        "energyBoost": 55,
         "luckBoost": 15,
         "weightIncrement": 70
     },
     {
         "clothing_type": "hat",
         "name": "Obsidian Cowboy-Hat of Efficiency",
-        "sprite": "hat-58.png",
+        "sprite": "hat-61.png",
         "id_string": "HAT-T2-G002-N03",
         "element_type": [
             "Darkness",
@@ -940,17 +940,17 @@
             4
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": 60,
-        "skillBoost": 25,
+        "powerBoost": 55,
+        "skillBoost": 20,
         "reachBoost": 15,
-        "energyBoost": 40,
+        "energyBoost": 35,
         "luckBoost": 15,
         "weightIncrement": 60
     },
     {
         "clothing_type": "hat",
         "name": "Clayborne Homburg-Hat of Rationality",
-        "sprite": "hat-57.png",
+        "sprite": "hat-60.png",
         "id_string": "HAT-T2-G003-N01",
         "element_type": [
             "Earth",
@@ -969,14 +969,14 @@
         "powerBoost": -45,
         "skillBoost": 0,
         "reachBoost": -75,
-        "energyBoost": 75,
+        "energyBoost": 70,
         "luckBoost": 0,
         "weightIncrement": 60
     },
     {
         "clothing_type": "hat",
         "name": "Pristine Homburg-Hat of Rationality",
-        "sprite": "hat-56.png",
+        "sprite": "hat-59.png",
         "id_string": "HAT-T2-G003-N02",
         "element_type": [
             "Light",
@@ -992,17 +992,17 @@
             5
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 75,
+        "powerBoost": 70,
         "skillBoost": -35,
         "reachBoost": 0,
-        "energyBoost": 125,
+        "energyBoost": 115,
         "luckBoost": -60,
         "weightIncrement": 45
     },
     {
         "clothing_type": "hat",
         "name": "Stonebound Homburg-Hat of Rationality",
-        "sprite": "hat-55.png",
+        "sprite": "hat-58.png",
         "id_string": "HAT-T2-G003-N03",
         "element_type": [
             "Rock",
@@ -1028,7 +1028,7 @@
     {
         "clothing_type": "hat",
         "name": "Venomous Night-Cap of Diligence",
-        "sprite": "hat-54.png",
+        "sprite": "hat-57.png",
         "id_string": "HAT-T2-G004-N01",
         "element_type": [
             "Poison",
@@ -1044,17 +1044,17 @@
             -2
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": 95,
+        "powerBoost": 90,
         "skillBoost": -45,
         "reachBoost": 0,
-        "energyBoost": 60,
+        "energyBoost": 55,
         "luckBoost": -75,
         "weightIncrement": 70
     },
     {
         "clothing_type": "hat",
         "name": "Aquaborn Night-Cap of Diligence",
-        "sprite": "hat-53.png",
+        "sprite": "hat-56.png",
         "id_string": "HAT-T2-G004-N02",
         "element_type": [
             "Water",
@@ -1070,8 +1070,8 @@
             -2
         ],
         "healthPointsIncrement": 120,
-        "powerBoost": 35,
-        "skillBoost": 75,
+        "powerBoost": 30,
+        "skillBoost": 70,
         "reachBoost": -25,
         "energyBoost": 20,
         "luckBoost": -40,
@@ -1080,7 +1080,7 @@
     {
         "clothing_type": "hat",
         "name": "Shadowed Night-Cap of Diligence",
-        "sprite": "hat-52.png",
+        "sprite": "hat-55.png",
         "id_string": "HAT-T2-G004-N03",
         "element_type": [
             "Darkness",
@@ -1096,9 +1096,9 @@
             -2
         ],
         "healthPointsIncrement": 130,
-        "powerBoost": 60,
-        "skillBoost": 40,
-        "reachBoost": 25,
+        "powerBoost": 55,
+        "skillBoost": 35,
+        "reachBoost": 20,
         "energyBoost": 15,
         "luckBoost": 15,
         "weightIncrement": 70
@@ -1106,7 +1106,7 @@
     {
         "clothing_type": "hat",
         "name": "Scarlet Night-Cap of Unbound",
-        "sprite": "hat-51.png",
+        "sprite": "hat-54.png",
         "id_string": "HAT-T2-G005-N01",
         "element_type": [
             "Fire",
@@ -1132,7 +1132,7 @@
     {
         "clothing_type": "hat",
         "name": "Grimshade Night-Cap of Unbound",
-        "sprite": "hat-50.png",
+        "sprite": "hat-53.png",
         "id_string": "HAT-T2-G005-N02",
         "element_type": [
             "Poison",
@@ -1151,14 +1151,14 @@
         "powerBoost": -25,
         "skillBoost": -40,
         "reachBoost": 20,
-        "energyBoost": 35,
-        "luckBoost": 75,
+        "energyBoost": 30,
+        "luckBoost": 70,
         "weightIncrement": 75
     },
     {
         "clothing_type": "hat",
         "name": "Oceanic Night-Cap of Unbound",
-        "sprite": "hat-49.png",
+        "sprite": "hat-52.png",
         "id_string": "HAT-T2-G005-N03",
         "element_type": [
             "Water",
@@ -1184,7 +1184,7 @@
     {
         "clothing_type": "hat",
         "name": "Celestial Night-Cap of Sagacity",
-        "sprite": "hat-48.png",
+        "sprite": "hat-51.png",
         "id_string": "HAT-T2-G006-N01",
         "element_type": [
             "Air",
@@ -1200,17 +1200,17 @@
             1
         ],
         "healthPointsIncrement": 125,
-        "powerBoost": 75,
+        "powerBoost": 70,
         "skillBoost": 0,
         "reachBoost": -45,
         "energyBoost": 0,
-        "luckBoost": 125,
+        "luckBoost": 115,
         "weightIncrement": 50
     },
     {
         "clothing_type": "hat",
         "name": "Fernwhisper Night-Cap of Sagacity",
-        "sprite": "hat-47.png",
+        "sprite": "hat-50.png",
         "id_string": "HAT-T2-G006-N02",
         "element_type": [
             "Nature",
@@ -1227,8 +1227,8 @@
         ],
         "healthPointsIncrement": 155,
         "powerBoost": -25,
-        "skillBoost": 35,
-        "reachBoost": 75,
+        "skillBoost": 30,
+        "reachBoost": 70,
         "energyBoost": 20,
         "luckBoost": -40,
         "weightIncrement": 60
@@ -1236,7 +1236,7 @@
     {
         "clothing_type": "hat",
         "name": "Stygian Night-Cap of Sagacity",
-        "sprite": "hat-46.png",
+        "sprite": "hat-49.png",
         "id_string": "HAT-T2-G006-N03",
         "element_type": [
             "Darkness",
@@ -1253,16 +1253,16 @@
         ],
         "healthPointsIncrement": 150,
         "powerBoost": 0,
-        "skillBoost": 75,
-        "reachBoost": 40,
-        "energyBoost": 25,
+        "skillBoost": 65,
+        "reachBoost": 35,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 75
     },
     {
         "clothing_type": "hat",
         "name": "Crystal Hat of Stoicism",
-        "sprite": "hat-45.png",
+        "sprite": "hat-48.png",
         "id_string": "HAT-T2-G007-N01",
         "element_type": [
             "Water",
@@ -1279,16 +1279,16 @@
         ],
         "healthPointsIncrement": 125,
         "powerBoost": 0,
-        "skillBoost": 95,
+        "skillBoost": 90,
         "reachBoost": -45,
-        "energyBoost": 60,
+        "energyBoost": 55,
         "luckBoost": -75,
         "weightIncrement": 70
     },
     {
         "clothing_type": "hat",
         "name": "Incendiary Hat of Stoicism",
-        "sprite": "hat-44.png",
+        "sprite": "hat-47.png",
         "id_string": "HAT-T2-G007-N02",
         "element_type": [
             "Fire",
@@ -1306,15 +1306,15 @@
         "healthPointsIncrement": 145,
         "powerBoost": -15,
         "skillBoost": 15,
-        "reachBoost": 75,
-        "energyBoost": 40,
-        "luckBoost": 25,
+        "reachBoost": 65,
+        "energyBoost": 35,
+        "luckBoost": 20,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
         "name": "Terra Hat of Stoicism",
-        "sprite": "hat-43.png",
+        "sprite": "hat-46.png",
         "id_string": "HAT-T2-G007-N03",
         "element_type": [
             "Earth",
@@ -1340,7 +1340,7 @@
     {
         "clothing_type": "hat",
         "name": "Slate Pointy-Hat of Gratitude",
-        "sprite": "hat-42.png",
+        "sprite": "hat-45.png",
         "id_string": "HAT-T2-G008-N01",
         "element_type": [
             "Rock",
@@ -1357,7 +1357,7 @@
         ],
         "healthPointsIncrement": 175,
         "powerBoost": -45,
-        "skillBoost": 50,
+        "skillBoost": 45,
         "reachBoost": 25,
         "energyBoost": 15,
         "luckBoost": 10,
@@ -1366,7 +1366,7 @@
     {
         "clothing_type": "hat",
         "name": "Sylph's Pointy-Hat of Gratitude",
-        "sprite": "hat-41.png",
+        "sprite": "hat-44.png",
         "id_string": "HAT-T2-G008-N02",
         "element_type": [
             "Air",
@@ -1383,8 +1383,8 @@
         ],
         "healthPointsIncrement": 165,
         "powerBoost": -25,
-        "skillBoost": 35,
-        "reachBoost": 75,
+        "skillBoost": 30,
+        "reachBoost": 70,
         "energyBoost": 20,
         "luckBoost": -40,
         "weightIncrement": 55
@@ -1392,7 +1392,7 @@
     {
         "clothing_type": "hat",
         "name": "Voltweaver's Pointy-Hat of Gratitude",
-        "sprite": "hat-40.png",
+        "sprite": "hat-43.png",
         "id_string": "HAT-T2-G008-N03",
         "element_type": [
             "Thunder",
@@ -1418,7 +1418,7 @@
     {
         "clothing_type": "hat",
         "name": "Virulent Night-Cap of Liberality",
-        "sprite": "hat-39.png",
+        "sprite": "hat-42.png",
         "id_string": "HAT-T2-G009-N01",
         "element_type": [
             "Poison",
@@ -1434,17 +1434,17 @@
             -2
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": 75,
+        "powerBoost": 70,
         "skillBoost": 0,
         "reachBoost": -45,
-        "energyBoost": 125,
+        "energyBoost": 115,
         "luckBoost": 0,
         "weightIncrement": 85
     },
     {
         "clothing_type": "hat",
         "name": "Pearly Night-Cap of Liberality",
-        "sprite": "hat-38.png",
+        "sprite": "hat-41.png",
         "id_string": "HAT-T2-G009-N02",
         "element_type": [
             "Light",
@@ -1460,17 +1460,17 @@
             -2
         ],
         "healthPointsIncrement": 175,
-        "powerBoost": 75,
-        "skillBoost": 40,
+        "powerBoost": 65,
+        "skillBoost": 35,
         "reachBoost": -15,
         "energyBoost": 15,
-        "luckBoost": 25,
+        "luckBoost": 20,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
         "name": "Golden Night-Cap of Liberality",
-        "sprite": "hat-37.png",
+        "sprite": "hat-40.png",
         "id_string": "HAT-T2-G009-N03",
         "element_type": [
             "Thunder",
@@ -1496,7 +1496,7 @@
     {
         "clothing_type": "hat",
         "name": "Pebble Hat of Optimism",
-        "sprite": "hat-36.png",
+        "sprite": "hat-39.png",
         "id_string": "HAT-T2-G010-N01",
         "element_type": [
             "Rock",
@@ -1515,14 +1515,14 @@
         "powerBoost": -45,
         "skillBoost": -75,
         "reachBoost": 0,
-        "energyBoost": 95,
-        "luckBoost": 60,
+        "energyBoost": 90,
+        "luckBoost": 55,
         "weightIncrement": 100
     },
     {
         "clothing_type": "hat",
         "name": "Ebon Hat of Optimism",
-        "sprite": "hat-35.png",
+        "sprite": "hat-38.png",
         "id_string": "HAT-T2-G010-N02",
         "element_type": [
             "Darkness",
@@ -1541,14 +1541,14 @@
         "powerBoost": -60,
         "skillBoost": 25,
         "reachBoost": -35,
-        "energyBoost": 60,
+        "energyBoost": 55,
         "luckBoost": 15,
         "weightIncrement": 85
     },
     {
         "clothing_type": "hat",
         "name": "Deep Blue Hat of Optimism",
-        "sprite": "hat-34.png",
+        "sprite": "hat-37.png",
         "id_string": "HAT-T2-G010-N03",
         "element_type": [
             "Water",
@@ -1565,16 +1565,16 @@
         ],
         "healthPointsIncrement": 190,
         "powerBoost": 15,
-        "skillBoost": 35,
+        "skillBoost": 30,
         "reachBoost": 0,
         "energyBoost": 20,
-        "luckBoost": 65,
+        "luckBoost": 55,
         "weightIncrement": 80
     },
     {
         "clothing_type": "hat",
         "name": "Ethereal Beanie of Honesty",
-        "sprite": "hat-33.png",
+        "sprite": "hat-36.png",
         "id_string": "HAT-T2-G011-N01",
         "element_type": [
             "Light",
@@ -1600,7 +1600,7 @@
     {
         "clothing_type": "hat",
         "name": "Enigmatic Beanie of Honesty",
-        "sprite": "hat-32.png",
+        "sprite": "hat-35.png",
         "id_string": "HAT-T2-G011-N02",
         "element_type": [
             "Darkness",
@@ -1619,14 +1619,14 @@
         "powerBoost": 25,
         "skillBoost": -60,
         "reachBoost": -35,
-        "energyBoost": 60,
+        "energyBoost": 55,
         "luckBoost": 15,
         "weightIncrement": 55
     },
     {
         "clothing_type": "hat",
         "name": "Crimson Beanie of Honesty",
-        "sprite": "hat-31.png",
+        "sprite": "hat-34.png",
         "id_string": "HAT-T2-G011-N03",
         "element_type": [
             "Fire",
@@ -1642,17 +1642,17 @@
             3
         ],
         "healthPointsIncrement": 85,
-        "powerBoost": 60,
+        "powerBoost": 55,
         "skillBoost": 15,
-        "reachBoost": 40,
-        "energyBoost": 25,
+        "reachBoost": 35,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 45
     },
     {
         "clothing_type": "hat",
         "name": "Sienna Beanie of Resilience",
-        "sprite": "hat-30.png",
+        "sprite": "hat-33.png",
         "id_string": "HAT-T2-G012-N01",
         "element_type": [
             "Earth",
@@ -1668,7 +1668,7 @@
             3
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": 75,
+        "powerBoost": 70,
         "skillBoost": -45,
         "reachBoost": 0,
         "energyBoost": 0,
@@ -1678,7 +1678,7 @@
     {
         "clothing_type": "hat",
         "name": "Iceflow Beanie of Resilience",
-        "sprite": "hat-29.png",
+        "sprite": "hat-32.png",
         "id_string": "HAT-T2-G012-N02",
         "element_type": [
             "Water",
@@ -1694,17 +1694,17 @@
             3
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": 125,
+        "powerBoost": 115,
         "skillBoost": -60,
         "reachBoost": 0,
         "energyBoost": -35,
-        "luckBoost": 75,
+        "luckBoost": 70,
         "weightIncrement": 50
     },
     {
         "clothing_type": "hat",
         "name": "Orchid Beanie of Resilience",
-        "sprite": "hat-28.png",
+        "sprite": "hat-31.png",
         "id_string": "HAT-T2-G012-N03",
         "element_type": [
             "Poison",
@@ -1730,7 +1730,7 @@
     {
         "clothing_type": "hat",
         "name": "Emerald Night-Cap of Sagacity",
-        "sprite": "hat-27.png",
+        "sprite": "hat-30.png",
         "id_string": "HAT-T2-G013-N01",
         "element_type": [
             "Nature",
@@ -1748,15 +1748,15 @@
         "healthPointsIncrement": 100,
         "powerBoost": 0,
         "skillBoost": -45,
-        "reachBoost": 60,
+        "reachBoost": 55,
         "energyBoost": -75,
-        "luckBoost": 95,
+        "luckBoost": 90,
         "weightIncrement": 45
     },
     {
         "clothing_type": "hat",
         "name": "Abyssal Night-Cap of Sagacity",
-        "sprite": "hat-26.png",
+        "sprite": "hat-29.png",
         "id_string": "HAT-T2-G013-N02",
         "element_type": [
             "Darkness",
@@ -1774,15 +1774,15 @@
         "healthPointsIncrement": 95,
         "powerBoost": -25,
         "skillBoost": -40,
-        "reachBoost": 35,
-        "energyBoost": 75,
+        "reachBoost": 30,
+        "energyBoost": 70,
         "luckBoost": 20,
         "weightIncrement": 60
     },
     {
         "clothing_type": "hat",
         "name": "Gustborne Night-Cap of Sagacity",
-        "sprite": "hat-25.png",
+        "sprite": "hat-28.png",
         "id_string": "HAT-T2-G013-N03",
         "element_type": [
             "Air",
@@ -1799,16 +1799,16 @@
         ],
         "healthPointsIncrement": 130,
         "powerBoost": 15,
-        "skillBoost": 60,
-        "reachBoost": 40,
+        "skillBoost": 55,
+        "reachBoost": 35,
         "energyBoost": 15,
-        "luckBoost": 25,
+        "luckBoost": 20,
         "weightIncrement": 40
     },
     {
         "clothing_type": "hat",
         "name": "Aquaborn Helmet of Fairness",
-        "sprite": "hat-24.png",
+        "sprite": "hat-27.png",
         "id_string": "HAT-T2-G014-N01",
         "element_type": [
             "Water",
@@ -1834,7 +1834,7 @@
     {
         "clothing_type": "hat",
         "name": "Granite Helmet of Fairness",
-        "sprite": "hat-23.png",
+        "sprite": "hat-26.png",
         "id_string": "HAT-T2-G014-N02",
         "element_type": [
             "Rock",
@@ -1851,8 +1851,8 @@
         ],
         "healthPointsIncrement": 130,
         "powerBoost": -40,
-        "skillBoost": 75,
-        "reachBoost": 35,
+        "skillBoost": 70,
+        "reachBoost": 30,
         "energyBoost": -25,
         "luckBoost": 20,
         "weightIncrement": 75
@@ -1860,7 +1860,7 @@
     {
         "clothing_type": "hat",
         "name": "Earthen Helmet of Fairness",
-        "sprite": "hat-22.png",
+        "sprite": "hat-25.png",
         "id_string": "HAT-T2-G014-N03",
         "element_type": [
             "Earth",
@@ -1886,7 +1886,7 @@
     {
         "clothing_type": "hat",
         "name": "Oceanic Bonnet-Cap of Prudence",
-        "sprite": "hat-21.png",
+        "sprite": "hat-24.png",
         "id_string": "HAT-T2-G015-N01",
         "element_type": [
             "Water",
@@ -1902,9 +1902,9 @@
             2
         ],
         "healthPointsIncrement": 120,
-        "powerBoost": 125,
+        "powerBoost": 115,
         "skillBoost": 0,
-        "reachBoost": 75,
+        "reachBoost": 70,
         "energyBoost": 0,
         "luckBoost": -45,
         "weightIncrement": 60
@@ -1912,7 +1912,7 @@
     {
         "clothing_type": "hat",
         "name": "Rocky Bonnet-Cap of Prudence",
-        "sprite": "hat-20.png",
+        "sprite": "hat-23.png",
         "id_string": "HAT-T2-G015-N02",
         "element_type": [
             "Rock",
@@ -1929,16 +1929,16 @@
         ],
         "healthPointsIncrement": 150,
         "powerBoost": -40,
-        "skillBoost": 75,
+        "skillBoost": 70,
         "reachBoost": -25,
         "energyBoost": 20,
-        "luckBoost": 35,
+        "luckBoost": 30,
         "weightIncrement": 80
     },
     {
         "clothing_type": "hat",
         "name": "Ivory Bonnet-Cap of Prudence",
-        "sprite": "hat-19.png",
+        "sprite": "hat-22.png",
         "id_string": "HAT-T2-G015-N03",
         "element_type": [
             "Light",
@@ -1955,16 +1955,16 @@
         ],
         "healthPointsIncrement": 145,
         "powerBoost": 0,
-        "skillBoost": 75,
-        "reachBoost": 25,
+        "skillBoost": 65,
+        "reachBoost": 20,
         "energyBoost": 15,
-        "luckBoost": 40,
+        "luckBoost": 35,
         "weightIncrement": 50
     },
     {
         "clothing_type": "hat",
         "name": "Cobalt Hat of Credibility",
-        "sprite": "hat-18.png",
+        "sprite": "hat-21.png",
         "id_string": "HAT-T2-G016-N01",
         "element_type": [
             "Water",
@@ -1981,16 +1981,16 @@
         ],
         "healthPointsIncrement": 125,
         "powerBoost": 0,
-        "skillBoost": 95,
+        "skillBoost": 90,
         "reachBoost": -75,
         "energyBoost": -45,
-        "luckBoost": 60,
+        "luckBoost": 55,
         "weightIncrement": 65
     },
     {
         "clothing_type": "hat",
         "name": "Stygian Hat of Credibility",
-        "sprite": "hat-17.png",
+        "sprite": "hat-20.png",
         "id_string": "HAT-T2-G016-N02",
         "element_type": [
             "Darkness",
@@ -2007,16 +2007,16 @@
         ],
         "healthPointsIncrement": 150,
         "powerBoost": -15,
-        "skillBoost": 25,
-        "reachBoost": 75,
-        "energyBoost": 40,
+        "skillBoost": 20,
+        "reachBoost": 65,
+        "energyBoost": 35,
         "luckBoost": 15,
         "weightIncrement": 70
     },
     {
         "clothing_type": "hat",
         "name": "Cobblestone Hat of Credibility",
-        "sprite": "hat-16.png",
+        "sprite": "hat-19.png",
         "id_string": "HAT-T2-G016-N03",
         "element_type": [
             "Rock",
@@ -2042,7 +2042,7 @@
     {
         "clothing_type": "hat",
         "name": "Viper's Boater-Hat of Punctuality",
-        "sprite": "hat-15.png",
+        "sprite": "hat-18.png",
         "id_string": "HAT-T2-G017-N01",
         "element_type": [
             "Poison",
@@ -2061,14 +2061,14 @@
         "powerBoost": 10,
         "skillBoost": 25,
         "reachBoost": -45,
-        "energyBoost": 50,
+        "energyBoost": 45,
         "luckBoost": 15,
         "weightIncrement": 80
     },
     {
         "clothing_type": "hat",
         "name": "Nature's Boater-Hat of Punctuality",
-        "sprite": "hat-14.png",
+        "sprite": "hat-17.png",
         "id_string": "HAT-T2-G017-N02",
         "element_type": [
             "Nature",
@@ -2084,17 +2084,17 @@
             2
         ],
         "healthPointsIncrement": 155,
-        "powerBoost": 75,
+        "powerBoost": 70,
         "skillBoost": -25,
         "reachBoost": -40,
-        "energyBoost": 35,
+        "energyBoost": 30,
         "luckBoost": 20,
         "weightIncrement": 60
     },
     {
         "clothing_type": "hat",
         "name": "Crystal Boater-Hat of Punctuality",
-        "sprite": "hat-13.png",
+        "sprite": "hat-16.png",
         "id_string": "HAT-T2-G017-N03",
         "element_type": [
             "Water",
@@ -2115,6 +2115,84 @@
         "reachBoost": 0,
         "energyBoost": 40,
         "luckBoost": 0,
+        "weightIncrement": 65
+    },
+    {
+        "clothing_type": "hat",
+        "name": "Slate Hat of Wisdom",
+        "sprite": "hat-15.png",
+        "id_string": "HAT-T2-G018-N01",
+        "element_type": [
+            "Rock",
+            "Poison"
+        ],
+        "item_colors": {
+            "gray": 90,
+            "purple": 4
+        },
+        "rarity": "Common",
+        "pixels_offset": [
+            1,
+            4
+        ],
+        "healthPointsIncrement": 145,
+        "powerBoost": -45,
+        "skillBoost": 70,
+        "reachBoost": 0,
+        "energyBoost": 0,
+        "luckBoost": -75,
+        "weightIncrement": 90
+    },
+    {
+        "clothing_type": "hat",
+        "name": "Canyon Hat of Wisdom",
+        "sprite": "hat-14.png",
+        "id_string": "HAT-T2-G018-N02",
+        "element_type": [
+            "Earth",
+            "Nature"
+        ],
+        "item_colors": {
+            "brown": 90,
+            "green": 4
+        },
+        "rarity": "Rare",
+        "pixels_offset": [
+            1,
+            4
+        ],
+        "healthPointsIncrement": 165,
+        "powerBoost": 70,
+        "skillBoost": -35,
+        "reachBoost": 0,
+        "energyBoost": 115,
+        "luckBoost": -60,
+        "weightIncrement": 75
+    },
+    {
+        "clothing_type": "hat",
+        "name": "Fiery Hat of Wisdom",
+        "sprite": "hat-13.png",
+        "id_string": "HAT-T2-G018-N03",
+        "element_type": [
+            "Fire",
+            "Air"
+        ],
+        "item_colors": {
+            "red": 90,
+            "sky_blue": 4
+        },
+        "rarity": "Epic",
+        "pixels_offset": [
+            1,
+            4
+        ],
+        "healthPointsIncrement": 150,
+        "powerBoost": 30,
+        "skillBoost": 70,
+        "reachBoost": 0,
+        "energyBoost": 0,
+        "luckBoost": 20,
         "weightIncrement": 65
     },
     {
@@ -2141,8 +2219,8 @@
         "powerBoost": -45,
         "skillBoost": 0,
         "reachBoost": -75,
-        "energyBoost": 95,
-        "luckBoost": 60,
+        "energyBoost": 90,
+        "luckBoost": 55,
         "weightIncrement": 50
     },
     {
@@ -2168,7 +2246,7 @@
         "healthPointsIncrement": 70,
         "powerBoost": -60,
         "skillBoost": -35,
-        "reachBoost": 60,
+        "reachBoost": 55,
         "energyBoost": 25,
         "luckBoost": 15,
         "weightIncrement": 65
@@ -2194,10 +2272,10 @@
             2
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 35,
+        "powerBoost": 30,
         "skillBoost": 0,
         "reachBoost": 20,
-        "energyBoost": 65,
+        "energyBoost": 55,
         "luckBoost": 15,
         "weightIncrement": 60
     },
@@ -2251,7 +2329,7 @@
         ],
         "healthPointsIncrement": 100,
         "powerBoost": -60,
-        "skillBoost": 60,
+        "skillBoost": 55,
         "reachBoost": -35,
         "energyBoost": 25,
         "luckBoost": 15,
@@ -2279,10 +2357,10 @@
         ],
         "healthPointsIncrement": 105,
         "powerBoost": 15,
-        "skillBoost": 60,
+        "skillBoost": 55,
         "reachBoost": 15,
-        "energyBoost": 40,
-        "luckBoost": 25,
+        "energyBoost": 35,
+        "luckBoost": 20,
         "weightIncrement": 65
     },
     {
@@ -2309,7 +2387,7 @@
         "powerBoost": 0,
         "skillBoost": -45,
         "reachBoost": -75,
-        "energyBoost": 75,
+        "energyBoost": 70,
         "luckBoost": 0,
         "weightIncrement": 55
     },
@@ -2334,10 +2412,10 @@
             5
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 125,
+        "powerBoost": 115,
         "skillBoost": 0,
         "reachBoost": -35,
-        "energyBoost": 75,
+        "energyBoost": 70,
         "luckBoost": -60,
         "weightIncrement": 70
     },
@@ -2390,10 +2468,10 @@
             4
         ],
         "healthPointsIncrement": 90,
-        "powerBoost": 60,
+        "powerBoost": 55,
         "skillBoost": -45,
         "reachBoost": -75,
-        "energyBoost": 95,
+        "energyBoost": 90,
         "luckBoost": 0,
         "weightIncrement": 55
     },
@@ -2418,8 +2496,8 @@
             4
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": 35,
-        "skillBoost": 75,
+        "powerBoost": 30,
+        "skillBoost": 70,
         "reachBoost": -25,
         "energyBoost": 20,
         "luckBoost": -40,
@@ -2446,10 +2524,10 @@
             4
         ],
         "healthPointsIncrement": 125,
-        "powerBoost": 40,
+        "powerBoost": 35,
         "skillBoost": 15,
-        "reachBoost": 25,
-        "energyBoost": 60,
+        "reachBoost": 20,
+        "energyBoost": 55,
         "luckBoost": 15,
         "weightIncrement": 70
     },
@@ -2473,8 +2551,8 @@
         "powerBoost": -75,
         "skillBoost": 0,
         "reachBoost": -45,
-        "energyBoost": 60,
-        "luckBoost": 95,
+        "energyBoost": 55,
+        "luckBoost": 90,
         "weightIncrement": 70
     },
     {
@@ -2497,7 +2575,7 @@
         "powerBoost": 25,
         "skillBoost": -35,
         "reachBoost": -60,
-        "energyBoost": 60,
+        "energyBoost": 55,
         "luckBoost": 15,
         "weightIncrement": 60
     },
@@ -2518,11 +2596,11 @@
             -17
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 35,
+        "powerBoost": 30,
         "skillBoost": 0,
         "reachBoost": 20,
         "energyBoost": 15,
-        "luckBoost": 65,
+        "luckBoost": 55,
         "weightIncrement": 40
     },
     {
@@ -2568,7 +2646,7 @@
         "healthPointsIncrement": 85,
         "powerBoost": -60,
         "skillBoost": -35,
-        "reachBoost": 60,
+        "reachBoost": 55,
         "energyBoost": 25,
         "luckBoost": 15,
         "weightIncrement": 70
@@ -2591,9 +2669,9 @@
         ],
         "healthPointsIncrement": 110,
         "powerBoost": 15,
-        "skillBoost": 60,
-        "reachBoost": 40,
-        "energyBoost": 25,
+        "skillBoost": 55,
+        "reachBoost": 35,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 40
     },
@@ -2617,7 +2695,7 @@
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": -75,
-        "energyBoost": 75,
+        "energyBoost": 70,
         "luckBoost": -45,
         "weightIncrement": 55
     },
@@ -2638,10 +2716,10 @@
             -19
         ],
         "healthPointsIncrement": 115,
-        "powerBoost": 75,
+        "powerBoost": 70,
         "skillBoost": 0,
         "reachBoost": -60,
-        "energyBoost": 125,
+        "energyBoost": 115,
         "luckBoost": -35,
         "weightIncrement": 50
     },
@@ -2686,10 +2764,10 @@
             -18
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": 95,
+        "powerBoost": 90,
         "skillBoost": -45,
         "reachBoost": -75,
-        "energyBoost": 60,
+        "energyBoost": 55,
         "luckBoost": 0,
         "weightIncrement": 60
     },
@@ -2710,10 +2788,10 @@
             -18
         ],
         "healthPointsIncrement": 100,
-        "powerBoost": 35,
+        "powerBoost": 30,
         "skillBoost": -25,
         "reachBoost": 20,
-        "energyBoost": 75,
+        "energyBoost": 70,
         "luckBoost": -40,
         "weightIncrement": 70
     },
@@ -2734,11 +2812,11 @@
             -18
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": 40,
-        "skillBoost": 25,
+        "powerBoost": 35,
+        "skillBoost": 20,
         "reachBoost": 15,
         "energyBoost": 15,
-        "luckBoost": 60,
+        "luckBoost": 55,
         "weightIncrement": 50
     },
     {
@@ -2784,8 +2862,8 @@
         "healthPointsIncrement": 120,
         "powerBoost": -40,
         "skillBoost": -25,
-        "reachBoost": 75,
-        "energyBoost": 35,
+        "reachBoost": 70,
+        "energyBoost": 30,
         "luckBoost": 20,
         "weightIncrement": 60
     },
@@ -2835,8 +2913,8 @@
         "powerBoost": -45,
         "skillBoost": -75,
         "reachBoost": 0,
-        "energyBoost": 60,
-        "luckBoost": 95,
+        "energyBoost": 55,
+        "luckBoost": 90,
         "weightIncrement": 70
     },
     {
@@ -2858,7 +2936,7 @@
             -17
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": 60,
+        "powerBoost": 55,
         "skillBoost": -35,
         "reachBoost": -60,
         "energyBoost": 25,
@@ -2884,10 +2962,10 @@
             -17
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 35,
+        "powerBoost": 30,
         "skillBoost": 20,
         "reachBoost": 0,
-        "energyBoost": 65,
+        "energyBoost": 55,
         "luckBoost": 15,
         "weightIncrement": 60
     },
@@ -2939,7 +3017,7 @@
         "powerBoost": -60,
         "skillBoost": 15,
         "reachBoost": -35,
-        "energyBoost": 60,
+        "energyBoost": 55,
         "luckBoost": 25,
         "weightIncrement": 50
     },
@@ -2962,10 +3040,10 @@
             -17
         ],
         "healthPointsIncrement": 120,
-        "powerBoost": 60,
-        "skillBoost": 40,
+        "powerBoost": 55,
+        "skillBoost": 35,
         "reachBoost": 15,
-        "energyBoost": 25,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 70
     },
@@ -2991,7 +3069,7 @@
         "powerBoost": -75,
         "skillBoost": 0,
         "reachBoost": -45,
-        "energyBoost": 75,
+        "energyBoost": 70,
         "luckBoost": 0,
         "weightIncrement": 55
     },
@@ -3014,10 +3092,10 @@
             -18
         ],
         "healthPointsIncrement": 85,
-        "powerBoost": 125,
+        "powerBoost": 115,
         "skillBoost": -60,
         "reachBoost": 0,
-        "energyBoost": 75,
+        "energyBoost": 70,
         "luckBoost": -35,
         "weightIncrement": 65
     },
@@ -3066,10 +3144,10 @@
             -18
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": 60,
+        "powerBoost": 55,
         "skillBoost": -75,
         "reachBoost": 0,
-        "energyBoost": 95,
+        "energyBoost": 90,
         "luckBoost": -45,
         "weightIncrement": 55
     },
@@ -3092,8 +3170,8 @@
             -18
         ],
         "healthPointsIncrement": 140,
-        "powerBoost": 75,
-        "skillBoost": 35,
+        "powerBoost": 70,
+        "skillBoost": 30,
         "reachBoost": -40,
         "energyBoost": 20,
         "luckBoost": -25,
@@ -3118,10 +3196,10 @@
             -18
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": 25,
+        "powerBoost": 20,
         "skillBoost": 15,
-        "reachBoost": 60,
-        "energyBoost": 40,
+        "reachBoost": 55,
+        "energyBoost": 35,
         "luckBoost": 15,
         "weightIncrement": 70
     },
@@ -3172,8 +3250,8 @@
         "healthPointsIncrement": 135,
         "powerBoost": -40,
         "skillBoost": -25,
-        "reachBoost": 75,
-        "energyBoost": 35,
+        "reachBoost": 70,
+        "energyBoost": 30,
         "luckBoost": 20,
         "weightIncrement": 65
     },
@@ -3222,11 +3300,11 @@
             -18
         ],
         "healthPointsIncrement": 140,
-        "powerBoost": 125,
+        "powerBoost": 115,
         "skillBoost": 0,
         "reachBoost": -45,
         "energyBoost": 0,
-        "luckBoost": 75,
+        "luckBoost": 70,
         "weightIncrement": 70
     },
     {
@@ -3249,9 +3327,9 @@
         ],
         "healthPointsIncrement": 130,
         "powerBoost": -40,
-        "skillBoost": 35,
+        "skillBoost": 30,
         "reachBoost": 20,
-        "energyBoost": 75,
+        "energyBoost": 70,
         "luckBoost": -25,
         "weightIncrement": 75
     },
@@ -3276,9 +3354,9 @@
         "healthPointsIncrement": 150,
         "powerBoost": 0,
         "skillBoost": 15,
-        "reachBoost": 75,
-        "energyBoost": 40,
-        "luckBoost": 25,
+        "reachBoost": 65,
+        "energyBoost": 35,
+        "luckBoost": 20,
         "weightIncrement": 80
     },
     {
@@ -3301,9 +3379,9 @@
         ],
         "healthPointsIncrement": 125,
         "powerBoost": 0,
-        "skillBoost": 95,
+        "skillBoost": 90,
         "reachBoost": -45,
-        "energyBoost": 60,
+        "energyBoost": 55,
         "luckBoost": -75,
         "weightIncrement": 55
     },
@@ -3327,10 +3405,10 @@
         ],
         "healthPointsIncrement": 185,
         "powerBoost": -15,
-        "skillBoost": 75,
-        "reachBoost": 25,
+        "skillBoost": 65,
+        "reachBoost": 20,
         "energyBoost": 15,
-        "luckBoost": 40,
+        "luckBoost": 35,
         "weightIncrement": 90
     },
     {
@@ -3381,7 +3459,7 @@
         "powerBoost": -45,
         "skillBoost": 15,
         "reachBoost": 10,
-        "energyBoost": 50,
+        "energyBoost": 45,
         "luckBoost": 25,
         "weightIncrement": 85
     },
@@ -3405,9 +3483,9 @@
         ],
         "healthPointsIncrement": 180,
         "powerBoost": -40,
-        "skillBoost": 75,
+        "skillBoost": 70,
         "reachBoost": 20,
-        "energyBoost": 35,
+        "energyBoost": 30,
         "luckBoost": -25,
         "weightIncrement": 90
     },
@@ -3456,10 +3534,10 @@
             -18
         ],
         "healthPointsIncrement": 170,
-        "powerBoost": 75,
+        "powerBoost": 70,
         "skillBoost": 0,
         "reachBoost": -45,
-        "energyBoost": 125,
+        "energyBoost": 115,
         "luckBoost": 0,
         "weightIncrement": 65
     },
@@ -3482,10 +3560,10 @@
             -18
         ],
         "healthPointsIncrement": 185,
-        "powerBoost": 40,
-        "skillBoost": 25,
+        "powerBoost": 35,
+        "skillBoost": 20,
         "reachBoost": -15,
-        "energyBoost": 75,
+        "energyBoost": 65,
         "luckBoost": 15,
         "weightIncrement": 80
     },
@@ -3537,8 +3615,8 @@
         "powerBoost": -45,
         "skillBoost": -75,
         "reachBoost": 0,
-        "energyBoost": 95,
-        "luckBoost": 60,
+        "energyBoost": 90,
+        "luckBoost": 55,
         "weightIncrement": 80
     },
     {
@@ -3561,7 +3639,7 @@
         ],
         "healthPointsIncrement": 160,
         "powerBoost": -35,
-        "skillBoost": 60,
+        "skillBoost": 55,
         "reachBoost": -60,
         "energyBoost": 25,
         "luckBoost": 15,
@@ -3587,9 +3665,9 @@
         ],
         "healthPointsIncrement": 185,
         "powerBoost": 15,
-        "skillBoost": 65,
+        "skillBoost": 55,
         "reachBoost": 0,
-        "energyBoost": 35,
+        "energyBoost": 30,
         "luckBoost": 20,
         "weightIncrement": 60
     },
@@ -3638,7 +3716,7 @@
             -17
         ],
         "healthPointsIncrement": 80,
-        "powerBoost": 60,
+        "powerBoost": 55,
         "skillBoost": -35,
         "reachBoost": -60,
         "energyBoost": 25,
@@ -3666,9 +3744,9 @@
         "healthPointsIncrement": 105,
         "powerBoost": 15,
         "skillBoost": 15,
-        "reachBoost": 60,
-        "energyBoost": 25,
-        "luckBoost": 40,
+        "reachBoost": 55,
+        "energyBoost": 20,
+        "luckBoost": 35,
         "weightIncrement": 50
     },
     {
@@ -3690,7 +3768,7 @@
             -17
         ],
         "healthPointsIncrement": 70,
-        "powerBoost": 75,
+        "powerBoost": 70,
         "skillBoost": -45,
         "reachBoost": 0,
         "energyBoost": 0,
@@ -3716,11 +3794,11 @@
             -17
         ],
         "healthPointsIncrement": 95,
-        "powerBoost": 75,
+        "powerBoost": 70,
         "skillBoost": -35,
         "reachBoost": 0,
         "energyBoost": -60,
-        "luckBoost": 125,
+        "luckBoost": 115,
         "weightIncrement": 70
     },
     {
@@ -3770,9 +3848,9 @@
         "healthPointsIncrement": 95,
         "powerBoost": 0,
         "skillBoost": -75,
-        "reachBoost": 60,
+        "reachBoost": 55,
         "energyBoost": -45,
-        "luckBoost": 95,
+        "luckBoost": 90,
         "weightIncrement": 45
     },
     {
@@ -3796,9 +3874,9 @@
         "healthPointsIncrement": 110,
         "powerBoost": -25,
         "skillBoost": -40,
-        "reachBoost": 35,
+        "reachBoost": 30,
         "energyBoost": 20,
-        "luckBoost": 75,
+        "luckBoost": 70,
         "weightIncrement": 40
     },
     {
@@ -3820,10 +3898,10 @@
             -19
         ],
         "healthPointsIncrement": 115,
-        "powerBoost": 60,
+        "powerBoost": 55,
         "skillBoost": 15,
-        "reachBoost": 40,
-        "energyBoost": 25,
+        "reachBoost": 35,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 40
     },
@@ -3874,9 +3952,9 @@
         "healthPointsIncrement": 130,
         "powerBoost": -40,
         "skillBoost": 20,
-        "reachBoost": 75,
+        "reachBoost": 70,
         "energyBoost": -25,
-        "luckBoost": 35,
+        "luckBoost": 30,
         "weightIncrement": 50
     },
     {
@@ -3924,9 +4002,9 @@
             -16
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": 75,
+        "powerBoost": 70,
         "skillBoost": 0,
-        "reachBoost": 125,
+        "reachBoost": 115,
         "energyBoost": 0,
         "luckBoost": -45,
         "weightIncrement": 55
@@ -3951,9 +4029,9 @@
         ],
         "healthPointsIncrement": 120,
         "powerBoost": -40,
-        "skillBoost": 35,
+        "skillBoost": 30,
         "reachBoost": -25,
-        "energyBoost": 75,
+        "energyBoost": 70,
         "luckBoost": 20,
         "weightIncrement": 75
     },
@@ -3977,9 +4055,9 @@
         ],
         "healthPointsIncrement": 160,
         "powerBoost": 0,
-        "skillBoost": 75,
-        "reachBoost": 25,
-        "energyBoost": 40,
+        "skillBoost": 65,
+        "reachBoost": 20,
+        "energyBoost": 35,
         "luckBoost": 15,
         "weightIncrement": 80
     },
@@ -4003,10 +4081,10 @@
         ],
         "healthPointsIncrement": 110,
         "powerBoost": 0,
-        "skillBoost": 95,
+        "skillBoost": 90,
         "reachBoost": -45,
         "energyBoost": -75,
-        "luckBoost": 60,
+        "luckBoost": 55,
         "weightIncrement": 65
     },
     {
@@ -4030,9 +4108,9 @@
         "healthPointsIncrement": 135,
         "powerBoost": -15,
         "skillBoost": 15,
-        "reachBoost": 40,
-        "energyBoost": 75,
-        "luckBoost": 25,
+        "reachBoost": 35,
+        "energyBoost": 65,
+        "luckBoost": 20,
         "weightIncrement": 75
     },
     {
@@ -4084,7 +4162,7 @@
         "skillBoost": 25,
         "reachBoost": -45,
         "energyBoost": 15,
-        "luckBoost": 50,
+        "luckBoost": 45,
         "weightIncrement": 50
     },
     {
@@ -4106,10 +4184,10 @@
             -16
         ],
         "healthPointsIncrement": 140,
-        "powerBoost": 75,
+        "powerBoost": 70,
         "skillBoost": -25,
         "reachBoost": -40,
-        "energyBoost": 35,
+        "energyBoost": 30,
         "luckBoost": 20,
         "weightIncrement": 60
     },
@@ -4163,8 +4241,8 @@
         "powerBoost": -45,
         "skillBoost": 0,
         "reachBoost": -75,
-        "energyBoost": 60,
-        "luckBoost": 95,
+        "energyBoost": 55,
+        "luckBoost": 90,
         "weightIncrement": 60
     },
     {
@@ -4190,7 +4268,7 @@
         "healthPointsIncrement": 100,
         "powerBoost": -35,
         "skillBoost": -60,
-        "reachBoost": 60,
+        "reachBoost": 55,
         "energyBoost": 25,
         "luckBoost": 15,
         "weightIncrement": 70
@@ -4216,9 +4294,9 @@
             -19
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": 35,
+        "powerBoost": 30,
         "skillBoost": 0,
-        "reachBoost": 65,
+        "reachBoost": 55,
         "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 45
@@ -4275,7 +4353,7 @@
         "powerBoost": -35,
         "skillBoost": 15,
         "reachBoost": -60,
-        "energyBoost": 60,
+        "energyBoost": 55,
         "luckBoost": 25,
         "weightIncrement": 60
     },
@@ -4300,11 +4378,11 @@
             -18
         ],
         "healthPointsIncrement": 110,
-        "powerBoost": 25,
+        "powerBoost": 20,
         "skillBoost": 15,
-        "reachBoost": 60,
+        "reachBoost": 55,
         "energyBoost": 15,
-        "luckBoost": 40,
+        "luckBoost": 35,
         "weightIncrement": 55
     },
     {
@@ -4331,7 +4409,7 @@
         "powerBoost": 0,
         "skillBoost": -45,
         "reachBoost": -75,
-        "energyBoost": 75,
+        "energyBoost": 70,
         "luckBoost": 0,
         "weightIncrement": 75
     },
@@ -4356,10 +4434,10 @@
             -19
         ],
         "healthPointsIncrement": 105,
-        "powerBoost": 75,
+        "powerBoost": 70,
         "skillBoost": 0,
         "reachBoost": -35,
-        "energyBoost": 125,
+        "energyBoost": 115,
         "luckBoost": -60,
         "weightIncrement": 55
     },
@@ -4412,10 +4490,10 @@
             -16
         ],
         "healthPointsIncrement": 85,
-        "powerBoost": 60,
+        "powerBoost": 55,
         "skillBoost": -45,
         "reachBoost": -75,
-        "energyBoost": 95,
+        "energyBoost": 90,
         "luckBoost": 0,
         "weightIncrement": 70
     },
@@ -4440,8 +4518,8 @@
             -16
         ],
         "healthPointsIncrement": 115,
-        "powerBoost": 75,
-        "skillBoost": 35,
+        "powerBoost": 70,
+        "skillBoost": 30,
         "reachBoost": -25,
         "energyBoost": 20,
         "luckBoost": -40,
@@ -4469,10 +4547,10 @@
         ],
         "healthPointsIncrement": 155,
         "powerBoost": 15,
-        "skillBoost": 60,
-        "reachBoost": 40,
+        "skillBoost": 55,
+        "reachBoost": 35,
         "energyBoost": 15,
-        "luckBoost": 25,
+        "luckBoost": 20,
         "weightIncrement": 80
     },
     {
@@ -4526,8 +4604,8 @@
         "healthPointsIncrement": 150,
         "powerBoost": 20,
         "skillBoost": -40,
-        "reachBoost": 75,
-        "energyBoost": 35,
+        "reachBoost": 70,
+        "energyBoost": 30,
         "luckBoost": -25,
         "weightIncrement": 45
     },
@@ -4580,11 +4658,11 @@
             -18
         ],
         "healthPointsIncrement": 135,
-        "powerBoost": 75,
+        "powerBoost": 70,
         "skillBoost": -45,
         "reachBoost": 0,
         "energyBoost": 0,
-        "luckBoost": 125,
+        "luckBoost": 115,
         "weightIncrement": 55
     },
     {
@@ -4609,8 +4687,8 @@
         ],
         "healthPointsIncrement": 145,
         "powerBoost": -25,
-        "skillBoost": 35,
-        "reachBoost": 75,
+        "skillBoost": 30,
+        "reachBoost": 70,
         "energyBoost": 20,
         "luckBoost": -40,
         "weightIncrement": 65
@@ -4636,9 +4714,9 @@
             -18
         ],
         "healthPointsIncrement": 140,
-        "powerBoost": 75,
-        "skillBoost": 40,
-        "reachBoost": 25,
+        "powerBoost": 65,
+        "skillBoost": 35,
+        "reachBoost": 20,
         "energyBoost": 15,
         "luckBoost": 0,
         "weightIncrement": 60
@@ -4665,9 +4743,9 @@
         ],
         "healthPointsIncrement": 125,
         "powerBoost": -45,
-        "skillBoost": 60,
+        "skillBoost": 55,
         "reachBoost": 0,
-        "energyBoost": 95,
+        "energyBoost": 90,
         "luckBoost": -75,
         "weightIncrement": 55
     },
@@ -4692,10 +4770,10 @@
             -19
         ],
         "healthPointsIncrement": 165,
-        "powerBoost": 75,
-        "skillBoost": 40,
+        "powerBoost": 65,
+        "skillBoost": 35,
         "reachBoost": -15,
-        "energyBoost": 25,
+        "energyBoost": 20,
         "luckBoost": 15,
         "weightIncrement": 75
     },
@@ -4750,7 +4828,7 @@
         "healthPointsIncrement": 150,
         "powerBoost": 25,
         "skillBoost": 10,
-        "reachBoost": 50,
+        "reachBoost": 45,
         "energyBoost": 15,
         "luckBoost": -45,
         "weightIncrement": 70
@@ -4777,8 +4855,8 @@
         ],
         "healthPointsIncrement": 185,
         "powerBoost": -40,
-        "skillBoost": 75,
-        "reachBoost": 35,
+        "skillBoost": 70,
+        "reachBoost": 30,
         "energyBoost": 20,
         "luckBoost": -25,
         "weightIncrement": 65
@@ -4832,10 +4910,10 @@
             -17
         ],
         "healthPointsIncrement": 165,
-        "powerBoost": 75,
+        "powerBoost": 70,
         "skillBoost": -45,
         "reachBoost": 0,
-        "energyBoost": 125,
+        "energyBoost": 115,
         "luckBoost": 0,
         "weightIncrement": 70
     },
@@ -4860,11 +4938,11 @@
             -17
         ],
         "healthPointsIncrement": 170,
-        "powerBoost": 25,
+        "powerBoost": 20,
         "skillBoost": -15,
         "reachBoost": 15,
-        "energyBoost": 75,
-        "luckBoost": 40,
+        "energyBoost": 65,
+        "luckBoost": 35,
         "weightIncrement": 75
     },
     {

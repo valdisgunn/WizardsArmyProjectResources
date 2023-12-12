@@ -1623,11 +1623,11 @@ def generate_clothing_items_attributes(items):
 		# Lists contain 2 items, the first one is the positive stats total value, the second one is the negative stats total value
 		# NOTE: We can spread these values among the 5 stats of the element (also probably making some of those stats not be affected by the item itself, usually affect 3/5 stats, but sometimes 4 and others even 5, based on the rarity)
 		rarity_percentage_stat_values = {
-			"Useless": [50, 75],
-			"Common": [75, 60],
-			"Rare": [100, 45],
-			"Epic": [125, 30],
-			"Legendary": [150, 15]
+			"Useless": [30, 30],
+			"Common": [50, 25],
+			"Rare": [70, 20],
+			"Epic": [90, 15],
+			"Legendary": [110, 10]
 		}
 		# Stat elements associations (for the 5 percentage stats)
 		# NOTE: the 2 stats in the list are also ordered from the one that MOSTLY influences the stat to the one that LEAST influences the stat

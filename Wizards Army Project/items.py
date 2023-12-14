@@ -51,7 +51,7 @@ TYPES_GROUPS_CLOTHING_PIECE_NAME_MAPPINGS = {
 		# DONE until "T2-G017"
 
 		# "T3-G001": "Hat",
-		"T3-G003": "Pointy-Hat",
+		# "T3-G003": "Pointy-Hat",
 		"T3-G004": "Helmet",
 		# DONE until "T3-G004"
 
@@ -1669,7 +1669,7 @@ def generate_clothing_items_attributes(items):
 			"Epic": [4, 1],
 			"Legendary": [5, 0]
 		}
-		all_item_stats = ["healthPointsIncrement", "powerBoost", "skillBoost", "reachBoost", "energyBoost", "luckBoost", "weightIncrement"]
+		# all_item_stats = ["healthPointsIncrement", "powerBoost", "skillBoost", "reachBoost", "energyBoost", "luckBoost", "weightIncrement"]
 		all_items_percentage_stats = ["powerBoost", "skillBoost", "reachBoost", "energyBoost", "luckBoost"]
 
 		# Get the element types of the item
@@ -1685,10 +1685,10 @@ def generate_clothing_items_attributes(items):
 		# Set a weight for the item (base weight for hats is around 40, base height for robes is around 60)
 		weight_multiplier = 1 + 0.1 * lighter_to_heavier_elements.index(item_element_types[0])	# In range [1.0, 2.0]
 		# Set the weight increment of the item
-		base_weight_value = round(40 * weight_multiplier)			# In range [40, 80]
-		additional_weight_value = (3 * (group_number % 11) - 10)		# In range [-25, 25]
+		base_weight_value = round(10 * weight_multiplier)			# In range [10, 20]
+		additional_weight_value = (2 * (group_number % 6) - 5)		# In range [-5, 5]
 		weight_increment = base_weight_value + additional_weight_value
-		item["weightIncrement"] = math.ceil(weight_increment / 5) * 5		# Round to the nearest multiple of 5
+		item["weightIncrement"] = math.ceil(weight_increment / 5) * 5		# Round to the nearest multiple of 5, hence in range [5, 25]
 
 		# ===============================================================================================================
 		# [HEALTH POINTS INCREMENT] =====================================================================================
@@ -1707,18 +1707,19 @@ def generate_clothing_items_attributes(items):
 			val = get_element_type_health_point_value(element_type, 1.0 - 0.30 * index)
 			# Add the health point value of the element type to the health point increment
 			health_points_increment_additional_value += val
-		# In range [X,Y] where X and Y are in given by "(-21) + (-21 * 0.7) + (-21 * 0.4)" hence range could be [-21*2.1, 21*2.1] = [-65, 65]
+		# In range [X,Y] where X and Y are in given by "(-21) + (-21 * 0.7) + (-21 * 0.4)" hence range could be [-21*2.1, 21*2.1] = [-65, 65] (before dividing by 5 in next line)
+		health_points_increment_additional_value /= 5		# Divide by 5, hence now is in range [-13, 13]
 
 		# Set the base health points increment for the item
-		health_point_increment_base_value = 50 + ((group_number * 10)) % 101		# In range [50, 150]
+		health_point_increment_base_value = 15 + ((group_number * 10)) % (25 + 1)	# In range [15, 40]
 		# Add additional value based on the item rarity
 		rarities = ["Useless", "Common", "Rare", "Epic", "Legendary"]
 		rarity_index = rarities.index(item["rarity"])
-		health_point_increment_rarity_value = 10 * rarity_index		# In range [0, 40]
+		health_point_increment_rarity_value = 5 * rarity_index		# In range [0, 20]
 		# Add additional value based on the item element types count
 		health_points_final_value = health_point_increment_base_value + health_point_increment_rarity_value + health_points_increment_additional_value
 		health_points_final_value = round(health_points_final_value / 5) * 5		# Round to the nearest multiple of 5
-		item["healthPointsIncrement"] = health_points_final_value
+		item["healthPointsIncrement"] = health_points_final_value	# In range [0, 75] (we rounded to 5)
 
 		# ===============================================================================================================
 		# [PERCENTAGE STATS] ============================================================================================

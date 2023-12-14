@@ -212,7 +212,7 @@ function populate_clothing_items() {
 	generalInfoDiv.appendChild(robesDiv);
 
 	// Append the general info div to the items container
-	document.getElementById("page-content").prepend(generalInfoDiv);
+	document.getElementById("info-container").prepend(generalInfoDiv);
 
 
 	// We create a div for each clothing item, with nested divs for each of its properties
@@ -344,7 +344,13 @@ function populate_clothing_items() {
 		itemDiv.style.borderColor = rarity_colors[CLOTHING_ITEMS[i].rarity];
 
 		// Append the item div to the items container
-		document.getElementById("clothing-items-container").appendChild(itemDiv);
+		if (CLOTHING_ITEMS[i].clothing_type == "hat") {
+			document.getElementById("hats-container").appendChild(itemDiv);
+		} else if (CLOTHING_ITEMS[i].clothing_type == "robe") {
+			document.getElementById("robes-container").appendChild(itemDiv);
+		}
+		//
+
 
 	}
 
@@ -354,6 +360,33 @@ $(document).ready(function () {
 
 	// Populate the clothing items
 	populate_clothing_items();
+
+	// Add event listeners to "#hats-tab-button", "#robes-tab-button" and "#staffs-tab-button"
+	$("#hats-tab-button").click(function () {
+		$("#hats-tab-button").addClass("active");
+		$("#robes-tab-button").removeClass("active");
+		$("#hats-container").addClass("active");
+		$("#robes-container").removeClass("active");
+		$("#staffs-tab-button").removeClass("active");
+		$("#staffs-container").removeClass("active");
+	});
+	$("#robes-tab-button").click(function () {
+		$("#robes-tab-button").addClass("active");
+		$("#hats-tab-button").removeClass("active");
+		$("#robes-container").addClass("active");
+		$("#hats-container").removeClass("active");
+		$("#staffs-tab-button").removeClass("active");
+		$("#staffs-container").removeClass("active");
+	});
+	$("#staffs-tab-button").click(function () {
+		$("#staffs-tab-button").addClass("active");
+		$("#hats-tab-button").removeClass("active");
+		$("#robes-tab-button").removeClass("active");
+		$("#staffs-container").addClass("active");
+		$("#hats-container").removeClass("active");
+		$("#robes-container").removeClass("active");
+	});
+
 
 });
 

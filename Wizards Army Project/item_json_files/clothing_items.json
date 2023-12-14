@@ -15,13 +15,13 @@
             4,
             3
         ],
-        "healthPointsIncrement": 90,
+        "healthPointsIncrement": 35,
         "powerBoost": -35,
         "skillBoost": 0,
         "reachBoost": -20,
         "energyBoost": 40,
         "luckBoost": 65,
-        "weightIncrement": 70
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -39,13 +39,13 @@
             4,
             3
         ],
-        "healthPointsIncrement": 85,
+        "healthPointsIncrement": 35,
         "powerBoost": 20,
         "skillBoost": -15,
         "reachBoost": -25,
         "energyBoost": 15,
         "luckBoost": 45,
-        "weightIncrement": 40
+        "weightIncrement": 10
     },
     {
         "clothing_type": "hat",
@@ -63,13 +63,13 @@
             4,
             3
         ],
-        "healthPointsIncrement": 90,
+        "healthPointsIncrement": 40,
         "powerBoost": 25,
         "skillBoost": 0,
         "reachBoost": 15,
         "energyBoost": 45,
         "luckBoost": 10,
-        "weightIncrement": 60
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -87,13 +87,13 @@
             4,
             2
         ],
-        "healthPointsIncrement": 80,
+        "healthPointsIncrement": 40,
         "powerBoost": -20,
         "skillBoost": -35,
         "reachBoost": 15,
         "energyBoost": 10,
         "luckBoost": 30,
-        "weightIncrement": 55
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -111,13 +111,13 @@
             4,
             2
         ],
-        "healthPointsIncrement": 70,
+        "healthPointsIncrement": 40,
         "powerBoost": -15,
         "skillBoost": -25,
         "reachBoost": 15,
         "energyBoost": 45,
         "luckBoost": 20,
-        "weightIncrement": 65
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -135,13 +135,13 @@
             4,
             2
         ],
-        "healthPointsIncrement": 100,
+        "healthPointsIncrement": 55,
         "powerBoost": 45,
         "skillBoost": 30,
         "reachBoost": 20,
         "energyBoost": 15,
         "luckBoost": 15,
-        "weightIncrement": 50
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -159,13 +159,13 @@
             2,
             2
         ],
-        "healthPointsIncrement": 105,
+        "healthPointsIncrement": 25,
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": -35,
         "energyBoost": 50,
         "luckBoost": -20,
-        "weightIncrement": 50
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -183,13 +183,13 @@
             2,
             2
         ],
-        "healthPointsIncrement": 95,
+        "healthPointsIncrement": 30,
         "powerBoost": 55,
         "skillBoost": 0,
         "reachBoost": -15,
         "energyBoost": 90,
         "luckBoost": -25,
-        "weightIncrement": 75
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -207,13 +207,13 @@
             2,
             2
         ],
-        "healthPointsIncrement": 100,
+        "healthPointsIncrement": 25,
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": -30,
-        "weightIncrement": 75
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -231,13 +231,13 @@
             0,
             -1
         ],
-        "healthPointsIncrement": 105,
+        "healthPointsIncrement": 35,
         "powerBoost": 40,
         "skillBoost": -20,
         "reachBoost": -35,
         "energyBoost": 65,
         "luckBoost": 0,
-        "weightIncrement": 65
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -255,13 +255,13 @@
             0,
             -1
         ],
-        "healthPointsIncrement": 135,
+        "healthPointsIncrement": 45,
         "powerBoost": 25,
         "skillBoost": -15,
         "reachBoost": 55,
         "energyBoost": 15,
         "luckBoost": -20,
-        "weightIncrement": 50
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -279,13 +279,13 @@
             0,
             -1
         ],
-        "healthPointsIncrement": 130,
+        "healthPointsIncrement": 50,
         "powerBoost": 15,
         "skillBoost": 45,
         "reachBoost": 30,
         "energyBoost": 20,
         "luckBoost": 15,
-        "weightIncrement": 45
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -303,13 +303,13 @@
             3,
             2
         ],
-        "healthPointsIncrement": 105,
+        "healthPointsIncrement": 45,
         "powerBoost": -35,
         "skillBoost": -20,
         "reachBoost": 30,
         "energyBoost": 15,
         "luckBoost": 10,
-        "weightIncrement": 80
+        "weightIncrement": 25
     },
     {
         "clothing_type": "hat",
@@ -327,13 +327,13 @@
             3,
             2
         ],
-        "healthPointsIncrement": 135,
+        "healthPointsIncrement": 55,
         "powerBoost": -15,
         "skillBoost": -20,
         "reachBoost": 25,
         "energyBoost": 15,
         "luckBoost": 55,
-        "weightIncrement": 50
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -351,13 +351,13 @@
             3,
             2
         ],
-        "healthPointsIncrement": 100,
+        "healthPointsIncrement": 40,
         "powerBoost": -30,
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": 40,
         "luckBoost": 25,
-        "weightIncrement": 65
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -375,13 +375,13 @@
             4,
             -4
         ],
-        "healthPointsIncrement": 110,
+        "healthPointsIncrement": 30,
         "powerBoost": 55,
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": -20,
         "luckBoost": 90,
-        "weightIncrement": 80
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -399,13 +399,13 @@
             4,
             -4
         ],
-        "healthPointsIncrement": 130,
+        "healthPointsIncrement": 35,
         "powerBoost": 55,
         "skillBoost": -20,
         "reachBoost": 25,
         "energyBoost": 15,
         "luckBoost": -15,
-        "weightIncrement": 60
+        "weightIncrement": 10
     },
     {
         "clothing_type": "hat",
@@ -423,13 +423,13 @@
             4,
             -4
         ],
-        "healthPointsIncrement": 155,
+        "healthPointsIncrement": 45,
         "powerBoost": 30,
         "skillBoost": 15,
         "reachBoost": 55,
         "energyBoost": 20,
         "luckBoost": 0,
-        "weightIncrement": 70
+        "weightIncrement": 10
     },
     {
         "clothing_type": "hat",
@@ -447,13 +447,13 @@
             4,
             6
         ],
-        "healthPointsIncrement": 120,
+        "healthPointsIncrement": 35,
         "powerBoost": -35,
         "skillBoost": 40,
         "reachBoost": 0,
         "energyBoost": 65,
         "luckBoost": -20,
-        "weightIncrement": 65
+        "weightIncrement": 10
     },
     {
         "clothing_type": "hat",
@@ -471,13 +471,13 @@
             4,
             6
         ],
-        "healthPointsIncrement": 155,
+        "healthPointsIncrement": 50,
         "powerBoost": 55,
         "skillBoost": 15,
         "reachBoost": -10,
         "energyBoost": 30,
         "luckBoost": 20,
-        "weightIncrement": 85
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -495,13 +495,13 @@
             4,
             6
         ],
-        "healthPointsIncrement": 120,
+        "healthPointsIncrement": 35,
         "powerBoost": -30,
         "skillBoost": 30,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": 0,
-        "weightIncrement": 55
+        "weightIncrement": 10
     },
     {
         "clothing_type": "hat",
@@ -519,13 +519,13 @@
             2,
             2
         ],
-        "healthPointsIncrement": 155,
+        "healthPointsIncrement": 30,
         "powerBoost": 20,
         "skillBoost": 10,
         "reachBoost": 35,
         "energyBoost": 15,
         "luckBoost": -20,
-        "weightIncrement": 75
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -543,13 +543,13 @@
             2,
             2
         ],
-        "healthPointsIncrement": 175,
+        "healthPointsIncrement": 35,
         "powerBoost": 55,
         "skillBoost": 25,
         "reachBoost": -20,
         "energyBoost": 15,
         "luckBoost": -15,
-        "weightIncrement": 65
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -567,13 +567,13 @@
             2,
             2
         ],
-        "healthPointsIncrement": 130,
+        "healthPointsIncrement": 15,
         "powerBoost": 0,
         "skillBoost": 25,
         "reachBoost": 0,
         "energyBoost": -30,
         "luckBoost": 40,
-        "weightIncrement": 80
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -591,13 +591,13 @@
             4,
             0
         ],
-        "healthPointsIncrement": 160,
+        "healthPointsIncrement": 35,
         "powerBoost": 90,
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": 55,
         "luckBoost": -20,
-        "weightIncrement": 85
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -615,13 +615,13 @@
             4,
             0
         ],
-        "healthPointsIncrement": 200,
+        "healthPointsIncrement": 50,
         "powerBoost": 55,
         "skillBoost": -10,
         "reachBoost": 15,
         "energyBoost": 30,
         "luckBoost": 20,
-        "weightIncrement": 95
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -639,13 +639,13 @@
             4,
             0
         ],
-        "healthPointsIncrement": 145,
+        "healthPointsIncrement": 30,
         "powerBoost": 0,
         "skillBoost": -30,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": 0,
-        "weightIncrement": 65
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -663,13 +663,13 @@
             1,
             2
         ],
-        "healthPointsIncrement": 140,
+        "healthPointsIncrement": 40,
         "powerBoost": 0,
         "skillBoost": -35,
         "reachBoost": -20,
         "energyBoost": 40,
         "luckBoost": 65,
-        "weightIncrement": 90
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -687,13 +687,13 @@
             1,
             2
         ],
-        "healthPointsIncrement": 170,
+        "healthPointsIncrement": 45,
         "powerBoost": -15,
         "skillBoost": -25,
         "reachBoost": 20,
         "energyBoost": 15,
         "luckBoost": 45,
-        "weightIncrement": 80
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -711,13 +711,13 @@
             1,
             2
         ],
-        "healthPointsIncrement": 180,
+        "healthPointsIncrement": 50,
         "powerBoost": 0,
         "skillBoost": 45,
         "reachBoost": 25,
         "energyBoost": 15,
         "luckBoost": 10,
-        "weightIncrement": 60
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -735,13 +735,13 @@
             1,
             1
         ],
-        "healthPointsIncrement": 55,
+        "healthPointsIncrement": 25,
         "powerBoost": 30,
         "skillBoost": -20,
         "reachBoost": -35,
         "energyBoost": 15,
         "luckBoost": 10,
-        "weightIncrement": 45
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -759,13 +759,13 @@
             1,
             1
         ],
-        "healthPointsIncrement": 90,
+        "healthPointsIncrement": 35,
         "powerBoost": 45,
         "skillBoost": -15,
         "reachBoost": -25,
         "energyBoost": 15,
         "luckBoost": 20,
-        "weightIncrement": 40
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -783,13 +783,13 @@
             1,
             1
         ],
-        "healthPointsIncrement": 95,
+        "healthPointsIncrement": 40,
         "powerBoost": 45,
         "skillBoost": 15,
         "reachBoost": 30,
         "energyBoost": 20,
         "luckBoost": 15,
-        "weightIncrement": 65
+        "weightIncrement": 25
     },
     {
         "clothing_type": "hat",
@@ -809,13 +809,13 @@
             2,
             5
         ],
-        "healthPointsIncrement": 60,
+        "healthPointsIncrement": 30,
         "powerBoost": -35,
         "skillBoost": -20,
         "reachBoost": 0,
         "energyBoost": 40,
         "luckBoost": 65,
-        "weightIncrement": 60
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -835,13 +835,13 @@
             2,
             5
         ],
-        "healthPointsIncrement": 90,
+        "healthPointsIncrement": 35,
         "powerBoost": 45,
         "skillBoost": -15,
         "reachBoost": -25,
         "energyBoost": 20,
         "luckBoost": 15,
-        "weightIncrement": 45
+        "weightIncrement": 10
     },
     {
         "clothing_type": "hat",
@@ -861,13 +861,13 @@
             2,
             5
         ],
-        "healthPointsIncrement": 90,
+        "healthPointsIncrement": 40,
         "powerBoost": 45,
         "skillBoost": 25,
         "reachBoost": 0,
         "energyBoost": 15,
         "luckBoost": 10,
-        "weightIncrement": 40
+        "weightIncrement": 10
     },
     {
         "clothing_type": "hat",
@@ -887,13 +887,13 @@
             2,
             4
         ],
-        "healthPointsIncrement": 85,
+        "healthPointsIncrement": 40,
         "powerBoost": -20,
         "skillBoost": 10,
         "reachBoost": -35,
         "energyBoost": 30,
         "luckBoost": 15,
-        "weightIncrement": 60
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -913,13 +913,13 @@
             2,
             4
         ],
-        "healthPointsIncrement": 85,
+        "healthPointsIncrement": 45,
         "powerBoost": -25,
         "skillBoost": 20,
         "reachBoost": -15,
         "energyBoost": 45,
         "luckBoost": 15,
-        "weightIncrement": 70
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -939,13 +939,13 @@
             2,
             4
         ],
-        "healthPointsIncrement": 100,
+        "healthPointsIncrement": 55,
         "powerBoost": 45,
         "skillBoost": 20,
         "reachBoost": 15,
         "energyBoost": 30,
         "luckBoost": 15,
-        "weightIncrement": 60
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -965,13 +965,13 @@
             1,
             5
         ],
-        "healthPointsIncrement": 100,
+        "healthPointsIncrement": 25,
         "powerBoost": -20,
         "skillBoost": 0,
         "reachBoost": -35,
         "energyBoost": 50,
         "luckBoost": 0,
-        "weightIncrement": 60
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -991,13 +991,13 @@
             1,
             5
         ],
-        "healthPointsIncrement": 95,
+        "healthPointsIncrement": 30,
         "powerBoost": 55,
         "skillBoost": -15,
         "reachBoost": 0,
         "energyBoost": 90,
         "luckBoost": -25,
-        "weightIncrement": 45
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -1017,13 +1017,13 @@
             1,
             5
         ],
-        "healthPointsIncrement": 100,
+        "healthPointsIncrement": 25,
         "powerBoost": -30,
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": 0,
-        "weightIncrement": 75
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -1043,13 +1043,13 @@
             3,
             -2
         ],
-        "healthPointsIncrement": 90,
+        "healthPointsIncrement": 30,
         "powerBoost": 65,
         "skillBoost": -20,
         "reachBoost": 0,
         "energyBoost": 40,
         "luckBoost": -35,
-        "weightIncrement": 70
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -1069,13 +1069,13 @@
             3,
             -2
         ],
-        "healthPointsIncrement": 120,
+        "healthPointsIncrement": 45,
         "powerBoost": 25,
         "skillBoost": 55,
         "reachBoost": -15,
         "energyBoost": 15,
         "luckBoost": -20,
-        "weightIncrement": 60
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -1095,13 +1095,13 @@
             3,
             -2
         ],
-        "healthPointsIncrement": 130,
+        "healthPointsIncrement": 50,
         "powerBoost": 45,
         "skillBoost": 30,
         "reachBoost": 20,
         "energyBoost": 15,
         "luckBoost": 15,
-        "weightIncrement": 70
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -1121,13 +1121,13 @@
             5,
             2
         ],
-        "healthPointsIncrement": 100,
+        "healthPointsIncrement": 40,
         "powerBoost": -35,
         "skillBoost": -20,
         "reachBoost": 30,
         "energyBoost": 10,
         "luckBoost": 15,
-        "weightIncrement": 60
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -1147,13 +1147,13 @@
             5,
             2
         ],
-        "healthPointsIncrement": 110,
+        "healthPointsIncrement": 50,
         "powerBoost": -15,
         "skillBoost": -20,
         "reachBoost": 15,
         "energyBoost": 25,
         "luckBoost": 55,
-        "weightIncrement": 75
+        "weightIncrement": 25
     },
     {
         "clothing_type": "hat",
@@ -1173,13 +1173,13 @@
             5,
             2
         ],
-        "healthPointsIncrement": 90,
+        "healthPointsIncrement": 35,
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": -30,
         "energyBoost": 40,
         "luckBoost": 25,
-        "weightIncrement": 65
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -1199,13 +1199,13 @@
             5,
             1
         ],
-        "healthPointsIncrement": 125,
+        "healthPointsIncrement": 30,
         "powerBoost": 55,
         "skillBoost": 0,
         "reachBoost": -20,
         "energyBoost": 0,
         "luckBoost": 90,
-        "weightIncrement": 50
+        "weightIncrement": 5
     },
     {
         "clothing_type": "hat",
@@ -1225,13 +1225,13 @@
             5,
             1
         ],
-        "healthPointsIncrement": 155,
+        "healthPointsIncrement": 40,
         "powerBoost": -15,
         "skillBoost": 25,
         "reachBoost": 55,
         "energyBoost": 15,
         "luckBoost": -20,
-        "weightIncrement": 60
+        "weightIncrement": 10
     },
     {
         "clothing_type": "hat",
@@ -1251,13 +1251,13 @@
             5,
             1
         ],
-        "healthPointsIncrement": 150,
+        "healthPointsIncrement": 45,
         "powerBoost": 0,
         "skillBoost": 55,
         "reachBoost": 30,
         "energyBoost": 20,
         "luckBoost": 15,
-        "weightIncrement": 75
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -1277,13 +1277,13 @@
             2,
             3
         ],
-        "healthPointsIncrement": 125,
+        "healthPointsIncrement": 35,
         "powerBoost": 0,
         "skillBoost": 65,
         "reachBoost": -20,
         "energyBoost": 40,
         "luckBoost": -35,
-        "weightIncrement": 70
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -1303,13 +1303,13 @@
             2,
             3
         ],
-        "healthPointsIncrement": 145,
+        "healthPointsIncrement": 50,
         "powerBoost": -10,
         "skillBoost": 15,
         "reachBoost": 55,
         "energyBoost": 30,
         "luckBoost": 20,
-        "weightIncrement": 65
+        "weightIncrement": 10
     },
     {
         "clothing_type": "hat",
@@ -1329,13 +1329,13 @@
             2,
             3
         ],
-        "healthPointsIncrement": 130,
+        "healthPointsIncrement": 35,
         "powerBoost": 0,
         "skillBoost": 30,
         "reachBoost": -30,
         "energyBoost": 0,
         "luckBoost": 0,
-        "weightIncrement": 75
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -1355,13 +1355,13 @@
             2,
             4
         ],
-        "healthPointsIncrement": 175,
+        "healthPointsIncrement": 30,
         "powerBoost": -20,
         "skillBoost": 35,
         "reachBoost": 20,
         "energyBoost": 15,
         "luckBoost": 10,
-        "weightIncrement": 90
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -1381,13 +1381,13 @@
             2,
             4
         ],
-        "healthPointsIncrement": 165,
+        "healthPointsIncrement": 35,
         "powerBoost": -15,
         "skillBoost": 25,
         "reachBoost": 55,
         "energyBoost": 15,
         "luckBoost": -20,
-        "weightIncrement": 55
+        "weightIncrement": 10
     },
     {
         "clothing_type": "hat",
@@ -1407,13 +1407,13 @@
             2,
             4
         ],
-        "healthPointsIncrement": 140,
+        "healthPointsIncrement": 20,
         "powerBoost": -30,
         "skillBoost": 25,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": 40,
-        "weightIncrement": 90
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -1433,13 +1433,13 @@
             4,
             -2
         ],
-        "healthPointsIncrement": 135,
+        "healthPointsIncrement": 30,
         "powerBoost": 55,
         "skillBoost": 0,
         "reachBoost": -20,
         "energyBoost": 90,
         "luckBoost": 0,
-        "weightIncrement": 85
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -1459,13 +1459,13 @@
             4,
             -2
         ],
-        "healthPointsIncrement": 175,
+        "healthPointsIncrement": 45,
         "powerBoost": 55,
         "skillBoost": 30,
         "reachBoost": -10,
         "energyBoost": 15,
         "luckBoost": 20,
-        "weightIncrement": 65
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -1485,13 +1485,13 @@
             4,
             -2
         ],
-        "healthPointsIncrement": 135,
+        "healthPointsIncrement": 25,
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": -30,
         "luckBoost": 0,
-        "weightIncrement": 90
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -1511,13 +1511,13 @@
             4,
             2
         ],
-        "healthPointsIncrement": 190,
+        "healthPointsIncrement": 50,
         "powerBoost": -20,
         "skillBoost": -35,
         "reachBoost": 0,
         "energyBoost": 65,
         "luckBoost": 40,
-        "weightIncrement": 100
+        "weightIncrement": 25
     },
     {
         "clothing_type": "hat",
@@ -1537,13 +1537,13 @@
             4,
             2
         ],
-        "healthPointsIncrement": 165,
+        "healthPointsIncrement": 45,
         "powerBoost": -25,
         "skillBoost": 20,
         "reachBoost": -15,
         "energyBoost": 45,
         "luckBoost": 15,
-        "weightIncrement": 85
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -1563,13 +1563,13 @@
             4,
             2
         ],
-        "healthPointsIncrement": 190,
+        "healthPointsIncrement": 55,
         "powerBoost": 10,
         "skillBoost": 25,
         "reachBoost": 0,
         "energyBoost": 15,
         "luckBoost": 45,
-        "weightIncrement": 80
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -1589,13 +1589,13 @@
             2,
             3
         ],
-        "healthPointsIncrement": 65,
+        "healthPointsIncrement": 25,
         "powerBoost": 30,
         "skillBoost": -20,
         "reachBoost": -35,
         "energyBoost": 10,
         "luckBoost": 15,
-        "weightIncrement": 35
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -1615,13 +1615,13 @@
             2,
             3
         ],
-        "healthPointsIncrement": 80,
+        "healthPointsIncrement": 30,
         "powerBoost": 20,
         "skillBoost": -25,
         "reachBoost": -15,
         "energyBoost": 45,
         "luckBoost": 15,
-        "weightIncrement": 55
+        "weightIncrement": 25
     },
     {
         "clothing_type": "hat",
@@ -1641,13 +1641,13 @@
             2,
             3
         ],
-        "healthPointsIncrement": 85,
+        "healthPointsIncrement": 40,
         "powerBoost": 45,
         "skillBoost": 15,
         "reachBoost": 30,
         "energyBoost": 20,
         "luckBoost": 15,
-        "weightIncrement": 45
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -1667,13 +1667,13 @@
             2,
             3
         ],
-        "healthPointsIncrement": 80,
+        "healthPointsIncrement": 35,
         "powerBoost": 50,
         "skillBoost": -20,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": -35,
-        "weightIncrement": 55
+        "weightIncrement": 10
     },
     {
         "clothing_type": "hat",
@@ -1693,13 +1693,13 @@
             2,
             3
         ],
-        "healthPointsIncrement": 105,
+        "healthPointsIncrement": 45,
         "powerBoost": 90,
         "skillBoost": -25,
         "reachBoost": 0,
         "energyBoost": -15,
         "luckBoost": 55,
-        "weightIncrement": 50
+        "weightIncrement": 10
     },
     {
         "clothing_type": "hat",
@@ -1719,13 +1719,13 @@
             2,
             3
         ],
-        "healthPointsIncrement": 40,
+        "healthPointsIncrement": 25,
         "powerBoost": 0,
         "skillBoost": -30,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": 0,
-        "weightIncrement": 65
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -1745,13 +1745,13 @@
             4,
             -2
         ],
-        "healthPointsIncrement": 100,
+        "healthPointsIncrement": 20,
         "powerBoost": 0,
         "skillBoost": -20,
         "reachBoost": 40,
         "energyBoost": -35,
         "luckBoost": 65,
-        "weightIncrement": 45
+        "weightIncrement": 10
     },
     {
         "clothing_type": "hat",
@@ -1771,13 +1771,13 @@
             4,
             -2
         ],
-        "healthPointsIncrement": 95,
+        "healthPointsIncrement": 25,
         "powerBoost": -15,
         "skillBoost": -20,
         "reachBoost": 25,
         "energyBoost": 55,
         "luckBoost": 15,
-        "weightIncrement": 60
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -1797,13 +1797,13 @@
             4,
             -2
         ],
-        "healthPointsIncrement": 130,
+        "healthPointsIncrement": 35,
         "powerBoost": 15,
         "skillBoost": 45,
         "reachBoost": 30,
         "energyBoost": 15,
         "luckBoost": 20,
-        "weightIncrement": 40
+        "weightIncrement": 10
     },
     {
         "clothing_type": "hat",
@@ -1823,13 +1823,13 @@
             1,
             3
         ],
-        "healthPointsIncrement": 95,
+        "healthPointsIncrement": 30,
         "powerBoost": -20,
         "skillBoost": 10,
         "reachBoost": 15,
         "energyBoost": -35,
         "luckBoost": 30,
-        "weightIncrement": 55
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -1849,13 +1849,13 @@
             1,
             3
         ],
-        "healthPointsIncrement": 130,
+        "healthPointsIncrement": 45,
         "powerBoost": -20,
         "skillBoost": 55,
         "reachBoost": 25,
         "energyBoost": -15,
         "luckBoost": 15,
-        "weightIncrement": 75
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -1875,13 +1875,13 @@
             1,
             3
         ],
-        "healthPointsIncrement": 80,
+        "healthPointsIncrement": 25,
         "powerBoost": -30,
         "skillBoost": 0,
         "reachBoost": 25,
         "energyBoost": 0,
         "luckBoost": 40,
-        "weightIncrement": 60
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -1901,13 +1901,13 @@
             2,
             2
         ],
-        "healthPointsIncrement": 120,
+        "healthPointsIncrement": 45,
         "powerBoost": 90,
         "skillBoost": 0,
         "reachBoost": 55,
         "energyBoost": 0,
         "luckBoost": -20,
-        "weightIncrement": 60
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -1927,13 +1927,13 @@
             2,
             2
         ],
-        "healthPointsIncrement": 150,
+        "healthPointsIncrement": 55,
         "powerBoost": -20,
         "skillBoost": 55,
         "reachBoost": -15,
         "energyBoost": 15,
         "luckBoost": 25,
-        "weightIncrement": 80
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -1953,13 +1953,13 @@
             2,
             2
         ],
-        "healthPointsIncrement": 145,
+        "healthPointsIncrement": 55,
         "powerBoost": 0,
         "skillBoost": 55,
         "reachBoost": 20,
         "energyBoost": 15,
         "luckBoost": 30,
-        "weightIncrement": 50
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -1979,13 +1979,13 @@
             6,
             4
         ],
-        "healthPointsIncrement": 125,
+        "healthPointsIncrement": 25,
         "powerBoost": 0,
         "skillBoost": 65,
         "reachBoost": -35,
         "energyBoost": -20,
         "luckBoost": 40,
-        "weightIncrement": 65
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -2005,13 +2005,13 @@
             6,
             4
         ],
-        "healthPointsIncrement": 150,
+        "healthPointsIncrement": 40,
         "powerBoost": -10,
         "skillBoost": 20,
         "reachBoost": 55,
         "energyBoost": 30,
         "luckBoost": 15,
-        "weightIncrement": 70
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -2031,13 +2031,13 @@
             6,
             4
         ],
-        "healthPointsIncrement": 130,
+        "healthPointsIncrement": 25,
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": -30,
         "energyBoost": 0,
         "luckBoost": 30,
-        "weightIncrement": 85
+        "weightIncrement": 25
     },
     {
         "clothing_type": "hat",
@@ -2057,13 +2057,13 @@
             1,
             2
         ],
-        "healthPointsIncrement": 120,
+        "healthPointsIncrement": 35,
         "powerBoost": 10,
         "skillBoost": 20,
         "reachBoost": -20,
         "energyBoost": 35,
         "luckBoost": 15,
-        "weightIncrement": 80
+        "weightIncrement": 25
     },
     {
         "clothing_type": "hat",
@@ -2083,13 +2083,13 @@
             1,
             2
         ],
-        "healthPointsIncrement": 155,
+        "healthPointsIncrement": 45,
         "powerBoost": 55,
         "skillBoost": -15,
         "reachBoost": -20,
         "energyBoost": 25,
         "luckBoost": 15,
-        "weightIncrement": 60
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -2109,13 +2109,13 @@
             1,
             2
         ],
-        "healthPointsIncrement": 105,
+        "healthPointsIncrement": 25,
         "powerBoost": -30,
         "skillBoost": 40,
         "reachBoost": 0,
         "energyBoost": 25,
         "luckBoost": 0,
-        "weightIncrement": 65
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -2135,13 +2135,13 @@
             1,
             4
         ],
-        "healthPointsIncrement": 145,
+        "healthPointsIncrement": 45,
         "powerBoost": -20,
         "skillBoost": 50,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": -35,
-        "weightIncrement": 90
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -2161,13 +2161,13 @@
             1,
             4
         ],
-        "healthPointsIncrement": 165,
+        "healthPointsIncrement": 50,
         "powerBoost": 55,
         "skillBoost": -15,
         "reachBoost": 0,
         "energyBoost": 90,
         "luckBoost": -25,
-        "weightIncrement": 75
+        "weightIncrement": 10
     },
     {
         "clothing_type": "hat",
@@ -2187,13 +2187,13 @@
             1,
             4
         ],
-        "healthPointsIncrement": 150,
+        "healthPointsIncrement": 50,
         "powerBoost": 25,
         "skillBoost": 55,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": 15,
-        "weightIncrement": 65
+        "weightIncrement": 10
     },
     {
         "clothing_type": "hat",
@@ -2215,13 +2215,13 @@
             3,
             2
         ],
-        "healthPointsIncrement": 70,
+        "healthPointsIncrement": 30,
         "powerBoost": -20,
         "skillBoost": 0,
         "reachBoost": -35,
         "energyBoost": 65,
         "luckBoost": 40,
-        "weightIncrement": 50
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -2243,13 +2243,13 @@
             3,
             2
         ],
-        "healthPointsIncrement": 70,
+        "healthPointsIncrement": 35,
         "powerBoost": -25,
         "skillBoost": -15,
         "reachBoost": 45,
         "energyBoost": 20,
         "luckBoost": 15,
-        "weightIncrement": 65
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -2271,13 +2271,13 @@
             3,
             2
         ],
-        "healthPointsIncrement": 95,
+        "healthPointsIncrement": 40,
         "powerBoost": 25,
         "skillBoost": 0,
         "reachBoost": 15,
         "energyBoost": 45,
         "luckBoost": 10,
-        "weightIncrement": 60
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -2299,13 +2299,13 @@
             4,
             0
         ],
-        "healthPointsIncrement": 90,
+        "healthPointsIncrement": 40,
         "powerBoost": -20,
         "skillBoost": 15,
         "reachBoost": -35,
         "energyBoost": 30,
         "luckBoost": 10,
-        "weightIncrement": 60
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -2327,13 +2327,13 @@
             4,
             0
         ],
-        "healthPointsIncrement": 100,
+        "healthPointsIncrement": 45,
         "powerBoost": -25,
         "skillBoost": 45,
         "reachBoost": -15,
         "energyBoost": 20,
         "luckBoost": 15,
-        "weightIncrement": 50
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -2355,13 +2355,13 @@
             4,
             0
         ],
-        "healthPointsIncrement": 105,
+        "healthPointsIncrement": 55,
         "powerBoost": 15,
         "skillBoost": 45,
         "reachBoost": 15,
         "energyBoost": 30,
         "luckBoost": 20,
-        "weightIncrement": 65
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -2383,13 +2383,13 @@
             2,
             5
         ],
-        "healthPointsIncrement": 95,
+        "healthPointsIncrement": 25,
         "powerBoost": 0,
         "skillBoost": -20,
         "reachBoost": -35,
         "energyBoost": 50,
         "luckBoost": 0,
-        "weightIncrement": 55
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -2411,13 +2411,13 @@
             2,
             5
         ],
-        "healthPointsIncrement": 95,
+        "healthPointsIncrement": 30,
         "powerBoost": 90,
         "skillBoost": 0,
         "reachBoost": -15,
         "energyBoost": 55,
         "luckBoost": -25,
-        "weightIncrement": 70
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -2439,13 +2439,13 @@
             2,
             5
         ],
-        "healthPointsIncrement": 75,
+        "healthPointsIncrement": 20,
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": -30,
         "energyBoost": 0,
         "luckBoost": 0,
-        "weightIncrement": 45
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -2467,13 +2467,13 @@
             4,
             4
         ],
-        "healthPointsIncrement": 90,
+        "healthPointsIncrement": 30,
         "powerBoost": 40,
         "skillBoost": -20,
         "reachBoost": -35,
         "energyBoost": 65,
         "luckBoost": 0,
-        "weightIncrement": 55
+        "weightIncrement": 20
     },
     {
         "clothing_type": "hat",
@@ -2495,13 +2495,13 @@
             4,
             4
         ],
-        "healthPointsIncrement": 135,
+        "healthPointsIncrement": 45,
         "powerBoost": 25,
         "skillBoost": 55,
         "reachBoost": -15,
         "energyBoost": 15,
         "luckBoost": -20,
-        "weightIncrement": 50
+        "weightIncrement": 15
     },
     {
         "clothing_type": "hat",
@@ -2523,18 +2523,18 @@
             4,
             4
         ],
-        "healthPointsIncrement": 125,
+        "healthPointsIncrement": 50,
         "powerBoost": 30,
         "skillBoost": 15,
         "reachBoost": 20,
         "energyBoost": 45,
         "luckBoost": 15,
-        "weightIncrement": 70
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
         "name": "Granite Cloak of Sensitivity",
-        "sprite": "robe-93.png",
+        "sprite": "robe-96.png",
         "id_string": "ROBE-T1-G001-N01",
         "element_type": [
             "Rock"
@@ -2547,18 +2547,18 @@
             3,
             -17
         ],
-        "healthPointsIncrement": 90,
+        "healthPointsIncrement": 35,
         "powerBoost": -35,
         "skillBoost": 0,
         "reachBoost": -20,
         "energyBoost": 40,
         "luckBoost": 65,
-        "weightIncrement": 70
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
         "name": "Shadowed Cloak of Sensitivity",
-        "sprite": "robe-92.png",
+        "sprite": "robe-95.png",
         "id_string": "ROBE-T1-G001-N02",
         "element_type": [
             "Darkness"
@@ -2571,18 +2571,18 @@
             3,
             -17
         ],
-        "healthPointsIncrement": 80,
+        "healthPointsIncrement": 35,
         "powerBoost": 20,
         "skillBoost": -15,
         "reachBoost": -25,
         "energyBoost": 45,
         "luckBoost": 15,
-        "weightIncrement": 60
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
         "name": "Luminous Cloak of Sensitivity",
-        "sprite": "robe-91.png",
+        "sprite": "robe-94.png",
         "id_string": "ROBE-T1-G001-N03",
         "element_type": [
             "Light"
@@ -2595,18 +2595,18 @@
             3,
             -17
         ],
-        "healthPointsIncrement": 95,
+        "healthPointsIncrement": 40,
         "powerBoost": 25,
         "skillBoost": 0,
         "reachBoost": 15,
         "energyBoost": 10,
         "luckBoost": 45,
-        "weightIncrement": 40
+        "weightIncrement": 10
     },
     {
         "clothing_type": "robe",
         "name": "Rustic Cape of Sincerity",
-        "sprite": "robe-90.png",
+        "sprite": "robe-93.png",
         "id_string": "ROBE-T1-G002-N01",
         "element_type": [
             "Earth"
@@ -2619,18 +2619,18 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 85,
+        "healthPointsIncrement": 40,
         "powerBoost": -35,
         "skillBoost": -20,
         "reachBoost": 30,
         "energyBoost": 15,
         "luckBoost": 10,
-        "weightIncrement": 60
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
         "name": "Zephyr Cape of Sincerity",
-        "sprite": "robe-89.png",
+        "sprite": "robe-92.png",
         "id_string": "ROBE-T1-G002-N02",
         "element_type": [
             "Thunder"
@@ -2643,18 +2643,18 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 85,
+        "healthPointsIncrement": 45,
         "powerBoost": -25,
         "skillBoost": -15,
         "reachBoost": 45,
         "energyBoost": 20,
         "luckBoost": 15,
-        "weightIncrement": 70
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
         "name": "Azure Cape of Sincerity",
-        "sprite": "robe-88.png",
+        "sprite": "robe-91.png",
         "id_string": "ROBE-T1-G002-N03",
         "element_type": [
             "Air"
@@ -2667,18 +2667,18 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 110,
+        "healthPointsIncrement": 55,
         "powerBoost": 15,
         "skillBoost": 45,
         "reachBoost": 30,
         "energyBoost": 20,
         "luckBoost": 15,
-        "weightIncrement": 40
+        "weightIncrement": 10
     },
     {
         "clothing_type": "robe",
         "name": "Flametongue Drip of Diplomacy",
-        "sprite": "robe-87.png",
+        "sprite": "robe-90.png",
         "id_string": "ROBE-T1-G003-N01",
         "element_type": [
             "Fire"
@@ -2691,18 +2691,18 @@
             2,
             -19
         ],
-        "healthPointsIncrement": 80,
+        "healthPointsIncrement": 20,
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": -35,
         "energyBoost": 50,
         "luckBoost": -20,
-        "weightIncrement": 55
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
         "name": "Fernwhisper Drip of Diplomacy",
-        "sprite": "robe-86.png",
+        "sprite": "robe-89.png",
         "id_string": "ROBE-T1-G003-N02",
         "element_type": [
             "Nature"
@@ -2715,18 +2715,18 @@
             2,
             -19
         ],
-        "healthPointsIncrement": 115,
+        "healthPointsIncrement": 30,
         "powerBoost": 55,
         "skillBoost": 0,
         "reachBoost": -25,
         "energyBoost": 90,
         "luckBoost": -15,
-        "weightIncrement": 50
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
         "name": "Stygian Drip of Diplomacy",
-        "sprite": "robe-85.png",
+        "sprite": "robe-88.png",
         "id_string": "ROBE-T1-G003-N03",
         "element_type": [
             "Darkness"
@@ -2739,18 +2739,18 @@
             2,
             -19
         ],
-        "healthPointsIncrement": 80,
+        "healthPointsIncrement": 20,
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": -30,
-        "weightIncrement": 65
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
         "name": "Crystal Cloak of Creativity",
-        "sprite": "robe-84.png",
+        "sprite": "robe-87.png",
         "id_string": "ROBE-T1-G004-N01",
         "element_type": [
             "Water"
@@ -2763,18 +2763,18 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 100,
+        "healthPointsIncrement": 35,
         "powerBoost": 65,
         "skillBoost": -20,
         "reachBoost": -35,
         "energyBoost": 40,
         "luckBoost": 0,
-        "weightIncrement": 60
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
         "name": "Viper's Cloak of Creativity",
-        "sprite": "robe-83.png",
+        "sprite": "robe-86.png",
         "id_string": "ROBE-T1-G004-N02",
         "element_type": [
             "Poison"
@@ -2787,18 +2787,18 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 100,
+        "healthPointsIncrement": 40,
         "powerBoost": 25,
         "skillBoost": -15,
         "reachBoost": 15,
         "energyBoost": 55,
         "luckBoost": -20,
-        "weightIncrement": 70
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
         "name": "Gleaming Cloak of Creativity",
-        "sprite": "robe-82.png",
+        "sprite": "robe-85.png",
         "id_string": "ROBE-T1-G004-N03",
         "element_type": [
             "Light"
@@ -2811,18 +2811,18 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 135,
+        "healthPointsIncrement": 50,
         "powerBoost": 30,
         "skillBoost": 20,
         "reachBoost": 15,
         "energyBoost": 15,
         "luckBoost": 45,
-        "weightIncrement": 50
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
         "name": "Mariner's Robe of Silence",
-        "sprite": "robe-81.png",
+        "sprite": "robe-84.png",
         "id_string": "ROBE-T1-G005-N01",
         "element_type": [
             "Water"
@@ -2835,18 +2835,18 @@
             3,
             -17
         ],
-        "healthPointsIncrement": 110,
+        "healthPointsIncrement": 45,
         "powerBoost": -20,
         "skillBoost": -35,
         "reachBoost": 15,
         "energyBoost": 10,
         "luckBoost": 30,
-        "weightIncrement": 65
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
         "name": "Fiery Robe of Silence",
-        "sprite": "robe-80.png",
+        "sprite": "robe-83.png",
         "id_string": "ROBE-T1-G005-N02",
         "element_type": [
             "Fire"
@@ -2859,18 +2859,18 @@
             3,
             -17
         ],
-        "healthPointsIncrement": 120,
+        "healthPointsIncrement": 50,
         "powerBoost": -20,
         "skillBoost": -15,
         "reachBoost": 55,
         "energyBoost": 25,
         "luckBoost": 15,
-        "weightIncrement": 60
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
         "name": "Voltweaver's Robe of Silence",
-        "sprite": "robe-79.png",
+        "sprite": "robe-82.png",
         "id_string": "ROBE-T1-G005-N03",
         "element_type": [
             "Thunder"
@@ -2883,13 +2883,85 @@
             3,
             -17
         ],
-        "healthPointsIncrement": 95,
+        "healthPointsIncrement": 40,
         "powerBoost": -30,
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": 25,
         "luckBoost": 40,
-        "weightIncrement": 80
+        "weightIncrement": 25
+    },
+    {
+        "clothing_type": "robe",
+        "name": "Meteoric Robe of Sorcery",
+        "sprite": "robe-81.png",
+        "id_string": "ROBE-T1-G006-N01",
+        "element_type": [
+            "Rock"
+        ],
+        "item_colors": {
+            "gray": 271
+        },
+        "rarity": "Rare",
+        "pixels_offset": [
+            2,
+            -18
+        ],
+        "healthPointsIncrement": 35,
+        "powerBoost": 55,
+        "skillBoost": 0,
+        "reachBoost": 0,
+        "energyBoost": -20,
+        "luckBoost": 90,
+        "weightIncrement": 15
+    },
+    {
+        "clothing_type": "robe",
+        "name": "Umberstone Robe of Sorcery",
+        "sprite": "robe-80.png",
+        "id_string": "ROBE-T1-G006-N02",
+        "element_type": [
+            "Earth"
+        ],
+        "item_colors": {
+            "brown": 271
+        },
+        "rarity": "Epic",
+        "pixels_offset": [
+            2,
+            -18
+        ],
+        "healthPointsIncrement": 40,
+        "powerBoost": 25,
+        "skillBoost": -15,
+        "reachBoost": 55,
+        "energyBoost": 15,
+        "luckBoost": -20,
+        "weightIncrement": 10
+    },
+    {
+        "clothing_type": "robe",
+        "name": "Skyborne Robe of Sorcery",
+        "sprite": "robe-79.png",
+        "id_string": "ROBE-T1-G006-N03",
+        "element_type": [
+            "Air"
+        ],
+        "item_colors": {
+            "sky_blue": 271
+        },
+        "rarity": "Legendary",
+        "pixels_offset": [
+            2,
+            -18
+        ],
+        "healthPointsIncrement": 45,
+        "powerBoost": 15,
+        "skillBoost": 55,
+        "reachBoost": 30,
+        "energyBoost": 20,
+        "luckBoost": 0,
+        "weightIncrement": 5
     },
     {
         "clothing_type": "robe",
@@ -2909,13 +2981,13 @@
             4,
             -17
         ],
-        "healthPointsIncrement": 95,
+        "healthPointsIncrement": 35,
         "powerBoost": -20,
         "skillBoost": -35,
         "reachBoost": 0,
         "energyBoost": 40,
         "luckBoost": 65,
-        "weightIncrement": 70
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -2935,13 +3007,13 @@
             4,
             -17
         ],
-        "healthPointsIncrement": 80,
+        "healthPointsIncrement": 35,
         "powerBoost": 45,
         "skillBoost": -15,
         "reachBoost": -25,
         "energyBoost": 20,
         "luckBoost": 15,
-        "weightIncrement": 40
+        "weightIncrement": 10
     },
     {
         "clothing_type": "robe",
@@ -2961,13 +3033,13 @@
             4,
             -17
         ],
-        "healthPointsIncrement": 95,
+        "healthPointsIncrement": 40,
         "powerBoost": 25,
         "skillBoost": 15,
         "reachBoost": 0,
         "energyBoost": 45,
         "luckBoost": 10,
-        "weightIncrement": 60
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -2987,13 +3059,13 @@
             3,
             -17
         ],
-        "healthPointsIncrement": 95,
+        "healthPointsIncrement": 45,
         "powerBoost": -20,
         "skillBoost": 30,
         "reachBoost": -35,
         "energyBoost": 10,
         "luckBoost": 15,
-        "weightIncrement": 55
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -3013,13 +3085,13 @@
             3,
             -17
         ],
-        "healthPointsIncrement": 75,
+        "healthPointsIncrement": 40,
         "powerBoost": -25,
         "skillBoost": 15,
         "reachBoost": -15,
         "energyBoost": 45,
         "luckBoost": 20,
-        "weightIncrement": 50
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -3039,13 +3111,13 @@
             3,
             -17
         ],
-        "healthPointsIncrement": 120,
+        "healthPointsIncrement": 55,
         "powerBoost": 45,
         "skillBoost": 30,
         "reachBoost": 15,
         "energyBoost": 20,
         "luckBoost": 15,
-        "weightIncrement": 70
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -3065,13 +3137,13 @@
             3,
             -18
         ],
-        "healthPointsIncrement": 75,
+        "healthPointsIncrement": 20,
         "powerBoost": -35,
         "skillBoost": 0,
         "reachBoost": -20,
         "energyBoost": 50,
         "luckBoost": 0,
-        "weightIncrement": 55
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -3091,13 +3163,13 @@
             3,
             -18
         ],
-        "healthPointsIncrement": 85,
+        "healthPointsIncrement": 25,
         "powerBoost": 90,
         "skillBoost": -25,
         "reachBoost": 0,
         "energyBoost": 55,
         "luckBoost": -15,
-        "weightIncrement": 65
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -3117,13 +3189,13 @@
             3,
             -18
         ],
-        "healthPointsIncrement": 55,
+        "healthPointsIncrement": 15,
         "powerBoost": -30,
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": 0,
-        "weightIncrement": 70
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -3143,13 +3215,13 @@
             3,
             -18
         ],
-        "healthPointsIncrement": 105,
+        "healthPointsIncrement": 35,
         "powerBoost": 40,
         "skillBoost": -35,
         "reachBoost": 0,
         "energyBoost": 65,
         "luckBoost": -20,
-        "weightIncrement": 55
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -3169,13 +3241,13 @@
             3,
             -18
         ],
-        "healthPointsIncrement": 140,
+        "healthPointsIncrement": 50,
         "powerBoost": 55,
         "skillBoost": 25,
         "reachBoost": -20,
         "energyBoost": 15,
         "luckBoost": -15,
-        "weightIncrement": 50
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -3195,13 +3267,13 @@
             3,
             -18
         ],
-        "healthPointsIncrement": 135,
+        "healthPointsIncrement": 50,
         "powerBoost": 20,
         "skillBoost": 15,
         "reachBoost": 45,
         "energyBoost": 30,
         "luckBoost": 15,
-        "weightIncrement": 70
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -3221,13 +3293,13 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 115,
+        "healthPointsIncrement": 45,
         "powerBoost": -20,
         "skillBoost": -35,
         "reachBoost": 30,
         "energyBoost": 15,
         "luckBoost": 10,
-        "weightIncrement": 45
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -3247,13 +3319,13 @@
             2,
             -19
         ],
-        "healthPointsIncrement": 135,
+        "healthPointsIncrement": 55,
         "powerBoost": -20,
         "skillBoost": -15,
         "reachBoost": 55,
         "energyBoost": 25,
         "luckBoost": 15,
-        "weightIncrement": 65
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -3273,13 +3345,13 @@
             2,
             -19
         ],
-        "healthPointsIncrement": 100,
+        "healthPointsIncrement": 40,
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": -30,
         "energyBoost": 25,
         "luckBoost": 40,
-        "weightIncrement": 80
+        "weightIncrement": 25
     },
     {
         "clothing_type": "robe",
@@ -3299,13 +3371,13 @@
             3,
             -18
         ],
-        "healthPointsIncrement": 140,
+        "healthPointsIncrement": 35,
         "powerBoost": 90,
         "skillBoost": 0,
         "reachBoost": -20,
         "energyBoost": 0,
         "luckBoost": 55,
-        "weightIncrement": 70
+        "weightIncrement": 10
     },
     {
         "clothing_type": "robe",
@@ -3325,13 +3397,13 @@
             3,
             -18
         ],
-        "healthPointsIncrement": 130,
+        "healthPointsIncrement": 35,
         "powerBoost": -20,
         "skillBoost": 25,
         "reachBoost": 15,
         "energyBoost": 55,
         "luckBoost": -15,
-        "weightIncrement": 75
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -3351,13 +3423,13 @@
             4,
             -18
         ],
-        "healthPointsIncrement": 150,
+        "healthPointsIncrement": 45,
         "powerBoost": 0,
         "skillBoost": 15,
         "reachBoost": 55,
         "energyBoost": 30,
         "luckBoost": 20,
-        "weightIncrement": 80
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -3377,13 +3449,13 @@
             3,
             -17
         ],
-        "healthPointsIncrement": 125,
+        "healthPointsIncrement": 35,
         "powerBoost": 0,
         "skillBoost": 65,
         "reachBoost": -20,
         "energyBoost": 40,
         "luckBoost": -35,
-        "weightIncrement": 55
+        "weightIncrement": 10
     },
     {
         "clothing_type": "robe",
@@ -3403,13 +3475,13 @@
             3,
             -17
         ],
-        "healthPointsIncrement": 185,
+        "healthPointsIncrement": 60,
         "powerBoost": -10,
         "skillBoost": 55,
         "reachBoost": 20,
         "energyBoost": 15,
         "luckBoost": 30,
-        "weightIncrement": 90
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -3429,13 +3501,13 @@
             3,
             -17
         ],
-        "healthPointsIncrement": 100,
+        "healthPointsIncrement": 30,
         "powerBoost": 0,
         "skillBoost": 30,
         "reachBoost": -30,
         "energyBoost": 0,
         "luckBoost": 0,
-        "weightIncrement": 80
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -3455,13 +3527,13 @@
             4,
             -19
         ],
-        "healthPointsIncrement": 125,
+        "healthPointsIncrement": 20,
         "powerBoost": -20,
         "skillBoost": 15,
         "reachBoost": 10,
         "energyBoost": 35,
         "luckBoost": 20,
-        "weightIncrement": 85
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -3481,13 +3553,13 @@
             4,
             -19
         ],
-        "healthPointsIncrement": 180,
+        "healthPointsIncrement": 35,
         "powerBoost": -20,
         "skillBoost": 55,
         "reachBoost": 15,
         "energyBoost": 25,
         "luckBoost": -15,
-        "weightIncrement": 90
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -3507,13 +3579,13 @@
             4,
             -19
         ],
-        "healthPointsIncrement": 135,
+        "healthPointsIncrement": 20,
         "powerBoost": -30,
         "skillBoost": 40,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": 25,
-        "weightIncrement": 70
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -3533,13 +3605,13 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 170,
+        "healthPointsIncrement": 40,
         "powerBoost": 55,
         "skillBoost": 0,
         "reachBoost": -20,
         "energyBoost": 90,
         "luckBoost": 0,
-        "weightIncrement": 65
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -3559,13 +3631,13 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 185,
+        "healthPointsIncrement": 50,
         "powerBoost": 30,
         "skillBoost": 20,
         "reachBoost": -10,
         "energyBoost": 55,
         "luckBoost": 15,
-        "weightIncrement": 80
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -3585,13 +3657,13 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 115,
+        "healthPointsIncrement": 20,
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": -30,
         "luckBoost": 0,
-        "weightIncrement": 85
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -3611,13 +3683,13 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 160,
+        "healthPointsIncrement": 40,
         "powerBoost": -20,
         "skillBoost": -35,
         "reachBoost": 0,
         "energyBoost": 65,
         "luckBoost": 40,
-        "weightIncrement": 80
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -3637,13 +3709,13 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 160,
+        "healthPointsIncrement": 45,
         "powerBoost": -15,
         "skillBoost": 45,
         "reachBoost": -25,
         "energyBoost": 20,
         "luckBoost": 15,
-        "weightIncrement": 75
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -3663,13 +3735,13 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 185,
+        "healthPointsIncrement": 55,
         "powerBoost": 10,
         "skillBoost": 45,
         "reachBoost": 0,
         "energyBoost": 25,
         "luckBoost": 15,
-        "weightIncrement": 60
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -3689,13 +3761,13 @@
             2,
             -17
         ],
-        "healthPointsIncrement": 60,
+        "healthPointsIncrement": 25,
         "powerBoost": 15,
         "skillBoost": -35,
         "reachBoost": -20,
         "energyBoost": 30,
         "luckBoost": 10,
-        "weightIncrement": 60
+        "weightIncrement": 25
     },
     {
         "clothing_type": "robe",
@@ -3715,13 +3787,13 @@
             2,
             -17
         ],
-        "healthPointsIncrement": 80,
+        "healthPointsIncrement": 30,
         "powerBoost": 45,
         "skillBoost": -15,
         "reachBoost": -25,
         "energyBoost": 20,
         "luckBoost": 15,
-        "weightIncrement": 35
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -3741,13 +3813,13 @@
             2,
             -17
         ],
-        "healthPointsIncrement": 105,
+        "healthPointsIncrement": 40,
         "powerBoost": 15,
         "skillBoost": 15,
         "reachBoost": 45,
         "energyBoost": 20,
         "luckBoost": 30,
-        "weightIncrement": 50
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -3767,13 +3839,13 @@
             2,
             -17
         ],
-        "healthPointsIncrement": 70,
+        "healthPointsIncrement": 35,
         "powerBoost": 50,
         "skillBoost": -20,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": -35,
-        "weightIncrement": 45
+        "weightIncrement": 10
     },
     {
         "clothing_type": "robe",
@@ -3793,13 +3865,13 @@
             2,
             -17
         ],
-        "healthPointsIncrement": 95,
+        "healthPointsIncrement": 40,
         "powerBoost": 55,
         "skillBoost": -15,
         "reachBoost": 0,
         "energyBoost": -25,
         "luckBoost": 90,
-        "weightIncrement": 70
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -3819,13 +3891,13 @@
             2,
             -17
         ],
-        "healthPointsIncrement": 70,
+        "healthPointsIncrement": 30,
         "powerBoost": 0,
         "skillBoost": -30,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": 0,
-        "weightIncrement": 60
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -3845,13 +3917,13 @@
             2,
             -19
         ],
-        "healthPointsIncrement": 95,
+        "healthPointsIncrement": 20,
         "powerBoost": 0,
         "skillBoost": -35,
         "reachBoost": 40,
         "energyBoost": -20,
         "luckBoost": 65,
-        "weightIncrement": 45
+        "weightIncrement": 10
     },
     {
         "clothing_type": "robe",
@@ -3871,13 +3943,13 @@
             2,
             -19
         ],
-        "healthPointsIncrement": 110,
+        "healthPointsIncrement": 30,
         "powerBoost": -15,
         "skillBoost": -20,
         "reachBoost": 25,
         "energyBoost": 15,
         "luckBoost": 55,
-        "weightIncrement": 40
+        "weightIncrement": 10
     },
     {
         "clothing_type": "robe",
@@ -3897,13 +3969,13 @@
             2,
             -19
         ],
-        "healthPointsIncrement": 115,
+        "healthPointsIncrement": 35,
         "powerBoost": 45,
         "skillBoost": 15,
         "reachBoost": 30,
         "energyBoost": 20,
         "luckBoost": 15,
-        "weightIncrement": 40
+        "weightIncrement": 10
     },
     {
         "clothing_type": "robe",
@@ -3923,13 +3995,13 @@
             2,
             -17
         ],
-        "healthPointsIncrement": 70,
+        "healthPointsIncrement": 25,
         "powerBoost": -20,
         "skillBoost": 30,
         "reachBoost": 10,
         "energyBoost": -35,
         "luckBoost": 15,
-        "weightIncrement": 70
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -3949,13 +4021,13 @@
             2,
             -17
         ],
-        "healthPointsIncrement": 130,
+        "healthPointsIncrement": 40,
         "powerBoost": -20,
         "skillBoost": 15,
         "reachBoost": 55,
         "energyBoost": -15,
         "luckBoost": 25,
-        "weightIncrement": 50
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -3975,13 +4047,13 @@
             2,
             -17
         ],
-        "healthPointsIncrement": 90,
+        "healthPointsIncrement": 25,
         "powerBoost": -30,
         "skillBoost": 0,
         "reachBoost": 25,
         "energyBoost": 0,
         "luckBoost": 40,
-        "weightIncrement": 55
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -4001,13 +4073,13 @@
             3,
             -16
         ],
-        "healthPointsIncrement": 105,
+        "healthPointsIncrement": 40,
         "powerBoost": 55,
         "skillBoost": 0,
         "reachBoost": 90,
         "energyBoost": 0,
         "luckBoost": -20,
-        "weightIncrement": 55
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -4027,13 +4099,13 @@
             3,
             -16
         ],
-        "healthPointsIncrement": 120,
+        "healthPointsIncrement": 50,
         "powerBoost": -20,
         "skillBoost": 25,
         "reachBoost": -15,
         "energyBoost": 55,
         "luckBoost": 15,
-        "weightIncrement": 75
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -4053,13 +4125,13 @@
             3,
             -16
         ],
-        "healthPointsIncrement": 160,
+        "healthPointsIncrement": 60,
         "powerBoost": 0,
         "skillBoost": 55,
         "reachBoost": 20,
         "energyBoost": 30,
         "luckBoost": 15,
-        "weightIncrement": 80
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -4079,13 +4151,13 @@
             4,
             -17
         ],
-        "healthPointsIncrement": 110,
+        "healthPointsIncrement": 20,
         "powerBoost": 0,
         "skillBoost": 65,
         "reachBoost": -20,
         "energyBoost": -35,
         "luckBoost": 40,
-        "weightIncrement": 65
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -4105,13 +4177,13 @@
             4,
             -17
         ],
-        "healthPointsIncrement": 135,
+        "healthPointsIncrement": 35,
         "powerBoost": -10,
         "skillBoost": 15,
         "reachBoost": 30,
         "energyBoost": 55,
         "luckBoost": 20,
-        "weightIncrement": 75
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -4131,13 +4203,13 @@
             4,
             -17
         ],
-        "healthPointsIncrement": 125,
+        "healthPointsIncrement": 20,
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": -30,
         "energyBoost": 0,
         "luckBoost": 30,
-        "weightIncrement": 55
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -4157,13 +4229,13 @@
             3,
             -16
         ],
-        "healthPointsIncrement": 140,
+        "healthPointsIncrement": 40,
         "powerBoost": 10,
         "skillBoost": 20,
         "reachBoost": -20,
         "energyBoost": 15,
         "luckBoost": 35,
-        "weightIncrement": 50
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -4183,13 +4255,13 @@
             3,
             -16
         ],
-        "healthPointsIncrement": 140,
+        "healthPointsIncrement": 45,
         "powerBoost": 55,
         "skillBoost": -15,
         "reachBoost": -20,
         "energyBoost": 25,
         "luckBoost": 15,
-        "weightIncrement": 60
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -4209,13 +4281,13 @@
             3,
             -16
         ],
-        "healthPointsIncrement": 140,
+        "healthPointsIncrement": 35,
         "powerBoost": -30,
         "skillBoost": 25,
         "reachBoost": 0,
         "energyBoost": 40,
         "luckBoost": 0,
-        "weightIncrement": 85
+        "weightIncrement": 25
     },
     {
         "clothing_type": "robe",
@@ -4237,13 +4309,13 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 75,
+        "healthPointsIncrement": 30,
         "powerBoost": -20,
         "skillBoost": 0,
         "reachBoost": -35,
         "energyBoost": 40,
         "luckBoost": 65,
-        "weightIncrement": 60
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -4265,13 +4337,13 @@
             2,
             -19
         ],
-        "healthPointsIncrement": 100,
+        "healthPointsIncrement": 40,
         "powerBoost": -15,
         "skillBoost": -25,
         "reachBoost": 45,
         "energyBoost": 20,
         "luckBoost": 15,
-        "weightIncrement": 70
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -4293,13 +4365,13 @@
             2,
             -19
         ],
-        "healthPointsIncrement": 105,
+        "healthPointsIncrement": 45,
         "powerBoost": 25,
         "skillBoost": 0,
         "reachBoost": 45,
         "energyBoost": 15,
         "luckBoost": 10,
-        "weightIncrement": 45
+        "weightIncrement": 10
     },
     {
         "clothing_type": "robe",
@@ -4321,13 +4393,13 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 70,
+        "healthPointsIncrement": 40,
         "powerBoost": -20,
         "skillBoost": 10,
         "reachBoost": -35,
         "energyBoost": 30,
         "luckBoost": 15,
-        "weightIncrement": 65
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -4349,13 +4421,13 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 90,
+        "healthPointsIncrement": 45,
         "powerBoost": -15,
         "skillBoost": 15,
         "reachBoost": -25,
         "energyBoost": 45,
         "luckBoost": 20,
-        "weightIncrement": 60
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -4377,13 +4449,13 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 110,
+        "healthPointsIncrement": 55,
         "powerBoost": 20,
         "skillBoost": 15,
         "reachBoost": 45,
         "energyBoost": 15,
         "luckBoost": 30,
-        "weightIncrement": 55
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -4405,13 +4477,13 @@
             2,
             -19
         ],
-        "healthPointsIncrement": 125,
+        "healthPointsIncrement": 30,
         "powerBoost": 0,
         "skillBoost": -20,
         "reachBoost": -35,
         "energyBoost": 50,
         "luckBoost": 0,
-        "weightIncrement": 75
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -4433,13 +4505,13 @@
             2,
             -19
         ],
-        "healthPointsIncrement": 105,
+        "healthPointsIncrement": 30,
         "powerBoost": 55,
         "skillBoost": 0,
         "reachBoost": -15,
         "energyBoost": 90,
         "luckBoost": -25,
-        "weightIncrement": 55
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -4461,13 +4533,13 @@
             2,
             -19
         ],
-        "healthPointsIncrement": 85,
+        "healthPointsIncrement": 20,
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": -30,
         "energyBoost": 0,
         "luckBoost": 0,
-        "weightIncrement": 65
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -4489,13 +4561,13 @@
             2,
             -16
         ],
-        "healthPointsIncrement": 85,
+        "healthPointsIncrement": 30,
         "powerBoost": 40,
         "skillBoost": -20,
         "reachBoost": -35,
         "energyBoost": 65,
         "luckBoost": 0,
-        "weightIncrement": 70
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -4517,13 +4589,13 @@
             2,
             -16
         ],
-        "healthPointsIncrement": 115,
+        "healthPointsIncrement": 45,
         "powerBoost": 55,
         "skillBoost": 25,
         "reachBoost": -15,
         "energyBoost": 15,
         "luckBoost": -20,
-        "weightIncrement": 50
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -4545,13 +4617,13 @@
             2,
             -16
         ],
-        "healthPointsIncrement": 155,
+        "healthPointsIncrement": 55,
         "powerBoost": 15,
         "skillBoost": 45,
         "reachBoost": 30,
         "energyBoost": 15,
         "luckBoost": 20,
-        "weightIncrement": 80
+        "weightIncrement": 25
     },
     {
         "clothing_type": "robe",
@@ -4573,13 +4645,13 @@
             2,
             -17
         ],
-        "healthPointsIncrement": 125,
+        "healthPointsIncrement": 45,
         "powerBoost": 15,
         "skillBoost": -35,
         "reachBoost": 30,
         "energyBoost": 10,
         "luckBoost": -20,
-        "weightIncrement": 55
+        "weightIncrement": 20
     },
     {
         "clothing_type": "robe",
@@ -4601,13 +4673,13 @@
             2,
             -17
         ],
-        "healthPointsIncrement": 150,
+        "healthPointsIncrement": 60,
         "powerBoost": 15,
         "skillBoost": -20,
         "reachBoost": 55,
         "energyBoost": 25,
         "luckBoost": -15,
-        "weightIncrement": 45
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -4629,13 +4701,13 @@
             2,
             -17
         ],
-        "healthPointsIncrement": 85,
+        "healthPointsIncrement": 35,
         "powerBoost": 0,
         "skillBoost": -30,
         "reachBoost": 0,
         "energyBoost": 25,
         "luckBoost": 40,
-        "weightIncrement": 70
+        "weightIncrement": 25
     },
     {
         "clothing_type": "robe",
@@ -4657,13 +4729,13 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 135,
+        "healthPointsIncrement": 35,
         "powerBoost": 55,
         "skillBoost": -20,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": 90,
-        "weightIncrement": 55
+        "weightIncrement": 10
     },
     {
         "clothing_type": "robe",
@@ -4685,13 +4757,13 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 145,
+        "healthPointsIncrement": 40,
         "powerBoost": -15,
         "skillBoost": 25,
         "reachBoost": 55,
         "energyBoost": 15,
         "luckBoost": -20,
-        "weightIncrement": 65
+        "weightIncrement": 10
     },
     {
         "clothing_type": "robe",
@@ -4713,13 +4785,13 @@
             2,
             -18
         ],
-        "healthPointsIncrement": 140,
+        "healthPointsIncrement": 40,
         "powerBoost": 55,
         "skillBoost": 30,
         "reachBoost": 20,
         "energyBoost": 15,
         "luckBoost": 0,
-        "weightIncrement": 60
+        "weightIncrement": 10
     },
     {
         "clothing_type": "robe",
@@ -4741,13 +4813,13 @@
             2,
             -19
         ],
-        "healthPointsIncrement": 125,
+        "healthPointsIncrement": 35,
         "powerBoost": -20,
         "skillBoost": 40,
         "reachBoost": 0,
         "energyBoost": 65,
         "luckBoost": -35,
-        "weightIncrement": 55
+        "weightIncrement": 10
     },
     {
         "clothing_type": "robe",
@@ -4769,13 +4841,13 @@
             2,
             -19
         ],
-        "healthPointsIncrement": 165,
+        "healthPointsIncrement": 55,
         "powerBoost": 55,
         "skillBoost": 30,
         "reachBoost": -10,
         "energyBoost": 20,
         "luckBoost": 15,
-        "weightIncrement": 75
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -4797,13 +4869,13 @@
             2,
             -19
         ],
-        "healthPointsIncrement": 130,
+        "healthPointsIncrement": 35,
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": 30,
         "luckBoost": -30,
-        "weightIncrement": 60
+        "weightIncrement": 10
     },
     {
         "clothing_type": "robe",
@@ -4825,13 +4897,13 @@
             3,
             -18
         ],
-        "healthPointsIncrement": 150,
+        "healthPointsIncrement": 30,
         "powerBoost": 20,
         "skillBoost": 10,
         "reachBoost": 35,
         "energyBoost": 15,
         "luckBoost": -20,
-        "weightIncrement": 70
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -4853,13 +4925,13 @@
             3,
             -18
         ],
-        "healthPointsIncrement": 185,
+        "healthPointsIncrement": 35,
         "powerBoost": -20,
         "skillBoost": 55,
         "reachBoost": 25,
         "energyBoost": 15,
         "luckBoost": -15,
-        "weightIncrement": 65
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -4881,13 +4953,13 @@
             3,
             -18
         ],
-        "healthPointsIncrement": 130,
+        "healthPointsIncrement": 15,
         "powerBoost": 0,
         "skillBoost": 25,
         "reachBoost": -30,
         "energyBoost": 0,
         "luckBoost": 40,
-        "weightIncrement": 55
+        "weightIncrement": 10
     },
     {
         "clothing_type": "robe",
@@ -4909,13 +4981,13 @@
             4,
             -17
         ],
-        "healthPointsIncrement": 165,
+        "healthPointsIncrement": 40,
         "powerBoost": 55,
         "skillBoost": -20,
         "reachBoost": 0,
         "energyBoost": 90,
         "luckBoost": 0,
-        "weightIncrement": 70
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -4937,13 +5009,13 @@
             4,
             -17
         ],
-        "healthPointsIncrement": 170,
+        "healthPointsIncrement": 45,
         "powerBoost": 20,
         "skillBoost": -10,
         "reachBoost": 15,
         "energyBoost": 55,
         "luckBoost": 30,
-        "weightIncrement": 75
+        "weightIncrement": 15
     },
     {
         "clothing_type": "robe",
@@ -4965,12 +5037,12 @@
             4,
             -17
         ],
-        "healthPointsIncrement": 140,
+        "healthPointsIncrement": 25,
         "powerBoost": 0,
         "skillBoost": 0,
         "reachBoost": 0,
         "energyBoost": 0,
         "luckBoost": -30,
-        "weightIncrement": 90
+        "weightIncrement": 20
     }
 ]

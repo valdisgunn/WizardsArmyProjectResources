@@ -1,6 +1,6 @@
 
 '''
-Python script used to generate items based on sprites in the "./Sprites/" folder, and store their values into JSON files.
+Python script used to generate clothing items based on sprites in the "./Sprites/" folder, and store their values into JSON files.
 '''
 
 import os
@@ -10,6 +10,8 @@ import math
 import json
 import argparse
 import random	# used to shuffle things with a seed
+import datetime
+import shutil	# used to copy files
 random.seed(14)	# set the seed to "14" to get the same scrambled lists and things every time
 				# NOTE: DON'T CHANGE THIS SEED (otherwise, all new items will be generated with different names than previous items which are supposed to remain the same, and possibly also different stats, types, rarities, ecc...)
 
@@ -18,6 +20,7 @@ random.seed(14)	# set the seed to "14" to get the same scrambled lists and thing
 JSON_ITEMS_DIRECTORY = "./item_json_files/"
 
 JSON_CLOTHING_ITEMS_FILE_NAME = "clothing_items.json"
+JSON_STAFF_ITEMS_FILE_NAME = "staff_items.json"
 
 # Used to map names of clothing pieces (hat and robes) which shouldn't be named as the default "Hat" or "Robe"
 TYPES_GROUPS_CLOTHING_PIECE_NAME_MAPPINGS = {
@@ -906,68 +909,52 @@ GENERAL_EPITHETS = [
 # Scramble the epithets list deterministically
 random.shuffle(GENERAL_EPITHETS)
 
-# Get command line arguments ("--ignore-old-items-differences", ...)
+# Get command line arguments ("--ignore-old-items-differences", "--items", "--staffs")
 parser = argparse.ArgumentParser()
 parser.add_argument("--ignore-old-items-differences", action="store_true")
+parser.add_argument("--clothes", action="store_true")
+parser.add_argument("--staffs", action="store_true")
 args = parser.parse_args()
 
 # Used to sort items by their sprite name
-def get_fixed_item_sprite_name(sprite_name):
+def get_fixed_item_sprite_number(sprite_name):
 	name = sprite_name.split(".")[0]
 	# check if the sprite contains "-"
-	if "-" in name:
-		# get the number after the "-"
-		return name.split("-")[1].zfill(3)
+	if (("hat" in name or "robe" in name) and "-" in name) or ("staff" in name and name.count("-") >= 2):
+		# get the number after the last "-"
+		return name.split("-")[-1].zfill(3)
 	else:
 		# get the number after the "_"
 		return "1".zfill(3)
 
 def main():
 
+	if not args.clothes and not args.staffs:
+		print("\nERROR: Missing command line arguments...\n" + \
+			"Appendable Arguments:\n\n" + \
+			"\t--clothes\n" + \
+			"\t  Create clothing items (hats and robes)\n\n" + \
+			"\t--staffs\n" + \
+			"\t  Create staff items\n\n" + \
+			"\t--ignore-old-items-differences\n" + \
+			"\t  Use in combination with one of the arguments above to overwrite any already\n" + \
+			"\t    assigned attribute and value for already created items.\n" + \
+			"\t  NOTE: this is meant to be used when not wanting to simply add new items to the\n" + \
+			"\t    JSON list of clothing/staff items, but when in need of changing actual stats or\n" + \
+			"\t    names of items, for rebalancing purposes or error corrections.\n" + \
+			"\t  This means that stats of clothing/staff items that were already set and used in \n" + \
+			"\t    the game will be overwitten (and possibly stored in the backup file for clothes/items).\n"
+		)
+		return
+
 	# Get the list of file names in the "./Sprites/" folder.
 	sprites = os.listdir("./Sprites/")
 
-	# create dictionaries to store hats and robes
+	# create a dictionary list to store hats and robes
 	clothing_items = []
 
-	'''
-	Hats and robes objects have the following attributes:
-
-	item = {
-		
-		(DONE) "clothing_type": string,			// Type of clothing (either "hat" or "robe")
-
-		(DONE) "name": string,						// Name of the item
-		(DONE) "sprite": string,					// Name of the sprite file (e.g. "hat-1.png")
-
-		(DONE) "id_string": string,				// String used to identify the items (e.g. "HAT-T1-G001-N01")
-												// NOTE: We have id constricted as follows:
-												//		- first string is the type of item (either "HAT" or "ROBE")
-												//		- second string is the number of element types of the item (either "T1", "T2" or "T3")
-												//		- third string is the group number (group of 3 items) of the item (since each item usually has 3 color variations, but i may bump it to more color variations...)
-												//		- fourth string is the number of the item in the group (usually from 1 to 3, but I could even have more in the future, so I keep it padded with 2 digits, hence we will usually have only "01", "02" or "03" for now)
-
-
-		(DONE) "element_type": string[],			// List of element types of the item (list of string values in list [Darkness, Rock, Light, Earth, Fire, Thunder, Nature, Air, Water, Poison]) sorted from most frequent to least frequent associated pixel color in the sprite
-		(DONE) "item_colors": {					// Pixel palette colors (dictionary containing the name of the color (key) and the number of pixels of that color (value)) in the item's sprite
-				"red": int,							// Color name (in list [black, gray, white, brown, red, yellow, green, sky_blue, blue, purple]) and its associated number of pixels in the sprite
-				"...": int,							// ...
-			}
-
-		(DONE) "rarity": int,						// Rarity of the item, int in range [1-6]
-
-		"pixels_offset": [int, int],		// X and Y offsets of the image (such that the item's image sprite is centered)
-
-		"healthPointsIncrement": float,		// ...
-		"powerBoost": float,				// ...
-		"skillBoost": float,				// ...
-		"reachBoost": float,				// ...
-		"energyBoost": float,				// ...
-		"luckBoost": float,					// ...
-		"weightIncrement": float,			// ...
-	}
-
-	'''
+	# create a dictionary list to store staffs
+	staff_items = []
 
 	# Iterate through the sprites
 	for sprite_name in sprites:
@@ -985,30 +972,122 @@ def main():
 			# Create and add a new clothing item
 			clothing_items.append(initialize_clothing_item(sprite_name, item_type))
 		elif item_type == "staff":
-			# TO IMPLEMENT
+			# Create and add a new staff item
+			staff_items.append(initialize_staff_item(sprite_name))
 			continue
 		elif item_type == "book":
-			# TO IMPLEMENT
+			# do nothing for now...
 			continue
 
-	# Add the "id_string" to clothing items
+	if args.clothes:
+		# Create clothing items
+		create_clothing_items(clothing_items)
+
+	if args.staffs:
+		# Create staff items
+		create_staff_items(staff_items)
+
+def initialize_clothing_item(sprite_name, item_type):
+
+	# create a new item
+	item = get_empty_clothing_item()
+
+	# set the clothing type
+	item["clothing_type"] = item_type
+
+	# set the sprite
+	item["sprite"] = sprite_name
+
+	# get the element types of the item
+	item["element_type"], item["item_colors"], item["pixels_offset"] = get_image_based_item_values(sprite_name)
+
+	# NOTE: the "id_string", "name" and "rarity" attributes will be set later, after all the items have been initialized
+	# Also, does't set the stats of the item, since they will be set later, after all the items have been initialized (using rarity, id string, ecc... for random values generation)
+
+	return item
+
+def get_empty_clothing_item():
+	return {
+		"clothing_type": "",
+		"name": "",
+		"sprite": "",
+		"id_string": "",
+		"element_type": [],
+		"item_colors": {},
+		"rarity": 0,
+		"pixels_offset": [0, 0],
+		"healthPointsIncrement": 0,
+		"powerBoost": 0,
+		"skillBoost": 0,
+		"reachBoost": 0,
+		"energyBoost": 0,
+		"luckBoost": 0,
+		"weightIncrement": 0,
+	}
+
+def create_clothing_items(clothing_items):
+
+	'''
+	Creates clothing items (hats and robes) from the given initialized clothing items list (which contains the sprite name and the item type).
+
+	Then saves the clothing items in the "clothing_items.json" file.
+
+	Hats and robes objects have the following attributes:
+
+	item = {
+		
+		"clothing_type": string,			// Type of clothing (either "hat" or "robe")
+
+		"name": string,						// Name of the item
+		"sprite": string,					// Name of the sprite file (e.g. "hat-1.png")
+
+		"id_string": string,				// String used to identify the items (e.g. "HAT-T1-G001-N01")
+												// NOTE: We have id constricted as follows:
+												//		- first string is the type of item (either "HAT" or "ROBE")
+												//		- second string is the number of element types of the item (either "T1", "T2" or "T3")
+												//		- third string is the group number (group of 3 items) of the item (since each item usually has 3 color variations, but i may bump it to more color variations...)
+												//		- fourth string is the number of the item in the group (usually from 1 to 3, but I could even have more in the future, so I keep it padded with 2 digits, hence we will usually have only "01", "02" or "03" for now)
+
+
+		"element_type": string[],			// List of element types of the item (list of string values in list [Darkness, Rock, Light, Earth, Fire, Thunder, Nature, Air, Water, Poison]) sorted from most frequent to least frequent associated pixel color in the sprite
+		"item_colors": {					// Pixel palette colors (dictionary containing the name of the color (key) and the number of pixels of that color (value)) in the item's sprite
+				"red": int,							// Color name (in list [black, gray, white, brown, red, yellow, green, sky_blue, blue, purple]) and its associated number of pixels in the sprite
+				"...": int,							// ...
+			}
+
+		"rarity": int,						// Rarity of the item, int in range [1-6]
+
+		"pixels_offset": [int, int],		// X and Y offsets of the image (such that the item's image sprite is centered)
+
+		"healthPointsIncrement": float,		// ...
+		"powerBoost": float,				// ...
+		"skillBoost": float,				// ...
+		"reachBoost": float,				// ...
+		"energyBoost": float,				// ...
+		"luckBoost": float,					// ...
+		"weightIncrement": float,			// ...
+	}
+
+	'''
+
+	# Update the dictionary list for hats and robes by initializing main attributes
 	clothing_items = generate_clothing_items_attributes(clothing_items)
 
 	# sort items by their id_string
 	clothing_items.sort(key=lambda item: item["id_string"])
 
-	def get_item_string(item, ignore_unset_stats = False, print_in_json_format = True):
-		default_item = get_empty_clothing_item()
+	def get_clothing_item_string(item, ignore_unset_stats = False):
+		default_clothing_item = get_empty_clothing_item()
 		items_string = ""
 		items_string += item["id_string"] + ": " + "\n"
 		for key in item:
-			if item[key] != default_item[key] or not ignore_unset_stats:
+			if item[key] != default_clothing_item[key] or not ignore_unset_stats:
 				items_string += "\t" + key + ": " + str(item[key]) + "\n"
 		return items_string
 
 	# Print items on console
 	for item in clothing_items:
-		print(get_item_string(item, False, False))
+		print(get_clothing_item_string(item, False))
 
 	def get_compact_item_string(item):
 		items_string = ""
@@ -1104,10 +1183,10 @@ def main():
 			# Sort all items in the groups by their fixed sprite name
 			for clothing_type in grouped_old_items:
 				for item_type in grouped_old_items[clothing_type]:
-					grouped_old_items[clothing_type][item_type].sort(key=lambda item: get_fixed_item_sprite_name(item["sprite"]), reverse=True)
+					grouped_old_items[clothing_type][item_type].sort(key=lambda item: get_fixed_item_sprite_number(item["sprite"]), reverse=True)
 			for clothing_type in grouped_new_items:
 				for item_type in grouped_new_items[clothing_type]:
-					grouped_new_items[clothing_type][item_type].sort(key=lambda item: get_fixed_item_sprite_name(item["sprite"]), reverse=True)
+					grouped_new_items[clothing_type][item_type].sort(key=lambda item: get_fixed_item_sprite_number(item["sprite"]), reverse=True)
 			# Compare the items in the JSON file with the new items
 			for clothing_type in grouped_old_items:
 				for item_type in grouped_old_items[clothing_type]:
@@ -1134,7 +1213,7 @@ def main():
 				print("\tOK: No differences in ordering found between the old items and the new items.")
 			else:
 				print("\n\t", "  NOTE: errors might be due to the fact that new items in the Photoshop file were created right next to old items, \n", 
-		  					"\t\tinstead of at the top of the list of layers for a specific hat's/robe's group of sprites \n",
+							"\t\tinstead of at the top of the list of layers for a specific hat's/robe's group of sprites \n",
 							"\t\t(grouped by number of elements).\n", 
 							"\t\tCheck the layers of the photoshop file before continuing, and if you find there are no errors there \n",
 							"\t\t(but this error is originated by something else), then re-run this script with parameter \n",
@@ -1146,22 +1225,35 @@ def main():
 
 	# Check if command line arguments contain "--ignore-old-items-differences", if it doesnt, terminate the script
 	if found_old_items_differences_with_new_items and not args.ignore_old_items_differences:
-		print("\n\n>>>>> NOTE: To overwrite the JSON file with the new items, run this script with parameter \"--ignore-old-items-differences\".\n")
-		return
+			# Found differences in the old items with the new items, but the user didn't specify to ignore them, so terminate the script 
+			print("\n\n>>>>> NOTE: To overwrite the JSON file with the new items, run this script with parameter \"--ignore-old-items-differences\".\n")
+			return
 		
 	# Print items in JSON file (create file if it doesn't exist)
 	json_file_path = JSON_ITEMS_DIRECTORY + JSON_CLOTHING_ITEMS_FILE_NAME
 	input_val = input("\n>>>>> Do you want to overwrite the file \"" + json_file_path + "\"? (Y/n): ")
 	if input_val == "Y":
+		# Create the directory if it doesn't exist
 		if not os.path.exists(JSON_ITEMS_DIRECTORY):
 			os.makedirs(JSON_ITEMS_DIRECTORY)
 		# Create a backup of the previous file (if it exists)
 		if os.path.exists(json_file_path):
+			# Create a backup of the previous file
 			backup_file_path = json_file_path + ".backup"
 			if os.path.exists(backup_file_path):
 				os.remove(backup_file_path)
-			os.rename(json_file_path, backup_file_path)
+			shutil.copy(json_file_path, backup_file_path)
 			print("\t[OK] Current file \"" + json_file_path + "\" backed up as \"" + backup_file_path + "\".")
+			# Create another backup if we are overwriting the file with new items (we never delete this backup file from here, we can only delete it manually)
+			if args.ignore_old_items_differences and found_old_items_differences_with_new_items:
+				# Append date, with format "YYYY-MM-DD-HH-MM" to the backup file name
+				backup_append_name = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M")
+				backup_file_path = json_file_path + "_before_overwrite_of_" + backup_append_name + ".backup"
+				if os.path.exists(backup_file_path):
+					os.remove(backup_file_path)
+				# Copy the current file into the new file
+				shutil.copy(json_file_path, backup_file_path)
+				print("\t[OK] Current file \"" + json_file_path + "\" also backed up as \"" + backup_file_path + "\" (because of overwriting).")
 		# Write the JSON file
 		with open(json_file_path, "w") as json_file:
 			# json_file.write("[\n")
@@ -1172,320 +1264,6 @@ def main():
 		print("\t[OK] File \"" + json_file_path + "\" overwritten.")
 	else:
 		print("\t[NO EDITS] File \"" + json_file_path + "\" was NOT overwritten.")
-
-def get_exclude_pixels_indexes_from_robes():
-	# Returns a set of [x,y] indexes of pixels to exclude when calculating the types of the robes,
-	# 	hence the pixels' colors not to consider when calculating the types of the hat or robe, which are
-	# 	the pixels with an alpha > 0 (i.e. not transparent pixels) of the "face" sprite.
-	# These pixels are the ones that will cover the robe, hence they should not be considered when calculating the types of the robe.
-
-	# Get the face image
-	image = PIL.Image.open("./Sprites/face.png")
-
-	# Get the size of the image
-	size = image.size
-
-	# Get the pixels of the image
-	pixels = image.load()
-
-	# Get the indexes of the pixels to exclude
-	exclude_pixels_indexes = []
-	for x in range(size[0]):
-		for y in range(size[1]):
-			if pixels[x, y][3] > 0:
-				exclude_pixels_indexes.append([x, y])
-
-	return exclude_pixels_indexes
-
-COVERED_PIXELS_FOR_ROBES = get_exclude_pixels_indexes_from_robes()
-
-COLOR_NAME_TO_ELEMENT_TYPE = {
-	"black": "Darkness",
-	"gray": "Rock",
-	"white": "Light",
-	"brown": "Earth",
-	"red": "Fire",
-	"yellow": "Thunder",
-	"green": "Nature",
-	"sky_blue": "Air",
-	"blue": "Water",
-	"purple": "Poison",
-}
-
-def get_image_based_item_values(sprite_name):
-	'''
-	Returns a triple with:
-		1) the element types of the item (list of string values in list [Darkness, Rock, Light, Earth, Fire, Thunder, Nature, Air, Water, Poison]) 
-		2) the pixel palette colors (dictionary containing the name of the color (key) and the number of pixels of that color (value)) of the item
-		3) the X and Y offset of the image (such that the image is centered)
-	'''
-	def rgb_to_hex(r, g, b):
-		return '#{:02x}{:02x}{:02x}'.format(r, g, b)
-	
-	# Get the image
-	image = PIL.Image.open("./Sprites/" + sprite_name)
-
-	# Get the size of the image
-	size = image.size
-
-	# Get the pixels of the image
-	pixels = image.load()
-
-	# Palette of possible colors in the image
-	palette_hex = {
-		"black": ["#4d4d4d", "#333333", "#1a1a1a"],
-		"gray": ["#999999", "#808080", "#666666"],
-		"white": ["#e5e5e5", "#cccccc", "#b3b3b3"],
-		"brown": ["#b65327", "#964420", "#703318"],
-		"red": ["#ff4d3a", "#ff0000", "#ca0000"],
-		"yellow": ["#ffe326", "#ffcc00", "#d2a800"],
-		"green": ["#9cff5a", "#00ff0c", "#00ca0a"],
-		"sky_blue": ["#47d6ff", "#00bbf1", "#009ecc"],
-		"blue": ["#1400d4", "#1000aa", "#110079"],
-		"purple": ["#a018ff", "#8200dd", "#6200a6"],
-	}
-
-	# Cycle through the pixels of the image, and get the color of each pixel, adding it to the dictionary of colors for the image, along with the number of pixels of that color
-	colors = {}
-	for x in range(size[0]):
-		for y in range(size[1]):
-			# check if the pixel is covered by the face
-			if [x, y] in COVERED_PIXELS_FOR_ROBES and "robe" in sprite_name:
-				continue
-			color = pixels[x, y]	# tuple (r,g,b,a)
-			if color[3] == 0:	# if the pixel is transparent, skip it
-				continue
-			hex_color = rgb_to_hex(color[0], color[1], color[2])
-			# check if the hex color is in the palette_hex dictionary
-			color_name = ""
-			for color in palette_hex:
-				if hex_color in palette_hex[color]:
-					color_name = color
-					break
-			if color_name == "":
-				continue
-			if color_name in colors:
-				colors[color_name] += 1
-			else:
-				colors[color_name] = 1
-	
-	# To fill in the pixel palette colors (which contains all the colors of the palette that will determin the "types" or "elements" of the wizard hat or color) we only add the palette color (type/element) if the number of pixels of that color (in the hat/clothes sprite) is x >= pixel_colors_min_count
-	pixel_colors_min_count_for_hats = 2;	# Only sprites with a number of pixels GREATER OR EQUAL than this will have the associated color type/element added to the palette
-	pixel_colors_min_count_for_robes = 5;	# Only sprites with a number of pixels GREATER OR EQUAL than this will have the associated color type/element added to the palette
-
-	pixel_colors_min_count = pixel_colors_min_count_for_robes if "robe" in sprite_name else pixel_colors_min_count_for_hats
-
-	# Dictionary containing the nae of the color (key) and the number of pixels of that color (value)
-	pixel_palette_colors = {}
-	for color in colors:
-		if colors[color] >= pixel_colors_min_count:
-			pixel_palette_colors[color] = colors[color]
-
-	# Get the element types of the item (sorted from most frequent to least frequent associated pixel color in the sprite)
-	#get the list of colors sorted by number of pixels
-	sorted_colors = sorted(pixel_palette_colors, key=pixel_palette_colors.get, reverse=True)
-	element_types = []
-	for color in sorted_colors:
-		element_types.append(COLOR_NAME_TO_ELEMENT_TYPE[color])
-
-	# calculate how many transparent pixels are on the right and on the left of the image before the first pixel with a non-transparent pixel (in whatever column)
-	# to do this, first construct a list of size "size[0]" (width of the image) with all false values, then cycle through the pixels and set to true the value of the list at the index of the pixel's x coordinate
-	# then, cycle through the list and count the number of false values on the left and on the right of the list
-	horizontal_flatten_pixels = [False] * size[0]
-	vertical_flatten_pixels = [False] * size[1]
-	for x in range(size[0]):
-		for y in range(size[1]):
-			if pixels[x, y][3] > 0:
-				horizontal_flatten_pixels[x] = True
-				vertical_flatten_pixels[y] = True
-				break
-	transparent_pixels_on_the_right = 0
-	transparent_pixels_on_the_left = 0
-	for x in range(size[0]):
-		if horizontal_flatten_pixels[x]:
-			break
-		transparent_pixels_on_the_left += 1
-	for x in range(size[0] - 1, -1, -1):
-		if horizontal_flatten_pixels[x]:
-			break
-		transparent_pixels_on_the_right += 1
-	transparent_pixels_on_the_top = 0
-	transparent_pixels_on_the_bottom = 0
-	for y in range(size[1]):
-		if vertical_flatten_pixels[y]:
-			break
-		transparent_pixels_on_the_top += 1
-	for y in range(size[1] - 1, -1, -1):
-		if vertical_flatten_pixels[y]:
-			break
-		transparent_pixels_on_the_bottom += 1
-	# calculate an horizontal offset (in pixels) for the image such that the image is centered horizontally
-	horizontal_offset = -1 * round((float(transparent_pixels_on_the_left) - float(transparent_pixels_on_the_right)) / 2.0)
-	# calculate a vertical offset (in pixels) for the image such that the image is centered vertically
-	vertical_offset = -1 * round((float(transparent_pixels_on_the_top) - float(transparent_pixels_on_the_bottom)) / 2.0)
-	
-	return element_types, pixel_palette_colors, [horizontal_offset, vertical_offset]
-
-def get_rarities_values():
-	'''
-	Returns a dictionary with a string in the form "['Common', 'Rare', 'Epic']" as key and the rarity value as value, 
-		where the rarity value is a number between 1 and 10, where 10 is the most common rarity and 1 is the least 
-		common rarity.
-	The dictionary can be used to generate the rarity of the items, assinging to the 3 items the 3 rarities of an item
-		of the dictionary, based on how frequent the rarity combination is (hence based on the value associated to the 
-		rarity combination in the dictionary).
-	Also, since values are from 1 to 10, this means that I should consider at least 55 groups of 3 items for each item 
-		type (and then another 55 groups, then another 55, ecc...) and then assign to each of those 55 items, a certain
-		combination based on the "rarity" value of the combination, e.g. for the most common combination (with value 10)
-		I should assign it to 10 of the 55 items, for the second most common combination (with value 9) I should assign 
-		it to 9 of the 55 items, and so on...
-	As a final note, I should also consider that I must assign these rarity combinations in a distributed way, so that
-		N consecutive items won't have the same rarity combination, but rather the most variated combinations possible.
-	'''
-	rarities = ["Common", "Rare", "Epic", "Legendary", "Useless"]
-	rarity_values = [17, 12, 8, 5, 2]
-	def get_rarity_value(rarity):
-		return rarity_values[rarities.index(rarity)]
-	def get_combination_rarity_value(combination):
-		return sum([get_rarity_value(rarity) for rarity in combination]) - 14
-	def get_min_max_combination_rarity_value(combinations):
-		min_value = get_combination_rarity_value(combinations[0])
-		max_value = get_combination_rarity_value(combinations[-1])
-		return min_value, max_value
-	def get_combination_probability(combination):
-		# return the probability as the combination total rarity value / the sum of the rarity values of all the combinations
-		return get_combination_rarity_value(combination) / sum([get_combination_rarity_value(combination) for combination in rarity_combinations])
-	# Generate rarity combinations of 3 items with no repetition, taken one at a time, order doesn't matter
-	rarity_combinations = set()
-	for rarity1 in rarities:
-		for rarity2 in rarities:
-			for rarity3 in rarities:
-				if rarity1 != rarity2 and rarity1 != rarity3 and rarity2 != rarity3:
-					set_of_rarities = set([rarity1, rarity2, rarity3])
-					rarity_combinations.add(frozenset(set_of_rarities))
-	# convert the set of sets to a list of lists
-	rarity_combinations = list(map(list, rarity_combinations))
-	# sort each list item by rarity value (descending order)
-	for rarity_combination in rarity_combinations:
-		rarity_combination.sort(key=get_rarity_value, reverse=True)
-	# sort the list of lists by the sum of the rarity values of the 3 rarities
-	rarity_combinations.sort(key=lambda rarity_combination: get_rarity_value(rarity_combination[0]) + get_rarity_value(rarity_combination[1]) + get_rarity_value(rarity_combination[2]), reverse=True)
-	# # Print the rarity combinations and their combined values
-	# for rarity_combination in rarity_combinations:
-	# 	print(round(get_combination_probability(rarity_combination) * 100, 1), "%", rarity_combination, get_combination_rarity_value(rarity_combination))
-	# return the probabilities of the rarity combinations in a dictionary with the rarity combination as key and the probability as value
-	rarities_values = {}
-	for rarity_combination, index in zip(rarity_combinations, range(len(rarity_combinations))):
-		rarities_values[str(rarity_combination)] = len(rarity_combinations) - index
-	# for rarity_combination in rarities_values:
-	# 	print(rarity_combination," -> ", rarities_values[rarity_combination],sep="")
-	return rarities_values
-
-def get_rarity_combinations_expanded_list():
-	'''
-	Returns a rarity combination (e.g. ['Common', 'Rare', 'Epic']) based on the group number of the item (group of 3 
-		items) so that the 3 rarities of the combination can be assigned to the 3 items in the group.
-
-	Build a list of 55 rarity combinations based on the following frequencies:
-	- ['Common', 'Rare', 'Epic']			->	10 / 55
-	- ['Common', 'Rare', 'Legendary']		->	9 / 55 
-	- ['Common', 'Rare', 'Useless']			->	8 / 55 
-	- ['Common', 'Epic', 'Legendary']		->	7 / 55 
-	- ['Common', 'Epic', 'Useless']			->	6 / 55 
-	- ['Rare', 'Epic', 'Legendary']			->	5 / 55 
-	- ['Common', 'Legendary', 'Useless']	->	4 / 55 
-	- ['Rare', 'Epic', 'Useless']			->	3 / 55 
-	- ['Rare', 'Legendary', 'Useless']		->	2 / 55 
-	- ['Epic', 'Legendary', 'Useless']		->	1 / 55 
-	Then to the given group number maps an item in this list of rarity combinations.
-
-	The list is also distributed, so that the first 10 items will have the first rarity combination, the next 9 items
-		will have the same rarities combinations except for the last combination (which has rarity 1), the next will
-		have 8 items with the same rarities combination except for the last 2 combinations (which have rarities 1 and 2),
-		and so on...
-
-	'''
-
-	# get the list of rarity combinations with 55 elements, ordered as described above
-	rarity_combinations_and_values = get_rarities_values()
-	rarity_combinations_list = list(rarity_combinations_and_values.keys())
-	# sort the list of rarity combinations by the rarity value
-	rarity_combinations_list.sort(key=lambda rarity_combination: rarity_combinations_and_values[rarity_combination], reverse=True)
-	# build the actual list with 55 rarity combinations as described above
-	rarity_combination_items = []
-	rarity_combinations_and_values_temp = rarity_combinations_and_values.copy()
-	for rarity_combination in rarity_combinations_list:
-		for rarity_combination in rarity_combinations_list:
-			rarity_combinations_and_values_temp[rarity_combination] -= 1
-			if rarity_combinations_and_values_temp[rarity_combination] > 0:
-					rarity_combination_items.append(rarity_combination)
-
-	# print the rarity combinations and their combined values
-	# for rarity_combination in rarity_combination_items:
-	# 	print(rarity_combination," -> ", rarity_combinations_and_values[rarity_combination],sep="")
-
-	# for each single rarity, construct a dictionary with the rarity combination as key and the number of times the rarity appears in one of the items of the rarity_combination_items list as value
-	rarities = ["Common", "Rare", "Epic", "Legendary", "Useless"]
-	single_rarities_frequencies = {}
-	for rarity in rarities:
-		if rarity not in single_rarities_frequencies:
-			single_rarities_frequencies[rarity] = 0
-		for rarity_combination in rarity_combination_items:
-			if rarity in rarity_combination:
-				single_rarities_frequencies[rarity] += 1
-	single_rarities_probabilities = {}
-	sum_of_frequency_values = sum([single_rarities_frequencies[rarity] for rarity in single_rarities_frequencies])
-	for rarity in single_rarities_frequencies:
-		single_rarities_probabilities[rarity] = single_rarities_frequencies[rarity] / sum_of_frequency_values
-
-	# the "rarity_combination_items" is a list of strings of the form "['Common', 'Rare', 'Epic']" (the rarity combination)
-	# transform it in a list of lists of strings, where each string is a rarity
-	rarity_combination_items = [rarity_combination[1:-1].split(", ") for rarity_combination in rarity_combination_items]
-
-	return rarity_combination_items
-
-RARITIES_COMBINATION_EXPANDED_LIST = get_rarity_combinations_expanded_list()
-
-def get_rarity_combination(group_number):
-	return RARITIES_COMBINATION_EXPANDED_LIST[(group_number-1) % len(RARITIES_COMBINATION_EXPANDED_LIST)]
-
-def get_empty_clothing_item():
-	return {
-		"clothing_type": "",
-		"name": "",
-		"sprite": "",
-		"id_string": "",
-		"element_type": [],
-		"item_colors": {},
-		"rarity": 0,
-		"pixels_offset": [0, 0],
-		"healthPointsIncrement": 0,
-		"powerBoost": 0,
-		"skillBoost": 0,
-		"reachBoost": 0,
-		"energyBoost": 0,
-		"luckBoost": 0,
-		"weightIncrement": 0,
-	}
-
-def initialize_clothing_item(sprite_name, item_type):
-
-	# create a new item
-	item = get_empty_clothing_item()
-
-	# set the clothing type
-	item["clothing_type"] = item_type
-
-	# set the sprite
-	item["sprite"] = sprite_name
-
-	# get the element types of the item
-	item["element_type"], item["item_colors"], item["pixels_offset"] = get_image_based_item_values(sprite_name)
-
-	# NOTE: the "id_string", "name" and "rarity" attributes will be set later, after all the items have been initialized
-	# Also, does't set the stats of the item, since they will be set later, after all the items have been initialized (using rarity, id string, ecc... for random values generation)
-
-	return item
 
 def generate_clothing_items_attributes(items):
 	'''
@@ -1805,7 +1583,8 @@ def generate_clothing_items_attributes(items):
 
 		return item
 
-	items.sort(key=lambda item: get_fixed_item_sprite_name(item["sprite"]), reverse=True)
+	items.sort(key=lambda item: get_fixed_item_sprite_number(item["sprite"]), reverse=True)
+	
 	for item, index in zip(items, range(len(items))):
 		# Get the type of the item
 		item_type = item["clothing_type"].upper()
@@ -1847,6 +1626,1045 @@ def generate_clothing_items_attributes(items):
 
 	# Return the items
 	return items
+
+def initialize_staff_item(sprite_name):
+
+	# create a new item
+	item = get_empty_staff_item()
+
+	# set the staff type (Staff sprites are saved as "staff-<type>-<number>.png")
+	item["staff_type"] = sprite_name.split("-")[1].split(".")[0]
+
+	# set the sprite
+	item["sprite"] = sprite_name
+
+	# NOTE: the other attributes will be set later, after all the items have been initialized, inclujding stats of the item, 
+	#		since they will be set later, after all the items have been initialized (using rarity, id string, ecc... for random values generation)
+
+	return item
+
+def get_empty_staff_item():
+	return {
+		"staff_type": "",
+		"name": "",
+		"sprite": "",
+		"id_string": "",
+		"rarity": 0,
+		"pixels_offset": [0, 0],
+		"healthPointsIncrement": 0,
+		"actionValue": 0,
+		"actionRate": 0,
+		"actionRadius": 0,
+		"specialActionReghargeSpeed": 0,
+		"criticalChance": 0,
+		"weightIncrement": 0,
+		"criticalHitMultiplier": 0,
+		"shooterAndHealerStats": {
+			"bulletPrefab": "",
+			"bulletSpawnOffset": [0, 0],
+			"bulletSpeedMultiplier": 0,
+			"bulletMainColor": "",
+		},
+		"meleeStats": {
+			"actionKnockbackMultiplier": 0,
+			"areaDamageRadius": 0,
+			"afterHitState": "",
+		},
+		"defenderStats": {
+			"shieldForceFieldColor": "",
+		},
+		"boosterStats": {
+			"boostColor": "",
+			"actionValueMultiplier": 0,
+			"actionRateMultiplier": 0,
+			"actionRadiusMultiplier": 0,
+			"speedMultiplier": 0,
+		},
+		"summonerAndTrainerStats": {
+			"summonedUnitPrefab": "",
+			"maxNumberOfSummonedUnitsinBattle": 0,
+			"unitsSummonedAtEachAction": 0,
+		},
+		"spellcasterStats": {
+		}
+	}
+
+def create_staff_items(staff_items):
+	'''
+	Creates staff items from the given initialized staff items list (which contains the sprite name and the item type).
+
+	Then saves the staff items in the "staff_items.json" file.
+
+	Staff objects have the following attributes:
+	
+	item = {
+		
+		"name": string,							// Name of the item
+
+		(DONE) "sprite": string,				// Name of the sprite file (e.g. "staff-booster-2.png")
+
+		(DONE) "id_string": string,				// String used to identify the items (e.g. "STAFF-SUM-001")
+												// NOTE: We have id constricted as follows:
+												//		- first string is the type of item (always "STAFF")
+												//		- second string is the type of the staff (from list of staff types, can be "melee", "shooter", "booster", "defender", ecc...), the first 3 letters of the type are used (e.g. "shooter" becomes "SHO")
+												//		- fourth string is the number of the staff among staffs of that type (padded with 3 digits, hence we will usually have only "001", "002", ecc... for now)
+
+		(~) "rarity": int,						// Rarity of the item, int in range [1-5]
+
+		(DONE) "pixels_offset": [int, int],		// X and Y offsets of the image (such that the item's image sprite is centered)
+
+		// ===== Unit Stats (Actual stats of the staff item) =============================================================
+
+		(~) "healthPointsIncrement": float,			// The HP value the staff adds or subtracts to the unit (usually 0, but some staffs might give some life to the unit, 
+													e.g. defender staffs, while others might give negative values, like more powerful staff, e.g. spellcasters, others 
+													are instead the stats of the unit summoned or trained, for summoners and trainers)
+		(DONE) "actionValue": float,					// The damage, heal amount, damage boost for other troops, ecc... of this staff (hence the main action value of the staff)
+		(DONE) "actionRate": float,					// The rate of the action of this staff (e.g. attack rate, shoot rate, heal rate, damage boost rate, ecc...)
+		(DONE) "actionRadius": float,					// The radius of the action of this staff (e.g. attack radius, shoot radius, heal radius, but also radius of the defender force field, ecc...)
+		(~) "specialActionReghargeSpeed": float,	// The recharge speed of the special action of this staff (e.g. the percentage of the special attack/effect that recharges per second)
+		(DONE) "criticalChance": float,				// The critical chance of this staff (e.g. the percentage chance of critical hit, critical heal, critical damage boost, ecc...)
+		(DONE) "weightIncrement": float,				// The weight of this staff (that is added to the wizard unit wielding this staff)
+		
+		// ===== Unit Action Stats (Stats of the staff itself, like flags, staff type, ecc...) =============================================================
+
+		(DONE) "staff_type": string,				// Type of the staff, hence type of the wizard unit with this staff (from list of staff types, can be "melee", "shooter", "booster", "defender", ecc...)
+		(DONE) "criticalHitMultiplier": float,		// The multiplier of the critical hit of this staff (e.g. the multiplier of the critical hit, critical heal, critical damage boost, ecc...)
+		
+		// ===== Unit Action Stats for specific staff types (hence specific to melee, to shooters, to boosters, ecc...) =============================================================
+
+		"shooterAndHealerStats": {
+			"bulletPrefab": string,					// The name of the bullet prefab (e.g. "arrow")
+			"bulletSpawnOffset": [float, float],	// The offset of the bullet spawn position from the position of the unit wielding this staff
+			"bulletSpeedMultiplier": float,			// The speed of the bullet
+			"bulletMainColor": string,				// Main color of the bullet: leave to an empty string if the bullet should not set its color
+		}
+
+		"meleeStats": {
+			"actionKnockbackMultiplier": float,	// The knockback of the melee attack of this staff
+			"areaDamageRadius": float,			// The radius of the area damage of this staff's melee attack
+			"afterHitState": string, 			// The state of the unit after the hit of this staff's melee attack
+		}
+
+		"defenderStats": {
+			"shieldForceFieldColor": string,	// The color of the force field of the defender staff
+		}
+
+		"boosterStats": {
+			"boostColor": string,				// The color of the boost (e.g. "red", "purple", ecc...)
+			"actionValueMultiplier": float,		// The multiplier of the action value of the boost (e.g. the multiplier of the damage boost, heal boost, ecc...)
+			"actionRateMultiplier": float,		// The multiplier of the action rate of the boost (e.g. the multiplier of the damage boost rate, heal boost rate, ecc...)
+			"actionRadiusMultiplier": float,	// The multiplier of the action radius of the boost (e.g. the multiplier of the damage boost radius, heal boost radius, ecc...)
+			"speedMultiplier": float,			// The multiplier of the speed of the boost (e.g. the multiplier of the speed boost)
+		}
+
+		"summonerAndTrainerStats": {
+			"summonedUnitPrefab": string,		// The name of the unit prefab (e.g. "skeleton-armor")
+			"maxNumberOfSummonedUnitsinBattle": int,	// The maximum number of summoned units that can be in battle at the same time
+			"unitsSummonedAtEachAction": int,	// The number of units summoned at each action
+		}
+
+		"spellcasterStats": {
+		}
+
+	}
+	
+	'''
+
+	# Update the dictionary list for staffs by initializing main attributes
+	staff_items = generate_staff_items_attributes(staff_items)
+
+	#Sort the staff items by the ID string
+	staff_items.sort(key=lambda item: item["id_string"])
+
+	def get_staff_item_string(staff_item, ignore_unset_stats = False, prepend_to_lines = ""):
+		# Returns a string to print the staff item
+		default_staff_item = get_empty_staff_item()
+		toRet = prepend_to_lines
+		toRet += staff_item["id_string"] + ":\n"
+		for key in staff_item.keys():
+			#Exclude the object keys that do not contain the staff type in their key name
+			if type(staff_item[key]) == dict and staff_item["staff_type"].lower() not in key.lower():
+				continue
+			if key != "id_string" and (staff_item[key] != default_staff_item[key] or not ignore_unset_stats):
+				unset_stat_string = ""
+				if staff_item[key] == default_staff_item[key]:
+					unset_stat_string = "(-) "
+				# If the value is not another dictionary, print it normally, othersise print its values with indentation
+				if type(staff_item[key]) != dict:
+					toRet += prepend_to_lines + "\t" + unset_stat_string + key + ": " + str(staff_item[key]) + "\n"
+				else:
+					toRet += prepend_to_lines + "\t" + unset_stat_string + key + ":\n"
+					for sub_key in staff_item[key].keys():
+						toRet += prepend_to_lines + "\t\t" + sub_key + ": " + str(staff_item[key][sub_key]) + "\n"
+		return toRet
+
+	# Print the staff items
+	for staff_item_1 in staff_items:
+		print(get_staff_item_string(staff_item_1))
+	
+	# ==================================================================================================================
+	# TESTS ===========================================================================================================
+
+	print("\n>>>>> TESTS:")
+
+	# Check if there are 2 staffs with the same name
+	found_duplicate_names = False
+	for staff_item_1 in staff_items:
+		for staff_item_2 in staff_items:
+			if staff_item_1 != staff_item_2 and staff_item_1["name"] == staff_item_2["name"]:
+				print("\tERROR: Found 2 staffs with the same name: " + staff_item_1["name"] + " (" + staff_item_1["id_string"] + ") and " + staff_item_2["name"] + " (" + staff_item_2["id_string"] + ")")
+				print(get_staff_item_string(staff_item_1, False, "\t"))
+				print(get_staff_item_string(staff_item_2, False, "\t"))
+				found_duplicate_names = True
+	if not found_duplicate_names:
+		print("\tOK: No duplicate names found (for staffs).")
+
+	# Get the content of the the currently existing JSON file (if it exists), and compare its content with the new items to write
+	# NOTE: This is done to check if the new items are different from the ones already existing in the JSON file, and if they are, to print them
+	#		so that we can check if the new items are correct
+	# NOTE: This is done only if the JSON file already exists
+	found_old_items_differences_with_new_items = False
+	json_file_path = JSON_ITEMS_DIRECTORY + JSON_STAFF_ITEMS_FILE_NAME
+	if os.path.exists(json_file_path):
+		# Get the content of the JSON file
+		with open(json_file_path, "r") as json_file:
+			json_file_content = json.load(json_file)
+		# Compare the content of the JSON file with the new items
+		for staff_item_1 in staff_items:
+			for staff_item_2 in json_file_content:
+				if staff_item_1["id_string"] == staff_item_2["id_string"]:
+					# Compare the 2 items
+					if staff_item_1 != staff_item_2:
+						print("\tERROR: Found 2 different staff items with the same id_string: " + staff_item_1["id_string"])
+						print(get_staff_item_string(staff_item_1, False, "\t"))
+						print(get_staff_item_string(staff_item_2, False, "\t"))
+						found_old_items_differences_with_new_items = True
+	if not found_old_items_differences_with_new_items:
+		print("\tOK: No differences found between old and new staff items.")
+
+	# SHOULD ADD MORE TESTS EVENTUALLY...
+
+	# ==================================================================================================================
+	# JSON ============================================================================================================
+	
+	# Check if command line arguments contain "--ignore-old-items-differences", if it doesnt and items differences were found, terminate the script
+	if found_old_items_differences_with_new_items and not args.ignore_old_items_differences:
+			# Found differences in the old items with the new items, but the user didn't specify to ignore them, so terminate the script 
+			print("\n\n>>>>> NOTE: To overwrite the JSON file with the new items, run this script with parameter \"--ignore-old-items-differences\".\n")
+			return
+	
+	# Print items in JSON file (create file if it doesn't exist)
+	json_file_path = JSON_ITEMS_DIRECTORY + JSON_STAFF_ITEMS_FILE_NAME
+	input_val = input("\n>>>>> Do you want to overwrite the file \"" + json_file_path + "\"? (Y/n): ")
+	if input_val == "Y":
+		# Create the directory if it doesn't exist
+		if not os.path.exists(JSON_ITEMS_DIRECTORY):
+			os.makedirs(JSON_ITEMS_DIRECTORY)
+		# Create a backup of the previous file (if it exists)
+		if os.path.exists(json_file_path):
+			# Create a backup of the previous file
+			backup_file_path = json_file_path + ".backup"
+			if os.path.exists(backup_file_path):
+				os.remove(backup_file_path)
+			shutil.copy(json_file_path, backup_file_path)
+			print("\t[OK] Current file \"" + json_file_path + "\" backed up as \"" + backup_file_path + "\".")
+			# Create another backup if we are overwriting the file with new items (we never delete this backup file from here, we can only delete it manually)
+			if args.ignore_old_items_differences and found_old_items_differences_with_new_items:
+				# Append date, with format "YYYY-MM-DD-HH-MM" to the backup file name
+				backup_append_name = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M")
+				backup_file_path = json_file_path + "_before_overwrite_of_" + backup_append_name + ".backup"
+				if os.path.exists(backup_file_path):
+					os.remove(backup_file_path)
+				# Copy the current file into the new file
+				shutil.copy(json_file_path, backup_file_path)
+				print("\t[OK] Current file \"" + json_file_path + "\" also backed up as \"" + backup_file_path + "\" (because of overwriting).")
+		# Write the JSON file
+		with open(json_file_path, "w") as json_file:
+			json.dump(staff_items, json_file, indent=4)
+		print("\t[OK] File \"" + json_file_path + "\" overwritten.")
+	else:
+		print("\t[NO EDITS] File \"" + json_file_path + "\" was NOT overwritten.")
+
+def generate_staff_items_attributes(staff_items):
+	'''
+	For each of the initialized staff items in the given dictionary, generates all the attributes of the staff item (e.g. rarity, id_string, stats, unit specific stats, ecc...).
+	'''
+
+	possible_staff_types = ["melee", "shooter", "healer", "booster", "defender", "summoner", "trainer", "spellcaster"]
+
+	def get_staff_rarity(staff_type, staff_number_among_same_type):
+		possible_rarities = ["Useless", "Common", "Rare", "Epic", "Legendary"]
+		match staff_type:
+			case "melee":
+				possible_rarities = ["Useless", "Common", "Rare", "Epic", "Legendary"]
+			case "shooter":
+				possible_rarities = ["Useless", "Common", "Rare", "Epic", "Legendary"]
+			case "healer":
+				possible_rarities = ["Common", "Rare", "Epic", "Legendary"]
+			case "booster":
+				# This should actually return a rarity based on the summoned unit (set manually)
+				possible_rarities = ["Rare", "Epic", "Legendary"]
+			case "defender":
+				possible_rarities = ["Common", "Rare", "Epic", "Legendary"]
+			case "summoner":
+				possible_rarities = ["Rare", "Epic", "Legendary"]
+			case "trainer":
+				# This should actually return a rarity based on the trained unit (set manually)
+				possible_rarities = ["Rare", "Epic", "Legendary"]
+			case "spellcaster":
+				possible_rarities = ["Common", "Rare", "Epic", "Legendary"]
+			case _: # Default
+				print("ERROR: Invalid staff type: " + staff_type)
+				possible_rarities = ["Useless", "Common", "Rare", "Epic", "Legendary"]
+		return possible_rarities[staff_number_among_same_type % len(possible_rarities)]
+
+	def sort_items_criteria(item):
+		# sort by staff type
+		staff_type = item["staff_type"]
+		# sort by staff number
+		staff_number = get_fixed_item_sprite_number(item["sprite"])
+		return staff_type, staff_number
+	# sort staff items (so that newly added items, which are the ones with the lowest numbers appended to the sprite names, are the last ones of each group)
+	staff_items.sort(key=lambda item: sort_items_criteria(item), reverse=True)
+
+	def set_unit_type_specific_stats(staff):
+		staff_type = staff["staff_type"]
+
+		# List of all possible bullets with their main color and also their value tier, number usually in [1,5] (but may also be higher) that depends on
+		#		the damage of the bullet and also takes into account the after hit state, the knockback (a bit, if needed), and other characteristics of the bullet (based on how "good" the bullet is)
+		# NOTE: value usually is equal to the actual damage of the bullet divided by 5, but thats just for a rough estimate (it can be different, e.g. in case of bullets with very high knockback or bullets with a certain after hit state)
+		# possible_bullets = {
+		# 	"arrow": {
+		# 		"value": 4,
+		# 		"color": "brown"
+		# 	},
+		# 	"spear": {
+		# 		"value": 5,
+		# 		"color": "brown"
+		# 	},
+		# 	"wave": {
+		# 		"value": 1.5,
+		# 		"color": "white"
+		# 	},
+		# 	"fireball": {
+		# 		"value": 4,	# It burns the hit target
+		# 		"color": "yellow"
+		# 	},
+		# 	"magicball": {
+		# 		"value": 2,
+		# 		"color": "green"
+		# 	},
+		# 	"poisonball": {
+		# 		"value": 4,	# It poisons the hit target
+		# 		"color": "purple"
+		# 	},
+		# 	"iceball": {
+		# 		"value": 3,	# It freezes the hit target
+		# 		"color": "sky_blue"
+		# 	},
+		# 	"redballghost": {
+		# 		"value": 2.5,	# Has a high knockback
+		# 		"color": "red"
+		# 	},
+		# 	"whiteballghost": {
+		# 		"value": 2,
+		# 		"color": "white"
+		# 	},
+		# 	"redballghostsmall": {
+		# 		"value": 1.5,
+		# 		"color": "red"
+		# 	},
+		# }
+
+		staff_number = int(staff["id_string"].split("-")[2])
+
+		def get_bullet_spawn_offset_from_pixel_position(pos_x, pos_y):
+			'''
+			The "pos_x" and "pos_y" are the index of the pixel, from 0 to 63, starting from the top left corner of the image, in both the X and Y axis.
+
+			The "pos_x" and "pos_y" are also the same x and y pixel coordinates that appear when hovering over a sprite in the items visualizer.
+
+			The "pos_x" and "pos_y" also correspond to the "X" and "Y" that appear on the "Properties" tab (tab "Proprieta'") in Photoshop when you draw a single pixel on an empty layer.
+
+			The returned value is a value which corresponds to the offset, in units, to apply to the transform.position to get the actual bullet spawn relative position.
+			'''
+
+			# We consider a single pixel in world unit equal to 1/32, and we also should subtract one picxel from the final value since the pivot point is set to the bottom with a custom offset of 1 pixel (hence the sprtie is actually translated 1 pixel down in the scene)
+			y = (64 / 32) - (pos_y / 32) - (1 / 32)
+			# If its 0, the x should be -1 / 32, if its 63 it should be 1 / 32
+			x = ((pos_x - 32) / 32) / 32
+
+			#Round the values to 3 decimal places
+			x = round(x, 3)
+			y = round(y, 3)
+
+			return [x, y]
+
+		match staff_type:
+			case "melee":
+
+				# Default stats
+				action_knockback_multiplier = 0
+				area_damage_radius = 0
+				after_hit_state = ""
+
+				match staff_number:
+					case 1:
+						action_knockback_multiplier = 0.5
+					case 2:
+						action_knockback_multiplier = 0.5
+					case 3:
+						action_knockback_multiplier = 1.25
+						area_damage_radius = 1
+						after_hit_state = "stunned"
+					case 4:
+						action_knockback_multiplier = 1.25
+						area_damage_radius = 1
+						after_hit_state = "stunned"
+					case 5:
+						action_knockback_multiplier = 1.25
+						area_damage_radius = 1
+						after_hit_state = "stunned"
+					case 6:
+						action_knockback_multiplier = 1
+					case 7:
+						action_knockback_multiplier = 0.375
+					case 8:
+						action_knockback_multiplier = 0.5
+						after_hit_state = "stunned"
+					case 9, 10, 11:
+						action_knockback_multiplier = 0.1
+
+				# Set final values
+				staff["meleeStats"]["actionKnockbackMultiplier"] = action_knockback_multiplier
+				staff["meleeStats"]["areaDamageRadius"] = area_damage_radius
+				staff["meleeStats"]["afterHitState"] = after_hit_state
+				
+			case "shooter":
+				
+				# Default stats
+				bullet_prefab_string = ""
+				bullet_speed_multiplier = 1
+				pixel_spawn_offset = [0,0]
+				color_to_set = ""
+
+				match staff_number:
+					case 1:
+						bullet_prefab_string = "colorballghost"
+						pixel_spawn_offset = [41,20]
+						color_to_set = "purple"
+					case 2:
+						bullet_prefab_string = "colorballghost"
+						pixel_spawn_offset = [41,20]
+						color_to_set = "green"
+					case 3:
+						bullet_prefab_string = "colorballghost"
+						pixel_spawn_offset = [41,20]
+						color_to_set = "yellow"
+					case 4:
+						bullet_prefab_string = "colorballghost"
+						pixel_spawn_offset = [41,18]
+						color_to_set = "sky_blue"
+					case 5:
+						bullet_prefab_string = "colorballghost"
+						pixel_spawn_offset = [41,18]
+						color_to_set = "red"
+					case 6:
+						bullet_prefab_string = "colorballghost"
+						pixel_spawn_offset = [41,18]
+						color_to_set = "blue"
+					case 7:	# Number 007
+						bullet_prefab_string = "colorballghostsmall"
+						pixel_spawn_offset = [41,9]
+						color_to_set = "green"
+					case 8:
+						bullet_prefab_string = "colorballghostsmall"
+						pixel_spawn_offset = [41,14]
+						color_to_set = "red"
+					case 9:
+						bullet_prefab_string = "colorballghostsmall"
+						pixel_spawn_offset = [41,17]
+						color_to_set = "sky_blue"
+					
+				# Set final values
+				staff["shooterAndHealerStats"]["bulletPrefab"] = bullet_prefab_string
+				staff["shooterAndHealerStats"]["bulletSpeedMultiplier"] = bullet_speed_multiplier
+				staff["shooterAndHealerStats"]["bulletSpawnOffset"] = get_bullet_spawn_offset_from_pixel_position(pixel_spawn_offset[0], pixel_spawn_offset[1])
+				staff["shooterAndHealerStats"]["bulletMainColor"] = color_to_set
+
+			case "healer":
+
+				pixel_spawn_offset = [0,0]
+				color_to_set = ""
+
+				# Set the healer bullet's spawn offset and color
+				if staff_number == 1:
+					pixel_spawn_offset = [41,17]
+					color_to_set = "green"
+				elif staff_number == 2:
+					pixel_spawn_offset = [41,17]
+					color_to_set = "sky_blue"
+				elif staff_number == 3:
+					pixel_spawn_offset = [41,17]
+					color_to_set = "white"
+					
+				# Set final values
+				staff["shooterAndHealerStats"]["bulletPrefab"] = "healer"
+				staff["shooterAndHealerStats"]["isPiercing"] = False
+				staff["shooterAndHealerStats"]["bulletSpeedMultiplier"] = 1
+				staff["shooterAndHealerStats"]["bulletSpawnOffset"] = get_bullet_spawn_offset_from_pixel_position(pixel_spawn_offset[0], pixel_spawn_offset[1])
+				staff["shooterAndHealerStats"]["bulletMainColor"] = color_to_set
+
+			case "booster":
+
+				# Default stats
+				boost_color = ""
+				action_value_multiplier = 0
+				action_rate_multiplier = 0
+				action_radius_multiplier = 0
+				speed_multiplier = 0
+
+				match staff_number:
+					case 1:
+						boost_color = "purple"
+						action_value_multiplier = 0
+						action_rate_multiplier = 1
+						action_radius_multiplier = 0
+						speed_multiplier = 1
+					case 2:
+						boost_color = "yellow"
+						action_value_multiplier = 0.5
+						action_rate_multiplier = 1
+						action_radius_multiplier = 0.5
+						speed_multiplier = 0
+					case 3:
+						boost_color = "red"
+						action_value_multiplier = 1
+						action_rate_multiplier = 0
+						action_radius_multiplier = 0
+						speed_multiplier = 0
+
+				# Set final values
+				staff["boosterStats"]["boostColor"] = boost_color
+				staff["boosterStats"]["actionValueMultiplier"] = action_value_multiplier
+				staff["boosterStats"]["actionRateMultiplier"] = action_rate_multiplier
+				staff["boosterStats"]["actionRadiusMultiplier"] = action_radius_multiplier
+				staff["boosterStats"]["speedMultiplier"] = speed_multiplier
+
+			case "defender":
+
+				# For now only sets the force field color
+				if (staff_number == 1):
+					staff["defenderStats"]["shieldForceFieldColor"] = "yellow"
+				elif (staff_number == 2):
+					staff["defenderStats"]["shieldForceFieldColor"] = "red"
+				elif (staff_number == 3):
+					staff["defenderStats"]["shieldForceFieldColor"] = "green"
+
+			case "summoner":
+
+				# Default stats
+				summoned_unit_prefab_string = ""
+				max_number_of_summoned_units_in_battle = -1
+				units_summoned_at_each_action = 1
+
+				match staff_number:
+					case 1:
+						summoned_unit_prefab_string = "dumbat"
+						max_number_of_summoned_units_in_battle = 3
+					case 2:
+						summoned_unit_prefab_string = "whyrm"
+						max_number_of_summoned_units_in_battle = 3
+					case 3:
+						summoned_unit_prefab_string = "eaglet"
+						max_number_of_summoned_units_in_battle = 2
+					case 4:
+						summoned_unit_prefab_string = "bird"
+						max_number_of_summoned_units_in_battle = 4
+					case 5:
+						summoned_unit_prefab_string = "seagull"
+						max_number_of_summoned_units_in_battle = 3
+					case 6:
+						summoned_unit_prefab_string = "flying-bones"
+						max_number_of_summoned_units_in_battle = 5
+						units_summoned_at_each_action = 2
+
+				# Set final values
+				staff["summonerAndTrainerStats"]["summonedUnitPrefab"] = summoned_unit_prefab_string
+				staff["summonerAndTrainerStats"]["maxNumberOfSummonedUnitsinBattle"] = max_number_of_summoned_units_in_battle
+				staff["summonerAndTrainerStats"]["unitsSummonedAtEachAction"] = units_summoned_at_each_action
+
+			case "trainer":
+				# TO DO...
+				staff["summonerAndTrainerStats"] = staff["summonerAndTrainerStats"]
+			case "spellcaster":
+				# TO DO...
+				staff["spellcasterStats"] = staff["spellcasterStats"]
+			case _: # Default
+				print("ERROR: Invalid staff type: " + staff_type)
+		return staff
+
+	def set_staff_item_stats(staff):
+
+		# Rarity value, from 1 to 5 (used to set stat values)
+		rarity_value = 1 + ["Useless", "Common", "Rare", "Epic", "Legendary"].index(staff["rarity"])
+
+		staff_type = staff["staff_type"]
+
+		staff_number = int(staff["id_string"].split("-")[2])
+
+		# Contains the max and min stat value for each of the main stats of the staff.
+		# Used to generate stat values in range [min, max] based on the staff type, rarity and staff number.
+		stat_values_per_rarity = {
+			"healthPointsIncrement": [0,0],			# Keep at 0 for most staffs
+			"actionValue": [0,0],
+			"actionRate": [0,0],
+			"actionRadius": [0,0],
+			"specialActionReghargeSpeed": [0,0],	# TO DEFINE...
+			"criticalChance": [0,0],
+			"weightIncrement": [25,150],				# Default values for most staffs (randomized, should not need to be changed for most staff types...)
+
+			"criticalHitMultiplier": [1,1],
+		}
+
+		match staff_type:
+			case "melee":
+				stat_values_per_rarity["actionValue"] = [20, 65]		# Melee staffs should deal high damage
+				stat_values_per_rarity["actionRate"] = [3.5, 7.5]		# Melee staffs should attack slowly
+				stat_values_per_rarity["actionRadius"] = [1.0, 1.0]	# Melee have a fixed action radius of 1.0 (their actual action radius is calculated differently)
+				# base_stat_values_per_rarity["specialActionReghargeSpeed"] = [0,0]
+				stat_values_per_rarity["criticalChance"] = [25, 75]	#Melee staffs have a high critical chance
+				stat_values_per_rarity["weightIncrement"] = [50, 200]	# Melee staffs should be heavier than other staffs
+				stat_values_per_rarity["criticalHitMultiplier"] = [1.5, 2.25]	# Melee staffs should have a high critical hit multiplier
+			case "shooter":
+				stat_values_per_rarity["actionValue"] = [100, 100]		# Shooter staffs have a damage dictated by the bullet they shoot, the action value represent the percentage of the damage of the bullet that the actual fired bullet deals (this should be kept at 100 for all shooter staffs...)
+				stat_values_per_rarity["actionRate"] = [5, 15] 		# Shooter staffs should attack fast
+				stat_values_per_rarity["actionRadius"] = [6, 12]		# Shooter staffs have a wide action radius
+				# base_stat_values_per_rarity["specialActionReghargeSpeed"] = [0,0]
+				stat_values_per_rarity["criticalChance"] = [10, 50]	# Shooter staffs have a low critical chance
+				stat_values_per_rarity["weightIncrement"] = [20, 125]	# Shooter staffs should be lighter than melee staffs
+				stat_values_per_rarity["criticalHitMultiplier"] = [1.25, 1.75]	# Shooter staffs should have a small critical hit multiplier
+			case "healer":
+				stat_values_per_rarity["actionValue"] = [5, 55]		# Healer staffs should heal for a small amount
+				stat_values_per_rarity["actionRate"] = [5, 15] 		# Healer staffs should heal at a medium rate
+				stat_values_per_rarity["actionRadius"] = [6, 12]	# Healer staffs have a wide action radius
+				# base_stat_values_per_rarity["specialActionReghargeSpeed"] = [0,0]
+				stat_values_per_rarity["criticalChance"] = [10, 50]	# Healer staffs have a low critical chance
+				stat_values_per_rarity["weightIncrement"] = [15, 100]	# Healer staffs should be very light
+				stat_values_per_rarity["criticalHitMultiplier"] = [1.25, 1.75]	# Healer staffs should have a small critical hit multiplier
+			case "booster":
+				stat_values_per_rarity["actionValue"] = [25, 75]			# Booster staffs boost for a base percentage (e.g. 10%)
+				stat_values_per_rarity["actionRate"] = [-1, -1] 			# Booster staffs have no action rate (they always boost)
+				stat_values_per_rarity["actionRadius"] = [5.5, 8.5]		# Booster staffs have a small boost radius
+				# base_stat_values_per_rarity["specialActionReghargeSpeed"] = [0,0]
+				stat_values_per_rarity["criticalChance"] = [-1, -1]		# Booster staffs have no critical chance
+				stat_values_per_rarity["weightIncrement"] = [25, 150]	# Booster staffs should be mediumyly heavy
+				stat_values_per_rarity["criticalHitMultiplier"] = [1, 1]	# Booster staffs have no critical hit multiplier (they don't hit)
+			case "defender":
+				stat_values_per_rarity["actionValue"] = [15, 65]			# Defender staffs have an action corresponding to the percentage of damage absorbed
+				stat_values_per_rarity["actionRate"] = [-1, -1] 			# Defender staffs have no action rate
+				stat_values_per_rarity["actionRadius"] = [8.5, 12.5]		# Defender staffs have an action radius corresponding to the force field around them (should be set to a value around 10)
+				# base_stat_values_per_rarity["specialActionReghargeSpeed"] = [0,0]
+				stat_values_per_rarity["criticalChance"] = [10, 25]		# Defender staffs have a critical chance which correspond to a negative effect, hence their critical multiplier should be negative, meaning the hit they take, with this given percentage, will damage them for the full damage multiplied by the critical multiplier (usually -1) rather than the reduced damage
+				stat_values_per_rarity["weightIncrement"] = [75, 300]	# Defender staffs should be very heavy
+				stat_values_per_rarity["criticalHitMultiplier"] = [-2.5, -0.5]	# Defender staffs have a negative critical hit multiplier (as explained above)
+			case "summoner":
+				stat_values_per_rarity["actionValue"] = [1, 1]			# Action value should be that of the summoned unit, hence we use this value as a multiplier for the summoned unit's stats (usually 1)
+				stat_values_per_rarity["actionRate"] = [1, 1] 			# Action rate of summoners should be that of the summoned unit, hence we use this value as a multiplier for the summoned unit's stats (usually 1)
+				stat_values_per_rarity["actionRadius"] = [1, 1]			# Action radius of summoners should be that of the summoned unit, hence we use this value as a multiplier for the summoned unit's stats (usually 1)
+				stat_values_per_rarity["specialActionReghargeSpeed"] = [1 / 4, 1 / 2]		# Summoners have the special action corresponding to the actual summoning of units, hence the recharge speed is tied to the number of units summoned per second (as if it was the action rate)
+				stat_values_per_rarity["criticalChance"] = [0, 0]		# Summoner staffs have no critical chance
+				stat_values_per_rarity["weightIncrement"] = [25, 150]	# Summoner staffs should be mediumyly heavy
+				stat_values_per_rarity["criticalHitMultiplier"] = [1, 1]	# Summoner staffs have no critical hit multiplier
+			case "trainer":
+				stat_values_per_rarity["actionValue"] = [1, 1]			# Action value should be that of the trained unit, hence we use this value as a multiplier for the trained unit's stats (usually 1)
+				stat_values_per_rarity["actionRate"] = [1, 1] 			# Action rate of trainers should be that of the trained unit, hence we use this value as a multiplier for the trained unit's stats (usually 1)
+				stat_values_per_rarity["actionRadius"] = [1, 1]			# Action radius of trainers should be that of the trained unit, hence we use this value as a multiplier for the trained unit's stats (usually 1)
+				# base_stat_values_per_rarity["specialActionReghargeSpeed"] = [0,0] 	# To set... (in this case, the special action is that of the creature that this trainer is training)
+				stat_values_per_rarity["criticalChance"] = [0, 0]		# Trainer staffs have no critical chance
+				stat_values_per_rarity["weightIncrement"] = [25, 150]	# Trainer staffs should be mediumyly heavy
+				stat_values_per_rarity["criticalHitMultiplier"] = [1, 1]	# Summoner staffs have no critical hit multiplier
+			case "spellcaster":
+				# TO DEFINE...
+				print("WARNING: Spellcaster staffs not yet defined")
+			case _: # Default
+				print("ERROR: Invalid staff type: " + staff_type)
+
+		# Set the stats of the staff item
+		for stat, stat_index in zip(stat_values_per_rarity.keys(), range(len(stat_values_per_rarity.keys()))):
+			if stat == "weightIncrement":
+				# We set a random weight increment in the range, based on the staff number
+				# Set a range of 5 values
+				possible_values = [stat_values_per_rarity[stat][0] + (stat_values_per_rarity[stat][1] - stat_values_per_rarity[stat][0]) * i / 4 for i in range(5)]
+				index = (staff_number + 2) % 5
+				staff[stat] = possible_values[index]
+			else:
+				# Other stats
+				if (stat_values_per_rarity[stat][0] == stat_values_per_rarity[stat][1]):
+					# We use the only possible stat value (same for min and max)
+					staff[stat] = stat_values_per_rarity[stat][0]
+				else:
+					# We get an array of 12 values in between the first and second elements of the values for each of the stat values, then we calculate an index among this array based on the rarity value and the staff number
+					# The index is calculated as follows:
+					# We get rarity index value based on the rarity, as "1 + [rarity index] * 2" (hence 1, 3, 5, 7, 9)
+					# We sum a value in range [-1, 1] to the index based on the number of the staff among staffs of that type (hence 1, 2, 3)
+					possible_values = [stat_values_per_rarity[stat][0]] + [stat_values_per_rarity[stat][0] + (stat_values_per_rarity[stat][1] - stat_values_per_rarity[stat][0]) * i / 11 for i in range(1, 11)] + [stat_values_per_rarity[stat][1]]
+					index = 1 + ((rarity_value - 1) * 2) + ((staff_number + stat_index) % 3 - 1)
+					# Randomize more by adding a value equal to the minimum possible value divided by 4 and multiplied by a random value in range [0,1] based on the staff number (considering 5 possible staff numbers)
+					value_to_add = stat_values_per_rarity[stat][0] / 4 * (((staff_number + stat_index) + 3) % 6) / 5
+					value_to_add_based_on_rarity = stat_values_per_rarity[stat][0] / 6 * (rarity_value - 1) / 4
+					staff[stat] = possible_values[index] + value_to_add + value_to_add_based_on_rarity
+					
+			# Round stats
+			if stat in ["healthPointsIncrement", "actionValue", "criticalChance", "weightIncrement"]:
+				#Round to the nearest integer
+				staff[stat] = round(staff[stat])
+			else:
+				# Round to 2 digits such that the number is a multiple of 0.25
+				staff[stat] = round(staff[stat] * 4) / 4
+
+		staff = set_unit_type_specific_stats(staff)
+
+		return staff
+	
+	def get_staff_name(staff_type, staff_number):
+		# Returns the name of the staff based on the staff type and staff number
+		# TO DO...
+
+		# Returns a placeholder name for now
+		return staff_type.capitalize() + " Staff " + str(staff_number).zfill(2)
+
+	# generate the id string of each staff item
+	staff_items_dict = {}
+	for staff_item, index in zip(staff_items, range(len(staff_items))):
+
+		staff_number = 1
+		if staff_items_dict.get(staff_item["staff_type"]) is not None:
+			staff_number = staff_items_dict[staff_item["staff_type"]] + 1
+		staff_items_dict[staff_item["staff_type"]] = staff_number
+
+		# Set the name of the staff
+		staff_item["name"] = get_staff_name(staff_item["staff_type"], staff_number)
+
+		# Set the id_string of the staff item
+		staff_item["id_string"] = "STAFF-" + staff_item["staff_type"][:3].upper() + "-" + str(staff_number).zfill(3)
+
+		# Set the pixels offset of the staff item
+		sprite_offset = get_sprite_offset_to_center(staff_item["sprite"])
+		horizontal_offset = sprite_offset[0]
+		vertical_offset = sprite_offset[1]
+
+		staff_item["pixels_offset"] = [horizontal_offset, vertical_offset]
+
+		# Set the rarity of the staff item
+		staff_item["rarity"] = get_staff_rarity(staff_item["staff_type"], staff_number)
+
+		# Set the stats of the staff item
+		staff_item = set_staff_item_stats(staff_item)
+
+		# Set the unit specific stats of the staff item
+		# staff_item = set_staff_item_unit_specific_stats(staff_item)
+
+	# Return the staff items
+	return staff_items
+
+def get_exclude_pixels_indexes_from_robes():
+	# Returns a set of [x,y] indexes of pixels to exclude when calculating the types of the robes,
+	# 	hence the pixels' colors not to consider when calculating the types of the hat or robe, which are
+	# 	the pixels with an alpha > 0 (i.e. not transparent pixels) of the "face" sprite.
+	# These pixels are the ones that will cover the robe, hence they should not be considered when calculating the types of the robe.
+
+	# Get the face image
+	image = PIL.Image.open("./Sprites/face.png")
+
+	# Get the size of the image
+	size = image.size
+
+	# Get the pixels of the image
+	pixels = image.load()
+
+	# Get the indexes of the pixels to exclude
+	exclude_pixels_indexes = []
+	for x in range(size[0]):
+		for y in range(size[1]):
+			if pixels[x, y][3] > 0:
+				exclude_pixels_indexes.append([x, y])
+
+	return exclude_pixels_indexes
+
+COVERED_PIXELS_FOR_ROBES = get_exclude_pixels_indexes_from_robes()
+
+COLOR_NAME_TO_ELEMENT_TYPE = {
+	"black": "Darkness",
+	"gray": "Rock",
+	"white": "Light",
+	"brown": "Earth",
+	"red": "Fire",
+	"yellow": "Thunder",
+	"green": "Nature",
+	"sky_blue": "Air",
+	"blue": "Water",
+	"purple": "Poison",
+}
+
+def get_image_based_item_values(sprite_name):
+	'''
+	Returns a triple with:
+		1) the element types of the item (list of string values in list [Darkness, Rock, Light, Earth, Fire, Thunder, Nature, Air, Water, Poison]) 
+		2) the pixel palette colors (dictionary containing the name of the color (key) and the number of pixels of that color (value)) of the item
+		3) the X and Y offset of the image (such that the image is centered)
+	'''
+	def rgb_to_hex(r, g, b):
+		return '#{:02x}{:02x}{:02x}'.format(r, g, b)
+	
+	# Get the image
+	image = PIL.Image.open("./Sprites/" + sprite_name)
+
+	# Get the size of the image
+	size = image.size
+
+	# Get the pixels of the image
+	pixels = image.load()
+
+	# Palette of possible colors in the image
+	palette_hex = {
+		"black": ["#4d4d4d", "#333333", "#1a1a1a"],
+		"gray": ["#999999", "#808080", "#666666"],
+		"white": ["#e5e5e5", "#cccccc", "#b3b3b3"],
+		"brown": ["#b65327", "#964420", "#703318"],
+		"red": ["#ff4d3a", "#ff0000", "#ca0000"],
+		"yellow": ["#ffe326", "#ffcc00", "#d2a800"],
+		"green": ["#9cff5a", "#00ff0c", "#00ca0a"],
+		"sky_blue": ["#47d6ff", "#00bbf1", "#009ecc"],
+		"blue": ["#1400d4", "#1000aa", "#110079"],
+		"purple": ["#a018ff", "#8200dd", "#6200a6"],
+	}
+
+	# Cycle through the pixels of the image, and get the color of each pixel, adding it to the dictionary of colors for the image, along with the number of pixels of that color
+	colors = {}
+	for x in range(size[0]):
+		for y in range(size[1]):
+			# check if the pixel is covered by the face
+			if [x, y] in COVERED_PIXELS_FOR_ROBES and "robe" in sprite_name:
+				continue
+			color = pixels[x, y]	# tuple (r,g,b,a)
+			if color[3] == 0:	# if the pixel is transparent, skip it
+				continue
+			hex_color = rgb_to_hex(color[0], color[1], color[2])
+			# check if the hex color is in the palette_hex dictionary
+			color_name = ""
+			for color in palette_hex:
+				if hex_color in palette_hex[color]:
+					color_name = color
+					break
+			if color_name == "":
+				continue
+			if color_name in colors:
+				colors[color_name] += 1
+			else:
+				colors[color_name] = 1
+	
+	# To fill in the pixel palette colors (which contains all the colors of the palette that will determin the "types" or "elements" of the wizard hat or color) we only add the palette color (type/element) if the number of pixels of that color (in the hat/clothes sprite) is x >= pixel_colors_min_count
+	pixel_colors_min_count_for_hats = 2;	# Only sprites with a number of pixels GREATER OR EQUAL than this will have the associated color type/element added to the palette
+	pixel_colors_min_count_for_robes = 5;	# Only sprites with a number of pixels GREATER OR EQUAL than this will have the associated color type/element added to the palette
+
+	pixel_colors_min_count = pixel_colors_min_count_for_robes if "robe" in sprite_name else pixel_colors_min_count_for_hats
+
+	# Dictionary containing the nae of the color (key) and the number of pixels of that color (value)
+	pixel_palette_colors = {}
+	for color in colors:
+		if colors[color] >= pixel_colors_min_count:
+			pixel_palette_colors[color] = colors[color]
+
+	# Get the element types of the item (sorted from most frequent to least frequent associated pixel color in the sprite)
+	#get the list of colors sorted by number of pixels
+	sorted_colors = sorted(pixel_palette_colors, key=pixel_palette_colors.get, reverse=True)
+	element_types = []
+	for color in sorted_colors:
+		element_types.append(COLOR_NAME_TO_ELEMENT_TYPE[color])
+
+	# calculate offset of the image such that the image is centered horizontally and vertically
+	pixels_offset = get_sprite_offset_to_center(sprite_name)
+	horizontal_offset = pixels_offset[0]
+	vertical_offset = pixels_offset[1]
+
+	return element_types, pixel_palette_colors, [horizontal_offset, vertical_offset]
+
+def get_sprite_offset_to_center(sprite_name):
+
+	'''
+	Given a sprite name, calculates the X and Y offset of the sprite which, applied to the sprite itself, will center the sprite.
+	The offset is returned as a list [horizontal_offset, vertical_offset], where the offsets are esxpressed in pixels.
+	'''
+	
+	# Get the image
+	image = PIL.Image.open("./Sprites/" + sprite_name)
+
+	# Get the size of the image
+	size = image.size
+	
+	# Get the pixels of the image
+	pixels = image.load()
+
+	# calculate how many transparent pixels are on the right and on the left of the image before the first pixel with a non-transparent pixel (in whatever column)
+	# to do this, first construct a list of size "size[0]" (width of the image) with all false values, then cycle through the pixels and set to true the value of the list at the index of the pixel's x coordinate
+	# then, cycle through the list and count the number of false values on the left and on the right of the list
+	horizontal_flatten_pixels = [False] * size[0]
+	vertical_flatten_pixels = [False] * size[1]
+	for x in range(size[0]):
+		for y in range(size[1]):
+			if pixels[x, y][3] > 0:
+				horizontal_flatten_pixels[x] = True
+				vertical_flatten_pixels[y] = True
+	transparent_pixels_on_the_right = 0
+	transparent_pixels_on_the_left = 0
+	for x in range(size[0]):
+		if horizontal_flatten_pixels[x]:
+			break
+		transparent_pixels_on_the_left += 1
+	for x in range(size[0] - 1, -1, -1):
+		if horizontal_flatten_pixels[x]:
+			break
+		transparent_pixels_on_the_right += 1
+	transparent_pixels_on_the_top = 0
+	transparent_pixels_on_the_bottom = 0
+	for y in range(size[1]):
+		if vertical_flatten_pixels[y]:
+			break
+		transparent_pixels_on_the_top += 1
+	for y in range(size[1] - 1, -1, -1):
+		if vertical_flatten_pixels[y]:
+			break
+		transparent_pixels_on_the_bottom += 1
+	# calculate an horizontal offset (in pixels) for the image such that the image is centered horizontally
+	horizontal_offset = -1 * round((float(transparent_pixels_on_the_left) - float(transparent_pixels_on_the_right)) / 2.0)
+	# calculate a vertical offset (in pixels) for the image such that the image is centered vertically
+	vertical_offset = -1 * round((float(transparent_pixels_on_the_top) - float(transparent_pixels_on_the_bottom)) / 2.0)
+
+	return [horizontal_offset, vertical_offset]
+
+def get_rarities_values():
+	'''
+	Returns a dictionary with a string in the form "['Common', 'Rare', 'Epic']" as key and the rarity value as value, 
+		where the rarity value is a number between 1 and 10, where 10 is the most common rarity and 1 is the least 
+		common rarity.
+	The dictionary can be used to generate the rarity of the items, assinging to the 3 items the 3 rarities of an item
+		of the dictionary, based on how frequent the rarity combination is (hence based on the value associated to the 
+		rarity combination in the dictionary).
+	Also, since values are from 1 to 10, this means that I should consider at least 55 groups of 3 items for each item 
+		type (and then another 55 groups, then another 55, ecc...) and then assign to each of those 55 items, a certain
+		combination based on the "rarity" value of the combination, e.g. for the most common combination (with value 10)
+		I should assign it to 10 of the 55 items, for the second most common combination (with value 9) I should assign 
+		it to 9 of the 55 items, and so on...
+	As a final note, I should also consider that I must assign these rarity combinations in a distributed way, so that
+		N consecutive items won't have the same rarity combination, but rather the most variated combinations possible.
+	'''
+	rarities = ["Common", "Rare", "Epic", "Legendary", "Useless"]
+	rarity_values = [17, 12, 8, 5, 2]
+	def get_rarity_value(rarity):
+		return rarity_values[rarities.index(rarity)]
+	def get_combination_rarity_value(combination):
+		return sum([get_rarity_value(rarity) for rarity in combination]) - 14
+	def get_min_max_combination_rarity_value(combinations):
+		min_value = get_combination_rarity_value(combinations[0])
+		max_value = get_combination_rarity_value(combinations[-1])
+		return min_value, max_value
+	def get_combination_probability(combination):
+		# return the probability as the combination total rarity value / the sum of the rarity values of all the combinations
+		return get_combination_rarity_value(combination) / sum([get_combination_rarity_value(combination) for combination in rarity_combinations])
+	# Generate rarity combinations of 3 items with no repetition, taken one at a time, order doesn't matter
+	rarity_combinations = set()
+	for rarity1 in rarities:
+		for rarity2 in rarities:
+			for rarity3 in rarities:
+				if rarity1 != rarity2 and rarity1 != rarity3 and rarity2 != rarity3:
+					set_of_rarities = set([rarity1, rarity2, rarity3])
+					rarity_combinations.add(frozenset(set_of_rarities))
+	# convert the set of sets to a list of lists
+	rarity_combinations = list(map(list, rarity_combinations))
+	# sort each list item by rarity value (descending order)
+	for rarity_combination in rarity_combinations:
+		rarity_combination.sort(key=get_rarity_value, reverse=True)
+	# sort the list of lists by the sum of the rarity values of the 3 rarities
+	rarity_combinations.sort(key=lambda rarity_combination: get_rarity_value(rarity_combination[0]) + get_rarity_value(rarity_combination[1]) + get_rarity_value(rarity_combination[2]), reverse=True)
+	# # Print the rarity combinations and their combined values
+	# for rarity_combination in rarity_combinations:
+	# 	print(round(get_combination_probability(rarity_combination) * 100, 1), "%", rarity_combination, get_combination_rarity_value(rarity_combination))
+	# return the probabilities of the rarity combinations in a dictionary with the rarity combination as key and the probability as value
+	rarities_values = {}
+	for rarity_combination, index in zip(rarity_combinations, range(len(rarity_combinations))):
+		rarities_values[str(rarity_combination)] = len(rarity_combinations) - index
+	# for rarity_combination in rarities_values:
+	# 	print(rarity_combination," -> ", rarities_values[rarity_combination],sep="")
+	return rarities_values
+
+def get_rarity_combinations_expanded_list():
+	'''
+	Returns a rarity combination (e.g. ['Common', 'Rare', 'Epic']) based on the group number of the item (group of 3 
+		items) so that the 3 rarities of the combination can be assigned to the 3 items in the group.
+
+	Build a list of 55 rarity combinations based on the following frequencies:
+	- ['Common', 'Rare', 'Epic']			->	10 / 55
+	- ['Common', 'Rare', 'Legendary']		->	9 / 55 
+	- ['Common', 'Rare', 'Useless']			->	8 / 55 
+	- ['Common', 'Epic', 'Legendary']		->	7 / 55 
+	- ['Common', 'Epic', 'Useless']			->	6 / 55 
+	- ['Rare', 'Epic', 'Legendary']			->	5 / 55 
+	- ['Common', 'Legendary', 'Useless']	->	4 / 55 
+	- ['Rare', 'Epic', 'Useless']			->	3 / 55 
+	- ['Rare', 'Legendary', 'Useless']		->	2 / 55 
+	- ['Epic', 'Legendary', 'Useless']		->	1 / 55 
+	Then to the given group number maps an item in this list of rarity combinations.
+
+	The list is also distributed, so that the first 10 items will have the first rarity combination, the next 9 items
+		will have the same rarities combinations except for the last combination (which has rarity 1), the next will
+		have 8 items with the same rarities combination except for the last 2 combinations (which have rarities 1 and 2),
+		and so on...
+
+	'''
+
+	# get the list of rarity combinations with 55 elements, ordered as described above
+	rarity_combinations_and_values = get_rarities_values()
+	rarity_combinations_list = list(rarity_combinations_and_values.keys())
+	# sort the list of rarity combinations by the rarity value
+	rarity_combinations_list.sort(key=lambda rarity_combination: rarity_combinations_and_values[rarity_combination], reverse=True)
+	# build the actual list with 55 rarity combinations as described above
+	rarity_combination_items = []
+	rarity_combinations_and_values_temp = rarity_combinations_and_values.copy()
+	for rarity_combination in rarity_combinations_list:
+		for rarity_combination in rarity_combinations_list:
+			rarity_combinations_and_values_temp[rarity_combination] -= 1
+			if rarity_combinations_and_values_temp[rarity_combination] > 0:
+					rarity_combination_items.append(rarity_combination)
+
+	# print the rarity combinations and their combined values
+	# for rarity_combination in rarity_combination_items:
+	# 	print(rarity_combination," -> ", rarity_combinations_and_values[rarity_combination],sep="")
+
+	# for each single rarity, construct a dictionary with the rarity combination as key and the number of times the rarity appears in one of the items of the rarity_combination_items list as value
+	rarities = ["Common", "Rare", "Epic", "Legendary", "Useless"]
+	single_rarities_frequencies = {}
+	for rarity in rarities:
+		if rarity not in single_rarities_frequencies:
+			single_rarities_frequencies[rarity] = 0
+		for rarity_combination in rarity_combination_items:
+			if rarity in rarity_combination:
+				single_rarities_frequencies[rarity] += 1
+	single_rarities_probabilities = {}
+	sum_of_frequency_values = sum([single_rarities_frequencies[rarity] for rarity in single_rarities_frequencies])
+	for rarity in single_rarities_frequencies:
+		single_rarities_probabilities[rarity] = single_rarities_frequencies[rarity] / sum_of_frequency_values
+
+	# the "rarity_combination_items" is a list of strings of the form "['Common', 'Rare', 'Epic']" (the rarity combination)
+	# transform it in a list of lists of strings, where each string is a rarity
+	rarity_combination_items = [rarity_combination[1:-1].split(", ") for rarity_combination in rarity_combination_items]
+
+	return rarity_combination_items
+
+RARITIES_COMBINATION_EXPANDED_LIST = get_rarity_combinations_expanded_list()
+
+def get_rarity_combination(group_number):
+	return RARITIES_COMBINATION_EXPANDED_LIST[(group_number-1) % len(RARITIES_COMBINATION_EXPANDED_LIST)]
 
 main()
 

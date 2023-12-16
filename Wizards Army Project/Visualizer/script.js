@@ -1319,11 +1319,11 @@ function print_hats_and_robes_sprite_infos() {
 		title_div.css("margin-bottom", "5px");
 		title_div.css("color", "#777777");
 		let description_div = $("<div></div>");
-		$(description_div).html("<b>NOTE</b>: Numbers in parentheses indicate the number of sprites with that color combination that have <b>3 element types</b> (3 colors).");
-		description_div.css("font-size", "0.85em");
+		$(description_div).html("<b>NOTE</b>: Numbers in parentheses indicate the number of clothing sprites with that color combination that have <b>3 element types</b> (3 colors).");
+		description_div.css("font-size", "0.82em");
 		description_div.css("font-style", "italic");
 		description_div.css("text-align", "center");
-		description_div.width("35%");
+		description_div.width("37%");
 		description_div.css("margin-bottom", "8px");
 		description_div.css("color", "#777777");
 		$("#sprites-info").append(title_div);

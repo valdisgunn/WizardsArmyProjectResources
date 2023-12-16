@@ -50,6 +50,7 @@ html, body {
 	font-size: 16px;
 	color: white;
 	font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+	position: relative;
 }
 body {
 	background-color: #505050;
@@ -67,6 +68,8 @@ body {
 	--items-padding: 10px;
 	--items-margin: 8px;
 	--items-border-width: 3px;
+	/* NOTE: this is set by the script.js of the items visualizer page */
+	/* --item-scale-factor: 1.175; */
 }
 .items-container {
 	width: 100%;
@@ -107,7 +110,7 @@ body {
 	transition: transform 0.1s ease-out, filter 0.1s ease-out;
 }
 .items-container > .item:active {
-	transform: scale(1.185);
+	transform: scale(var(--item-scale-factor));
 	z-index: 100;
 	filter: drop-shadow(0px 0px 10px #000000);
 	transition: transform 0.1s ease-out 0.2s, filter 0.1s ease-out 0.2s;
@@ -177,18 +180,28 @@ body {
 	justify-content: space-between;
 	justify-items: space-around;
 }
+.items-container > .item .staff-type {
+	font-size: 0.9em;
+	font-weight: bold;
+}
 .items-container > .item .id-string {
 	font-size: 0.9em;
 	font-weight: bold;
 	color: #ffffff30;
 	position: absolute;
 	top: 45px;
+	/* top: 242px; */
 	/* left: 17px; */
 	font-family: monospace;
-	opacity: 1;
+	opacity: 0;
+	pointer-events: none;
 }
 .items-container > .item:active .id-string {
 	opacity: 1;
+}
+.items-container > .item:not(:active) .id-string.always-visible,
+.items-container > .item:active .id-string.always-visible {
+	opacity: 1 !important;
 }
 .items-container > .item .rarity {
 	font-size: 0.85em;
@@ -250,4 +263,21 @@ body {
 #tab-buttons-container > div.active {
 	background-color: var(--black_1);
 	color: var(--black_3);
+}
+img {
+	user-select: none;
+	pointer-events: none;
+}
+#coordinates-tooltip {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #00000035;
+	pointer-events: none;
+	padding: 10px;
+	border-radius: 10px;
+	z-index: 1000;
 }

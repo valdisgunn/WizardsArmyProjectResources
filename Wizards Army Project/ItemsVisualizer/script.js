@@ -459,8 +459,6 @@ function populate_staff_items() {
 		statsDiv.className = "stats-container";
 		itemDiv.appendChild(statsDiv);
 
-
-
 		// For now, just dump the content of the json item for this staff into a div
 		function get_json_string_for_staff_item(item, dont_print_property_names) {
 			// Get the keys of the item
@@ -759,6 +757,8 @@ $(document).ready(function () {
 	document.addEventListener("mouseup", function (event) {
 		if ($("#coordinates-tooltip").is(":visible")) $("#coordinates-tooltip").hide();
 	});
+	// Hide the coordinates tooltip at start
+	if ($("#coordinates-tooltip").is(":visible")) $("#coordinates-tooltip").hide();
 
 	// Add class "always-visible" to all the "id-string" divs if the "SET_ID_STRING_TO_ALWAYS_BE_VISIBLE" variable is true
 	if (SET_ID_STRING_TO_ALWAYS_BE_VISIBLE) {

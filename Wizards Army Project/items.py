@@ -1401,11 +1401,11 @@ def generate_clothing_items_attributes(items):
 		# Lists contain 2 items, the first one is the positive stats total value, the second one is the negative stats total value
 		# NOTE: We can spread these values among the 5 stats of the element (also probably making some of those stats not be affected by the item itself, usually affect 3/5 stats, but sometimes 4 and others even 5, based on the rarity)
 		rarity_percentage_stat_values = {
-			"Useless": [30, 30],
-			"Common": [50, 25],
-			"Rare": [70, 20],
-			"Epic": [90, 15],
-			"Legendary": [110, 10]
+			"Useless": [25, 20],
+			"Common": [50, 15],
+			"Rare": [65, 10],
+			"Epic": [80, 5],
+			"Legendary": [95, 0]
 		}
 		# Stat elements associations (for the 5 percentage stats)
 		# NOTE: the 2 stats in the list are also ordered from the one that MOSTLY influences the stat to the one that LEAST influences the stat
@@ -1440,6 +1440,7 @@ def generate_clothing_items_attributes(items):
 			"Air", "Light", "Nature", "Fire", "Water", "Earth", "Darkness", "Poison", "Thunder", "Rock"
 		]
 		# Store the number of positively and negatively influenced stats respectively
+		# 	Hence we have [num_positive, num_negative] for each rarity's number of influenced stats
 		rarity_influenced_stats = {
 			"Useless": [1, 2],
 			"Common": [2, 2],
@@ -1565,11 +1566,18 @@ def generate_clothing_items_attributes(items):
 		# Set the positive stats
 		if len(ordered_positive_stats) > 0:
 			for stat, multiplier in zip(ordered_positive_stats, stats_multipliers[str(num_positive)]):
-				item[stat] = math.ceil(total_stat_value_positive * multiplier / 5) * 5	# Round up to the nearest multiple of 5
+				stat_to_set = total_stat_value_positive * multiplier
+				# stat_to_set = math.ceil(stat_to_set / 5) * 5	# Round up to the nearest multiple of 5
+				stat_to_set = round(stat_to_set)	# Round to the nearest integer
+				item[stat] = stat_to_set
 		# Set the negative stats
 		if len(ordered_negative_stats) > 0:
 			for stat, multiplier in zip(ordered_negative_stats, stats_multipliers[str(num_negative)]):
-				item[stat] = -1 * math.ceil(total_stat_value_negative * multiplier / 5) * 5	# Round up to the nearest multiple of 5
+				# item[stat] = -1 * math.ceil(total_stat_value_negative * multiplier / 5) * 5	# Round up to the nearest multiple of 5
+				stat_to_set = -1 * total_stat_value_negative * multiplier
+				# stat_to_set = math.ceil(stat_to_set / 5) * 5	# Round up to the nearest multiple of 5
+				stat_to_set = round(stat_to_set)	# Round to the nearest integer
+				item[stat] = stat_to_set
 
 		# ===============================================================================================================
 
@@ -1655,7 +1663,7 @@ def get_empty_staff_item():
 		"actionValue": 0,
 		"actionRate": 0,
 		"actionRadius": 0,
-		"specialActionReghargeSpeed": 0,
+		"specialActionRechargeSpeed": 0,
 		"criticalChance": 0,
 		"weightIncrement": 0,
 		"criticalHitMultiplier": 0,
@@ -1721,7 +1729,7 @@ def create_staff_items(staff_items):
 		(DONE) "actionValue": float,					// The damage, heal amount, damage boost for other troops, ecc... of this staff (hence the main action value of the staff)
 		(DONE) "actionRate": float,					// The rate of the action of this staff (e.g. attack rate, shoot rate, heal rate, damage boost rate, ecc...)
 		(DONE) "actionRadius": float,					// The radius of the action of this staff (e.g. attack radius, shoot radius, heal radius, but also radius of the defender force field, ecc...)
-		(~) "specialActionReghargeSpeed": float,	// The recharge speed of the special action of this staff (e.g. the percentage of the special attack/effect that recharges per second)
+		(~) "specialActionRechargeSpeed": float,	// The recharge speed of the special action of this staff (e.g. the percentage of the special attack/effect that recharges per second)
 		(DONE) "criticalChance": float,				// The critical chance of this staff (e.g. the percentage chance of critical hit, critical heal, critical damage boost, ecc...)
 		(DONE) "weightIncrement": float,				// The weight of this staff (that is added to the wizard unit wielding this staff)
 		
@@ -1992,7 +2000,7 @@ def generate_staff_items_attributes(staff_items):
 			# We consider a single pixel in world unit equal to 1/32, and we also should subtract one picxel from the final value since the pivot point is set to the bottom with a custom offset of 1 pixel (hence the sprtie is actually translated 1 pixel down in the scene)
 			y = (64 / 32) - (pos_y / 32) - (1 / 32)
 			# If its 0, the x should be -1 / 32, if its 63 it should be 1 / 32
-			x = ((pos_x - 32) / 32) / 32
+			x = ((pos_x - 32) / 32)
 
 			#Round the values to 3 decimal places
 			x = round(x, 3)
@@ -2173,7 +2181,7 @@ def generate_staff_items_attributes(staff_items):
 						summoned_unit_prefab_string = "dumbat"
 						max_number_of_summoned_units_in_battle = 3
 					case 2:
-						summoned_unit_prefab_string = "whyrm"
+						summoned_unit_prefab_string = "wyrm"
 						max_number_of_summoned_units_in_battle = 3
 					case 3:
 						summoned_unit_prefab_string = "eaglet"
@@ -2220,7 +2228,7 @@ def generate_staff_items_attributes(staff_items):
 			"actionValue": [0,0],
 			"actionRate": [0,0],
 			"actionRadius": [0,0],
-			"specialActionReghargeSpeed": [0,0],	# TO DEFINE...
+			"specialActionRechargeSpeed": [0,0],	# TO DEFINE...
 			"criticalChance": [0,0],
 			"weightIncrement": [25,150],				# Default values for most staffs (randomized, should not need to be changed for most staff types...)
 
@@ -2232,7 +2240,7 @@ def generate_staff_items_attributes(staff_items):
 				stat_values_per_rarity["actionValue"] = [20, 65]		# Melee staffs should deal high damage
 				stat_values_per_rarity["actionRate"] = [3.5, 7.5]		# Melee staffs should attack slowly
 				stat_values_per_rarity["actionRadius"] = [1.0, 1.0]	# Melee have a fixed action radius of 1.0 (their actual action radius is calculated differently)
-				# base_stat_values_per_rarity["specialActionReghargeSpeed"] = [0,0]
+				# base_stat_values_per_rarity["specialActionRechargeSpeed"] = [0,0]
 				stat_values_per_rarity["criticalChance"] = [25, 75]	#Melee staffs have a high critical chance
 				stat_values_per_rarity["weightIncrement"] = [50, 200]	# Melee staffs should be heavier than other staffs
 				stat_values_per_rarity["criticalHitMultiplier"] = [1.5, 2.25]	# Melee staffs should have a high critical hit multiplier
@@ -2240,23 +2248,23 @@ def generate_staff_items_attributes(staff_items):
 				stat_values_per_rarity["actionValue"] = [100, 100]		# Shooter staffs have a damage dictated by the bullet they shoot, the action value represent the percentage of the damage of the bullet that the actual fired bullet deals (this should be kept at 100 for all shooter staffs...)
 				stat_values_per_rarity["actionRate"] = [5, 15] 		# Shooter staffs should attack fast
 				stat_values_per_rarity["actionRadius"] = [6, 12]		# Shooter staffs have a wide action radius
-				# base_stat_values_per_rarity["specialActionReghargeSpeed"] = [0,0]
+				# base_stat_values_per_rarity["specialActionRechargeSpeed"] = [0,0]
 				stat_values_per_rarity["criticalChance"] = [10, 50]	# Shooter staffs have a low critical chance
 				stat_values_per_rarity["weightIncrement"] = [20, 125]	# Shooter staffs should be lighter than melee staffs
 				stat_values_per_rarity["criticalHitMultiplier"] = [1.25, 1.75]	# Shooter staffs should have a small critical hit multiplier
 			case "healer":
-				stat_values_per_rarity["actionValue"] = [5, 55]		# Healer staffs should heal for a small amount
+				stat_values_per_rarity["actionValue"] = [5, 35]		# Healer staffs should heal for a small amount
 				stat_values_per_rarity["actionRate"] = [5, 15] 		# Healer staffs should heal at a medium rate
 				stat_values_per_rarity["actionRadius"] = [6, 12]	# Healer staffs have a wide action radius
-				# base_stat_values_per_rarity["specialActionReghargeSpeed"] = [0,0]
+				# base_stat_values_per_rarity["specialActionRechargeSpeed"] = [0,0]
 				stat_values_per_rarity["criticalChance"] = [10, 50]	# Healer staffs have a low critical chance
 				stat_values_per_rarity["weightIncrement"] = [15, 100]	# Healer staffs should be very light
-				stat_values_per_rarity["criticalHitMultiplier"] = [1.25, 1.75]	# Healer staffs should have a small critical hit multiplier
+				stat_values_per_rarity["criticalHitMultiplier"] = [1, 1.5]	# Healer staffs should have a small critical hit multiplier
 			case "booster":
 				stat_values_per_rarity["actionValue"] = [25, 75]			# Booster staffs boost for a base percentage (e.g. 10%)
 				stat_values_per_rarity["actionRate"] = [-1, -1] 			# Booster staffs have no action rate (they always boost)
 				stat_values_per_rarity["actionRadius"] = [5.5, 8.5]		# Booster staffs have a small boost radius
-				# base_stat_values_per_rarity["specialActionReghargeSpeed"] = [0,0]
+				# base_stat_values_per_rarity["specialActionRechargeSpeed"] = [0,0]
 				stat_values_per_rarity["criticalChance"] = [-1, -1]		# Booster staffs have no critical chance
 				stat_values_per_rarity["weightIncrement"] = [25, 150]	# Booster staffs should be mediumyly heavy
 				stat_values_per_rarity["criticalHitMultiplier"] = [1, 1]	# Booster staffs have no critical hit multiplier (they don't hit)
@@ -2264,7 +2272,7 @@ def generate_staff_items_attributes(staff_items):
 				stat_values_per_rarity["actionValue"] = [15, 65]			# Defender staffs have an action corresponding to the percentage of damage absorbed
 				stat_values_per_rarity["actionRate"] = [-1, -1] 			# Defender staffs have no action rate
 				stat_values_per_rarity["actionRadius"] = [8.5, 12.5]		# Defender staffs have an action radius corresponding to the force field around them (should be set to a value around 10)
-				# base_stat_values_per_rarity["specialActionReghargeSpeed"] = [0,0]
+				# base_stat_values_per_rarity["specialActionRechargeSpeed"] = [0,0]
 				stat_values_per_rarity["criticalChance"] = [10, 25]		# Defender staffs have a critical chance which correspond to a negative effect, hence their critical multiplier should be negative, meaning the hit they take, with this given percentage, will damage them for the full damage multiplied by the critical multiplier (usually -1) rather than the reduced damage
 				stat_values_per_rarity["weightIncrement"] = [75, 300]	# Defender staffs should be very heavy
 				stat_values_per_rarity["criticalHitMultiplier"] = [-2.5, -0.5]	# Defender staffs have a negative critical hit multiplier (as explained above)
@@ -2272,7 +2280,7 @@ def generate_staff_items_attributes(staff_items):
 				stat_values_per_rarity["actionValue"] = [1, 1]			# Action value should be that of the summoned unit, hence we use this value as a multiplier for the summoned unit's stats (usually 1)
 				stat_values_per_rarity["actionRate"] = [1, 1] 			# Action rate of summoners should be that of the summoned unit, hence we use this value as a multiplier for the summoned unit's stats (usually 1)
 				stat_values_per_rarity["actionRadius"] = [1, 1]			# Action radius of summoners should be that of the summoned unit, hence we use this value as a multiplier for the summoned unit's stats (usually 1)
-				stat_values_per_rarity["specialActionReghargeSpeed"] = [1 / 4, 1 / 2]		# Summoners have the special action corresponding to the actual summoning of units, hence the recharge speed is tied to the number of units summoned per second (as if it was the action rate)
+				stat_values_per_rarity["specialActionRechargeSpeed"] = [1 / 4, 1 / 2]		# Summoners have the special action corresponding to the actual summoning of units, hence the recharge speed is tied to the number of units summoned per second (as if it was the action rate)
 				stat_values_per_rarity["criticalChance"] = [0, 0]		# Summoner staffs have no critical chance
 				stat_values_per_rarity["weightIncrement"] = [25, 150]	# Summoner staffs should be mediumyly heavy
 				stat_values_per_rarity["criticalHitMultiplier"] = [1, 1]	# Summoner staffs have no critical hit multiplier
@@ -2280,7 +2288,7 @@ def generate_staff_items_attributes(staff_items):
 				stat_values_per_rarity["actionValue"] = [1, 1]			# Action value should be that of the trained unit, hence we use this value as a multiplier for the trained unit's stats (usually 1)
 				stat_values_per_rarity["actionRate"] = [1, 1] 			# Action rate of trainers should be that of the trained unit, hence we use this value as a multiplier for the trained unit's stats (usually 1)
 				stat_values_per_rarity["actionRadius"] = [1, 1]			# Action radius of trainers should be that of the trained unit, hence we use this value as a multiplier for the trained unit's stats (usually 1)
-				# base_stat_values_per_rarity["specialActionReghargeSpeed"] = [0,0] 	# To set... (in this case, the special action is that of the creature that this trainer is training)
+				# base_stat_values_per_rarity["specialActionRechargeSpeed"] = [0,0] 	# To set... (in this case, the special action is that of the creature that this trainer is training)
 				stat_values_per_rarity["criticalChance"] = [0, 0]		# Trainer staffs have no critical chance
 				stat_values_per_rarity["weightIncrement"] = [25, 150]	# Trainer staffs should be mediumyly heavy
 				stat_values_per_rarity["criticalHitMultiplier"] = [1, 1]	# Summoner staffs have no critical hit multiplier
@@ -2311,10 +2319,12 @@ def generate_staff_items_attributes(staff_items):
 					possible_values = [stat_values_per_rarity[stat][0]] + [stat_values_per_rarity[stat][0] + (stat_values_per_rarity[stat][1] - stat_values_per_rarity[stat][0]) * i / 11 for i in range(1, 11)] + [stat_values_per_rarity[stat][1]]
 					index = 1 + ((rarity_value - 1) * 2) + ((staff_number + stat_index) % 3 - 1)
 					# Randomize more by adding a value equal to the minimum possible value divided by 4 and multiplied by a random value in range [0,1] based on the staff number (considering 5 possible staff numbers)
-					value_to_add = stat_values_per_rarity[stat][0] / 4 * (((staff_number + stat_index) + 3) % 6) / 5
-					value_to_add_based_on_rarity = stat_values_per_rarity[stat][0] / 6 * (rarity_value - 1) / 4
-					staff[stat] = possible_values[index] + value_to_add + value_to_add_based_on_rarity
-					
+					if stat != "criticalHitMultiplier":
+						value_to_add = stat_values_per_rarity[stat][0] / 4 * (((staff_number + stat_index) + 3) % 6) / 5
+						value_to_add_based_on_rarity = stat_values_per_rarity[stat][0] / 6 * (rarity_value - 1) / 4
+						staff[stat] = possible_values[index] + value_to_add + value_to_add_based_on_rarity
+					else:
+						staff[stat] = possible_values[index]
 			# Round stats
 			if stat in ["healthPointsIncrement", "actionValue", "criticalChance", "weightIncrement"]:
 				#Round to the nearest integer

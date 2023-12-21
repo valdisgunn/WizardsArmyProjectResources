@@ -1658,6 +1658,7 @@ def get_empty_staff_item():
 		"sprite": "",
 		"id_string": "",
 		"rarity": 0,
+		"staffMainColor": "",
 		"pixels_offset": [0, 0],
 		"healthPointsIncrement": 0,
 		"actionValue": 0,
@@ -1718,6 +1719,8 @@ def create_staff_items(staff_items):
 												//		- fourth string is the number of the staff among staffs of that type (padded with 3 digits, hence we will usually have only "001", "002", ecc... for now)
 
 		(~) "rarity": int,						// Rarity of the item, int in range [1-5]
+
+		(DONE) "staffMainColor": string,			// Main color of the staff: leave to an empty string if the staff should not set its color
 
 		(DONE) "pixels_offset": [int, int],		// X and Y offsets of the image (such that the item's image sprite is centered)
 
@@ -2366,6 +2369,32 @@ def generate_staff_items_attributes(staff_items):
 
 		staff_item["pixels_offset"] = [horizontal_offset, vertical_offset]
 
+		# Set the main the color of the staff 
+		colors_in_sprite = get_sprite_pixel_colors(staff_item["sprite"])
+		main_color_to_set = ""
+		if (len(colors_in_sprite) == 0):
+			# this shouldn't happen...
+			main_color_to_set = "white"
+		elif (len(colors_in_sprite) == 1):
+			main_color_to_set = list(colors_in_sprite.keys())[0]
+		else:
+			min_pixels_of_color = 3
+			#exclude colors with not enough pixels of that color
+			colors_in_sprite_to_use = {color: colors_in_sprite[color] for color in colors_in_sprite if colors_in_sprite[color] >= min_pixels_of_color}
+			if (len(colors_in_sprite_to_use) == 0):
+				# if there are no colors with enough pixels, use the color with the most pixels (this should not be happening...)
+				color_with_most_pixels = max(colors_in_sprite, key=colors_in_sprite.get)
+				colors_in_sprite_to_use = {color_with_most_pixels: colors_in_sprite[color_with_most_pixels]}
+			elif (len(colors_in_sprite_to_use) == 1):
+				# there is only one color with enough pixels, use that color
+				main_color_to_set = list(colors_in_sprite_to_use.keys())[0]
+			# There are 2 or more colors we can use (hence with enough pixels)
+			# get a list of colors sorted by number of pixels
+			sorted_colors_list = sorted(colors_in_sprite_to_use, key=colors_in_sprite_to_use.get, reverse=True)
+			# use the second most frequent color (not first to avoid using brown, which may be the most frequent for most staffs)
+			main_color_to_set = sorted_colors_list[1]
+		staff_item["staffMainColor"] = main_color_to_set
+
 		# Set the rarity of the staff item
 		staff_item["rarity"] = get_staff_rarity(staff_item["staff_type"], staff_number)
 
@@ -2424,18 +2453,66 @@ def get_image_based_item_values(sprite_name):
 		2) the pixel palette colors (dictionary containing the name of the color (key) and the number of pixels of that color (value)) of the item
 		3) the X and Y offset of the image (such that the image is centered)
 	'''
-	def rgb_to_hex(r, g, b):
-		return '#{:02x}{:02x}{:02x}'.format(r, g, b)
+	
+	# Get the image
+	# image = PIL.Image.open("./Sprites/" + sprite_name)
+
+	# # Get the size of the image
+	# size = image.size
+
+	# # Get the pixels of the image
+	# pixels = image.load()
+
+	colors = get_sprite_pixel_colors(sprite_name, COVERED_PIXELS_FOR_ROBES if "robe" in sprite_name else [])
+
+	# To fill in the pixel palette colors (which contains all the colors of the palette that will determin the "types" or "elements" of the wizard hat or color) we only add the palette color (type/element) if the number of pixels of that color (in the hat/clothes sprite) is x >= pixel_colors_min_count
+	pixel_colors_min_count_for_hats = 2;	# Only sprites with a number of pixels GREATER OR EQUAL than this will have the associated color type/element added to the palette
+	pixel_colors_min_count_for_robes = 5;	# Only sprites with a number of pixels GREATER OR EQUAL than this will have the associated color type/element added to the palette
+
+	pixel_colors_min_count = pixel_colors_min_count_for_robes if "robe" in sprite_name else pixel_colors_min_count_for_hats
+
+	# Dictionary containing the name of the color (key) and the number of pixels of that color (value)
+	pixel_palette_colors = {}
+	for color in colors:
+		if colors[color] >= pixel_colors_min_count:
+			pixel_palette_colors[color] = colors[color]
+
+	# Get the element types of the item (sorted from most frequent to least frequent associated pixel color in the sprite)
+	element_types = []
+	# get the list of colors sorted by number of pixels
+	sorted_colors_list = sorted(pixel_palette_colors, key=colors.get, reverse=True)
+	for color in sorted_colors_list:
+		element_types.append(COLOR_NAME_TO_ELEMENT_TYPE[color])
+
+	# calculate offset of the image such that the image is centered horizontally and vertically
+	pixels_offset = get_sprite_offset_to_center(sprite_name)
+	horizontal_offset = pixels_offset[0]
+	vertical_offset = pixels_offset[1]
+
+	return element_types, pixel_palette_colors, [horizontal_offset, vertical_offset]
+
+def get_sprite_pixel_colors(sprite_name, exclude_pixels_indexes = []):
+
+	'''
+	Returns an object containing, as keys, the names of the colors in the sprite, and as values, the number of pixels of that color in the sprite.
+	
+	Returned object contains only colors that are in the sprite.
+
+	The "exclude_pixels_indexes" is a list of [x,y] indexes of pixels to exclude when cycling through the pixels to get their colors (set to "COVERED_PIXELS_FOR_ROBES" to exclude the pixels covered by the face sprite when calculating the colors of the robe)
+	'''
 	
 	# Get the image
 	image = PIL.Image.open("./Sprites/" + sprite_name)
 
 	# Get the size of the image
 	size = image.size
-
+	
 	# Get the pixels of the image
 	pixels = image.load()
 
+	def rgb_to_hex(r, g, b):
+		return '#{:02x}{:02x}{:02x}'.format(r, g, b)
+	
 	# Palette of possible colors in the image
 	palette_hex = {
 		"black": ["#4d4d4d", "#333333", "#1a1a1a"],
@@ -2455,7 +2532,7 @@ def get_image_based_item_values(sprite_name):
 	for x in range(size[0]):
 		for y in range(size[1]):
 			# check if the pixel is covered by the face
-			if [x, y] in COVERED_PIXELS_FOR_ROBES and "robe" in sprite_name:
+			if [x, y] in exclude_pixels_indexes:
 				continue
 			color = pixels[x, y]	# tuple (r,g,b,a)
 			if color[3] == 0:	# if the pixel is transparent, skip it
@@ -2473,32 +2550,8 @@ def get_image_based_item_values(sprite_name):
 				colors[color_name] += 1
 			else:
 				colors[color_name] = 1
-	
-	# To fill in the pixel palette colors (which contains all the colors of the palette that will determin the "types" or "elements" of the wizard hat or color) we only add the palette color (type/element) if the number of pixels of that color (in the hat/clothes sprite) is x >= pixel_colors_min_count
-	pixel_colors_min_count_for_hats = 2;	# Only sprites with a number of pixels GREATER OR EQUAL than this will have the associated color type/element added to the palette
-	pixel_colors_min_count_for_robes = 5;	# Only sprites with a number of pixels GREATER OR EQUAL than this will have the associated color type/element added to the palette
 
-	pixel_colors_min_count = pixel_colors_min_count_for_robes if "robe" in sprite_name else pixel_colors_min_count_for_hats
-
-	# Dictionary containing the nae of the color (key) and the number of pixels of that color (value)
-	pixel_palette_colors = {}
-	for color in colors:
-		if colors[color] >= pixel_colors_min_count:
-			pixel_palette_colors[color] = colors[color]
-
-	# Get the element types of the item (sorted from most frequent to least frequent associated pixel color in the sprite)
-	#get the list of colors sorted by number of pixels
-	sorted_colors = sorted(pixel_palette_colors, key=pixel_palette_colors.get, reverse=True)
-	element_types = []
-	for color in sorted_colors:
-		element_types.append(COLOR_NAME_TO_ELEMENT_TYPE[color])
-
-	# calculate offset of the image such that the image is centered horizontally and vertically
-	pixels_offset = get_sprite_offset_to_center(sprite_name)
-	horizontal_offset = pixels_offset[0]
-	vertical_offset = pixels_offset[1]
-
-	return element_types, pixel_palette_colors, [horizontal_offset, vertical_offset]
+	return colors
 
 def get_sprite_offset_to_center(sprite_name):
 

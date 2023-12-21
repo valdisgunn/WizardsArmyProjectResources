@@ -5,6 +5,7 @@
         "sprite": "staff-booster-3.png",
         "id_string": "STAFF-BOO-001",
         "rarity": "Epic",
+        "staffMainColor": "brown",
         "pixels_offset": [
             -10,
             -2
@@ -54,6 +55,7 @@
         "sprite": "staff-booster-2.png",
         "id_string": "STAFF-BOO-002",
         "rarity": "Legendary",
+        "staffMainColor": "brown",
         "pixels_offset": [
             -10,
             -2
@@ -103,6 +105,7 @@
         "sprite": "staff-booster.png",
         "id_string": "STAFF-BOO-003",
         "rarity": "Rare",
+        "staffMainColor": "brown",
         "pixels_offset": [
             -10,
             -2
@@ -152,6 +155,7 @@
         "sprite": "staff-defender-3.png",
         "id_string": "STAFF-DEF-001",
         "rarity": "Rare",
+        "staffMainColor": "yellow",
         "pixels_offset": [
             -10,
             -7
@@ -201,6 +205,7 @@
         "sprite": "staff-defender-2.png",
         "id_string": "STAFF-DEF-002",
         "rarity": "Epic",
+        "staffMainColor": "red",
         "pixels_offset": [
             -10,
             -7
@@ -250,6 +255,7 @@
         "sprite": "staff-defender.png",
         "id_string": "STAFF-DEF-003",
         "rarity": "Legendary",
+        "staffMainColor": "green",
         "pixels_offset": [
             -10,
             -7
@@ -299,6 +305,7 @@
         "sprite": "staff-healer-3.png",
         "id_string": "STAFF-HEA-001",
         "rarity": "Rare",
+        "staffMainColor": "green",
         "pixels_offset": [
             -10,
             -6
@@ -349,6 +356,7 @@
         "sprite": "staff-healer-2.png",
         "id_string": "STAFF-HEA-002",
         "rarity": "Epic",
+        "staffMainColor": "sky_blue",
         "pixels_offset": [
             -10,
             -6
@@ -399,6 +407,7 @@
         "sprite": "staff-healer.png",
         "id_string": "STAFF-HEA-003",
         "rarity": "Legendary",
+        "staffMainColor": "white",
         "pixels_offset": [
             -10,
             -6
@@ -449,6 +458,7 @@
         "sprite": "staff-melee-11.png",
         "id_string": "STAFF-MEL-001",
         "rarity": "Common",
+        "staffMainColor": "brown",
         "pixels_offset": [
             -10,
             -2
@@ -498,6 +508,7 @@
         "sprite": "staff-melee-10.png",
         "id_string": "STAFF-MEL-002",
         "rarity": "Rare",
+        "staffMainColor": "white",
         "pixels_offset": [
             -10,
             -8
@@ -547,6 +558,7 @@
         "sprite": "staff-melee-9.png",
         "id_string": "STAFF-MEL-003",
         "rarity": "Epic",
+        "staffMainColor": "gray",
         "pixels_offset": [
             -10,
             -2
@@ -596,6 +608,7 @@
         "sprite": "staff-melee-8.png",
         "id_string": "STAFF-MEL-004",
         "rarity": "Legendary",
+        "staffMainColor": "brown",
         "pixels_offset": [
             -10,
             -2
@@ -645,6 +658,7 @@
         "sprite": "staff-melee-7.png",
         "id_string": "STAFF-MEL-005",
         "rarity": "Useless",
+        "staffMainColor": "white",
         "pixels_offset": [
             -10,
             -2
@@ -694,6 +708,7 @@
         "sprite": "staff-melee-6.png",
         "id_string": "STAFF-MEL-006",
         "rarity": "Common",
+        "staffMainColor": "brown",
         "pixels_offset": [
             -10,
             -8
@@ -743,6 +758,7 @@
         "sprite": "staff-melee-5.png",
         "id_string": "STAFF-MEL-007",
         "rarity": "Rare",
+        "staffMainColor": "brown",
         "pixels_offset": [
             -10,
             -6
@@ -792,6 +808,7 @@
         "sprite": "staff-melee-4.png",
         "id_string": "STAFF-MEL-008",
         "rarity": "Epic",
+        "staffMainColor": "brown",
         "pixels_offset": [
             -10,
             -4
@@ -841,6 +858,7 @@
         "sprite": "staff-melee-3.png",
         "id_string": "STAFF-MEL-009",
         "rarity": "Legendary",
+        "staffMainColor": "gray",
         "pixels_offset": [
             -10,
             -6
@@ -890,6 +908,7 @@
         "sprite": "staff-melee-2.png",
         "id_string": "STAFF-MEL-010",
         "rarity": "Useless",
+        "staffMainColor": "brown",
         "pixels_offset": [
             -11,
             -4
@@ -939,6 +958,7 @@
         "sprite": "staff-melee.png",
         "id_string": "STAFF-MEL-011",
         "rarity": "Common",
+        "staffMainColor": "gray",
         "pixels_offset": [
             -15,
             -2
@@ -988,6 +1008,7 @@
         "sprite": "staff-shooter-9.png",
         "id_string": "STAFF-SHO-001",
         "rarity": "Common",
+        "staffMainColor": "purple",
         "pixels_offset": [
             -10,
             -8
@@ -1037,6 +1058,7 @@
         "sprite": "staff-shooter-8.png",
         "id_string": "STAFF-SHO-002",
         "rarity": "Rare",
+        "staffMainColor": "green",
         "pixels_offset": [
             -10,
             -8
@@ -1086,6 +1108,7 @@
         "sprite": "staff-shooter-7.png",
         "id_string": "STAFF-SHO-003",
         "rarity": "Epic",
+        "staffMainColor": "yellow",
         "pixels_offset": [
             -10,
             -8
@@ -1135,6 +1158,7 @@
         "sprite": "staff-shooter-6.png",
         "id_string": "STAFF-SHO-004",
         "rarity": "Legendary",
+        "staffMainColor": "sky_blue",
         "pixels_offset": [
             -10,
             -7
@@ -1184,6 +1208,7 @@
         "sprite": "staff-shooter-5.png",
         "id_string": "STAFF-SHO-005",
         "rarity": "Useless",
+        "staffMainColor": "red",
         "pixels_offset": [
             -10,
             -7
@@ -1233,6 +1258,7 @@
         "sprite": "staff-shooter-4.png",
         "id_string": "STAFF-SHO-006",
         "rarity": "Common",
+        "staffMainColor": "blue",
         "pixels_offset": [
             -10,
             -7
@@ -1282,6 +1308,7 @@
         "sprite": "staff-shooter-3.png",
         "id_string": "STAFF-SHO-007",
         "rarity": "Rare",
+        "staffMainColor": "green",
         "pixels_offset": [
             -10,
             -3
@@ -1331,6 +1358,7 @@
         "sprite": "staff-shooter-2.png",
         "id_string": "STAFF-SHO-008",
         "rarity": "Epic",
+        "staffMainColor": "red",
         "pixels_offset": [
             -10,
             -5
@@ -1380,6 +1408,7 @@
         "sprite": "staff-shooter.png",
         "id_string": "STAFF-SHO-009",
         "rarity": "Legendary",
+        "staffMainColor": "sky_blue",
         "pixels_offset": [
             -10,
             -7
@@ -1429,6 +1458,7 @@
         "sprite": "staff-spellcaster-3.png",
         "id_string": "STAFF-SPE-001",
         "rarity": "Rare",
+        "staffMainColor": "purple",
         "pixels_offset": [
             -10,
             -6
@@ -1478,6 +1508,7 @@
         "sprite": "staff-spellcaster-2.png",
         "id_string": "STAFF-SPE-002",
         "rarity": "Epic",
+        "staffMainColor": "brown",
         "pixels_offset": [
             -10,
             -2
@@ -1527,6 +1558,7 @@
         "sprite": "staff-spellcaster.png",
         "id_string": "STAFF-SPE-003",
         "rarity": "Legendary",
+        "staffMainColor": "brown",
         "pixels_offset": [
             -10,
             -6
@@ -1576,6 +1608,7 @@
         "sprite": "staff-summoner-6.png",
         "id_string": "STAFF-SUM-001",
         "rarity": "Epic",
+        "staffMainColor": "purple",
         "pixels_offset": [
             -10,
             -6
@@ -1625,6 +1658,7 @@
         "sprite": "staff-summoner-5.png",
         "id_string": "STAFF-SUM-002",
         "rarity": "Legendary",
+        "staffMainColor": "yellow",
         "pixels_offset": [
             -10,
             -7
@@ -1674,6 +1708,7 @@
         "sprite": "staff-summoner-4.png",
         "id_string": "STAFF-SUM-003",
         "rarity": "Rare",
+        "staffMainColor": "yellow",
         "pixels_offset": [
             -10,
             -6
@@ -1723,6 +1758,7 @@
         "sprite": "staff-summoner-3.png",
         "id_string": "STAFF-SUM-004",
         "rarity": "Epic",
+        "staffMainColor": "blue",
         "pixels_offset": [
             -10,
             -7
@@ -1772,6 +1808,7 @@
         "sprite": "staff-summoner-2.png",
         "id_string": "STAFF-SUM-005",
         "rarity": "Legendary",
+        "staffMainColor": "yellow",
         "pixels_offset": [
             -10,
             -6
@@ -1821,6 +1858,7 @@
         "sprite": "staff-summoner.png",
         "id_string": "STAFF-SUM-006",
         "rarity": "Rare",
+        "staffMainColor": "gray",
         "pixels_offset": [
             -10,
             -4
@@ -1870,6 +1908,7 @@
         "sprite": "staff-trainer.png",
         "id_string": "STAFF-TRA-001",
         "rarity": "Epic",
+        "staffMainColor": "gray",
         "pixels_offset": [
             -10,
             -6

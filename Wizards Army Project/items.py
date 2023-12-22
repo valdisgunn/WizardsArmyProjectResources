@@ -1659,6 +1659,7 @@ def get_empty_staff_item():
 		"id_string": "",
 		"rarity": 0,
 		"staffMainColor": "",
+		"staffActionAnimation": "",
 		"pixels_offset": [0, 0],
 		"healthPointsIncrement": 0,
 		"actionValue": 0,
@@ -1721,6 +1722,8 @@ def create_staff_items(staff_items):
 		(~) "rarity": int,						// Rarity of the item, int in range [1-5]
 
 		(DONE) "staffMainColor": string,			// Main color of the staff: leave to an empty string if the staff should not set its color
+
+		"staffActionAnimation": string,		// The animation of the melee attack of this staff (e.g. "slash", "slam", "stab", ecc...)
 
 		(DONE) "pixels_offset": [int, int],		// X and Y offsets of the image (such that the item's image sprite is centered)
 
@@ -1939,6 +1942,7 @@ def generate_staff_items_attributes(staff_items):
 	staff_items.sort(key=lambda item: sort_items_criteria(item), reverse=True)
 
 	def set_unit_type_specific_stats(staff):
+
 		staff_type = staff["staff_type"]
 
 		# List of all possible bullets with their main color and also their value tier, number usually in [1,5] (but may also be higher) that depends on
@@ -2010,6 +2014,8 @@ def generate_staff_items_attributes(staff_items):
 			y = round(y, 3)
 
 			return [x, y]
+		
+		staff_action_animation = "default"
 
 		match staff_type:
 			case "melee":
@@ -2022,29 +2028,44 @@ def generate_staff_items_attributes(staff_items):
 				match staff_number:
 					case 1:
 						action_knockback_multiplier = 0.5
+						staff_action_animation = "slam"
 					case 2:
 						action_knockback_multiplier = 0.5
+						staff_action_animation = "slam"
 					case 3:
 						action_knockback_multiplier = 1.25
 						area_damage_radius = 1
 						after_hit_state = "stunned"
+						staff_action_animation = "slam"
 					case 4:
 						action_knockback_multiplier = 1.25
 						area_damage_radius = 1
 						after_hit_state = "stunned"
+						staff_action_animation = "slam"
 					case 5:
 						action_knockback_multiplier = 1.25
 						area_damage_radius = 1
 						after_hit_state = "stunned"
+						staff_action_animation = "slam"
 					case 6:
 						action_knockback_multiplier = 1
+						staff_action_animation = "slam"
 					case 7:
 						action_knockback_multiplier = 0.375
+						staff_action_animation = "slam"
 					case 8:
 						action_knockback_multiplier = 0.5
 						after_hit_state = "stunned"
-					case 9, 10, 11:
+						staff_action_animation = "slam"
+					case 9:
 						action_knockback_multiplier = 0.1
+						staff_action_animation = "stab"
+					case 10:
+						action_knockback_multiplier = 0.1
+						staff_action_animation = "slash"
+					case 11:
+						action_knockback_multiplier = 0.1
+						staff_action_animation = "slash"
 
 				# Set final values
 				staff["meleeStats"]["actionKnockbackMultiplier"] = action_knockback_multiplier
@@ -2213,6 +2234,10 @@ def generate_staff_items_attributes(staff_items):
 				staff["spellcasterStats"] = staff["spellcasterStats"]
 			case _: # Default
 				print("ERROR: Invalid staff type: " + staff_type)
+
+		# Set the staff action animation
+		staff["staffActionAnimation"] = staff_action_animation
+
 		return staff
 
 	def set_staff_item_stats(staff):
@@ -2242,11 +2267,11 @@ def generate_staff_items_attributes(staff_items):
 			case "melee":
 				stat_values_per_rarity["actionValue"] = [20, 65]		# Melee staffs should deal high damage
 				stat_values_per_rarity["actionRate"] = [3.5, 7.5]		# Melee staffs should attack slowly
-				stat_values_per_rarity["actionRadius"] = [1.0, 1.0]	# Melee have a fixed action radius of 1.0 (their actual action radius is calculated differently)
+				stat_values_per_rarity["actionRadius"] = [1.25, 1.25]	# Melee have a fixed action radius of 1.0 (their actual action radius is calculated differently)
 				# base_stat_values_per_rarity["specialActionRechargeSpeed"] = [0,0]
 				stat_values_per_rarity["criticalChance"] = [25, 75]	#Melee staffs have a high critical chance
-				stat_values_per_rarity["weightIncrement"] = [50, 200]	# Melee staffs should be heavier than other staffs
-				stat_values_per_rarity["criticalHitMultiplier"] = [1.5, 2.25]	# Melee staffs should have a high critical hit multiplier
+				stat_values_per_rarity["weightIncrement"] = [100, 200]	# Melee staffs should be heavier than other staffs
+				stat_values_per_rarity["criticalHitMultiplier"] = [1.5, 2]	# Melee staffs should have a high critical hit multiplier
 			case "shooter":
 				stat_values_per_rarity["actionValue"] = [100, 100]		# Shooter staffs have a damage dictated by the bullet they shoot, the action value represent the percentage of the damage of the bullet that the actual fired bullet deals (this should be kept at 100 for all shooter staffs...)
 				stat_values_per_rarity["actionRate"] = [5, 15] 		# Shooter staffs should attack fast
@@ -2256,13 +2281,13 @@ def generate_staff_items_attributes(staff_items):
 				stat_values_per_rarity["weightIncrement"] = [20, 125]	# Shooter staffs should be lighter than melee staffs
 				stat_values_per_rarity["criticalHitMultiplier"] = [1.25, 1.75]	# Shooter staffs should have a small critical hit multiplier
 			case "healer":
-				stat_values_per_rarity["actionValue"] = [5, 35]		# Healer staffs should heal for a small amount
-				stat_values_per_rarity["actionRate"] = [5, 15] 		# Healer staffs should heal at a medium rate
+				stat_values_per_rarity["actionValue"] = [5, 25]		# Healer staffs should heal for a small amount
+				stat_values_per_rarity["actionRate"] = [2.5, 7.5] 		# Healer staffs should heal at a medium rate
 				stat_values_per_rarity["actionRadius"] = [6, 12]	# Healer staffs have a wide action radius
 				# base_stat_values_per_rarity["specialActionRechargeSpeed"] = [0,0]
-				stat_values_per_rarity["criticalChance"] = [10, 50]	# Healer staffs have a low critical chance
+				stat_values_per_rarity["criticalChance"] = [5, 25]	# Healer staffs have a low critical chance
 				stat_values_per_rarity["weightIncrement"] = [15, 100]	# Healer staffs should be very light
-				stat_values_per_rarity["criticalHitMultiplier"] = [1, 1.5]	# Healer staffs should have a small critical hit multiplier
+				stat_values_per_rarity["criticalHitMultiplier"] = [1, 1.25]	# Healer staffs should have a small critical hit multiplier
 			case "booster":
 				stat_values_per_rarity["actionValue"] = [25, 75]			# Booster staffs boost for a base percentage (e.g. 10%)
 				stat_values_per_rarity["actionRate"] = [-1, -1] 			# Booster staffs have no action rate (they always boost)
@@ -2278,7 +2303,7 @@ def generate_staff_items_attributes(staff_items):
 				# base_stat_values_per_rarity["specialActionRechargeSpeed"] = [0,0]
 				stat_values_per_rarity["criticalChance"] = [10, 25]		# Defender staffs have a critical chance which correspond to a negative effect, hence their critical multiplier should be negative, meaning the hit they take, with this given percentage, will damage them for the full damage multiplied by the critical multiplier (usually -1) rather than the reduced damage
 				stat_values_per_rarity["weightIncrement"] = [75, 300]	# Defender staffs should be very heavy
-				stat_values_per_rarity["criticalHitMultiplier"] = [-2.5, -0.5]	# Defender staffs have a negative critical hit multiplier (as explained above)
+				stat_values_per_rarity["criticalHitMultiplier"] = [-2.25, -0.5]	# Defender staffs have a negative critical hit multiplier (as explained above)
 			case "summoner":
 				stat_values_per_rarity["actionValue"] = [1, 1]			# Action value should be that of the summoned unit, hence we use this value as a multiplier for the summoned unit's stats (usually 1)
 				stat_values_per_rarity["actionRate"] = [1, 1] 			# Action rate of summoners should be that of the summoned unit, hence we use this value as a multiplier for the summoned unit's stats (usually 1)

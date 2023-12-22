@@ -6,6 +6,7 @@
         "id_string": "STAFF-BOO-001",
         "rarity": "Epic",
         "staffMainColor": "brown",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -2
@@ -56,6 +57,7 @@
         "id_string": "STAFF-BOO-002",
         "rarity": "Legendary",
         "staffMainColor": "brown",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -2
@@ -106,6 +108,7 @@
         "id_string": "STAFF-BOO-003",
         "rarity": "Rare",
         "staffMainColor": "brown",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -2
@@ -156,6 +159,7 @@
         "id_string": "STAFF-DEF-001",
         "rarity": "Rare",
         "staffMainColor": "yellow",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -7
@@ -167,7 +171,7 @@
         "specialActionRechargeSpeed": 0.0,
         "criticalChance": 18,
         "weightIncrement": 244,
-        "criticalHitMultiplier": -1.5,
+        "criticalHitMultiplier": -1.25,
         "shooterAndHealerStats": {
             "bulletPrefab": "",
             "bulletSpawnOffset": [
@@ -206,6 +210,7 @@
         "id_string": "STAFF-DEF-002",
         "rarity": "Epic",
         "staffMainColor": "red",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -7
@@ -217,7 +222,7 @@
         "specialActionRechargeSpeed": 0.0,
         "criticalChance": 23,
         "weightIncrement": 300,
-        "criticalHitMultiplier": -1.5,
+        "criticalHitMultiplier": -1.25,
         "shooterAndHealerStats": {
             "bulletPrefab": "",
             "bulletSpawnOffset": [
@@ -256,6 +261,7 @@
         "id_string": "STAFF-DEF-003",
         "rarity": "Legendary",
         "staffMainColor": "green",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -7
@@ -306,16 +312,17 @@
         "id_string": "STAFF-HEA-001",
         "rarity": "Rare",
         "staffMainColor": "green",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -6
         ],
         "healthPointsIncrement": 0,
-        "actionValue": 23,
-        "actionRate": 9.0,
+        "actionValue": 18,
+        "actionRate": 4.5,
         "actionRadius": 9.5,
         "specialActionRechargeSpeed": 0.0,
-        "criticalChance": 27,
+        "criticalChance": 13,
         "weightIncrement": 79,
         "criticalHitMultiplier": 1.25,
         "shooterAndHealerStats": {
@@ -357,16 +364,17 @@
         "id_string": "STAFF-HEA-002",
         "rarity": "Epic",
         "staffMainColor": "sky_blue",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -6
         ],
         "healthPointsIncrement": 0,
-        "actionValue": 22,
-        "actionRate": 12.25,
+        "actionValue": 17,
+        "actionRate": 6.0,
         "actionRadius": 11.75,
         "specialActionRechargeSpeed": 0.0,
-        "criticalChance": 39,
+        "criticalChance": 19,
         "weightIncrement": 100,
         "criticalHitMultiplier": 1.25,
         "shooterAndHealerStats": {
@@ -408,18 +416,19 @@
         "id_string": "STAFF-HEA-003",
         "rarity": "Legendary",
         "staffMainColor": "white",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -6
         ],
         "healthPointsIncrement": 0,
-        "actionValue": 31,
-        "actionRate": 15.5,
+        "actionValue": 22,
+        "actionRate": 7.75,
         "actionRadius": 12.25,
         "specialActionRechargeSpeed": 0.0,
-        "criticalChance": 51,
+        "criticalChance": 25,
         "weightIncrement": 15,
-        "criticalHitMultiplier": 1.5,
+        "criticalHitMultiplier": 1.25,
         "shooterAndHealerStats": {
             "bulletPrefab": "healer",
             "bulletSpawnOffset": [
@@ -459,6 +468,7 @@
         "id_string": "STAFF-MEL-001",
         "rarity": "Common",
         "staffMainColor": "brown",
+        "staffActionAnimation": "slam",
         "pixels_offset": [
             -10,
             -2
@@ -466,10 +476,10 @@
         "healthPointsIncrement": 0,
         "actionValue": 42,
         "actionRate": 4.25,
-        "actionRadius": 1.0,
+        "actionRadius": 1.25,
         "specialActionRechargeSpeed": 0.0,
         "criticalChance": 39,
-        "weightIncrement": 162,
+        "weightIncrement": 175,
         "criticalHitMultiplier": 1.75,
         "shooterAndHealerStats": {
             "bulletPrefab": "",
@@ -509,6 +519,7 @@
         "id_string": "STAFF-MEL-002",
         "rarity": "Rare",
         "staffMainColor": "white",
+        "staffActionAnimation": "slam",
         "pixels_offset": [
             -10,
             -8
@@ -516,7 +527,7 @@
         "healthPointsIncrement": 0,
         "actionValue": 38,
         "actionRate": 5.75,
-        "actionRadius": 1.0,
+        "actionRadius": 1.25,
         "specialActionRechargeSpeed": 0.0,
         "criticalChance": 55,
         "weightIncrement": 200,
@@ -559,6 +570,7 @@
         "id_string": "STAFF-MEL-003",
         "rarity": "Epic",
         "staffMainColor": "gray",
+        "staffActionAnimation": "slam",
         "pixels_offset": [
             -10,
             -2
@@ -566,11 +578,11 @@
         "healthPointsIncrement": 0,
         "actionValue": 52,
         "actionRate": 7.25,
-        "actionRadius": 1.0,
+        "actionRadius": 1.25,
         "specialActionRechargeSpeed": 0.0,
         "criticalChance": 71,
-        "weightIncrement": 50,
-        "criticalHitMultiplier": 2.0,
+        "weightIncrement": 100,
+        "criticalHitMultiplier": 1.75,
         "shooterAndHealerStats": {
             "bulletPrefab": "",
             "bulletSpawnOffset": [
@@ -609,6 +621,7 @@
         "id_string": "STAFF-MEL-004",
         "rarity": "Legendary",
         "staffMainColor": "brown",
+        "staffActionAnimation": "slam",
         "pixels_offset": [
             -10,
             -2
@@ -616,11 +629,11 @@
         "healthPointsIncrement": 0,
         "actionValue": 66,
         "actionRate": 7.5,
-        "actionRadius": 1.0,
+        "actionRadius": 1.25,
         "specialActionRechargeSpeed": 0.0,
         "criticalChance": 66,
-        "weightIncrement": 88,
-        "criticalHitMultiplier": 2.25,
+        "weightIncrement": 125,
+        "criticalHitMultiplier": 2.0,
         "shooterAndHealerStats": {
             "bulletPrefab": "",
             "bulletSpawnOffset": [
@@ -659,6 +672,7 @@
         "id_string": "STAFF-MEL-005",
         "rarity": "Useless",
         "staffMainColor": "white",
+        "staffActionAnimation": "slam",
         "pixels_offset": [
             -10,
             -2
@@ -666,10 +680,10 @@
         "healthPointsIncrement": 0,
         "actionValue": 23,
         "actionRate": 4.5,
-        "actionRadius": 1.0,
+        "actionRadius": 1.25,
         "specialActionRechargeSpeed": 0.0,
         "criticalChance": 31,
-        "weightIncrement": 125,
+        "weightIncrement": 150,
         "criticalHitMultiplier": 1.5,
         "shooterAndHealerStats": {
             "bulletPrefab": "",
@@ -709,6 +723,7 @@
         "id_string": "STAFF-MEL-006",
         "rarity": "Common",
         "staffMainColor": "brown",
+        "staffActionAnimation": "slam",
         "pixels_offset": [
             -10,
             -8
@@ -716,10 +731,10 @@
         "healthPointsIncrement": 0,
         "actionValue": 37,
         "actionRate": 6.0,
-        "actionRadius": 1.0,
+        "actionRadius": 1.25,
         "specialActionRechargeSpeed": 0.0,
         "criticalChance": 47,
-        "weightIncrement": 162,
+        "weightIncrement": 175,
         "criticalHitMultiplier": 1.75,
         "shooterAndHealerStats": {
             "bulletPrefab": "",
@@ -759,6 +774,7 @@
         "id_string": "STAFF-MEL-007",
         "rarity": "Rare",
         "staffMainColor": "brown",
+        "staffActionAnimation": "slam",
         "pixels_offset": [
             -10,
             -6
@@ -766,11 +782,11 @@
         "healthPointsIncrement": 0,
         "actionValue": 51,
         "actionRate": 5.25,
-        "actionRadius": 1.0,
+        "actionRadius": 1.25,
         "specialActionRechargeSpeed": 0.0,
         "criticalChance": 49,
         "weightIncrement": 200,
-        "criticalHitMultiplier": 2.0,
+        "criticalHitMultiplier": 1.75,
         "shooterAndHealerStats": {
             "bulletPrefab": "",
             "bulletSpawnOffset": [
@@ -809,6 +825,7 @@
         "id_string": "STAFF-MEL-008",
         "rarity": "Epic",
         "staffMainColor": "brown",
+        "staffActionAnimation": "slam",
         "pixels_offset": [
             -10,
             -4
@@ -816,11 +833,11 @@
         "healthPointsIncrement": 0,
         "actionValue": 47,
         "actionRate": 6.75,
-        "actionRadius": 1.0,
+        "actionRadius": 1.25,
         "specialActionRechargeSpeed": 0.0,
         "criticalChance": 65,
-        "weightIncrement": 50,
-        "criticalHitMultiplier": 2.0,
+        "weightIncrement": 100,
+        "criticalHitMultiplier": 1.75,
         "shooterAndHealerStats": {
             "bulletPrefab": "",
             "bulletSpawnOffset": [
@@ -859,6 +876,7 @@
         "id_string": "STAFF-MEL-009",
         "rarity": "Legendary",
         "staffMainColor": "gray",
+        "staffActionAnimation": "stab",
         "pixels_offset": [
             -10,
             -6
@@ -866,10 +884,10 @@
         "healthPointsIncrement": 0,
         "actionValue": 61,
         "actionRate": 8.0,
-        "actionRadius": 1.0,
+        "actionRadius": 1.25,
         "specialActionRechargeSpeed": 0.0,
         "criticalChance": 81,
-        "weightIncrement": 88,
+        "weightIncrement": 125,
         "criticalHitMultiplier": 2.0,
         "shooterAndHealerStats": {
             "bulletPrefab": "",
@@ -881,7 +899,7 @@
             "bulletMainColor": ""
         },
         "meleeStats": {
-            "actionKnockbackMultiplier": 0,
+            "actionKnockbackMultiplier": 0.1,
             "areaDamageRadius": 0,
             "afterHitState": ""
         },
@@ -909,6 +927,7 @@
         "id_string": "STAFF-MEL-010",
         "rarity": "Useless",
         "staffMainColor": "brown",
+        "staffActionAnimation": "slash",
         "pixels_offset": [
             -11,
             -4
@@ -916,11 +935,11 @@
         "healthPointsIncrement": 0,
         "actionValue": 30,
         "actionRate": 4.0,
-        "actionRadius": 1.0,
+        "actionRadius": 1.25,
         "specialActionRechargeSpeed": 0.0,
         "criticalChance": 25,
-        "weightIncrement": 125,
-        "criticalHitMultiplier": 1.75,
+        "weightIncrement": 150,
+        "criticalHitMultiplier": 1.5,
         "shooterAndHealerStats": {
             "bulletPrefab": "",
             "bulletSpawnOffset": [
@@ -931,7 +950,7 @@
             "bulletMainColor": ""
         },
         "meleeStats": {
-            "actionKnockbackMultiplier": 0,
+            "actionKnockbackMultiplier": 0.1,
             "areaDamageRadius": 0,
             "afterHitState": ""
         },
@@ -959,6 +978,7 @@
         "id_string": "STAFF-MEL-011",
         "rarity": "Common",
         "staffMainColor": "gray",
+        "staffActionAnimation": "slash",
         "pixels_offset": [
             -15,
             -2
@@ -966,11 +986,11 @@
         "healthPointsIncrement": 0,
         "actionValue": 32,
         "actionRate": 5.5,
-        "actionRadius": 1.0,
+        "actionRadius": 1.25,
         "specialActionRechargeSpeed": 0.0,
         "criticalChance": 41,
-        "weightIncrement": 162,
-        "criticalHitMultiplier": 1.75,
+        "weightIncrement": 175,
+        "criticalHitMultiplier": 1.5,
         "shooterAndHealerStats": {
             "bulletPrefab": "",
             "bulletSpawnOffset": [
@@ -981,7 +1001,7 @@
             "bulletMainColor": ""
         },
         "meleeStats": {
-            "actionKnockbackMultiplier": 0,
+            "actionKnockbackMultiplier": 0.1,
             "areaDamageRadius": 0,
             "afterHitState": ""
         },
@@ -1009,6 +1029,7 @@
         "id_string": "STAFF-SHO-001",
         "rarity": "Common",
         "staffMainColor": "purple",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -8
@@ -1059,6 +1080,7 @@
         "id_string": "STAFF-SHO-002",
         "rarity": "Rare",
         "staffMainColor": "green",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -8
@@ -1109,6 +1131,7 @@
         "id_string": "STAFF-SHO-003",
         "rarity": "Epic",
         "staffMainColor": "yellow",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -8
@@ -1159,6 +1182,7 @@
         "id_string": "STAFF-SHO-004",
         "rarity": "Legendary",
         "staffMainColor": "sky_blue",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -7
@@ -1209,6 +1233,7 @@
         "id_string": "STAFF-SHO-005",
         "rarity": "Useless",
         "staffMainColor": "red",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -7
@@ -1259,6 +1284,7 @@
         "id_string": "STAFF-SHO-006",
         "rarity": "Common",
         "staffMainColor": "blue",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -7
@@ -1309,6 +1335,7 @@
         "id_string": "STAFF-SHO-007",
         "rarity": "Rare",
         "staffMainColor": "green",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -3
@@ -1359,6 +1386,7 @@
         "id_string": "STAFF-SHO-008",
         "rarity": "Epic",
         "staffMainColor": "red",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -5
@@ -1409,6 +1437,7 @@
         "id_string": "STAFF-SHO-009",
         "rarity": "Legendary",
         "staffMainColor": "sky_blue",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -7
@@ -1459,6 +1488,7 @@
         "id_string": "STAFF-SPE-001",
         "rarity": "Rare",
         "staffMainColor": "purple",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -6
@@ -1509,6 +1539,7 @@
         "id_string": "STAFF-SPE-002",
         "rarity": "Epic",
         "staffMainColor": "brown",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -2
@@ -1559,6 +1590,7 @@
         "id_string": "STAFF-SPE-003",
         "rarity": "Legendary",
         "staffMainColor": "brown",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -6
@@ -1609,6 +1641,7 @@
         "id_string": "STAFF-SUM-001",
         "rarity": "Epic",
         "staffMainColor": "purple",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -6
@@ -1659,6 +1692,7 @@
         "id_string": "STAFF-SUM-002",
         "rarity": "Legendary",
         "staffMainColor": "yellow",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -7
@@ -1709,6 +1743,7 @@
         "id_string": "STAFF-SUM-003",
         "rarity": "Rare",
         "staffMainColor": "yellow",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -6
@@ -1759,6 +1794,7 @@
         "id_string": "STAFF-SUM-004",
         "rarity": "Epic",
         "staffMainColor": "blue",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -7
@@ -1809,6 +1845,7 @@
         "id_string": "STAFF-SUM-005",
         "rarity": "Legendary",
         "staffMainColor": "yellow",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -6
@@ -1859,6 +1896,7 @@
         "id_string": "STAFF-SUM-006",
         "rarity": "Rare",
         "staffMainColor": "gray",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -4
@@ -1909,6 +1947,7 @@
         "id_string": "STAFF-TRA-001",
         "rarity": "Epic",
         "staffMainColor": "gray",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -6

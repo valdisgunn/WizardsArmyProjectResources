@@ -1121,6 +1121,10 @@ def create_clothing_items(clothing_items):
 				print("\t\t", item2["id_string"], " (",item2["element_type"],")", "  -  ", item2["sprite"],sep="")
 	if not found_duplicate_names:
 		print("\tOK: No duplicate names found (for hats and clothes).")
+	else:
+		print("\tNOTE: Duplicate names found (for hats and clothes).\n" + \
+			  "\tThis might be due to the fact that, for each pair of duplicate items found, both have the same color as the most frequent pixels color\n" + \
+			  "\t(it might be sufficient to simply swap 2 colors in one of the 2 sprites to make its main color another color, so that no elements in the 3 items group will have the same main color).")
 
 	# Check if among the 3 items of a same group there are 2 items with the same types (in any order)
 	found_duplicate_types = False
@@ -1847,9 +1851,17 @@ def create_staff_items(staff_items):
 		for staff_item_1 in staff_items:
 			for staff_item_2 in json_file_content:
 				if staff_item_1["id_string"] == staff_item_2["id_string"]:
-					# Compare the 2 items
-					if staff_item_1 != staff_item_2:
-						print("\tERROR: Found 2 different staff items with the same id_string: " + staff_item_1["id_string"])
+					# Compare the 2 items stats (the ones that should actually not change, hence dont include any sprite related stats)
+					skip_stats = ["sprite", "id_string"]
+					found_different_stats = False
+					for key in staff_item_1.keys():
+						if key not in skip_stats and staff_item_1[key] != staff_item_2[key]:
+							print("\tERROR: Found 2 staff items (one in the old JSON and one ot be written in the new JSON) with the same id_string but different stats: " + staff_item_1["id_string"])
+							print(get_staff_item_string(staff_item_1, False, "\t"))
+							print(get_staff_item_string(staff_item_2, False, "\t"))
+							found_different_stats = True
+					if found_different_stats:
+						print("\tERROR: Found 2 staff items (one in the old JSON and one ot be written in the new JSON) with the same id_string but different stats: " + staff_item_1["id_string"])
 						print(get_staff_item_string(staff_item_1, False, "\t"))
 						print(get_staff_item_string(staff_item_2, False, "\t"))
 						found_old_items_differences_with_new_items = True
@@ -1937,59 +1949,14 @@ def generate_staff_items_attributes(staff_items):
 		staff_type = item["staff_type"]
 		# sort by staff number
 		staff_number = get_fixed_item_sprite_number(item["sprite"])
-		return staff_type, staff_number
+		return str(staff_type) + str(staff_number).zfill(3)
+		# return item["id_string"]
 	# sort staff items (so that newly added items, which are the ones with the lowest numbers appended to the sprite names, are the last ones of each group)
 	staff_items.sort(key=lambda item: sort_items_criteria(item), reverse=True)
 
 	def set_unit_type_specific_stats(staff):
 
 		staff_type = staff["staff_type"]
-
-		# List of all possible bullets with their main color and also their value tier, number usually in [1,5] (but may also be higher) that depends on
-		#		the damage of the bullet and also takes into account the after hit state, the knockback (a bit, if needed), and other characteristics of the bullet (based on how "good" the bullet is)
-		# NOTE: value usually is equal to the actual damage of the bullet divided by 5, but thats just for a rough estimate (it can be different, e.g. in case of bullets with very high knockback or bullets with a certain after hit state)
-		# possible_bullets = {
-		# 	"arrow": {
-		# 		"value": 4,
-		# 		"color": "brown"
-		# 	},
-		# 	"spear": {
-		# 		"value": 5,
-		# 		"color": "brown"
-		# 	},
-		# 	"wave": {
-		# 		"value": 1.5,
-		# 		"color": "white"
-		# 	},
-		# 	"fireball": {
-		# 		"value": 4,	# It burns the hit target
-		# 		"color": "yellow"
-		# 	},
-		# 	"magicball": {
-		# 		"value": 2,
-		# 		"color": "green"
-		# 	},
-		# 	"poisonball": {
-		# 		"value": 4,	# It poisons the hit target
-		# 		"color": "purple"
-		# 	},
-		# 	"iceball": {
-		# 		"value": 3,	# It freezes the hit target
-		# 		"color": "sky_blue"
-		# 	},
-		# 	"redballghost": {
-		# 		"value": 2.5,	# Has a high knockback
-		# 		"color": "red"
-		# 	},
-		# 	"whiteballghost": {
-		# 		"value": 2,
-		# 		"color": "white"
-		# 	},
-		# 	"redballghostsmall": {
-		# 		"value": 1.5,
-		# 		"color": "red"
-		# 	},
-		# }
 
 		staff_number = int(staff["id_string"].split("-")[2])
 
@@ -2117,6 +2084,15 @@ def generate_staff_items_attributes(staff_items):
 						bullet_prefab_string = "colorballghostsmall"
 						pixel_spawn_offset = [41,17]
 						color_to_set = "sky_blue"
+					case 10:
+						bullet_prefab_string = "poisonball"
+						pixel_spawn_offset = [41,15]
+					case 11:
+						bullet_prefab_string = "fireball"
+						pixel_spawn_offset = [41,16]
+					case 12:
+						bullet_prefab_string = "magicball"
+						pixel_spawn_offset = [41,17]
 					
 				# Set final values
 				staff["shooterAndHealerStats"]["bulletPrefab"] = bullet_prefab_string
@@ -2386,6 +2362,7 @@ def generate_staff_items_attributes(staff_items):
 
 		# Set the id_string of the staff item
 		staff_item["id_string"] = "STAFF-" + staff_item["staff_type"][:3].upper() + "-" + str(staff_number).zfill(3)
+		# print("Staff number: " + str(staff_number) + " | Staff type: " + staff_item["staff_type"] + " | Staff name: " + staff_item["name"] + " | Staff id_string: " + staff_item["id_string"])
 
 		# Set the pixels offset of the staff item
 		sprite_offset = get_sprite_offset_to_center(staff_item["sprite"])

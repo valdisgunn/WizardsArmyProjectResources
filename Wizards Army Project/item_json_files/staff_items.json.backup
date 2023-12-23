@@ -6,6 +6,7 @@
         "id_string": "STAFF-BOO-001",
         "rarity": "Epic",
         "staffMainColor": "brown",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -2
@@ -56,6 +57,7 @@
         "id_string": "STAFF-BOO-002",
         "rarity": "Legendary",
         "staffMainColor": "brown",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -2
@@ -106,6 +108,7 @@
         "id_string": "STAFF-BOO-003",
         "rarity": "Rare",
         "staffMainColor": "brown",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -2
@@ -156,6 +159,7 @@
         "id_string": "STAFF-DEF-001",
         "rarity": "Rare",
         "staffMainColor": "yellow",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -7
@@ -206,6 +210,7 @@
         "id_string": "STAFF-DEF-002",
         "rarity": "Epic",
         "staffMainColor": "red",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -7
@@ -256,6 +261,7 @@
         "id_string": "STAFF-DEF-003",
         "rarity": "Legendary",
         "staffMainColor": "green",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -7
@@ -306,6 +312,7 @@
         "id_string": "STAFF-HEA-001",
         "rarity": "Rare",
         "staffMainColor": "green",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -6
@@ -357,6 +364,7 @@
         "id_string": "STAFF-HEA-002",
         "rarity": "Epic",
         "staffMainColor": "sky_blue",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -6
@@ -408,6 +416,7 @@
         "id_string": "STAFF-HEA-003",
         "rarity": "Legendary",
         "staffMainColor": "white",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -6
@@ -459,6 +468,7 @@
         "id_string": "STAFF-MEL-001",
         "rarity": "Common",
         "staffMainColor": "brown",
+        "staffActionAnimation": "slam",
         "pixels_offset": [
             -10,
             -2
@@ -483,8 +493,7 @@
         "meleeStats": {
             "actionKnockbackMultiplier": 0.5,
             "areaDamageRadius": 0,
-            "afterHitState": "",
-            "meleeActionAnimation": "slam"
+            "afterHitState": ""
         },
         "defenderStats": {
             "shieldForceFieldColor": ""
@@ -510,6 +519,7 @@
         "id_string": "STAFF-MEL-002",
         "rarity": "Rare",
         "staffMainColor": "white",
+        "staffActionAnimation": "slam",
         "pixels_offset": [
             -10,
             -8
@@ -534,8 +544,7 @@
         "meleeStats": {
             "actionKnockbackMultiplier": 0.5,
             "areaDamageRadius": 0,
-            "afterHitState": "",
-            "meleeActionAnimation": "slam"
+            "afterHitState": ""
         },
         "defenderStats": {
             "shieldForceFieldColor": ""
@@ -561,6 +570,7 @@
         "id_string": "STAFF-MEL-003",
         "rarity": "Epic",
         "staffMainColor": "gray",
+        "staffActionAnimation": "slam",
         "pixels_offset": [
             -10,
             -2
@@ -585,8 +595,7 @@
         "meleeStats": {
             "actionKnockbackMultiplier": 1.25,
             "areaDamageRadius": 1,
-            "afterHitState": "stunned",
-            "meleeActionAnimation": "slam"
+            "afterHitState": "stunned"
         },
         "defenderStats": {
             "shieldForceFieldColor": ""
@@ -612,6 +621,7 @@
         "id_string": "STAFF-MEL-004",
         "rarity": "Legendary",
         "staffMainColor": "brown",
+        "staffActionAnimation": "slam",
         "pixels_offset": [
             -10,
             -2
@@ -636,8 +646,7 @@
         "meleeStats": {
             "actionKnockbackMultiplier": 1.25,
             "areaDamageRadius": 1,
-            "afterHitState": "stunned",
-            "meleeActionAnimation": "slam"
+            "afterHitState": "stunned"
         },
         "defenderStats": {
             "shieldForceFieldColor": ""
@@ -663,6 +672,7 @@
         "id_string": "STAFF-MEL-005",
         "rarity": "Useless",
         "staffMainColor": "white",
+        "staffActionAnimation": "slam",
         "pixels_offset": [
             -10,
             -2
@@ -687,8 +697,7 @@
         "meleeStats": {
             "actionKnockbackMultiplier": 1.25,
             "areaDamageRadius": 1,
-            "afterHitState": "stunned",
-            "meleeActionAnimation": "slam"
+            "afterHitState": "stunned"
         },
         "defenderStats": {
             "shieldForceFieldColor": ""
@@ -714,6 +723,7 @@
         "id_string": "STAFF-MEL-006",
         "rarity": "Common",
         "staffMainColor": "brown",
+        "staffActionAnimation": "slam",
         "pixels_offset": [
             -10,
             -8
@@ -738,8 +748,7 @@
         "meleeStats": {
             "actionKnockbackMultiplier": 1,
             "areaDamageRadius": 0,
-            "afterHitState": "",
-            "meleeActionAnimation": "slam"
+            "afterHitState": ""
         },
         "defenderStats": {
             "shieldForceFieldColor": ""
@@ -765,6 +774,7 @@
         "id_string": "STAFF-MEL-007",
         "rarity": "Rare",
         "staffMainColor": "brown",
+        "staffActionAnimation": "slam",
         "pixels_offset": [
             -10,
             -6
@@ -789,8 +799,7 @@
         "meleeStats": {
             "actionKnockbackMultiplier": 0.375,
             "areaDamageRadius": 0,
-            "afterHitState": "",
-            "meleeActionAnimation": "slam"
+            "afterHitState": ""
         },
         "defenderStats": {
             "shieldForceFieldColor": ""
@@ -816,6 +825,7 @@
         "id_string": "STAFF-MEL-008",
         "rarity": "Epic",
         "staffMainColor": "brown",
+        "staffActionAnimation": "slam",
         "pixels_offset": [
             -10,
             -4
@@ -840,8 +850,7 @@
         "meleeStats": {
             "actionKnockbackMultiplier": 0.5,
             "areaDamageRadius": 0,
-            "afterHitState": "stunned",
-            "meleeActionAnimation": "slam"
+            "afterHitState": "stunned"
         },
         "defenderStats": {
             "shieldForceFieldColor": ""
@@ -867,6 +876,7 @@
         "id_string": "STAFF-MEL-009",
         "rarity": "Legendary",
         "staffMainColor": "gray",
+        "staffActionAnimation": "stab",
         "pixels_offset": [
             -10,
             -6
@@ -891,8 +901,7 @@
         "meleeStats": {
             "actionKnockbackMultiplier": 0.1,
             "areaDamageRadius": 0,
-            "afterHitState": "",
-            "meleeActionAnimation": "stab"
+            "afterHitState": ""
         },
         "defenderStats": {
             "shieldForceFieldColor": ""
@@ -918,6 +927,7 @@
         "id_string": "STAFF-MEL-010",
         "rarity": "Useless",
         "staffMainColor": "brown",
+        "staffActionAnimation": "slash",
         "pixels_offset": [
             -11,
             -4
@@ -942,8 +952,7 @@
         "meleeStats": {
             "actionKnockbackMultiplier": 0.1,
             "areaDamageRadius": 0,
-            "afterHitState": "",
-            "meleeActionAnimation": "slash"
+            "afterHitState": ""
         },
         "defenderStats": {
             "shieldForceFieldColor": ""
@@ -969,6 +978,7 @@
         "id_string": "STAFF-MEL-011",
         "rarity": "Common",
         "staffMainColor": "gray",
+        "staffActionAnimation": "slash",
         "pixels_offset": [
             -15,
             -2
@@ -993,8 +1003,7 @@
         "meleeStats": {
             "actionKnockbackMultiplier": 0.1,
             "areaDamageRadius": 0,
-            "afterHitState": "",
-            "meleeActionAnimation": "slash"
+            "afterHitState": ""
         },
         "defenderStats": {
             "shieldForceFieldColor": ""
@@ -1020,6 +1029,7 @@
         "id_string": "STAFF-SHO-001",
         "rarity": "Common",
         "staffMainColor": "purple",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -8
@@ -1070,6 +1080,7 @@
         "id_string": "STAFF-SHO-002",
         "rarity": "Rare",
         "staffMainColor": "green",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -8
@@ -1120,6 +1131,7 @@
         "id_string": "STAFF-SHO-003",
         "rarity": "Epic",
         "staffMainColor": "yellow",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -8
@@ -1170,6 +1182,7 @@
         "id_string": "STAFF-SHO-004",
         "rarity": "Legendary",
         "staffMainColor": "sky_blue",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -7
@@ -1220,6 +1233,7 @@
         "id_string": "STAFF-SHO-005",
         "rarity": "Useless",
         "staffMainColor": "red",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -7
@@ -1270,6 +1284,7 @@
         "id_string": "STAFF-SHO-006",
         "rarity": "Common",
         "staffMainColor": "blue",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -7
@@ -1320,6 +1335,7 @@
         "id_string": "STAFF-SHO-007",
         "rarity": "Rare",
         "staffMainColor": "green",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -3
@@ -1370,6 +1386,7 @@
         "id_string": "STAFF-SHO-008",
         "rarity": "Epic",
         "staffMainColor": "red",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -5
@@ -1420,6 +1437,7 @@
         "id_string": "STAFF-SHO-009",
         "rarity": "Legendary",
         "staffMainColor": "sky_blue",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -7
@@ -1470,6 +1488,7 @@
         "id_string": "STAFF-SPE-001",
         "rarity": "Rare",
         "staffMainColor": "purple",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -6
@@ -1520,6 +1539,7 @@
         "id_string": "STAFF-SPE-002",
         "rarity": "Epic",
         "staffMainColor": "brown",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -2
@@ -1570,6 +1590,7 @@
         "id_string": "STAFF-SPE-003",
         "rarity": "Legendary",
         "staffMainColor": "brown",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -6
@@ -1620,6 +1641,7 @@
         "id_string": "STAFF-SUM-001",
         "rarity": "Epic",
         "staffMainColor": "purple",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -6
@@ -1670,6 +1692,7 @@
         "id_string": "STAFF-SUM-002",
         "rarity": "Legendary",
         "staffMainColor": "yellow",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -7
@@ -1720,6 +1743,7 @@
         "id_string": "STAFF-SUM-003",
         "rarity": "Rare",
         "staffMainColor": "yellow",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -6
@@ -1770,6 +1794,7 @@
         "id_string": "STAFF-SUM-004",
         "rarity": "Epic",
         "staffMainColor": "blue",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -7
@@ -1820,6 +1845,7 @@
         "id_string": "STAFF-SUM-005",
         "rarity": "Legendary",
         "staffMainColor": "yellow",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -6
@@ -1870,6 +1896,7 @@
         "id_string": "STAFF-SUM-006",
         "rarity": "Rare",
         "staffMainColor": "gray",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -4
@@ -1920,6 +1947,7 @@
         "id_string": "STAFF-TRA-001",
         "rarity": "Epic",
         "staffMainColor": "gray",
+        "staffActionAnimation": "default",
         "pixels_offset": [
             -10,
             -6

@@ -168,10 +168,10 @@
         "actionValue": 47,
         "actionRate": -1.0,
         "actionRadius": 11.5,
-        "specialActionRechargeSpeed": 0.0,
+        "specialActionRechargeSpeed": 0.25,
         "criticalChance": 18,
         "weightIncrement": 244,
-        "criticalHitMultiplier": -1.25,
+        "criticalHitMultiplier": 1.5,
         "shooterAndHealerStats": {
             "bulletPrefab": "",
             "bulletSpawnOffset": [
@@ -219,10 +219,10 @@
         "actionValue": 44,
         "actionRate": -1.0,
         "actionRadius": 13.25,
-        "specialActionRechargeSpeed": 0.0,
+        "specialActionRechargeSpeed": 0.25,
         "criticalChance": 23,
         "weightIncrement": 300,
-        "criticalHitMultiplier": -1.25,
+        "criticalHitMultiplier": 1.5,
         "shooterAndHealerStats": {
             "bulletPrefab": "",
             "bulletSpawnOffset": [
@@ -270,10 +270,10 @@
         "actionValue": 59,
         "actionRate": -1.0,
         "actionRadius": 14.0,
-        "specialActionRechargeSpeed": 0.0,
+        "specialActionRechargeSpeed": 0.25,
         "criticalChance": 28,
         "weightIncrement": 75,
-        "criticalHitMultiplier": -0.75,
+        "criticalHitMultiplier": 2.0,
         "shooterAndHealerStats": {
             "bulletPrefab": "",
             "bulletSpawnOffset": [
@@ -1025,7 +1025,7 @@
     {
         "staff_type": "shooter",
         "name": "Shooter Staff 01",
-        "sprite": "staff-shooter-9.png",
+        "sprite": "staff-shooter-12.png",
         "id_string": "STAFF-SHO-001",
         "rarity": "Common",
         "staffMainColor": "purple",
@@ -1076,7 +1076,7 @@
     {
         "staff_type": "shooter",
         "name": "Shooter Staff 02",
-        "sprite": "staff-shooter-8.png",
+        "sprite": "staff-shooter-11.png",
         "id_string": "STAFF-SHO-002",
         "rarity": "Rare",
         "staffMainColor": "green",
@@ -1127,7 +1127,7 @@
     {
         "staff_type": "shooter",
         "name": "Shooter Staff 03",
-        "sprite": "staff-shooter-7.png",
+        "sprite": "staff-shooter-10.png",
         "id_string": "STAFF-SHO-003",
         "rarity": "Epic",
         "staffMainColor": "yellow",
@@ -1178,7 +1178,7 @@
     {
         "staff_type": "shooter",
         "name": "Shooter Staff 04",
-        "sprite": "staff-shooter-6.png",
+        "sprite": "staff-shooter-9.png",
         "id_string": "STAFF-SHO-004",
         "rarity": "Legendary",
         "staffMainColor": "sky_blue",
@@ -1229,7 +1229,7 @@
     {
         "staff_type": "shooter",
         "name": "Shooter Staff 05",
-        "sprite": "staff-shooter-5.png",
+        "sprite": "staff-shooter-8.png",
         "id_string": "STAFF-SHO-005",
         "rarity": "Useless",
         "staffMainColor": "red",
@@ -1280,7 +1280,7 @@
     {
         "staff_type": "shooter",
         "name": "Shooter Staff 06",
-        "sprite": "staff-shooter-4.png",
+        "sprite": "staff-shooter-7.png",
         "id_string": "STAFF-SHO-006",
         "rarity": "Common",
         "staffMainColor": "blue",
@@ -1331,7 +1331,7 @@
     {
         "staff_type": "shooter",
         "name": "Shooter Staff 07",
-        "sprite": "staff-shooter-3.png",
+        "sprite": "staff-shooter-6.png",
         "id_string": "STAFF-SHO-007",
         "rarity": "Rare",
         "staffMainColor": "green",
@@ -1382,7 +1382,7 @@
     {
         "staff_type": "shooter",
         "name": "Shooter Staff 08",
-        "sprite": "staff-shooter-2.png",
+        "sprite": "staff-shooter-5.png",
         "id_string": "STAFF-SHO-008",
         "rarity": "Epic",
         "staffMainColor": "red",
@@ -1433,7 +1433,7 @@
     {
         "staff_type": "shooter",
         "name": "Shooter Staff 09",
-        "sprite": "staff-shooter.png",
+        "sprite": "staff-shooter-4.png",
         "id_string": "STAFF-SHO-009",
         "rarity": "Legendary",
         "staffMainColor": "sky_blue",
@@ -1458,6 +1458,159 @@
             ],
             "bulletSpeedMultiplier": 1,
             "bulletMainColor": "sky_blue"
+        },
+        "meleeStats": {
+            "actionKnockbackMultiplier": 0,
+            "areaDamageRadius": 0,
+            "afterHitState": ""
+        },
+        "defenderStats": {
+            "shieldForceFieldColor": ""
+        },
+        "boosterStats": {
+            "boostColor": "",
+            "actionValueMultiplier": 0,
+            "actionRateMultiplier": 0,
+            "actionRadiusMultiplier": 0,
+            "speedMultiplier": 0
+        },
+        "summonerAndTrainerStats": {
+            "summonedUnitPrefab": "",
+            "maxNumberOfSummonedUnitsinBattle": 0,
+            "unitsSummonedAtEachAction": 0
+        },
+        "spellcasterStats": {}
+    },
+    {
+        "staff_type": "shooter",
+        "name": "Shooter Staff 10",
+        "sprite": "staff-shooter-3.png",
+        "id_string": "STAFF-SHO-010",
+        "rarity": "Useless",
+        "staffMainColor": "purple",
+        "staffActionAnimation": "default",
+        "pixels_offset": [
+            -10,
+            -3
+        ],
+        "healthPointsIncrement": 0,
+        "actionValue": 100,
+        "actionRate": 5.75,
+        "actionRadius": 7.75,
+        "specialActionRechargeSpeed": 0.0,
+        "criticalChance": 10,
+        "weightIncrement": 72,
+        "criticalHitMultiplier": 1.25,
+        "shooterAndHealerStats": {
+            "bulletPrefab": "poisonball",
+            "bulletSpawnOffset": [
+                0.281,
+                1.5
+            ],
+            "bulletSpeedMultiplier": 1,
+            "bulletMainColor": ""
+        },
+        "meleeStats": {
+            "actionKnockbackMultiplier": 0,
+            "areaDamageRadius": 0,
+            "afterHitState": ""
+        },
+        "defenderStats": {
+            "shieldForceFieldColor": ""
+        },
+        "boosterStats": {
+            "boostColor": "",
+            "actionValueMultiplier": 0,
+            "actionRateMultiplier": 0,
+            "actionRadiusMultiplier": 0,
+            "speedMultiplier": 0
+        },
+        "summonerAndTrainerStats": {
+            "summonedUnitPrefab": "",
+            "maxNumberOfSummonedUnitsinBattle": 0,
+            "unitsSummonedAtEachAction": 0
+        },
+        "spellcasterStats": {}
+    },
+    {
+        "staff_type": "shooter",
+        "name": "Shooter Staff 11",
+        "sprite": "staff-shooter-2.png",
+        "id_string": "STAFF-SHO-011",
+        "rarity": "Common",
+        "staffMainColor": "yellow",
+        "staffActionAnimation": "default",
+        "pixels_offset": [
+            -10,
+            -4
+        ],
+        "healthPointsIncrement": 0,
+        "actionValue": 100,
+        "actionRate": 9.0,
+        "actionRadius": 10.0,
+        "specialActionRechargeSpeed": 0.0,
+        "criticalChance": 22,
+        "weightIncrement": 99,
+        "criticalHitMultiplier": 1.25,
+        "shooterAndHealerStats": {
+            "bulletPrefab": "fireball",
+            "bulletSpawnOffset": [
+                0.281,
+                1.469
+            ],
+            "bulletSpeedMultiplier": 1,
+            "bulletMainColor": ""
+        },
+        "meleeStats": {
+            "actionKnockbackMultiplier": 0,
+            "areaDamageRadius": 0,
+            "afterHitState": ""
+        },
+        "defenderStats": {
+            "shieldForceFieldColor": ""
+        },
+        "boosterStats": {
+            "boostColor": "",
+            "actionValueMultiplier": 0,
+            "actionRateMultiplier": 0,
+            "actionRadiusMultiplier": 0,
+            "speedMultiplier": 0
+        },
+        "summonerAndTrainerStats": {
+            "summonedUnitPrefab": "",
+            "maxNumberOfSummonedUnitsinBattle": 0,
+            "unitsSummonedAtEachAction": 0
+        },
+        "spellcasterStats": {}
+    },
+    {
+        "staff_type": "shooter",
+        "name": "Shooter Staff 12",
+        "sprite": "staff-shooter.png",
+        "id_string": "STAFF-SHO-012",
+        "rarity": "Rare",
+        "staffMainColor": "green",
+        "staffActionAnimation": "default",
+        "pixels_offset": [
+            -10,
+            -4
+        ],
+        "healthPointsIncrement": 0,
+        "actionValue": 100,
+        "actionRate": 12.0,
+        "actionRadius": 8.75,
+        "specialActionRechargeSpeed": 0.0,
+        "criticalChance": 34,
+        "weightIncrement": 125,
+        "criticalHitMultiplier": 1.5,
+        "shooterAndHealerStats": {
+            "bulletPrefab": "magicball",
+            "bulletSpawnOffset": [
+                0.281,
+                1.438
+            ],
+            "bulletSpeedMultiplier": 1,
+            "bulletMainColor": ""
         },
         "meleeStats": {
             "actionKnockbackMultiplier": 0,
@@ -1650,7 +1803,7 @@
         "actionValue": 1,
         "actionRate": 1.0,
         "actionRadius": 1.0,
-        "specialActionRechargeSpeed": 0.5,
+        "specialActionRechargeSpeed": 0.25,
         "criticalChance": 0,
         "weightIncrement": 119,
         "criticalHitMultiplier": 1.0,
@@ -1701,7 +1854,7 @@
         "actionValue": 1,
         "actionRate": 1.0,
         "actionRadius": 1.0,
-        "specialActionRechargeSpeed": 0.5,
+        "specialActionRechargeSpeed": 0.25,
         "criticalChance": 0,
         "weightIncrement": 150,
         "criticalHitMultiplier": 1.0,
@@ -1752,7 +1905,7 @@
         "actionValue": 1,
         "actionRate": 1.0,
         "actionRadius": 1.0,
-        "specialActionRechargeSpeed": 0.5,
+        "specialActionRechargeSpeed": 0.25,
         "criticalChance": 0,
         "weightIncrement": 25,
         "criticalHitMultiplier": 1.0,
@@ -1803,7 +1956,7 @@
         "actionValue": 1,
         "actionRate": 1.0,
         "actionRadius": 1.0,
-        "specialActionRechargeSpeed": 0.5,
+        "specialActionRechargeSpeed": 0.25,
         "criticalChance": 0,
         "weightIncrement": 56,
         "criticalHitMultiplier": 1.0,
@@ -1854,7 +2007,7 @@
         "actionValue": 1,
         "actionRate": 1.0,
         "actionRadius": 1.0,
-        "specialActionRechargeSpeed": 0.5,
+        "specialActionRechargeSpeed": 0.25,
         "criticalChance": 0,
         "weightIncrement": 88,
         "criticalHitMultiplier": 1.0,
@@ -1905,7 +2058,7 @@
         "actionValue": 1,
         "actionRate": 1.0,
         "actionRadius": 1.0,
-        "specialActionRechargeSpeed": 0.5,
+        "specialActionRechargeSpeed": 0.25,
         "criticalChance": 0,
         "weightIncrement": 119,
         "criticalHitMultiplier": 1.0,

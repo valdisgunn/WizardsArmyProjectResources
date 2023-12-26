@@ -2273,18 +2273,18 @@ def generate_staff_items_attributes(staff_items):
 				stat_values_per_rarity["weightIncrement"] = [25, 150]	# Booster staffs should be mediumyly heavy
 				stat_values_per_rarity["criticalHitMultiplier"] = [1, 1]	# Booster staffs have no critical hit multiplier (they don't hit)
 			case "defender":
-				stat_values_per_rarity["actionValue"] = [15, 65]			# Defender staffs have an action corresponding to the percentage of damage absorbed
+				stat_values_per_rarity["actionValue"] = [15, 65]			# Defender staffs have an action corresponding to the percentage of damage reduced
 				stat_values_per_rarity["actionRate"] = [-1, -1] 			# Defender staffs have no action rate
 				stat_values_per_rarity["actionRadius"] = [8.5, 12.5]		# Defender staffs have an action radius corresponding to the force field around them (should be set to a value around 10)
-				# base_stat_values_per_rarity["specialActionRechargeSpeed"] = [0,0]
+				stat_values_per_rarity["specialActionRechargeSpeed"] = [1 / 10, 1 / 6] 	# Defender staffs recharge their health points at the next hit they take after their special action is executed 
 				stat_values_per_rarity["criticalChance"] = [10, 25]		# Defender staffs have a critical chance which correspond to a negative effect, hence their critical multiplier should be negative, meaning the hit they take, with this given percentage, will damage them for the full damage multiplied by the critical multiplier (usually -1) rather than the reduced damage
 				stat_values_per_rarity["weightIncrement"] = [75, 300]	# Defender staffs should be very heavy
-				stat_values_per_rarity["criticalHitMultiplier"] = [-2.25, -0.5]	# Defender staffs have a negative critical hit multiplier (as explained above)
+				stat_values_per_rarity["criticalHitMultiplier"] = [0.5, 2.25]	# Defender staffs have a critical hit multiplier that has a negative effect (since they will take damage instead of absorbing it in case of a "critical absorption")
 			case "summoner":
 				stat_values_per_rarity["actionValue"] = [1, 1]			# Action value should be that of the summoned unit, hence we use this value as a multiplier for the summoned unit's stats (usually 1)
 				stat_values_per_rarity["actionRate"] = [1, 1] 			# Action rate of summoners should be that of the summoned unit, hence we use this value as a multiplier for the summoned unit's stats (usually 1)
 				stat_values_per_rarity["actionRadius"] = [1, 1]			# Action radius of summoners should be that of the summoned unit, hence we use this value as a multiplier for the summoned unit's stats (usually 1)
-				stat_values_per_rarity["specialActionRechargeSpeed"] = [1 / 4, 1 / 2]		# Summoners have the special action corresponding to the actual summoning of units, hence the recharge speed is tied to the number of units summoned per second (as if it was the action rate)
+				stat_values_per_rarity["specialActionRechargeSpeed"] = [1 / 12, 1 / 6]		# Summoners have the special action corresponding to the actual summoning of units, hence the recharge speed is tied to the number of units summoned per second (as if it was the action rate)
 				stat_values_per_rarity["criticalChance"] = [0, 0]		# Summoner staffs have no critical chance
 				stat_values_per_rarity["weightIncrement"] = [25, 150]	# Summoner staffs should be mediumyly heavy
 				stat_values_per_rarity["criticalHitMultiplier"] = [1, 1]	# Summoner staffs have no critical hit multiplier
